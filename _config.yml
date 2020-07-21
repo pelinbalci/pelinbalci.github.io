@@ -1,3 +1,5 @@
 name: Pelin Balci
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+description: >
+  My Site
