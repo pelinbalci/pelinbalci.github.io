@@ -1,1 +1,4 @@
-theme: jekyll-theme-slate
+  
+name: Pelin Balc
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
