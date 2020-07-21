@@ -7,7 +7,8 @@ categories: General
 
 # CNN
 
-Note: My notes from "Intro to Deep Learning with PyTorch". You can reach the course link [here](https://classroom.udacity.com/courses/ud188) 
+Note: My notes from "Intro to Deep Learning with PyTorch". You can reach the course link [here](https://classroom.udacity.com/courses/ud188)
+Reach the complete notes [here](https://github.com/pelinbalci/Intro_Deep_Learning/tree/master/CNN)
 
 The MLP turn the pixels to vectors and don't analyze them a group. There are half million links between the input and hidden layers. 
 And the pictures are pre- trained, they are all in center, they all in grey color scale and their sizes are almost the same. But in real life the numbers can be anywhere. 
@@ -134,10 +135,8 @@ library, there are many startups such as Applied Minds, VideoSurf, and Zeitera, 
 
 ### Sobel?
 
-![image_description](images/sobel_ops.png)
-
 https://en.wikipedia.org/wiki/Sobel_operator
-[custom_filters.py](custom_filters.py)
+[custom_filters.py](https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/CNN/custom_filters.py)
 
 
 ### Importance of filters
