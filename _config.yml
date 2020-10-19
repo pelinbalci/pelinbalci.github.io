@@ -17,45 +17,39 @@ show_excerpts: true # set to true to show excerpts on the homepage
 minima:
   date_format: "%b %-d, %Y"
 
-  # generate social links in footer
-  social_links:
-    twitter: balcipelin
-    github:  pelinbalci
-    # devto: jekyll
-    # dribbble: jekyll
-    # facebook: jekyll
-    # flickr:   jekyll
-    # instagram: jekyll
-    # linkedin: jekyll
-    # pinterest: jekyll
-    # youtube: jekyll
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    # youtube_channel_name: CloudCannon
-    # telegram: jekyll
-    # googleplus: +jekyll
-    # microdotblog: jekyll
-    # keybase: jekyll
+# generate social links in footer
+#social_links:
+twitter_username: balcipelin
+github_username:  pelinbalci
+  # devto: jekyll
+  # dribbble: jekyll
+  # facebook: jekyll
+  # flickr:   jekyll
+  # instagram: jekyll
+  # linkedin: jekyll
+  # pinterest: jekyll
+  # youtube: jekyll
+  # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+  # youtube_channel_name: CloudCannon
+  # telegram: jekyll
+  # googleplus: +jekyll
+  # microdotblog: jekyll
+  # keybase: jekyll
 
-    # Mastodon instances
-    # mastodon:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+  # Mastodon instances
+  # mastodon:
+  # - username: jekyll
+  #   instance: example.com
+  # - username: jekyll2
+  #   instance: example.com
 
-    # GitLab instances
-    # gitlab:
-    # - username: jekyll
-    #   instance: example.com
-    # - username: jekyll2
-    #   instance: example.com
+  # GitLab instances
+  # gitlab:
+  # - username: jekyll
+  #   instance: example.com
+  # - username: jekyll2
+  #   instance: example.com
 
-- icon:	twitter
-    url:	https://twitter.com/balcipelin
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 header_pages:

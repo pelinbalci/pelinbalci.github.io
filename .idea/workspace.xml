@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_includes/icon-github.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/icon-github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/icon-twitter.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/icon-twitter.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_layouts/default.html" beforeDir="false" afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +278,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603132919856</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="homepage">
+      <created>1603133387649</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1603133387649</updated>
+    </task>
+    <task id="LOCAL-00031" summary="twitter_icon_trial">
+      <created>1603133688886</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1603133688886</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -287,13 +307,15 @@
     <MESSAGE value="add image" />
     <MESSAGE value="fix" />
     <MESSAGE value="footer" />
-    <option name="LAST_COMMIT_MESSAGE" value="footer" />
+    <MESSAGE value="homepage" />
+    <MESSAGE value="twitter_icon_trial" />
+    <option name="LAST_COMMIT_MESSAGE" value="twitter_icon_trial" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2" timestamp="1603132919661">
+    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2" timestamp="1603133688736">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603132919661" />
+    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603133688736" />
     <state x="140" y="123" width="907" height="577" key="DiffContextDialog" timestamp="1603132847543">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
@@ -302,10 +324,10 @@
       <screen x="40" y="23" width="1240" height="777" />
     </state>
     <state x="40" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1603112694694" />
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603132921315">
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603133690950">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603132921315" />
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603133690950" />
     <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603131517096">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
