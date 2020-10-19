@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CV.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,15 +43,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts/images" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts/images" />
       <recent name="$PROJECT_DIR$/_posts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images" />
+      <recent name="$PROJECT_DIR$/assets/image_op" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -201,35 +202,113 @@
       <option name="project" value="LOCAL" />
       <updated>1603116785409</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="CV">
+      <created>1603119193566</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1603119193566</updated>
+    </task>
+    <task id="LOCAL-00021" summary="CV">
+      <created>1603119692735</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1603119692735</updated>
+    </task>
+    <task id="LOCAL-00022" summary="CV">
+      <created>1603119787107</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1603119787107</updated>
+    </task>
+    <task id="LOCAL-00023" summary="trial_post">
+      <created>1603120030238</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1603120030238</updated>
+    </task>
+    <task id="LOCAL-00024" summary="trial_post">
+      <created>1603127847777</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1603127847777</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add image">
+      <created>1603130392087</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1603130392087</updated>
+    </task>
+    <task id="LOCAL-00026" summary="add image">
+      <created>1603131849222</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1603131849222</updated>
+    </task>
+    <task id="LOCAL-00027" summary="fix">
+      <created>1603132164147</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1603132164147</updated>
+    </task>
+    <task id="LOCAL-00028" summary="fix">
+      <created>1603132547236</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1603132547236</updated>
+    </task>
+    <task id="LOCAL-00029" summary="footer">
+      <created>1603132919856</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1603132919856</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix" />
     <MESSAGE value="CNN notes" />
     <MESSAGE value="style_triaş" />
     <MESSAGE value="add path" />
     <MESSAGE value="rename" />
     <MESSAGE value="trial" />
     <MESSAGE value="cv" />
-    <option name="LAST_COMMIT_MESSAGE" value="cv" />
+    <MESSAGE value="CV" />
+    <MESSAGE value="trial_post" />
+    <MESSAGE value="add image" />
+    <MESSAGE value="fix" />
+    <MESSAGE value="footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="footer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="23" key="CommitChangelistDialog2" timestamp="1603116785200">
+    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2" timestamp="1603132919661">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="350" y="23" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603116785200" />
+    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603132919661" />
+    <state x="140" y="123" width="907" height="577" key="DiffContextDialog" timestamp="1603132847543">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="140" y="123" width="907" height="577" key="DiffContextDialog/40.23.1240.777@40.23.1240.777" timestamp="1603132847543" />
     <state x="40" y="50" key="SettingsEditor" timestamp="1603112694694">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
     <state x="40" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1603112694694" />
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603116789010">
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603132921315">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603116789010" />
-    <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603108990209">
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603132921315" />
+    <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603131517096">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="280" y="310" width="882" height="490" key="find.popup/40.23.1240.777@40.23.1240.777" timestamp="1603108990209" />
+    <state x="280" y="310" width="882" height="490" key="find.popup/40.23.1240.777@40.23.1240.777" timestamp="1603131517096" />
   </component>
 </project>
