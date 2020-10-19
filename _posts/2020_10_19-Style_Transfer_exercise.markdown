@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Style Transfer"
+date:   2020-10-19
+categories: General
+---
 
 ```python
 from google.colab import drive
