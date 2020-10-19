@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Pelin Balci, Msc Industrial Engineer
+title: CV
 permalink: /CV/
 ---
+
+# Pelin Balci, Msc Industrial Engineer
 
 ### Contact
 
