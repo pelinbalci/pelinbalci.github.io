@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/pelinbalci.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pelinbalci.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/atom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/blog/atom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blog/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,5 +122,11 @@
     <MESSAGE value="fix" />
     <MESSAGE value="CNN notes" />
     <option name="LAST_COMMIT_MESSAGE" value="CNN notes" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603108990209">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="280" y="310" width="882" height="490" key="find.popup/40.23.1240.777@40.23.1240.777" timestamp="1603108990209" />
   </component>
 </project>
