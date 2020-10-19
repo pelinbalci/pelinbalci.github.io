@@ -1,4 +1,4 @@
-title: My Notes
+title:
 author:
   name: Pelin Balcı
   github: https://github.com/pelinbalci
@@ -6,6 +6,9 @@ description: > # this means to ignore newlines until "show_excerpts:"
 
   Machine Learning Notes
 #description will appear in your document head meta (for Google search results)
+
+# blog cover
+cover: "/assets/images/cover.jpeg"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
