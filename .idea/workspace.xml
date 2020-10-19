@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="" />
+    <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +41,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/_posts" />
     </key>
@@ -131,16 +137,80 @@
       <option name="project" value="LOCAL" />
       <updated>1603109342541</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="style_triaş">
+      <created>1603109561815</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1603109561816</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add path">
+      <created>1603110049390</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110049390</updated>
+    </task>
+    <task id="LOCAL-00014" summary="rename">
+      <created>1603110201791</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110201791</updated>
+    </task>
+    <task id="LOCAL-00015" summary="rename">
+      <created>1603110401594</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110401594</updated>
+    </task>
+    <task id="LOCAL-00016" summary="trial">
+      <created>1603110640919</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110640919</updated>
+    </task>
+    <task id="LOCAL-00017" summary="trial">
+      <created>1603110799601</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1603110799601</updated>
+    </task>
+    <task id="LOCAL-00018" summary="trial">
+      <created>1603111301060</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1603111301060</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fix" />
     <MESSAGE value="CNN notes" />
+    <MESSAGE value="style_triaş" />
+    <MESSAGE value="add path" />
+    <MESSAGE value="rename" />
     <MESSAGE value="trial" />
     <option name="LAST_COMMIT_MESSAGE" value="trial" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="350" y="23" key="CommitChangelistDialog2" timestamp="1603111300891">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="350" y="23" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603111300891" />
+    <state x="40" y="50" key="SettingsEditor" timestamp="1603112694694">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="40" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1603112694694" />
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603111302920">
+      <screen x="40" y="23" width="1240" height="777" />
+    </state>
+    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603111302920" />
     <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603108990209">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
