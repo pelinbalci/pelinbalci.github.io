@@ -186,7 +186,7 @@ ax2.imshow(im_convert(style))
 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/image_op/content.png" width="49%">
+  <img src="/assets/image_op/content_style.png" width="49%">
   <div class="figcaption">Content Image(left) - Style Image(right).</div>
 </div>
 
