@@ -185,9 +185,10 @@ ax2.imshow(im_convert(style))
     <matplotlib.image.AxesImage at 0x7ff3dcbcafd0>
 
 
-
-
-![png](assets/image_op/content_style.png)
+<div class="fig figcenter fighighlight">
+  <img src="/assets/image_op/content.png" width="49%">
+  <div class="figcaption">Content Image(left) - Style Image(right).</div>
+</div>
 
 
 **See the explanation for each step of the function:**
@@ -360,12 +361,9 @@ plt.imshow(image)
 
     <matplotlib.image.AxesImage at 0x7ff3dae27cc0>
 
-
-
-
 <div class="fig figcenter fighighlight">
   <img src="/assets/image_op/content.png" width="49%">
-  <div class="figcaption">Content image (right).</div>
+  <div class="figcaption">Content image.</div>
 </div>
 
 **Summary:**
