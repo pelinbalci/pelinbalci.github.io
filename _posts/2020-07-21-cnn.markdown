@@ -3,7 +3,7 @@ layout: post
 title:  "cnn"
 date:   2020-07-21
 categories: General
-permalink: https://pelinbalci.github.io/blog/2020/07/21/cnn/
+permalink: /blog/2020/07/21/cnn/
 ---
 
 # CNN
