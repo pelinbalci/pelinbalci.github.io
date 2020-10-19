@@ -1,7 +1,9 @@
+---
 layout: page
 title: "trial"
 date: 2020-07-21
 categories: CATEGORY-1 
+---
 
 # TRIAL
 
