@@ -1,4 +1,8 @@
-## Pelin Balci, Msc Industrial Engineer
+---
+layout: page
+title: CV
+permalink: /CV/
+---
 
 ### Contact
 
