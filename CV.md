@@ -28,4 +28,4 @@ June 26 - 28, 2013
 ### Scholarships
 
 Bilkent University Graduate School of Engineering and Science Scholarship, 2010 – 2012
-TUBIITAK Graduate Scholarship, 2010 – 2012
+TUBITAK Graduate Scholarship, 2010 – 2012
