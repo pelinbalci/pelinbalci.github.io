@@ -1,4 +1,10 @@
-title:
+
+# Build settings
+gems:
+  - jemoji
+  - jekyll-paginate
+
+title: Pelin Balcı's Blog
 author:
   name: Pelin Balcı
   github: https://github.com/pelinbalci
