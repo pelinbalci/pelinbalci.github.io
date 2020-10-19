@@ -1,5 +1,6 @@
 # Pelin Balci's Blog
 
-I've used the template: http://hankquinlan.github.io/
+My blog about Data Science and Machine Learning.
 
-Direct Link:https://pelinbalci.github.io/ 
+- Template: http://hankquinlan.github.io/
+- Direct Link:https://pelinbalci.github.io/ 
