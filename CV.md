@@ -4,6 +4,8 @@ title: CV
 permalink: /CV/
 ---
 
+# Pelin Balci, Msc Industrial Engineer
+
 ### Contact
 
 https://github.com/pelinbalci
@@ -23,7 +25,7 @@ P. Balci, B. Tansel "Analysis of Locations of Existing Fire Stations in Ankara i
 Optimized Locations.," International IIE Conference, The Global Reach of Industrial Engineering, Istanbul / Turkey,
 June 26 - 28, 2013
 
-### Scholarship
+### Scholarships
 
 Bilkent University Graduate School of Engineering and Science Scholarship, 2010 – 2012
 TUBIITAK Graduate Scholarship, 2010 – 2012
