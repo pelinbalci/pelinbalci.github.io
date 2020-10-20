@@ -25,19 +25,19 @@ In this paper[1]  style transfer usses the features found in 19 layer VGG networ
 - In btw 5 pooling layers --> 2 or 4 conv layers.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/image_op/vgg_fig.png" width="49%">
-  <div class="figcaption">VGG Layers for Style and Content Images.</div>
+  <img src="/assets/image_op/vgg_fig.png" width="75%">
+  <div class="figcaption">Figure: VGG Layers for Style and Content Images.</div>
 </div>
 
 
-### Figure 1 Explanation:
+### Explanation of the Figure:
 
-Image representations in a Convolutional Neural Network (CNN). 
+This is an image representations in a Convolutional Neural Network (CNN). 
 
 A given input image is represented as a set of filtered images at each processing stage in the CNN. While the number of 
 different filters increases along the processing hierarchy, the size of the filtered
-images is reduced by some downsampling mechanism (e.g. max-pooling) leading to a decrease in the total number of units per layer of the
-network. 
+images is reduced by some down sampling mechanism (e.g. max-pooling) leading to a decrease in the total number of units 
+per layer of the network. 
 
 #### Content Reconstructions:
 
@@ -107,8 +107,9 @@ The correlations at each layer are given by a GRAM MATRIX.
 - Output: 4*4 in height and weight and 8 in depth. --> It has 8 features maps that we want to find relationships between.
 
 Operations:
-- Vectorize the values in this layer: 4 * 4 * 8 -> 4*4=16 (one feature map) and there are 8 of them: 16 * 8 
-- Multiply it with its transpose --> gram matrix
+- Vectorize the values in this layer: 8 * 4 * 4 -> 4*4=16 (one feature map): `8*16`
+- Take the transpose of this matrix : `8*16`
+- Multiply these two matrices: `8*8`
 
 Result of the gram matrix contains non localized information about the layer. 
 
