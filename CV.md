@@ -20,7 +20,7 @@ Python for Data Science (Pandas, Numpy, Scikit-learn, Matplotlib, PyTorch), SQL,
 
 ## Work Experiences
 - 2019 – 2020	Adphorus a Sojern Company, Sr. Data Analyst
-    - Production level codes for reporting performance of the algorithms by using Python, Facebook API and SQL, 
+    - Production level codes for reporting performance of the algorithms by using Python, Facebook API and SQL 
     - A/B testing methods
     - Sampling algorithms 
     - Facebook digital marketing
@@ -59,29 +59,25 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 
 ## Trainings
 - CS231n Convolutional Neural Networks for Visual Recognition, Standford University, 2020
-- Intro to Deep Learning with PyTorch, Udacity, 2020
-    - https://github.com/pelinbalci/Intro_Deep_Learning
-- AWS Machine Learning Foundation Course, Udacity, 2020 
-    - https://github.com/pelinbalci/aws_ml_foundations
-- Machine Learning Crash Course with TensorFlow API, Google, 2020 
-    - https://github.com/pelinbalci/machinelearning
-- Intro to Machine Learning, Udacity, 2020
-    - https://github.com/pelinbalci/intro_to_ml
-- Bayesian Machine Learning via Python: A/B Testing, Udemy, 2020
-    - https://www.udemy.com/certificate/UC-918b0d23-b95e-471f-b7fc-92f4438ce1e3/
+- Intro to Deep Learning with PyTorch, Udacity, 2020 [github_notes](https://github.com/pelinbalci/Intro_Deep_Learning)
+- AWS Machine Learning Foundation Course, Udacity, 2020 [github_notes](https://github.com/pelinbalci/aws_ml_foundations)
+- Machine Learning Crash Course with TensorFlow API, Google, 2020 [github_notes](https://github.com/pelinbalci/machinelearning)
+- Intro to Machine Learning, Udacity, 2020 [github_notes](https://github.com/pelinbalci/intro_to_ml)
+- Bayesian Machine Learning via Python: A/B Testing, Udemy, 2020 [github_notes](https://github.com/pelinbalci/Bayesian-AB-Test), [certificate](https://www.udemy.com/certificate/UC-918b0d23-b95e-471f-b7fc-92f4438ce1e3/)
 - Advanced Data Analytics, Data Scientist Track, Sabancı University, 2018
-- Bertelsmann Data Analyst Nano Degree with Scholarship, 2018 – 2019 
-    - https://graduation.udacity.com/confirm/URVHJGL
-- Google Android Basics Nano Degree with Scholarship, 2017 – 2018 
-    - https://graduation.udacity.com/confirm/APRDAZTN 
-- Intermediate Python for Data Science Course, DataCamp, Dec 2017 
-    - https://www.datacamp.com/statement-of accomplishment/course/415c57b9164ac3a2066d0617d4ddbf094305bc99 
+- Bertelsmann Data Analyst Nano Degree with Scholarship, 2018 – 2019 [certificate](https://graduation.udacity.com/confirm/URVHJGL)
+- Google Android Basics Nano Degree with Scholarship, 2017 – 2018 [certificate](https://graduation.udacity.com/confirm/APRDAZTN)
+- Intermediate Python for Data Science Course, DataCamp, 2017 [certificate](https://www.datacamp.com/statement-of-accomplishment/course/415c57b9164ac3a2066d0617d4ddbf094305bc99)
+- Intro to Python for Data Science Course, DataCamp, 2017 [certificate](https://www.datacamp.com/statement-of-accomplishment/course/9502c7b48b86f828d9d1c034a255b57d605a3b14)
+- Data Science Orientation by Microsoft, 2017 [certificate](https://courses.edx.org/certificates/c987d9529a7f436aa392d1afcfe7db72)
 
 ## Foreign Languages 
 English (Advanced), Spanish (Beginner), German (Beginner)
 
 ## Club Memberships & Social Activities
-Cycling, 2020
-Lindy Hop Dance, 2018                                                                                                                         TÜBİTAK Formula-G Solar Car Race, G-Mobil 2 Sponsor Team Member, 2008 – 2009                    Gazi University Technology Club, Charter Member and Member of the Board, 2007 - 2009
-Personal Characteristics
-Self-learner, a good team member, creative and analytical thinking, good communication skills
+- Cycling, 2020
+- Lindy Hop Dance, 2018
+- TÜBİTAK Formula-G Solar Car Race, G-Mobil 2 Sponsor Team Member, 2008 – 2009
+- Gazi University Technology Club, Charter Member and Member of the Board, 2007 - 2009
+- Personal Characteristics
+- Self-learner, a good team member, creative and analytical thinking, good communication skills
