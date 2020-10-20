@@ -29,7 +29,7 @@ In this paper[1]  style transfer usses the features found in 19 layer VGG networ
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/image_op/vgg_fig.png" width="75%">
-  <div class="figcaption">Figure: VGG Layers for Style and Content Images</div>
+  <div class="figcaption">Figure 1: VGG Layers for Style and Content Images</div>
 </div>
 
 
