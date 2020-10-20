@@ -1,8 +1,11 @@
 ---
 layout: post
 title: "Style Transfer with PyTorch"
-categories: misc
+categories: cnn
 ---
+
+In this post, I would like to share my notes from the 'Style Transfer' lecture given by Udacity, Intro to Deep Learning 
+with PyTorch. You can find the references below. 
 
 The key is using the technique that a trained CNN to separate the content from the style of an image. Then you can merge the content of 
 one image and style of another and you will get a new image.  
@@ -26,7 +29,7 @@ In this paper[1]  style transfer usses the features found in 19 layer VGG networ
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/image_op/vgg_fig.png" width="75%">
-  <div class="figcaption">Figure: VGG Layers for Style and Content Images.</div>
+  <div class="figcaption">Figure: VGG Layers for Style and Content Images</div>
 </div>
 
 

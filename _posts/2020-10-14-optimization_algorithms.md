@@ -1,9 +1,11 @@
 ---
 layout: post
 title: "Standford cs231n: Optimization Algorithms in Neural Networks"
-categories: misc
+categories: nn
 ---
 
+In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Standsord University, the lecture videos of cs231n 
+can be found in YouTube and all materials are freely available (see the references). 
 
 # First Order Optimization Algorithms
 
@@ -33,8 +35,9 @@ categories: misc
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/sgd_vs_momentum.png" width="75%">
-  <div class="figcaption">SGD vs Momentum</div>
+  <div class="figcaption">SGD vs SGD with Momentum</div>
 </div>
+
  
 ## SGD with Nesterov Momentum
 
@@ -140,14 +143,14 @@ Different Models comparison: {'sgd': 5e-3, 'sgd_momentum':  5e-3, 'rmsprop': 1e-
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/different_models.png" width="75%">
-  <div class="figcaption">Different Models</div>
+  <div class="figcaption">Different models</div>
 </div>
 
 Different Models comparison: {'sgd': 1e-3, 'sgd_momentum':  1e-3, 'rmsprop': 1e-3, 'adam': 1e-3}
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/different_models_same_lr.png" width="75%">
-  <div class="figcaption">Different models with same learning rate</div>
+  <div class="figcaption">Different models with the same learning rate</div>
 </div>
 
 ## Change LR
@@ -164,7 +167,7 @@ Start with no decay. Select the best learning rate. Check the loss plot and deci
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/sgd_lr.png" width="75%">
-  <div class="figcaption">SGD different learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
+  <div class="figcaption">SGD, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
 </div>
 
 
@@ -172,14 +175,14 @@ Start with no decay. Select the best learning rate. Check the loss plot and deci
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/sgd_moment_lr.png" width="75%">
-  <div class="figcaption">SGD with Momentum Learning Rates: 1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
+  <div class="figcaption">SGD with Momentum, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
 </div>
 
 #### 'rmsprop': 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/rms_lr.png" width="75%">
-  <div class="figcaption">RMSProp Different learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
+  <div class="figcaption">RMSProp, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
 </div>
 
 
@@ -196,7 +199,7 @@ RMS Prop needs smaller lr: [1e-5, 5e-5, 5e-4, 1e-4]
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/optimization_images/adam_lr.png" width="75%">
-  <div class="figcaption">Adam different learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
+  <div class="figcaption">Adam, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
 </div>
 
 
