@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Image Loading and Transformation with Numpy & PyTorch & PIL"
-categories: misc
+categories: CNN
 ---
 
 In this notebook, I will explain how to load an image with PIL and explain some operations with PyTorch and Numpy. These processes are part of Style Transfer in Convolutional Neural Networks, there are two images: content and style. The next post defines how to transfer the style of one image to the content of the other image.
@@ -187,7 +187,7 @@ ax2.imshow(im_convert(style))
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/image_op/content_style.png" width="49%">
-  <div class="figcaption">Content Image(left) - Style Image(right).</div>
+  <div class="figcaption">Content Image(left) - Style Image(right)</div>
 </div>
 
 
@@ -363,7 +363,7 @@ plt.imshow(image)
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/image_op/content.png" width="49%">
-  <div class="figcaption">Content image.</div>
+  <div class="figcaption">Content image</div>
 </div>
 
 **Summary:**
