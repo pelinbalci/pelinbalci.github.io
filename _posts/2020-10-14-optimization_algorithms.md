@@ -4,7 +4,7 @@ title: "Standford cs231n: Optimization Algorithms in Neural Networks"
 categories: nn
 ---
 
-In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Standsord University, the lecture 
+In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Stanford University, the lecture 
 videos of cs231n can be found in YouTube and all materials are freely available (see the references). 
 
 # First Order Optimization Algorithms

@@ -7,20 +7,20 @@ categories: cnn
 In this post, I would like to share my notes from the 'Style Transfer' lecture given by Udacity, Intro to Deep Learning 
 with PyTorch. You can find the references below. 
 
-The key is using the technique that a trained CNN to separate the content from the style of an image. Then you can merge the content of 
-one image and style of another and you will get a new image.  
+The key is using the technique that a trained CNN to separate the content from the style of an image. 
+Then you can merge the content of one image and style of another and you will get a new image.  
 
     content image + style image = target image
 
 **Separating Style & Content**
 
 In deep networks, the image is transformed and the layers care about the content of the image, rather than texture and 
-colors. But what about style? It is tecture, colors, curvature...
+colors. But what about style? It is texture, colors, curvature...
 
 
 ## VGG19 Paper Summary
 
-In this paper[1]  style transfer usses the features found in 19 layer VGG network. 
+In this paper[1]  style transfer uses the features found in 19 layer VGG network. 
 
 - Input: a color image.
 - Pass through conv and pool layers. 

@@ -4,7 +4,9 @@ title: "Image Loading and Transformation with Numpy & PyTorch & PIL"
 categories: cnn
 ---
 
-In this notebook, I will explain how to load an image with PIL and explain some operations with PyTorch and Numpy. These processes are part of Style Transfer in Convolutional Neural Networks, there are two images: content and style. The next post defines how to transfer the style of one image to the content of the other image.
+In this notebook, I will explain how to load an image with PIL and explain some operations with PyTorch and Numpy. 
+These processes are part of Style Transfer in Convolutional Neural Networks, there are two images: content and style. 
+The next post defines how to transfer the style of one image to the content of the other image.
 
 This document is prepared by using Google Colab and the lecture notes from: https://classroom.udacity.com/courses/ud188
 

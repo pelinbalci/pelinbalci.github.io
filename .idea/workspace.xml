@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+    <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="fig names">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,18 +43,18 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts/images" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
+    <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts/images" />
-      <recent name="$PROJECT_DIR$/_posts" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/image_op" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_posts/images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,41 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595322575043</updated>
-    </task>
-    <task id="LOCAL-00001" summary="fix">
-      <created>1595324789231</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1595324789231</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix">
-      <created>1595325484191</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1595325484191</updated>
-    </task>
-    <task id="LOCAL-00003" summary="fix">
-      <created>1595344481832</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1595344481832</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix">
-      <created>1595345217428</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1595345217428</updated>
-    </task>
-    <task id="LOCAL-00005" summary="fix">
-      <created>1595346310979</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1595346310979</updated>
     </task>
     <task id="LOCAL-00006" summary="fix">
       <created>1595346499763</created>
@@ -293,17 +258,164 @@
       <option name="project" value="LOCAL" />
       <updated>1603134441985</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="icon">
+      <created>1603134740981</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1603134740981</updated>
+    </task>
+    <task id="LOCAL-00034" summary="icon">
+      <created>1603134931995</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1603134931995</updated>
+    </task>
+    <task id="LOCAL-00035" summary="icon">
+      <created>1603135105480</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1603135105480</updated>
+    </task>
+    <task id="LOCAL-00036" summary="title">
+      <created>1603135204807</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1603135204807</updated>
+    </task>
+    <task id="LOCAL-00037" summary="delete example posts">
+      <created>1603135593504</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603135593504</updated>
+    </task>
+    <task id="LOCAL-00038" summary="title">
+      <created>1603135609293</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1603135609293</updated>
+    </task>
+    <task id="LOCAL-00039" summary="fix error">
+      <created>1603135637384</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1603135637384</updated>
+    </task>
+    <task id="LOCAL-00040" summary="fix title">
+      <created>1603136018105</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1603136018105</updated>
+    </task>
+    <task id="LOCAL-00041" summary="fix images">
+      <created>1603136259435</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1603136259435</updated>
+    </task>
+    <task id="LOCAL-00042" summary="style_transfer_post">
+      <created>1603186528331</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1603186528332</updated>
+    </task>
+    <task id="LOCAL-00043" summary="rename_file">
+      <created>1603186589792</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1603186589792</updated>
+    </task>
+    <task id="LOCAL-00044" summary="change the headers">
+      <created>1603187956325</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1603187956325</updated>
+    </task>
+    <task id="LOCAL-00045" summary="optimization_post">
+      <created>1603189532670</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1603189532670</updated>
+    </task>
+    <task id="LOCAL-00046" summary="opt_images">
+      <created>1603193427895</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1603193427895</updated>
+    </task>
+    <task id="LOCAL-00047" summary="small_fix">
+      <created>1603193979282</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1603193979282</updated>
+    </task>
+    <task id="LOCAL-00048" summary="trial">
+      <created>1603194613278</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1603194613278</updated>
+    </task>
+    <task id="LOCAL-00049" summary="small changes">
+      <created>1603195020580</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195020580</updated>
+    </task>
+    <task id="LOCAL-00050" summary="delete the trial post">
+      <created>1603195046765</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195046767</updated>
+    </task>
+    <task id="LOCAL-00051" summary="fig names">
+      <created>1603195257061</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1603195257061</updated>
+    </task>
+    <task id="LOCAL-00052" summary="cv_update">
+      <created>1603199556482</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1603199556482</updated>
+    </task>
+    <task id="LOCAL-00053" summary="cv_links">
+      <created>1603200465362</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1603200465363</updated>
+    </task>
+    <task id="LOCAL-00054" summary="update">
+      <created>1629662404830</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1629662404831</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CNN notes" />
-    <MESSAGE value="style_triaş" />
-    <MESSAGE value="add path" />
-    <MESSAGE value="rename" />
-    <MESSAGE value="trial" />
-    <MESSAGE value="cv" />
-    <MESSAGE value="CV" />
     <MESSAGE value="trial_post" />
     <MESSAGE value="add image" />
     <MESSAGE value="fix" />
@@ -311,28 +423,38 @@
     <MESSAGE value="homepage" />
     <MESSAGE value="twitter_icon_trial" />
     <MESSAGE value="icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="icon" />
+    <MESSAGE value="delete example posts" />
+    <MESSAGE value="title" />
+    <MESSAGE value="fix error" />
+    <MESSAGE value="fix title" />
+    <MESSAGE value="fix images" />
+    <MESSAGE value="style_transfer_post" />
+    <MESSAGE value="rename_file" />
+    <MESSAGE value="change the headers" />
+    <MESSAGE value="optimization_post" />
+    <MESSAGE value="opt_images" />
+    <MESSAGE value="small_fix" />
+    <MESSAGE value="trial" />
+    <MESSAGE value="small changes" />
+    <MESSAGE value="delete the trial post" />
+    <MESSAGE value="fig names" />
+    <MESSAGE value="cv_update" />
+    <MESSAGE value="cv_links" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2" timestamp="1603134441765">
+    <state x="247" y="23" key="CommitChangelistDialog2" timestamp="1629662404547">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="40" y="23" width="1240" height="777" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1603134441765" />
-    <state x="140" y="123" width="907" height="577" key="DiffContextDialog" timestamp="1603132847543">
+    <state x="247" y="23" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1629662404547" />
+    <state x="169" y="50" key="SettingsEditor" timestamp="1629662271196">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="140" y="123" width="907" height="577" key="DiffContextDialog/40.23.1240.777@40.23.1240.777" timestamp="1603132847543" />
-    <state x="40" y="50" key="SettingsEditor" timestamp="1603112694694">
+    <state x="169" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1629662271196" />
+    <state x="260" y="151" key="Vcs.Push.Dialog.v2" timestamp="1629662409197">
       <screen x="40" y="23" width="1240" height="777" />
     </state>
-    <state x="40" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1603112694694" />
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2" timestamp="1603134443957">
-      <screen x="40" y="23" width="1240" height="777" />
-    </state>
-    <state x="40" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1603134443957" />
-    <state x="280" y="310" width="882" height="490" key="find.popup" timestamp="1603131517096">
-      <screen x="40" y="23" width="1240" height="777" />
-    </state>
-    <state x="280" y="310" width="882" height="490" key="find.popup/40.23.1240.777@40.23.1240.777" timestamp="1603131517096" />
+    <state x="260" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1629662409197" />
   </component>
 </project>
