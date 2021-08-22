@@ -19,6 +19,10 @@ Operations Research, Mathematical Modeling, Data Science, Machine Learning, Deep
 Python for Data Science (Pandas, Numpy, Scikit-learn, Matplotlib, PyTorch), SQL, GAMS
 
 ## Work Experiences
+- 2020 - SabancıDX, Data Scientsit
+    - Energy Imbalance System Direction Prediction
+    - Package & Driver Optimization for Fast Food Company
+    - Tools: Implement neural network with PyTorch, Simulation Environment with Simpy
 - 2019 – 2020	Adphorus a Sojern Company, Sr. Data Analyst
     - Production level codes for reporting performance of the algorithms by using Python, Facebook API and SQL 
     - A/B testing methods
@@ -74,10 +78,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Foreign Languages 
 English (Advanced), Spanish (Beginner), German (Beginner)
 
-## Club Memberships & Social Activities
+## Interests
+- Minimalism, 2021
 - Cycling, 2020
-- Lindy Hop Dance, 2018
-- TÜBİTAK Formula-G Solar Car Race, G-Mobil 2 Sponsor Team Member, 2008 – 2009
-- Gazi University Technology Club, Charter Member and Member of the Board, 2007 - 2009
-- Personal Characteristics
+- Lindy Hop, Solo Jazz, 2018
 - Self-learner, a good team member, creative and analytical thinking, good communication skills
