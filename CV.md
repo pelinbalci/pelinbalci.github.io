@@ -62,6 +62,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
+- Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/verify/XNKW988DUE4H?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=course)
+- Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/verify/EWZ43LNQU7DH?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=course)
 - CS231n Convolutional Neural Networks for Visual Recognition, Standford University, 2020
 - Intro to Deep Learning with PyTorch, Udacity, 2020 [github_notes](https://github.com/pelinbalci/Intro_Deep_Learning)
 - AWS Machine Learning Foundation Course, Udacity, 2020 [github_notes](https://github.com/pelinbalci/aws_ml_foundations)
