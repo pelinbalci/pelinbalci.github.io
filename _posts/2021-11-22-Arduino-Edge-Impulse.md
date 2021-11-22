@@ -14,6 +14,12 @@ Remember that those tips are valid for Windows OS.
 - Download the latest version of python. 
 - Install node.js from: https://nodejs.org/en/
 - **Select to install the addition tools when installing NodeJS.** (https://docs.edgeimpulse.com/docs/cli-installation)
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/nodejs.PNG" width="75%">
+  <div class="figcaption">Figure 2: Node.js download</div>
+</div>
+
 - Launch cmd, $npm config set msvs_version 2017 (https://github.com/nodejs/node-gyp#on-windows)
 - If you have multiple Python versions installed, **you need to identify which Python version node-gyp should use**:(https://github.com/nodejs/node-gyp#on-windows)
   
@@ -106,8 +112,8 @@ Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my devi
     [WS ] Go to https://studio.edgeimpulse.com/studio/62428/acquisition/training to build your machine learning model!`
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/device.PNG" width="49%">
-  <div class="figcaption">Figure 2: Content image</div>
+  <img src="/assets/tinyml_images/device.PNG" width="75%">
+  <div class="figcaption">Figure 2: Finally! :) </div>
 </div>
 
 
