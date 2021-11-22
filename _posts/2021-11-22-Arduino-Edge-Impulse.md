@@ -106,7 +106,7 @@ Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my devi
     [WS ] Go to https://studio.edgeimpulse.com/studio/62428/acquisition/training to build your machine learning model!`
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/image_op/content.png" width="49%">
+  <img src="/assets/tinyml_images/device.PNG" width="49%">
   <div class="figcaption">Figure 2: Content image</div>
 </div>
 
