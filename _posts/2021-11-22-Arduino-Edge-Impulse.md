@@ -16,8 +16,8 @@ Remember that those tips are valid for Windows OS.
 - **Select to install the addition tools when installing NodeJS.** (https://docs.edgeimpulse.com/docs/cli-installation)
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/nodejs.PNG" width="75%">
-  <div class="figcaption">Figure 2: Node.js download</div>
+  <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
+  <div class="figcaption">Figure 1: Node.js download</div>
 </div>
 
 - Launch cmd, $npm config set msvs_version 2017 (https://github.com/nodejs/node-gyp#on-windows)
