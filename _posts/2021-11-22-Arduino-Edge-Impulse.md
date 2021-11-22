@@ -46,8 +46,8 @@ Remember that those tips are valid for Windows OS.
 
 For me, those commands were both empty :( I will explain the solution in a minute. 
 
-### 4. Update the firmware: https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware
-- You need to download the latest Edge Impulse firmware and unzip the file. 
+### 4. Update the firmware
+- You need to download the latest Edge Impulse firmware and unzip the file. (https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware)
 - Open flash_windows.bat to flash the firmware. 
 - Wait until it is completed. 
   
