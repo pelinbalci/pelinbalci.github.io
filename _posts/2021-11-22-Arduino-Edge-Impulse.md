@@ -7,13 +7,16 @@ I've bought Arduino Tiny Machine Learning Kit for my tiny machine learning proje
 Here you can find some tips so that you don't deal with errors during the installation: 
 Remember that those tips are valid for Windows OS. 
 
-0. Sign up to edge impulse and create a project. 
+### 1. Sign up to edge impulse and create a project. 
 
-1. Edge Impulse CLI: https://docs.edgeimpulse.com/docs/cli-installation
+
+### 2. Install Edge Impulse CLI: 
+
+- https://docs.edgeimpulse.com/docs/cli-installation
 - Make sure that you **download  Visual Studio Community (using the "Desktop development with C++" workload).** 
 - Download the latest version of python. 
 - Install node.js from: https://nodejs.org/en/
-- **Select to install the addition tools when installing NodeJS.** (https://docs.edgeimpulse.com/docs/cli-installation)
+- **Install the additional tools when installing NodeJS.** 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
@@ -32,7 +35,9 @@ Remember that those tips are valid for Windows OS.
 
 (Note that before python config and downloading visual studio community, I got plenty of errors during installation of CLI tools. )
 
-2. Install Arduino CLI from: https://arduino.github.io/arduino-cli/0.20/installation/ to your C:/ directory. Then add the Arduino CLI installation path to your PATH environment variable. 
+### 3. Install Arduino CLI 
+
+- Install from: https://arduino.github.io/arduino-cli/0.20/installation/ to your C:/ directory. Then add the Arduino CLI installation path to your PATH environment variable. 
 - Run the following commands:
   
     `$ arduino-cli core list`
@@ -41,20 +46,20 @@ Remember that those tips are valid for Windows OS.
 
 For me, those commands were both empty :( I will explain the solution in a minute. 
 
-3. Update the firmware: https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware
+### 4. Update the firmware: https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware
 - You need to download the latest Edge Impulse firmware and unzip the file. 
 - Open flash_windows.bat to flash the firmware. 
 - Wait until it is completed. 
   
-**Here I got this error: Unknown FQBN: platform arduino:mbed is not installed**
+**Here, I got this error: Unknown FQBN: platform arduino:mbed is not installed**
 
-If you don't care this error too much and jump to the last step (like me!) with the command 
+If you don't care about this error and jump to the last step (like me!) with the command 
 
-    $edge-impulse-daemon, 
+    $edge-impulse-daemon
 
 you will get timeout errors.  :)
 
-Let's turn back to step 2. All these errors are coming from the arduino:mbed installation.
+Let's turn back to Step 3. All these errors are coming from the arduino:mbed installation.
 I searched for the solution from the following websites:
 
 - https://forum.edgeimpulse.com/t/incorrect-fqbn-error-installing-ei-firmware-for-arduino-nano-33ble-sense/1372/12
@@ -81,7 +86,7 @@ I think it is not helpful since $arduino-cli core list is still empty!
   
     `$ arduino-cli board list`  are not empty!
 
-I updated the firmware without getting any errors (Step 3). 
+I updated the firmware without getting any errors (Step 4). 
 
 Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my device to edge impulse :)
 
