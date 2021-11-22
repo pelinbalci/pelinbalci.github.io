@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de4f4924-c242-47f9-bb43-7306bebf13b6" name="Default Changelist" comment="fig names">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,18 +44,22 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/_posts" />
     <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\pelin\PycharmProjects\pelinbalci.github.io\_posts" />
+      <recent name="$PROJECT_DIR$/_posts" />
+      <recent name="$PROJECT_DIR$/_posts/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/images" />
       <recent name="$PROJECT_DIR$/assets/image_op" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/_posts" />
-      <recent name="$PROJECT_DIR$/_posts/images" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -68,13 +73,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595322575043</updated>
-    </task>
-    <task id="LOCAL-00006" summary="fix">
-      <created>1595346499763</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1595346499763</updated>
     </task>
     <task id="LOCAL-00007" summary="fix">
       <created>1595346559181</created>
@@ -412,11 +410,28 @@
       <option name="project" value="LOCAL" />
       <updated>1629662404831</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="tinyml initial">
+      <created>1637613761410</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1637613761410</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="trial_post" />
     <MESSAGE value="add image" />
     <MESSAGE value="fix" />
     <MESSAGE value="footer" />
@@ -441,20 +456,7 @@
     <MESSAGE value="cv_update" />
     <MESSAGE value="cv_links" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="247" y="23" key="CommitChangelistDialog2" timestamp="1629662404547">
-      <screen x="40" y="23" width="1240" height="777" />
-    </state>
-    <state x="247" y="23" key="CommitChangelistDialog2/40.23.1240.777@40.23.1240.777" timestamp="1629662404547" />
-    <state x="169" y="50" key="SettingsEditor" timestamp="1629662271196">
-      <screen x="40" y="23" width="1240" height="777" />
-    </state>
-    <state x="169" y="50" key="SettingsEditor/40.23.1240.777@40.23.1240.777" timestamp="1629662271196" />
-    <state x="260" y="151" key="Vcs.Push.Dialog.v2" timestamp="1629662409197">
-      <screen x="40" y="23" width="1240" height="777" />
-    </state>
-    <state x="260" y="151" key="Vcs.Push.Dialog.v2/40.23.1240.777@40.23.1240.777" timestamp="1629662409197" />
+    <MESSAGE value="tinyml initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="tinyml initial" />
   </component>
 </project>
