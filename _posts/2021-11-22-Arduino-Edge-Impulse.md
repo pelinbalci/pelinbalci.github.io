@@ -117,7 +117,7 @@ Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my devi
 </div>
 
 
-# Key Words
+## Key Words
 Tiny ML, Arduino, Edge Impulse, Timeout, arduino:mbed
 
 
