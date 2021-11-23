@@ -65,7 +65,7 @@ If you don't care about this error and jump to the last step (like me!) with the
 
     $edge-impulse-daemon
 
-you will get timeout errors.  :)
+you will get timeout error.  :)
 
   `Failed to get info off device Timeout when waiting for >  (timeout: 5000) onConnected`
 
