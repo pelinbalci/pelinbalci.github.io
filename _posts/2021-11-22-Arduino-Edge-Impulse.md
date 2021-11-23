@@ -12,7 +12,7 @@ Remember that those tips are valid for Windows OS.
 
 ### 2. Install Edge Impulse CLI: 
 
-- [https://docs.edgeimpulse.com/docs/cli-installation]
+- [https://docs.edgeimpulse.com/docs/cli-installation](https://docs.edgeimpulse.com/docs/cli-installation)
 - Make sure that you **download  Visual Studio Community (using the "Desktop development with C++" workload).** 
 - Download the latest version of python. 
 - Install node.js from: https://nodejs.org/en/
@@ -23,7 +23,7 @@ Remember that those tips are valid for Windows OS.
   <div class="figcaption">Figure 1: Node.js download</div>
 </div>
 
-- Check this website for additional configurations: [https://github.com/nodejs/node-gyp#on-windows]
+- Check this website for additional configurations: [https://github.com/nodejs/node-gyp#on-windows](https://github.com/nodejs/node-gyp#on-windows)
   
 - Set msvs version
   
