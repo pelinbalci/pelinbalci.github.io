@@ -34,7 +34,7 @@ Remember that those tips are valid for Windows OS.
 
     `$npm config set python /path/to/executable/python`
 
-- Additional info can be found here: [https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#compiling-native-addon-modules]
+- Additional info can be found here: [https://github.com/Microsoft/nodejs-guidelines](https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#compiling-native-addon-modules)
 - Install CLI tools via: 
   
     `$npm install -g edge-impulse-cli --force`
@@ -43,7 +43,7 @@ Remember that those tips are valid for Windows OS.
 
 ### 3. Install Arduino CLI 
 
-- Install from: [https://arduino.github.io/arduino-cli/0.20/installation/] to your C:/ directory. Then add the Arduino 
+- Install Arduino CLI to your C:/ directory from [https://arduino.github.io/arduino-cli/0.20/installation/](https://arduino.github.io/arduino-cli/0.20/installation/). Then add the Arduino 
   CLI installation path to your PATH environment variable. 
 - Run the following commands:
   
@@ -55,7 +55,7 @@ For me, those commands were both empty :( I will explain the solution in a minut
 
 ### 4. Update the firmware
 - You need to download the latest Edge Impulse firmware and unzip the file: 
-  [https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware]
+  [https://docs.edgeimpulse.com/](https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware)
 - Open flash_windows.bat to flash the firmware. 
 - Wait until it is completed. 
   
@@ -72,12 +72,13 @@ you will get timeout errors.  :)
 Let's turn back to Step 3. All these errors are coming from the arduino:mbed installation.
 I searched for the solution from the following websites:
 
-- [https://forum.edgeimpulse.com/t/incorrect-fqbn-error-installing-ei-firmware-for-arduino-nano-33ble-sense/1372/12]
-- [https://create.arduino.cc/projecthub/B45i/getting-started-with-arduino-cli-7652a5]
-- [https://forum.edgeimpulse.com/t/arduino-cli-version/1332/6]
-- [https://forum.edgeimpulse.com/t/issue-uploading-edge-impulse-firmware-for-nano/1683/2]
-- [https://forum.arduino.cc/t/problem-uploading-to-new-board-arduino-nano-33-ble/685958]
-- [https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano]
+- [forum_egde_impulse_1](https://forum.edgeimpulse.com/t/incorrect-fqbn-error-installing-ei-firmware-for-arduino-nano-33ble-sense/1372/12)
+- [forum_egde_impulse_2](https://forum.edgeimpulse.com/t/arduino-cli-version/1332/6)
+- [forum_egde_impulse_3](https://forum.edgeimpulse.com/t/issue-uploading-edge-impulse-firmware-for-nano/1683/2)
+- [forum_egde_impulse_4](https://forum.arduino.cc/t/problem-uploading-to-new-board-arduino-nano-33-ble/685958) 
+- [get_start_with_arduino_1](https://create.arduino.cc/projecthub/B45i/getting-started-with-arduino-cli-7652a5)
+- [get_start_with_arduino_1](https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano)
+
 
 Here you can find what I did to solve this problem:
 - Download Arduino IDE. 
