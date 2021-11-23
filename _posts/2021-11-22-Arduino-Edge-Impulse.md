@@ -12,7 +12,7 @@ Remember that those tips are valid for Windows OS.
 
 ### 2. Install Edge Impulse CLI: 
 
-- https://docs.edgeimpulse.com/docs/cli-installation
+- [https://docs.edgeimpulse.com/docs/cli-installation]
 - Make sure that you **download  Visual Studio Community (using the "Desktop development with C++" workload).** 
 - Download the latest version of python. 
 - Install node.js from: https://nodejs.org/en/
@@ -23,12 +23,18 @@ Remember that those tips are valid for Windows OS.
   <div class="figcaption">Figure 1: Node.js download</div>
 </div>
 
-- Launch cmd, $npm config set msvs_version 2017 (https://github.com/nodejs/node-gyp#on-windows)
-- If you have multiple Python versions installed, **you need to identify which Python version node-gyp should use**:(https://github.com/nodejs/node-gyp#on-windows)
+- Check this website for additional configurations: [https://github.com/nodejs/node-gyp#on-windows]
   
+- Set msvs version
+  
+    `$npm config set msvs_version 2017`
+
+- If you have multiple Python versions installed, **you need to identify which Python version node-gyp should use**: 
+  [https://github.com/nodejs/node-gyp#on-windows]
+
     `$npm config set python /path/to/executable/python`
 
-- Additional info can be found here: https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#compiling-native-addon-modules
+- Additional info can be found here: [https://github.com/Microsoft/nodejs-guidelines/blob/master/windows-environment.md#compiling-native-addon-modules]
 - Install CLI tools via: 
   
     `$npm install -g edge-impulse-cli --force`
@@ -37,7 +43,8 @@ Remember that those tips are valid for Windows OS.
 
 ### 3. Install Arduino CLI 
 
-- Install from: https://arduino.github.io/arduino-cli/0.20/installation/ to your C:/ directory. Then add the Arduino CLI installation path to your PATH environment variable. 
+- Install from: [https://arduino.github.io/arduino-cli/0.20/installation/] to your C:/ directory. Then add the Arduino 
+  CLI installation path to your PATH environment variable. 
 - Run the following commands:
   
     `$ arduino-cli core list`
@@ -47,11 +54,12 @@ Remember that those tips are valid for Windows OS.
 For me, those commands were both empty :( I will explain the solution in a minute. 
 
 ### 4. Update the firmware
-- You need to download the latest Edge Impulse firmware and unzip the file. (https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware)
+- You need to download the latest Edge Impulse firmware and unzip the file: 
+  [https://docs.edgeimpulse.com/docs/arduino-nano-33-ble-sense#2-update-the-firmware]
 - Open flash_windows.bat to flash the firmware. 
 - Wait until it is completed. 
   
-**Here, I got this error: Unknown FQBN: platform arduino:mbed is not installed**
+  `Here, I got this error: Unknown FQBN: platform arduino:mbed is not installed`
 
 If you don't care about this error and jump to the last step (like me!) with the command 
 
@@ -59,15 +67,17 @@ If you don't care about this error and jump to the last step (like me!) with the
 
 you will get timeout errors.  :)
 
+  `Failed to get info off device Timeout when waiting for >  (timeout: 5000) onConnected`
+
 Let's turn back to Step 3. All these errors are coming from the arduino:mbed installation.
 I searched for the solution from the following websites:
 
-- https://forum.edgeimpulse.com/t/incorrect-fqbn-error-installing-ei-firmware-for-arduino-nano-33ble-sense/1372/12
-- https://create.arduino.cc/projecthub/B45i/getting-started-with-arduino-cli-7652a5
-- https://forum.edgeimpulse.com/t/arduino-cli-version/1332/6
-- https://forum.edgeimpulse.com/t/issue-uploading-edge-impulse-firmware-for-nano/1683/2
-- https://forum.arduino.cc/t/problem-uploading-to-new-board-arduino-nano-33-ble/685958
-- https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano
+- [https://forum.edgeimpulse.com/t/incorrect-fqbn-error-installing-ei-firmware-for-arduino-nano-33ble-sense/1372/12]
+- [https://create.arduino.cc/projecthub/B45i/getting-started-with-arduino-cli-7652a5]
+- [https://forum.edgeimpulse.com/t/arduino-cli-version/1332/6]
+- [https://forum.edgeimpulse.com/t/issue-uploading-edge-impulse-firmware-for-nano/1683/2]
+- [https://forum.arduino.cc/t/problem-uploading-to-new-board-arduino-nano-33-ble/685958]
+- [https://docs.arduino.cc/software/ide-v1/tutorials/getting-started/cores/arduino-mbed_nano]
 
 Here you can find what I did to solve this problem:
 - Download Arduino IDE. 
@@ -89,7 +99,6 @@ I think it is not helpful since $arduino-cli core list is still empty!
 I updated the firmware without getting any errors (Step 4). 
 
 Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my device to edge impulse :)
-
 
 
     `Edge Impulse serial daemon v1.13.16
@@ -117,7 +126,7 @@ Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my devi
     [WS ] Go to https://studio.edgeimpulse.com/studio/62428/acquisition/training to build your machine learning model!`
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/device.PNG" width="75%">
+  <img src="/assets/tinyml_images/device.PNG" width="90%">
   <div class="figcaption">Figure 2: Finally! :) </div>
 </div>
 
