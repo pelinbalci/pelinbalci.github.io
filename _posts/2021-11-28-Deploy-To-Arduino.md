@@ -3,6 +3,7 @@ layout: post
 title: "How to Deploy Model to Arduino?"
 categories: tinyml
 ---
+In this post, I will explain the deployment of edge impulse to Arduino. 
 
 "You can deploy your impulse to any device. This makes the model run without an internet connection, 
 minimizes latency, and runs with minimal power consumption."
@@ -17,17 +18,17 @@ Please check this website: [https://docs.edgeimpulse.com/docs/running-your-impul
 
 It gives me arduino_motion-nano-33-ble-sense-v1.zip which includes flash.bat file. 
 Reboot arduino and run flash.bat.
-Lunch command prompt run $edge-impulse-run --> **This starts live classification.** 
+Lunch command prompt run $edge-impulse-run --> This starts live classification.
 
-But,  this is not what I want. I would like to download impulse library. 
+But,  this is not what I want. I would like to **download impulse library.**
 
     I click build again without selecting Arduino Nano 33 BLE Sense from Build Firmware, 
     it gives me ei-arduino-motion.zip this time. 
 
 - Open Arduino IDE.
 - Sketch --> include licbrary --> Add zip --> select arduino-motion.zip
-- Tools --> board --> Mbed OS Nano Boards --> select Arduino Nan0 33 BLE
-- File --> examples --> Arduino Motion Inferencing --> select Nano BLE 33 Sense Accelerometer
+- Tools --> board --> Arduino Mbed OS Nano Boards --> select Arduino Nano 33 BLE
+- File --> examples --> Arduino Motion Inferencing --> select Arduino Nano 33 BLE Sense Accelerometer
 - Tools --> Port --> Select Arduino COM
 - Click Upload  
 
@@ -39,7 +40,7 @@ Please check this website, I found it really heplpful: [https://www.programminge
 
 I installed  Arduino_LSM9DS1  from: 
     
-    Open Arduino IDE: sketch --> include library --> manage libraries --> Arduino TensorflowLite. 
+    Open Arduino IDE: sketch --> include library --> manage libraries --> Arduino_LSM9DS1 
 
 Upload completed with the errors below:
 
@@ -149,7 +150,7 @@ I installed  Arduino TensorflowLite via:
 
     Open Arduino IDE: sketch --> include library --> manage libraries --> Arduino TensorflowLite. 
 
-Start upload again. Same old :(
+Start upload again. Same error :(
 
     C:\Users\pelin\Documents\Arduino\libraries\arduino_motion_inferencing\src\edge-impulse-sdk\CMSIS\NN\Source\PoolingFunctions\arm_pool_q7_HWC.c:125:9: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
              *__SIMD32(pCnt)++ = __QADD16(vo2, in);
@@ -166,7 +167,7 @@ Start upload again. Same old :(
 
 Yet, when I open:
 
-    File -> examples -> arduino_motion_inferencing -> arduino nano ble33 sense accelerometer contionuous
+    File -> examples -> arduino_motion_inferencing -> Arduino Nano 33 BLE Sense Accelerometer Contionuous
 
 Upload and open serial monitor: 
 
