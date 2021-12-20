@@ -85,3 +85,10 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 - Cycling, 2020
 - Lindy Hop, Solo Jazz, 2018
 - Self-learner, a good team member, creative and analytical thinking, good communication skills
+
+## Badges
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/Edge-Impulse_badge.PNG" width="90%">
+  <div class="figcaption"> </div>
+</div>
