@@ -91,6 +91,6 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 ## Badges
 
 <div class="fig figcenter fighighlight">
-  <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="20%">
+  <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="40%">
   <div class="figcaption"> </div>
 </div>
