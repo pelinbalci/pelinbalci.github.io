@@ -124,5 +124,5 @@ There are some errors between light and heavy but that's ok :)
   <div class="figcaption">Live Classification </div>
 </div>
 
-
-VIDEO
+### Key Words
+Tiny ML, Arduino, Edge Impulse, Motion, Classification
