@@ -95,11 +95,21 @@ English (Advanced), Spanish (Beginner), German (Beginner)
   <div class="figcaption"> </div>
 </div>
 
+
 <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" alt="Badge">
 
+
 ![img.png](assets/tinyml_images/Edge-Impulse_badge.PNG)
+
 
 <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" alt="drawing" width="50%"/>
 
 
 <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="200">
+
+
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
+  <div class="figcaption">Figure 1: Node.js download</div>
+</div>
