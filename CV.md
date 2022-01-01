@@ -100,3 +100,8 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 ![img.png](assets/tinyml_images/Edge-Impulse_badge.PNG)
 
 <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="324" height="324">
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
+  <div class="figcaption">Figure 1: Node.js download</div>
+</div>
