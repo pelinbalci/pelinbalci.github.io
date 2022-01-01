@@ -41,8 +41,8 @@ Select Data- Acquisition, write the label name, and start sampling! There are 4 
 Here is a short video of the collecting data process:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/datacollect.mp4" width="90%">
-  <div class="figcaption">Setup </div>
+  <img src="/assets/tinyml_images/datacollect.mp4" width="50%">
+  <div class="figcaption">Data Collection </div>
 </div>
 
 I've collected 8 minutes of data (2 minutes for each class) and 2 minutes for test data.
@@ -54,7 +54,7 @@ You will select processing block and learning block. The processing block will h
 features, and the learning block is actually your model.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/impulse_design.PNG" width="90%">
+  <img src="/assets/tinyml_images/impulse_design.PNG" width="50%">
   <div class="figcaption">Impulse Design </div>
 </div>
 
@@ -93,7 +93,7 @@ After feature generation, I desging a neural network with 2 hidden layers and dr
 Here is the validation score:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/valid_acc.PNG" width="90%">
+  <img src="/assets/tinyml_images/valid_acc.PNG" width="70%">
   <div class="figcaption">Validation Accuracy :) </div>
 </div>
 
@@ -101,7 +101,7 @@ Here is the validation score:
 Then I choose model testing. The test score is 71.45%. I am happy with this result.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_acc.PNG" width="90%">
+  <img src="/assets/tinyml_images/test_acc.PNG" width="70%">
   <div class="figcaption">Test Accuracy :) </div>
 </div>
 
@@ -120,7 +120,7 @@ Then you can open Serial Monitor for live classification. Here is a short video 
 There are some errors between light and heavy but that's ok :)
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/live_classification.PNG" width="90%">
+  <img src="/assets/tinyml_images/live_classification.PNG" width="80%">
   <div class="figcaption">Live Classification </div>
 </div>
 
