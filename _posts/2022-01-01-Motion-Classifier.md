@@ -26,7 +26,10 @@ This is the funny part. You need to choose an item in your home that you can col
 I wish to have a remote-controlled car :( Anyway, I decided to use my hairdryer and taped the board to the hairdryer 
 as you can see below.
 
-PICTURE 
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/hairdryer.jpeg" width="90%">
+  <div class="figcaption">Setup </div>
+</div>
 
 Select Data- Acquisition, write the label name, and start sampling! There are 4 classes in my project, off, light, light_move, and heavy.
 
