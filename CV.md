@@ -90,28 +90,9 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 
 ## Badges
 
-<img src="assets/tinyml_images/badge.PNG" alt="Badge">
-
-
-![img.png](assets/tinyml_images/badge.PNG)
-
-
-<img src="assets/tinyml_images/badge.PNG" alt="drawing" width="50%"/>
-
-
-<img src="assets/tinyml_images/badge.PNG" width="200">
-
-
-
-<div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
-  <div class="figcaption">Figure 1: Node.js download</div>
-</div>
-
-
 pp
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/badge.PNG" width="60%">
+  <img src="/assets/tinyml_images/badge.PNG" width="30%">
   <div class="figcaption">Figure 1: Node.js download</div>
 </div>
