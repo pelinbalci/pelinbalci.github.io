@@ -27,7 +27,7 @@ I wish to have a remote-controlled car :( Anyway, I decided to use my hairdryer 
 as you can see below.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/hairdryer.jpeg" width="90%">
+  <img src="/assets/tinyml_images/hairdryer.jpeg" width="40%">
   <div class="figcaption">Setup </div>
 </div>
 
