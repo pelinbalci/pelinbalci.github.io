@@ -40,10 +40,9 @@ Select Data- Acquisition, write the label name, and start sampling! There are 4 
 
 Here is a short video of the collecting data process:
 
-<div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/datacollect.mp4" width="50%">
-  <div class="figcaption">Data Collection </div>
-</div>
+<video width="320" height="240" controls>
+  <source src="/assets/tinyml_images/datacollect.mp4" type="video/mp4">
+</video>
 
 I've collected 8 minutes of data (2 minutes for each class) and 2 minutes for test data.
 
@@ -54,7 +53,7 @@ You will select processing block and learning block. The processing block will h
 features, and the learning block is actually your model.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/impulse_design.PNG" width="50%">
+  <img src="/assets/tinyml_images/impulse_design.PNG" width="80%">
   <div class="figcaption">Impulse Design </div>
 </div>
 
