@@ -41,7 +41,7 @@ Select Data- Acquisition, write the label name, and start sampling! There are 4 
 Here is a short video of the collecting data process:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/hairdryer.jpeg" width="90%">
+  <img src="/assets/tinyml_images/datacollect.mp4" width="90%">
   <div class="figcaption">Setup </div>
 </div>
 
