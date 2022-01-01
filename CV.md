@@ -94,3 +94,9 @@ English (Advanced), Spanish (Beginner), German (Beginner)
   <img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="60%">
   <div class="figcaption"> </div>
 </div>
+
+<img src="assets/tinyml_images/Edge-Impulse_badge.PNG" alt="Badge">
+
+![img.png](assets/tinyml_images/Edge-Impulse_badge.PNG)
+
+<img src="assets/tinyml_images/Edge-Impulse_badge.PNG" width="324" height="324">
