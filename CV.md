@@ -90,9 +90,7 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 
 ## Badges
 
-pp
-
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/badge.PNG" width="30%">
+  <img src="/assets/tinyml_images/badge.PNG" width="20%">
   <div class="figcaption">Figure 1: Node.js download</div>
 </div>
