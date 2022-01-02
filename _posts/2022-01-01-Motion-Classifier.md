@@ -5,7 +5,7 @@ categories: tinyml
 ---
 Hello!
 
-Happy new year everyone:) On the very first day of the year, I completed a motion classifier project with edge impulse & Arduino. 
+Happy new year everyone:) On the very first day of the year, I completed a motion classifier project with Edge Impulse & Arduino. 
 I would like to tell you the steps of the project, some problems I've faced with and how to solve them.
 
 I would like to thank Coursera and Edge Impulse to give us a chance to learn embedded machine learning. 
@@ -14,14 +14,14 @@ Find more about the lecture: [Coursera](https://www.coursera.org/learn/introduct
 
 ### 1. Connection
 
-After creating a new project on edge impulse, I plugged in my Arduino board to my laptop, 
+After creating a new project on Edge Impulse, I plugged in my Arduino board to my laptop, 
 then **update the firmware** ---> this is very important do not skip this step. 
 
 Then I open the command prompt and write:
 
     edge-impulse-daemon --clean
 
-I can connect my Arduino board with my new project in edge impulse. Go back to your project on the edge impulse website 
+I can connect my Arduino board with my new project in Edge Impulse. Go back to your project on the Edge Impulse website 
 and check if the Arduino is connected. If you encountered with a problem, you can read my previous [post](https://pelinbalci.com/tinyml/2021/11/22/Arduino-Edge-Impulse.html)
 
 ### 2. Collect Data
@@ -52,7 +52,7 @@ I've collected 8 minutes of data (2 minutes for each class) and 2 minutes for te
 
 ### 3. Train & Test Model
 
-Impulse design is really easy thanks to edge impulse. First, you need to create impulse. 
+Impulse design is really easy thanks to Edge Impulse. First, you need to create impulse. 
 You will select processing block and learning block. The processing block will help you to generate 
 features, and the learning block is the classification model.
 
@@ -63,7 +63,7 @@ features, and the learning block is the classification model.
 
 
 You can check my previous post about [Fourier Transform](https://pelinbalci.com/2021/12/19/Fast-Fourier-Tranform.html), 
-It is used for generating features, fortunately, the edge impulse handles the Fouirer Transform for us.
+It is used for generating features, fortunately, the Edge Impulse handles the Fouirer Transform for us.
 
 After feature generation, I designed a neural network with 2 hidden layers and dropout layer with probability of 0.2 
 
