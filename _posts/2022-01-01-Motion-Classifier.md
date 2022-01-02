@@ -132,5 +132,37 @@ There are some errors between the targets light and heavy but that's ok :)
   <div class="figcaption">Live Classification </div>
 </div>
 
+
+### 5. Feature Extraction
+
+I tried to increase the test accuracy for all classes. In the feature generation part I've changed the parameters in Spectral features.
+
+Default filter value is low. First let's try heavy filter. The features separates the classes well but the test accuracy is worse than the low filter:
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/feature_heavy.PNG" width="80%">
+  <div class="figcaption">Heavy Filter </div>
+</div>
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/test_heavy.PNG" width="80%">
+  <div class="figcaption">Heavy Filter Test Accuracy </div>
+</div>
+
+Below, the result of none filter is presented:
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/feature_none.PNG" width="80%">
+  <div class="figcaption">None Filter </div>
+</div>
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/tinyml_images/test_none.PNG" width="80%">
+  <div class="figcaption">None Filter Test Accuracy </div>
+</div>
+
+
+
+
 ### Key Words
 Tiny ML, Arduino, Edge Impulse, Motion, Classification
