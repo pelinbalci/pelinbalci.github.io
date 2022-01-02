@@ -30,10 +30,14 @@ This is the funny part. You need to choose an item in your home that you can col
 I wish to have a remote-controlled car :( Anyway, I decided to use my hairdryer and taped the board to the hairdryer 
 as you can see below.
 
+## 
+
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/hairdryer.jpeg" width="40%" height="60%">
   <div class="figcaption">Setup </div>
 </div>
+
+## 
 
 Select Data- Acquisition, write the label name, and start sampling! There are 4 classes in my project, off, light, light_move, and heavy.
 
@@ -44,9 +48,13 @@ Select Data- Acquisition, write the label name, and start sampling! There are 4 
 
 Here is a short video of the collecting data process:
 
+## 
+
 <video width="320" height="240" controls>
   <source src="/assets/tinyml_images/datacollect.mp4" type="video/mp4">
 </video>
+
+## 
 
 I've collected 8 minutes of data (2 minutes for each class) and 2 minutes for test data.
 
@@ -56,11 +64,14 @@ Impulse design is really easy thanks to Edge Impulse. First, you need to create 
 You will select processing block and learning block. The processing block will help you to generate 
 features, and the learning block is the classification model.
 
+## 
+
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/impulse_design.PNG" width="80%">
   <div class="figcaption">Impulse Design </div>
 </div>
 
+##
 
 You can check my previous post about [Fourier Transform](https://pelinbalci.com/2021/12/19/Fast-Fourier-Tranform.html), 
 It is used for generating features, fortunately, the Edge Impulse handles the Fouirer Transform for us.
@@ -100,8 +111,11 @@ Here is the validation score:
   <div class="figcaption">Validation Accuracy :) </div>
 </div>
 
+##
 
 Then I choose model testing. The test score is 71.45%. I am happy with this result.
+
+## 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/test_acc.PNG" width="70%">
@@ -126,6 +140,7 @@ There are some errors between the targets light and heavy but that's ok :)
   <source src="/assets/tinyml_images/live_class.mp4" type="video/mp4">
 </video>
 
+##
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/live_classification.PNG" width="80%">
@@ -172,12 +187,17 @@ Default filter value is low. Let's try "heavy" filter. The features separates th
   <div class="figcaption">Heavy Filter </div>
 </div>
 
+## 
+
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/test_heavy.png" width="80%">
   <div class="figcaption">Heavy Filter Test Accuracy </div>
 </div>
 
-Filter Nnne gives very good result for test data :) 
+
+## 
+
+Filter None gives very good result for test data :) 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/feature_none.png" width="80%">
