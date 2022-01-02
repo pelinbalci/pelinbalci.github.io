@@ -148,7 +148,7 @@ There are some errors between the targets light and heavy but that's ok :)
 </div>
 
 
-### 5. Feature Extraction
+### 5. Improvement
 
 I tried to increase the test accuracy for all classes. First I changed the model architecture:
 
