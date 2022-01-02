@@ -168,24 +168,24 @@ Then, I've changed the parameters in Spectral features.
 Default filter value is low. Let's try "heavy" filter. The features separates the classes well but the test accuracy is worse than the low filter:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/feature_heavy.PNG" width="80%">
+  <img src="/assets/tinyml_images/feature_heavy.png" width="80%">
   <div class="figcaption">Heavy Filter </div>
 </div>
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_heavy.PNG" width="80%">
+  <img src="/assets/tinyml_images/test_heavy.png" width="80%">
   <div class="figcaption">Heavy Filter Test Accuracy </div>
 </div>
 
 Filter Nnne gives very good result for test data :) 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/feature_none.PNG" width="80%">
+  <img src="/assets/tinyml_images/feature_none.png" width="80%">
   <div class="figcaption">None Filter </div>
 </div>
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_none.PNG" width="80%">
+  <img src="/assets/tinyml_images/test_none.png" width="80%">
   <div class="figcaption">None Filter Test Accuracy </div>
 </div>
 
