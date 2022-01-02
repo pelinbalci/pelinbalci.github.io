@@ -50,7 +50,7 @@ I've collected 8 minutes of data (2 minutes for each class) and 2 minutes for te
 
 Impulse design is really easy thanks to edge impulse. First, you need to create impulse. 
 You will select processing block and learning block. The processing block will help you to generate 
-features, and the learning block is actually your model.
+features, and the learning block is the classification model.
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/impulse_design.PNG" width="80%">
@@ -61,7 +61,7 @@ features, and the learning block is actually your model.
 You can check my previous post about [Fourier Transform](https://pelinbalci.com/2021/12/19/Fast-Fourier-Tranform.html), 
 It is used for generating features, fortunately, the edge impulse handles the Fouirer Transform for us.
 
-After feature generation, I desging a neural network with 2 hidden layers and dropout layer with probability of 0.2 
+After feature generation, I designed a neural network with 2 hidden layers and dropout layer with probability of 0.2 
 
     import tensorflow as tf
     from tensorflow.keras.models import Sequential
@@ -106,7 +106,7 @@ Then I choose model testing. The test score is 71.45%. I am happy with this resu
 
 
 ### 4. Deployment
-You can read my previous post about deployment. Click Deployment, select Arduino, and the quantized version of the project (Please read more about Tensorflow Lite). Click build --> this will give you a zip file.
+You can read my previous [post](https://pelinbalci.com/tinyml/2021/11/28/Deploy-To-Arduino.html) about deployment. Click Deployment, select Arduino, and the quantized version of the project (Please read more about Tensorflow Lite). Click build --> this will give you a zip file.
 
 Now please close the terminal if it still opens. (I got "port is busy" error during uploading before I close the terminal)
 
@@ -116,7 +116,12 @@ Open Arduino IDE.
 - File --> Examples --> motion_classifier_inferencing --> nano_ble33_sense_accelerometer --> upload --> this will take around 10 minutes.
 
 Then you can open Serial Monitor for live classification. Here is a short video for live classification. 
-There are some errors between light and heavy but that's ok :)
+There are some errors between the targets light and heavy but that's ok :)
+
+<video width="320" height="240" controls>
+  <source src="/assets/tinyml_images/live_class.mp4" type="video/mp4">
+</video>
+
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/live_classification.PNG" width="80%">
