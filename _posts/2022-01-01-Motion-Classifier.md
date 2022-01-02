@@ -135,9 +135,37 @@ There are some errors between the targets light and heavy but that's ok :)
 
 ### 5. Feature Extraction
 
-I tried to increase the test accuracy for all classes. In the feature generation part I've changed the parameters in Spectral features.
+I tried to increase the test accuracy for all classes. First I changed the model architecture:
 
-Default filter value is low. First let's try heavy filter. The features separates the classes well but the test accuracy is worse than the low filter:
+    import tensorflow as tf
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense, InputLayer, Dropout, Conv1D, Conv2D, Flatten, Reshape, MaxPooling1D, MaxPooling2D, BatchNormalization, TimeDistributed
+    from tensorflow.keras.optimizers import Adam
+    
+    # model architecture
+    model = Sequential()
+    model.add(Dense(128, activation='relu',
+        activity_regularizer=tf.keras.regularizers.l1(0.00001)))
+    model.add(Dense(64, activation='relu',
+        activity_regularizer=tf.keras.regularizers.l1(0.00001)))
+    model.add(Dropout(0.25))
+    model.add(Dense(classes, activation='softmax', name='y_pred'))
+    
+    # this controls the learning rate
+    opt = Adam(lr=0.0001, beta_1=0.9, beta_2=0.999)
+    # this controls the batch size, or you can manipulate the tf.data.Dataset objects yourself
+    BATCH_SIZE = 32
+    train_dataset = train_dataset.batch(BATCH_SIZE, drop_remainder=False)
+    validation_dataset = validation_dataset.batch(BATCH_SIZE, drop_remainder=False)
+    callbacks.append(BatchLoggerCallback(BATCH_SIZE, train_sample_count))
+    
+    # train the neural network
+    model.compile(loss='categorical_crossentropy', optimizer=opt, metrics=['accuracy'])
+    model.fit(train_dataset, epochs=30, validation_data=validation_dataset, verbose=2, callbacks=callbacks)
+
+Then, I've changed the parameters in Spectral features.
+
+Default filter value is low. Let's try "heavy" filter. The features separates the classes well but the test accuracy is worse than the low filter:
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/feature_heavy.PNG" width="80%">
@@ -149,7 +177,7 @@ Default filter value is low. First let's try heavy filter. The features separate
   <div class="figcaption">Heavy Filter Test Accuracy </div>
 </div>
 
-Below, the result of none filter is presented:
+Filter Nnne gives very good result for test data :) 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/feature_none.PNG" width="80%">
@@ -160,8 +188,6 @@ Below, the result of none filter is presented:
   <img src="/assets/tinyml_images/test_none.PNG" width="80%">
   <div class="figcaption">None Filter Test Accuracy </div>
 </div>
-
-
 
 
 ### Key Words
