@@ -54,9 +54,8 @@ Here comes the final step: I clicked "Upload" to compile and send the program to
     Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
     ERR: Failed to record audio...
 
-I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 4 by applying the directions on the website. 
-Read more about this problem from: [edge_impulse](https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and 
-[digikey](https://www.digikey.com/en/maker/projects/how-to-use-embedded-machine-learning-to-do-speech-recognition-on-arduino/1d5dd38c05d9494180d5e5b7b657804d) 
+I decreased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 2 by applying the directions on the website. 
+Read more about this problem from: [edge_impulse](https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and
 Now it can capture the sound.
     
     /**
@@ -71,78 +70,23 @@ Now it can capture the sound.
 I run the blender, and the result is below :)
 That's great!
 
-    blender: 0.84180
-    faucet: 0.00000
-    noise: 0.15820
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Predictions (DSP: 78 ms., Classification: 252 ms., Anomaly: 0 ms.): 
+
+    Predictions (DSP: 165 ms., Classification: 253 ms., Anomaly: 0 ms.): 
+        blender: 0.00000
+        faucet: 0.00000
+        noise: 0.99609
+    Predictions (DSP: 165 ms., Classification: 253 ms., Anomaly: 0 ms.): 
+        blender: 0.00000
+        faucet: 0.00000
+        noise: 0.99609
+    Predictions (DSP: 165 ms., Classification: 253 ms., Anomaly: 0 ms.): 
         blender: 0.62695
         faucet: 0.00000
         noise: 0.37305
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Predictions (DSP: 78 ms., Classification: 252 ms., Anomaly: 0 ms.): 
+    Predictions (DSP: 165 ms., Classification: 253 ms., Anomaly: 0 ms.): 
         blender: 0.94531
         faucet: 0.00000
         noise: 0.05469
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Predictions (DSP: 78 ms., Classification: 252 ms., Anomaly: 0 ms.): 
-        blender: 0.85938
-        faucet: 0.00000
-        noise: 0.14062
-
-
-    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
-        blender: 0.00000
-        faucet: 0.00000
-        noise: 0.99609
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
-        blender: 0.00000
-        faucet: 0.00000
-        noise: 0.99609
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
-    ERR: Failed to record audio...
-    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
-        blender: 0.00000
-        faucet: 0.00000
-        noise: 0.99609
-
 
 ## Feature Extraction
 
