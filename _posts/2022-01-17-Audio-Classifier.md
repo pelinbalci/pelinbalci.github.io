@@ -55,15 +55,14 @@ Here comes the final step: I clicked "Upload" to compile and send the program to
     ERR: Failed to record audio...
 
 I decreased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 2 by applying the directions on the website. 
-Read more about this problem from: [edge_impulse](https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and
-Now it can capture the sound.
+Read more about this problem from: [edge_impulse](https://docs.edgeimpulse.com/docs/continuous-audio-sampling)
     
     /**
      * Define the number of slices per model window. E.g. a model window of 1000 ms
      * with slices per model window set to 4. Results in a slice size of 250 ms.
      * For more info: https://docs.edgeimpulse.com/docs/continuous-audio-sampling
      */
-    # define EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW 5
+    # define EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW 2
 
 :)
 
