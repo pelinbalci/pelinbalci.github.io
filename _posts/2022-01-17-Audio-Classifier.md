@@ -30,11 +30,11 @@ I've tried two different feature extraction method. I will explain the details o
 
 ### Deployment to Arduino
 
-In the deployment page, I select Arduino and click build. ei-audio_classifier-arduino-1.0.3.zip file is downloaded. 
+On the deployment page, select Arduino and click build. ei-audio_classifier-arduino-1.0.3.zip file is downloaded.
 
-Since I didn't collect the data with arduino, this is the first time I connected arduino to computer. 
+Since I didn't collect the data with Arduino, this is the first time I connected Arduino to the computer. 
 
-First I updated the firmware by running the flash_windows. Then, I opened the command prompt and write: 
+Don't forget to update the firmware: run flash_windows. After the firmware is updated open the command prompt:
 
     $edge-impulse-daemon --clean.
 
@@ -45,17 +45,20 @@ Smile :)
     [WS ] Device "myarduino" is now connected to project "audio_classifier"
     [WS ] Go to https://studio.edgeimpulse.com/studio/75736/acquisition/training to build your machine learning model!
 
-Now it is time to use Aruino IDE. From Sketch -> Add Zip Library, I selected ei-audio_classifier-arduino-1.0.3.zip
+Now it is time to use Arduino IDE. From Sketch -> Add Zip Library, select ei-audio_classifier-arduino-1.0.3.zip
 
-I selected File -> Examples --> audio-classifier-inferencing- nano_ble33_sense_microphone_continuous 
+Select File -> Examples --> audio-classifier-inferencing- nano_ble33_sense_microphone_continuous 
 
-I clicked to "Upload" to compile and send the program to Arduino. Here is the error :(
+Here comes the final step: I clicked "Upload" to compile and send the program to Arduino. Unfortunately, I got this error:
 
     Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
     ERR: Failed to record audio...
 
-I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 5. Now it can capture the sound. 
-
+I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 4 by applying the directions on the website. 
+Read more about this problem from: (https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and 
+(https://www.digikey.com/en/maker/projects/how-to-use-embedded-machine-learning-to-do-speech-recognition-on-arduino/1d5dd38c05d9494180d5e5b7b657804d) 
+Now it can capture the sound.
+    
     /**
      * Define the number of slices per model window. E.g. a model window of 1000 ms
      * with slices per model window set to 4. Results in a slice size of 250 ms.
@@ -66,7 +69,7 @@ I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 5. Now it can ca
 :)
 
 I run the blender, and the result is below :)
-That's great! 
+That's great!
 
     blender: 0.84180
     faucet: 0.00000
@@ -113,6 +116,32 @@ That's great!
         blender: 0.85938
         faucet: 0.00000
         noise: 0.14062
+
+
+    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
+        blender: 0.00000
+        faucet: 0.00000
+        noise: 0.99609
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
+        blender: 0.00000
+        faucet: 0.00000
+        noise: 0.99609
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
+    ERR: Failed to record audio...
+    Predictions (DSP: 122 ms., Classification: 254 ms., Anomaly: 0 ms.): 
+        blender: 0.00000
+        faucet: 0.00000
+        noise: 0.99609
 
 
 ## Feature Extraction
