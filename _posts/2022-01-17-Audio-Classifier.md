@@ -55,8 +55,8 @@ Here comes the final step: I clicked "Upload" to compile and send the program to
     ERR: Failed to record audio...
 
 I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 4 by applying the directions on the website. 
-Read more about this problem from: (https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and 
-(https://www.digikey.com/en/maker/projects/how-to-use-embedded-machine-learning-to-do-speech-recognition-on-arduino/1d5dd38c05d9494180d5e5b7b657804d) 
+Read more about this problem from: [edge_impulse](https://docs.edgeimpulse.com/docs/continuous-audio-sampling) and 
+[digikey](https://www.digikey.com/en/maker/projects/how-to-use-embedded-machine-learning-to-do-speech-recognition-on-arduino/1d5dd38c05d9494180d5e5b7b657804d) 
 Now it can capture the sound.
     
     /**
@@ -155,13 +155,13 @@ MFCCs are commonly derived as follows:
 - Map the powers of the spectrum obtained above onto the mel scale, using triangular overlapping windows or alternatively, cosine overlapping windows.
 - Take the logs of the powers at each of the mel frequencies. 
 - Take the discrete cosine transform of the list of mel log powers, as if it were a signal.
-- The MFCCs are the amplitudes of the resulting spectrum. [https://en.wikipedia.org/wiki/Mel-frequency_cepstrum]
+- The MFCCs are the amplitudes of the resulting spectrum. [wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
 
 MFE:
 
 The Mel-scale is a perceptual scale of pitches judged by listeners to be equal in distance from one another. 
 The idea is to extract more features (more filter banks) in the lower frequencies, 
-and less in the high frequencies, thus it performs well on sounds that can be distinguished by human ear. [https://docs.edgeimpulse.com/docs/audio-mfe]
+and less in the high frequencies, thus it performs well on sounds that can be distinguished by human ear. [edge_impulse](https://docs.edgeimpulse.com/docs/audio-mfe)
 
 
 <div class="fig figcenter fighighlight">
