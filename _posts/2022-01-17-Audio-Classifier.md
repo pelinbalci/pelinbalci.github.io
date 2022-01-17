@@ -3,7 +3,7 @@ layout: post
 title: "Audio Classifier with Edge Impulse"
 categories: tinyml
 ---
-In this pot you can find my second project on Edge Impulse with Arduino Tiny ML kit. I used audio dataset this time. 
+In this post you can find my second project on Edge Impulse with Arduino Tiny ML kit. I used audio dataset this time. 
 
 I would like to thank Coursera and Edge Impulse to give us a chance to learn embedded machine learning. 
 Find more about the lecture: [Coursera](https://www.coursera.org/learn/introduction-to-embedded-machine-learning)
@@ -11,32 +11,30 @@ Find more about the lecture: [Coursera](https://www.coursera.org/learn/introduct
 In the project description two audio datasets are given, faucet and noise. I added blender audio to this dataset. 
 I've run the blender for 2 minutes. Then using Audacity interface, I divided the 2 minute-data to 50 1-second data. 
 
-Here is a screenshot from audacity:
-
-
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/audacity.png" width="40%" height="60%">
-  <div class="figcaption">audacity </div>
+  <img src="/assets/tinyml_images/audacity.png" width="60%" height="60%">
+  <div class="figcaption">Audacity Interface </div>
 </div>
 
 --
 
-Then I uploaded data to edge impulse. Rest of the steps are:
+Rest of the steps are:
 
+- Upload the data
 - Create Impulse
-- Feature Generation
+- Generate Features
 - Model Training
 - Model Testing
 
 I've tried two different feature extraction method. I will explain the details of them later in the post. 
 
-### Deployment to Arduino:
+### Deployment to Arduino
 
-In the deployment page I select Arduino and click build. ei-audio_classifier-arduino-1.0.3.zip file is downloaded. 
+In the deployment page, I select Arduino and click build. ei-audio_classifier-arduino-1.0.3.zip file is downloaded. 
 
-Since I didn't collect the data with arduino, this is the first time I connect arduino to computer. 
+Since I didn't collect the data with arduino, this is the first time I connected arduino to computer. 
 
-First I updated the firmware by clicking the flash_windows. Then, I opened the command prompt and write: 
+First I updated the firmware by running the flash_windows. Then, I opened the command prompt and write: 
 
     $edge-impulse-daemon --clean.
 
@@ -47,11 +45,11 @@ Smile :)
     [WS ] Device "myarduino" is now connected to project "audio_classifier"
     [WS ] Go to https://studio.edgeimpulse.com/studio/75736/acquisition/training to build your machine learning model!
 
-Then I opened Aruino IDE. From Sketch -> Add Zip Library, I selected ei-audio_classifier-arduino-1.0.3.zip
+Now it is time to use Aruino IDE. From Sketch -> Add Zip Library, I selected ei-audio_classifier-arduino-1.0.3.zip
 
 I selected File -> Examples --> audio-classifier-inferencing- nano_ble33_sense_microphone_continuous 
 
-then I click Upload to compile and send the program to arduino. Here is the error :(
+I clicked to "Upload" to compile and send the program to Arduino. Here is the error :(
 
     Error sample buffer overrun. Decrease the number of slices per model window (EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW)
     ERR: Failed to record audio...
@@ -67,7 +65,7 @@ I increased the EI_CLASSIFIER_SLICES_PER_MODEL_WINDOW from 3 to 5. Now it can ca
 
 :)
 
-I run the blender and the result is below :)
+I run the blender, and the result is below :)
 That's great! 
 
     blender: 0.84180
@@ -136,38 +134,37 @@ The Mel-scale is a perceptual scale of pitches judged by listeners to be equal i
 The idea is to extract more features (more filter banks) in the lower frequencies, 
 and less in the high frequencies, thus it performs well on sounds that can be distinguished by human ear. [https://docs.edgeimpulse.com/docs/audio-mfe]
 
-DSP Results:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_1.PNG" width="40%" height="60%">
+  <img src="/assets/tinyml_images/mfcc_mfe_1.PNG" width="80%" height="60%">
   <div class="figcaption">DSP </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_2.PNG" width="40%" height="60%">
+  <img src="/assets/tinyml_images/mfcc_mfe_2.PNG" width="80%" height="60%">
   <div class="figcaption">Parameters </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_3.PNG" width="40%" height="60%">
+  <img src="/assets/tinyml_images/mfcc_mfe_3.PNG" width="80%" height="60%">
   <div class="figcaption">MFE Separates better </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG" width="40%" height="60%">
+  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG" width="80%" height="60%">
   <div class="figcaption">Training Accuracy </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG" width="40%" height="60%">
+  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG" width="80%" height="60%">
   <div class="figcaption">Test Accuracy </div>
 </div>
 
