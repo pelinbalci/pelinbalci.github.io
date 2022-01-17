@@ -91,8 +91,6 @@ That's great!
 
 I got better results with MFE Feature Extraction. I used 2d conv net for MFE, while I used 1DConv for MFFC.
 
-### MFFC (Mel-frequency cepstral coefficients)
-
 MFCCs are commonly derived as follows:
 - Take the Fourier transform of (a windowed excerpt of) a signal.
 - Map the powers of the spectrum obtained above onto the mel scale, using triangular overlapping windows or alternatively, cosine overlapping windows.
