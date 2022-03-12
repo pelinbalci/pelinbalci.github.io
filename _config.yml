@@ -51,6 +51,7 @@ minima:
 header_pages:
  - about.md
  - CV.md
+ - BooksIRead(Okuduklarım).md
 
 # Build settings
 theme: jekyll-theme-minimal
