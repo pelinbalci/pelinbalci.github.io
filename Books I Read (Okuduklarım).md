@@ -1,0 +1,77 @@
+---
+layout: page
+title: Books I Read (Okuduklarım)
+permalink: /BooksIRead(Okuduklarım)/
+
+---
+- Saatleri Ayarlama Enstitüsü – Ahmet Hamdi Tanpınar
+- Sineklerin Tanrısı – William Golding
+- Otomatik Portakal – Anthony Burgess
+- Sevdalinka – Ayşe Kulin
+- Adı Aylin – Ayşe Kulin
+- Korkma Ben Varım – Murat Menteş
+- Dublörün Dilemması – Murat Menteş
+- Ruhi Mücerret – Murat Menteş
+- Hastalık Hastası – Moliere
+- Benim Adım Kırmızı – Orhan Pamuk
+- Füreya – Ayşe Kulin
+- Aylak Adam – Yusuf Atılgan
+- Beyaz Geceler – Dostoyevski
+- Kelebek – Henri Charriere
+- Çanlar Kimin için Çalıyor – Ernest Hemingway
+- İlk Aşk – Turgenyev
+- Hokus Pokus – Kurt Vonnegut
+- Mezbaha No: 5 – Kurt Vonnegut
+- Şampiyonların Kahvaltısı – Kurt Vonnegut
+- Mavi Sakal – Kurt Vonnegut
+- Kürk Mantolu Madonna – Sabahattin Ali
+- Dorian Gray’in Portresi – Oscar Wilde
+- Dokuzuncu Hariciye Koğuşu – Peyami Safa
+- Tatlı Rüyalar – Alper Canıgüz
+- Oğullar ve Rencide Ruhlar – Alper Canıgüz
+- Cehennem Çiçekleri – Alper Canıgüz
+- Bir Ada Hikayesi (Fırat Suyu Kan Akıyor Baksana, Karıncanın Su İçtiği, Tanyeri Horozları) – Yaşar Kemal
+- Tek Kanatlı Bir Kuş – Yaşar Kemal
+- Bir Delinin Hatıra Defteri, Palto, Burun – Gogol
+- 1984 – George Orwell
+- Dövüş Kulübü – Chuck Palahniuk
+- Erken Kaybedenler – Emrah Serbes
+- Hikayem Paramparça – Emrah Serbes
+- Müptezeller – Emrah Serbes
+- Yabancı – Albert Camus
+- Çocukluğum – Maksim Gorki
+- Dönüşüm – Kafka
+- Ekmeğimi Kazanırken – Maksim Gorki
+- Dava – Kafka
+- Kan ve Gül – Alper Canıgüz
+- Alice Harikalar Diyarında – Lewis Carrol
+- Muhteşem Gatsby – Scott Fitzgerald
+- İvan İlyiç’in Ölümü – Tolstoy
+- Allah Senden Razı Olsun Bay Rosewater – Kurt Vonnegut
+- Utopia – Thomas More
+- Benim Üniversitelerim – Gorki
+- Germinal – Emile Zola
+- Robinson Crusoe – Daniel Defoe
+- Theo’ya Mektuplar – Vincent Van Gogh
+- Ecinniler – Dostoyevski
+- Zacharius Usta – Jules Verne
+- Diriliş – Tolstoy
+- Hayvan Çiftliği – George Orwell
+- Karamazov Kardeşler – Dostoyevski
+- Rich Dad Poor Dad- Robert T. Kiyosaki
+- Koşmasaydım Yazamazdım
+- Frankenstain – Marry Shelley
+- Parfümün Dansı – Tom Robbins
+- Notre Dame’ın Kamburu – Victor Hugo
+- Veba – Albert Camus
+- Yerdeniz Büyücüsü – Ursula K. Le Guin
+- Aşk Çetesi – Kemal Tahir
+- Netflix Bu İş Asla Tutmaz – Marc Randolph
+- Yedek Sevgili – Kemal Tahir
+- Dr. Moreau’nun Adası – H.G.Wells
+- Minimalizm Anlamlı Bir Yaşam – The Minimalists
+- Sanatın Öyküsü -   
+- Düşünce ve Tartışma Özgürlüğü Üzerine - John Stuart Mill
+- Beyin Hasarı Sonrası Yaşam: Kurtulanların Öyküleri - Barbara A. Wilson Jill Winegardner Fiona Ashworth
+- Alice Aynanın İçinde - Lewis Carrol
+- Duygusal Zeka - Harvard Business Review 
