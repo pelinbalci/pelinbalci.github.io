@@ -88,6 +88,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Trainings
 - Applications of TinyML, HarvardX, Edx, Free Version
 - Fundamentals of TinyML, HarvardX, Edx, Free Version
+- Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
 - Introduction to Embedded Machine Learning, Edge Impulse, Coursera [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
 - Convolutional Neural Networks in TensorFlow, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/DKW73Y8LDAQT)
 - Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/XNKW988DUE4H)
