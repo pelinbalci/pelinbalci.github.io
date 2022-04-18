@@ -13,33 +13,57 @@ permalink: /CV/
 * Blog: pelinbalci.github.io
 
 ## Key Skills
-Operations Research, Mathematical Modeling, Data Science, Machine Learning, Deep Learning
+Operations Research, Mathematical Modeling, Data Science, Machine Learning, Deep Learning, Tiny ML
 
 ## Software Knowledge
-Python for Data Science (Pandas, Numpy, Scikit-learn, Matplotlib, PyTorch), SQL, GAMS
+Python for Data Science (Pandas, Numpy, Scikit-learn, Matplotlib, PyTorch, TensorFlow, TensorFlowLite, Gurobi), SQL, GAMS,
+Simulation (Simpy)
 
 ## Work Experiences
-- 2020 - SabancıDX, Data Scientsit
-    - Energy Imbalance System Direction Prediction
+- 2020 - SabancıDX, Data Scientist
+    - Prediction of breakage in a production
+        - Maintenance of already written codes
+        - Retraining 
+        - MLOps
+    - IOT Project: Air Quality IOT Product 
+    - Energy Imbalance System Direction Prediction: 
+        - The aim of this project is training a model which classifies the energy
+      imbalance direction.
+        - Data: We've used public dataset in "EPIAS Seffaflık Platform" 
+        - Model: Neural Network Model is implemented with PyTorch
+        - Deployment: Databricks. Our model is being retrained every week and send a prediction mail to customer. 
     - Package & Driver Optimization for Fast Food Company
-    - Tools: Implement neural network with PyTorch, Simulation Environment with Simpy
-- 2019 – 2020	Adphorus a Sojern Company, Sr. Data Analyst
+        - The aim of this project is improving delivery process and optimize shifts
+        - Data: We've used the customer's own data. 
+        - Simulation for delivery process: I've written Simulation environment which show the order's assignments and delivery times with Simpy. 
+          Simulation is used to show the improvement of our new approach before live test. 
+        - Shift optimization: The hourly targeted number of drivers was calculated based on order distribution. The 
+          drivers closest to the required number of drivers according to the number of employees were assigned on the 
+          basis of their shifts by using Gurobi optimization tool. The new shifts are used in simulation in order to control the 
+          delivery process. 
+- 2019 – 2020   Adphorus a Sojern Company, Sr. Data Analyst
     - Production level codes for reporting performance of the algorithms by using Python, Facebook API and SQL 
     - A/B testing methods
     - Sampling algorithms 
     - Facebook digital marketing
 - 2017 – 2019 	Enerjisa Sales, Commodity Portfolio Management Specialist
-    - MtM reporting system project 
+    - MtM reporting system project, design and test the new system, compare the PL with old system 
     - Process development
-    - Hedging strategies and energy pricing for sales 
+    - Hedging strategies and energy pricing for sales
     - Customer based analysis
-- 2015 - 2017   Enerjisa Generation, Portfolio Optimization Specialist
-    - Optimizing, planning and simulating long term generation of power 
+    - Make budget for the upcoming year
+    - Prepare PL analysis and simulations for Finance
+- 2015 - 2017   Enerjisa Trading, Portfolio Optimization Specialist
+    - Optimizing, planning and simulating long term generation of power
     - Hedging strategies and energy pricing for generation
+    - Make budget of all power plants for upcoming years
+    - Prepare reports for locked and forward PL
+    - Explain the differences with budget in terms of production and prices every week
 - 2013 - 2015   MilSOFT Software Technologies Inc., Project Management Specialist
-    - Software project management 
+    - Software project management: CMMI5, Agile Systems
     - Risk management 
     - Statistical analysis
+    - Earned value analysis
 - 2010 - 2012   Bilkent University Industrial Engineering Department, Teaching Assistant
 
 ## Education
@@ -62,6 +86,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
+- Applications of TinyML, HarvardX, Edx, Free Version
+- Fundamentals of TinyML, HarvardX, Edx, Free Version
 - Introduction to Embedded Machine Learning, Edge Impulse, Coursera [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
 - Convolutional Neural Networks in TensorFlow, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/DKW73Y8LDAQT)
 - Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/XNKW988DUE4H)
