@@ -57,6 +57,8 @@ SQL, GAMS, Power BI
         the target driver and the assigned driver. These new shifts found as a result of the study are tested by 
         simulation and the delivery times that occur with the new shifts are checked. 
       - Tools: Python, SQL, Gurobi, Simpy, Power BI
+
+    
 - 2019 – 2020   Adphorus a Sojern Company, Sr. Data Analyst
     - Reporting the performance of algorithms 
       - Send status reports by email 
@@ -64,6 +66,8 @@ SQL, GAMS, Power BI
     - A/B Testing 
       - Sampling Algorithms, Statistical Tests 
       - Facebook Digital Marketing
+
+    
 - 2017 – 2019 	Enerjisa Sales, Commodity Portfolio Management Specialist
     - Mark to Market Reporting System Project 
       - Design the reporting tool with IT Department 
@@ -76,6 +80,7 @@ SQL, GAMS, Power BI
     - Prepare hedging strategies in terms of electricity in MW and dollar
     - Calculate energy prices for customers considering dollar, market conditions and risk premiums
     - Manage short positions
+
 
 - 2015 - 2017   Enerjisa Trading, Portfolio Optimization Specialist
     - Power Generation Optimization Tool Project:
@@ -90,17 +95,22 @@ SQL, GAMS, Power BI
     - Manage long positions
     - Create P&L from delta hedging (buy and sell electricity based on market conditions)
 
+
 - 2013 - 2015   MilSOFT Software Technologies Inc., Project Management Specialist
     - Software project management (CMMI5, Agile and Scrum Methods)
     - Risk management for known unknown bugs and milestones for projects
     - Statistical analysis for HR Planning
     - Earned value analysis
+
+    
 - 2010 - 2012   Bilkent University Industrial Engineering Department, Teaching Assistant
 
 ## Education
 - 2010 - 2013 	Bilkent University Graduate School of Engineering and Science
     - Industrial Engineering, Master of Science GPA: 3.09 / 4.00 
     - Master’s Thesis: [http://repository.bilkent.edu.tr/handle/11693/16920](http://repository.bilkent.edu.tr/handle/11693/16920)
+    
+
 - 2005 - 2010	Gazi University Engineering and Architecture Faculty
     - Industrial Engineering, Bachelor of Science GPA: 3.44 / 4.00
 
