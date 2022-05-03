@@ -8,9 +8,9 @@ permalink: /CV/
 
 ## Contact
 * Location: İstanbul, Turkey
-* LinkedIn: https://www.linkedin.com/in/pelin-balci/
-* GitHub: https://github.com/pelinbalci
-* Blog: pelinbalci.github.io
+* LinkedIn: [https://www.linkedin.com/in/pelin-balci/](https://www.linkedin.com/in/pelin-balci/)
+* GitHub: [https://github.com/pelinbalci](https://github.com/pelinbalci)
+* Blog: [https://pelinbalci.com/](https://pelinbalci.com/)
 
 ## Key Skills
 Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
@@ -100,7 +100,7 @@ SQL, GAMS, Power BI
 ## Education
 - 2010 - 2013 	Bilkent University Graduate School of Engineering and Science
     - Industrial Engineering, Master of Science GPA: 3.09 / 4.00 
-    - Master’s Thesis: http://repository.bilkent.edu.tr/handle/11693/16920
+    - Master’s Thesis: [http://repository.bilkent.edu.tr/handle/11693/16920](http://repository.bilkent.edu.tr/handle/11693/16920)
 - 2005 - 2010	Gazi University Engineering and Architecture Faculty
     - Industrial Engineering, Bachelor of Science GPA: 3.44 / 4.00
 
