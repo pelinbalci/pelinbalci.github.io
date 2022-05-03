@@ -4,11 +4,14 @@ title: About
 permalink: /about/
 ---
 
-I am an industrial engineer with a master's degree. 
-Here you can find my notes for machine learning and deep learning. 
+Hello! :)
 
-You can find the source code for Minima at GitHub:
-[minima](https://github.com/jekyll/minima)
+I am an industrial engineer with a master’s degree. I'm working as a data scientist in SabancıDx. 
+My job is also my hobby, I continue to write code in my spare time. At the moment, my biggest field of interest is 
+Tiny ML. I care about sustainable environments and energy-efficient products. Here you can find my notes and projects 
+for machine learning and deep learning.
 
-You can find the source code for Jekyll at GitHub:
-[jekyll](https://github.com/jekyll/jekyll)
+My github link: https://github.com/pelinbalci
+
+
+Note: This webpage is prepared using the codes [Minima](https://github.com/jekyll/minima) and [Jekyll](https://github.com/jekyll/jekyll)
