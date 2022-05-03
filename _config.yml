@@ -7,6 +7,8 @@ description: > # this means to ignore newlines until "show_excerpts:"
 #description will appear in your document head meta (for Google search results)
 
 show_excerpts: true # set to true to show excerpts on the homepage
+twitter_username: balcipelin
+github_username: pelinbalci
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
