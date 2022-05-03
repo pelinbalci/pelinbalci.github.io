@@ -13,56 +13,87 @@ permalink: /CV/
 * Blog: pelinbalci.github.io
 
 ## Key Skills
-Operations Research, Mathematical Modeling, Data Science, Machine Learning, Deep Learning, Tiny ML
+Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
+Tiny Machine Learning
 
 ## Software Knowledge
-Python for Data Science (Pandas, Numpy, Scikit-learn, Matplotlib, PyTorch, TensorFlow, TensorFlowLite, Gurobi), SQL, GAMS,
-Simulation (Simpy)
+Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite), 
+SQL, GAMS, Power BI
+
+## Personal Projects
+- [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
+- [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
+- [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
+
 
 ## Work Experiences
 - 2020 - SabancıDX, Data Scientist
     - Prediction of breakage in a production
-        - Maintenance of already written codes
-        - Retraining 
-        - MLOps
+        - The aim of this project is to recommend parameters which minimizes the breakage in the final product for 
+          industry
+        - Data: Customer’s own dataset
+        - Model: XGBoost and Linear Regression
+        - The project includes the maintenance of the codes and create an MLOPs platform to schedule retraining and 
+          making faster analysis.
     - IOT Project: Air Quality IOT Product 
-    - Energy Imbalance System Direction Prediction: 
-        - The aim of this project is training a model which classifies the energy
-      imbalance direction.
-        - Data: We've used public dataset in "EPIAS Seffaflık Platform" 
-        - Model: Neural Network Model is implemented with PyTorch
-        - Deployment: Databricks. Our model is being retrained every week and send a prediction mail to customer. 
-    - Package & Driver Optimization for Fast Food Company
-        - The aim of this project is improving delivery process and optimize shifts
-        - Data: We've used the customer's own data. 
-        - Simulation for delivery process: I've written Simulation environment which show the order's assignments and delivery times with Simpy. 
-          Simulation is used to show the improvement of our new approach before live test. 
-        - Shift optimization: The hourly targeted number of drivers was calculated based on order distribution. The 
-          drivers closest to the required number of drivers according to the number of employees were assigned on the 
-          basis of their shifts by using Gurobi optimization tool. The new shifts are used in simulation in order to control the 
-          delivery process. 
+      - Building an IOT Product which measures the quality of data for offices. 
+      - I’ve checked the measurements with Power BI & Python 
+      - I’m also responsible to search for the opportunities in using tiny ml in this product
+    - Prediction of System Direction for an Energy Company
+      - The aim of this project is predicting the hourly energy imbalance direction for the upcoming day.
+      - Data: Public dataset from “EPIAS Seffaflık Platform”
+      - Model: Neural Network Model is implemented with PyTorch 
+      - Deployment: Databricks. Our model is being retrained every week and send a prediction mail to custome
+      - Tools: Python, Databricks, SQL, Power BI
+    - Delivery Optimization for a Fast-Food Company 
+      - The aim of this project is improving delivery process and optimize shifts 
+      - Data: Customer’s own data. 
+      - Simulation for delivery process: I’ve written Simulation environment with Simpy which shows the order’s 
+        assignments and delivery times. Simulation is used to show the current state and the improvement of our new 
+        approach before live test. 
+      - Shift optimization: Targeted hourly driver numbers are calculated based on order distributions. 
+        The working hours of full and part-time employees are determined by the Gurobi optimization tool based on the 
+        targeted numbers. The objective function of the mathematical model is minimizing the difference between 
+        the target driver and the assigned driver. These new shifts found as a result of the study are tested by 
+        simulation and the delivery times that occur with the new shifts are checked. 
+      - Tools: Python, SQL, Gurobi, Simpy, Power BI
 - 2019 – 2020   Adphorus a Sojern Company, Sr. Data Analyst
-    - Production level codes for reporting performance of the algorithms by using Python, Facebook API and SQL 
-    - A/B testing methods
-    - Sampling algorithms 
-    - Facebook digital marketing
+    - Reporting the performance of algorithms 
+      - Send status reports by email 
+      - Tools: Facebook API, Python, SQL
+    - A/B Testing 
+      - Sampling Algorithms, Statistical Tests 
+      - Facebook Digital Marketing
 - 2017 – 2019 	Enerjisa Sales, Commodity Portfolio Management Specialist
-    - MtM reporting system project, design and test the new system, compare the PL with old system 
+    - Mark to Market Reporting System Project 
+      - Design the reporting tool with IT Department 
+      - Keep versions to make comparisons with budgets 
+      - Make User Tests 
+      - Control Profit and Loss Calculations 
+      - Prepare Daily, Weekly, Yearly Reports
     - Process development
-    - Hedging strategies and energy pricing for sales
-    - Customer based analysis
-    - Make budget for the upcoming year
-    - Prepare PL analysis and simulations for Finance
+    - Customer based demand analysis
+    - Prepare hedging strategies in terms of electricity in MW and dollar
+    - Calculate energy prices for customers considering dollar, market conditions and risk premiums
+    - Manage short positions
+
 - 2015 - 2017   Enerjisa Trading, Portfolio Optimization Specialist
+    - Power Generation Optimization Tool Project:
+      - Design the optimization tool with IT Department 
+      - Keep versions to calculate the difference between planned and actual generation in terms of production and prices 
+      - Make User Tests 
+      - Control Profit and Loss Calculations 
+      - Prepare Daily, Weekly, Yearly Reports for locked and forward P&L
     - Optimizing, planning and simulating long term generation of power
-    - Hedging strategies and energy pricing for generation
     - Make budget of all power plants for upcoming years
-    - Prepare reports for locked and forward PL
-    - Explain the differences with budget in terms of production and prices every week
+    - Prepare hedging strategies in terms of electricity in MW
+    - Manage long positions
+    - Create P&L from delta hedging (buy and sell electricity based on market conditions)
+
 - 2013 - 2015   MilSOFT Software Technologies Inc., Project Management Specialist
-    - Software project management: CMMI5, Agile Systems
-    - Risk management 
-    - Statistical analysis
+    - Software project management (CMMI5, Agile and Scrum Methods)
+    - Risk management for known unknown bugs and milestones for projects
+    - Statistical analysis for HR Planning
     - Earned value analysis
 - 2010 - 2012   Bilkent University Industrial Engineering Department, Teaching Assistant
 
@@ -109,11 +140,11 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Foreign Languages 
 English (Advanced), Spanish (Beginner), German (Beginner)
 
-## Interests
+## Interests and Personality Characteristics
 - Minimalism, 2021
 - Cycling, 2020
 - Lindy Hop, Solo Jazz, 2018
-- Self-learner, a good team member, creative and analytical thinking, good communication skills
+- Self-learner, self-awareness, a good team member, creative and analytical thinking, good communication skills
 
 ## Badges
 
