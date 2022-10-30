@@ -14305,7 +14305,7 @@ for iter in range(iterations):
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Before starting coding, let's revisit the features in numpy library!</p>
+<p>Before starting coding, let's revisit some features of numpy library!</p>
 <p>Here is an example  to assign point to the closest data point. data is the array of data and cent is the list of centroids, they are all 1D:</p>
 
 </div>
@@ -14871,7 +14871,9 @@ for iter in range(iterations):
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>Different initializations may give us different results.</p>
+<p><strong>Note:</strong></p>
+<p>As you can see, different initializations may give us different results.</p>
+<p>Therefore, it is better to randomly initialize the centroids for 100 (example number) times, make the first assignment and calculate the total distance from the inital centroids to the data points, and select the best (which has minimum distance) initial centroid set.</p>
 
 </div>
 </div>
