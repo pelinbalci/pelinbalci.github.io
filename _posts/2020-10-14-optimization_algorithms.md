@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Standford cs231n: Optimization Algorithms in Neural Networks"
+title: "Stanford cs231n: Optimization Algorithms in Neural Networks"
 categories: nn
 ---
 
