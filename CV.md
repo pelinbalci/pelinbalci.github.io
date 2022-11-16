@@ -127,10 +127,12 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
-- Applications of TinyML, HarvardX, Edx, Free Version
-- Fundamentals of TinyML, HarvardX, Edx, Free Version
+- Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera, -Ongoing
+- Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022[certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
+- Applications of TinyML, HarvardX, Edx, 2022 Free Version
+- Fundamentals of TinyML, HarvardX, Edx, 2022 Free Version
 - Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
-- Introduction to Embedded Machine Learning, Edge Impulse, Coursera [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
+- Introduction to Embedded Machine Learning, Edge Impulse, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
 - Convolutional Neural Networks in TensorFlow, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/DKW73Y8LDAQT)
 - Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/XNKW988DUE4H)
 - Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
