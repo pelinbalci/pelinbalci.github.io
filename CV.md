@@ -21,6 +21,7 @@ Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch
 SQL, GAMS, Power BI
 
 ## Personal Projects
+- [Movie Recommendation System](https://github.com/pelinbalci/MovieRecommendation)
 - [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
