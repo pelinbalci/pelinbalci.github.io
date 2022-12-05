@@ -167,9 +167,19 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 - Gazi University Technology Club, Charter Member and Member of the Board, 2007 – 2009
 - Self-learner, self-awareness, a good team member, creative and analytical thinking, good communication skills
 
-## Badges
+## Badges & Projects
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/tinyml_images/badge.PNG" width="20%">
+  <div class="figcaption">Edge Impulse badge</div>
+</div>
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/movie_rec_1.PNG" width="20%">
+  <div class="figcaption">Edge Impulse badge</div>
+</div>
+
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/movie_rec_2.PNG" width="20%">
   <div class="figcaption">Edge Impulse badge</div>
 </div>
