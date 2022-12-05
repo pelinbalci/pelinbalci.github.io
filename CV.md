@@ -17,7 +17,7 @@ Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Le
 Tiny Machine Learning
 
 ## Software Knowledge
-Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite), 
+Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite, Streamlit), 
 SQL, GAMS, Power BI
 
 ## Personal Projects
@@ -28,7 +28,14 @@ SQL, GAMS, Power BI
 
 
 ## Work Experiences
-- 2020 - SabancıDX, Data Scientist
+- 2022 -  SabancıDx, Sr. Data Scientist 
+    - Demand prediction for retail company 
+       - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
+         according to the lead time and safety stocks
+       - My responsibilities are reframing the project scope, detailing the tasks, making code reviews, turning the 
+         initial codes into production
+
+- 2020 - 2022 SabancıDX, Data Scientist
     - Prediction of breakage in a production
         - The aim of this project is to recommend parameters which minimizes the breakage in the final product for 
           industry
@@ -38,8 +45,7 @@ SQL, GAMS, Power BI
           making faster analysis.
     - IOT Project: Air Quality IOT Product 
       - Building an IOT Product which measures the quality of data for offices. 
-      - I’ve checked the measurements with Power BI & Python 
-      - I’m also responsible to search for the opportunities in using tiny ml in this product
+      - I’ve checked the measurements with Power BI & Python
     - Prediction of System Direction for an Energy Company
       - The aim of this project is predicting the hourly energy imbalance direction for the upcoming day.
       - Data: Public dataset from “EPIAS Seffaflık Platform”
@@ -128,7 +134,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
-- Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera, -Ongoing
+- Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
 - Applications of TinyML, HarvardX, Edx, 2022 Free Version
 - Fundamentals of TinyML, HarvardX, Edx, 2022 Free Version
@@ -157,6 +163,8 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 - Minimalism, 2021
 - Cycling, 2020
 - Lindy Hop, Solo Jazz, 2018
+- TÜBİTAK Formula - G Solar Car Race, G-Mobil 2 Sponsor Team Member, 2008 – 2009
+- Gazi University Technology Club, Charter Member and Member of the Board, 2007 – 2009
 - Self-learner, self-awareness, a good team member, creative and analytical thinking, good communication skills
 
 ## Badges
