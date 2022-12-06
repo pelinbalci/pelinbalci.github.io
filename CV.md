@@ -189,4 +189,4 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 
 
 
-![Movie Recommendation System-2](assets/images/mov2.png)
+<!---![Movie Recommendation System-2](assets/images/mov2.png) -->
