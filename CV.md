@@ -160,9 +160,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 English (Advanced), Spanish (Beginner), German (Beginner)
 
 ## Interests and Personality Characteristics
-- Minimalism, 2021
-- Cycling, 2020
-- Lindy Hop, Solo Jazz, 2018
+- Minimalism, Cycling, Lindy Hop Dance, Solo Jazz Dance, Chess
 - TÜBİTAK Formula - G Solar Car Race, G-Mobil 2 Sponsor Team Member, 2008 – 2009
 - Gazi University Technology Club, Charter Member and Member of the Board, 2007 – 2009
 - Self-learner, self-awareness, a good team member, creative and analytical thinking, good communication skills
