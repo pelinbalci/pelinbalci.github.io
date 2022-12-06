@@ -170,18 +170,12 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 ## Badges & Projects
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/badge.PNG" width="20%">
+  <img src="./assets/tinyml_images/badge.PNG" width="20%">
   <div class="figcaption">Edge Impulse badge</div>
 </div>
 
 --------------------------------------------------------------
 
-<div class="fig figcenter fighighlight">
-  <img src="/assets/images/movie_rec_1.PNG" width="50%">
-  <div class="figcaption">Movie Recommendation System-1</div>
-</div>
+![Movie Recommendation System-1](./assets/images/movie_rec_1.PNG)
 
-<div class="fig figcenter fighighlight">
-  <img src="/assets/images/movie_rec_2.PNG" width="50%">
-  <div class="figcaption">Movie Recommendation System-1</div>
-</div>
+![Movie Recommendation System-2](./assets/images/movie_rec_2.PNG)
