@@ -177,12 +177,16 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 --------------------------------------------------------------
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/mov1.png" width="40%">
-  <div class="figcaption">Movie</div>
+  <img src="/assets/images/mov1.png" width="120%">
+  <div class="figcaption">Movie Recommendation System-1</div>
 </div>
 
 
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/mov2.png" width="120%">
+  <div class="figcaption">Movie Recommendation System-2</div>
+</div>
 
-![Movie Recommendation System-1](./assets/images/mov1.PNG)
+
 
 ![Movie Recommendation System-2](assets/images/mov2.png)
