@@ -170,7 +170,7 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 ## Badges & Projects
 
 <div class="fig figcenter fighighlight">
-  <img src="./assets/tinyml_images/badge.PNG" width="20%">
+  <img src="/assets/tinyml_images/badge.PNG" width="20%">
   <div class="figcaption">Edge Impulse badge</div>
 </div>
 
