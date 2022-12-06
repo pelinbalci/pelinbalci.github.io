@@ -176,6 +176,6 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 
 --------------------------------------------------------------
 
-![Movie Recommendation System-1](./assets/images/movie_rec_1.PNG)
+![Movie Recommendation System-1](/assets/images/movie_rec_1.PNG)
 
-![Movie Recommendation System-2](./assets/images/movie_rec_2.PNG)
+![Movie Recommendation System-2](/assets/images/movie_rec_2.PNG)
