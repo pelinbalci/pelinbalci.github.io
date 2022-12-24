@@ -36,9 +36,9 @@ SQL, GAMS, Power BI
          initial codes into production
 
 - 2020 - 2022 SabancıDX, Data Scientist
-    - Prediction of breakage in a production
-        - The aim of this project is to recommend parameters which minimizes the breakage in the final product for 
-          industry
+    - Prediction of breakage in the production
+        - The aim of this project is to recommend sensor values which minimizes the breakage in the final product for 
+          industry. XGBoost Regression is used to make break prediction.
         - Data: Customer’s own dataset
         - Model: XGBoost and Linear Regression
         - The project includes the maintenance of the codes and create an MLOPs platform to schedule retraining and 
