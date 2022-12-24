@@ -32,7 +32,7 @@ SQL, GAMS, Power BI
     - Demand prediction for retail company 
        - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
          according to the lead time and safety stocks
-       - My responsibilities are reframing the project scope, detailing the tasks, making code reviews, turning the 
+       - My responsibilities are re-framing the project scope, detailing the tasks, making code reviews, turning the 
          initial codes into production
 
 - 2020 - 2022 SabancıDX, Data Scientist
@@ -45,7 +45,7 @@ SQL, GAMS, Power BI
           making faster analysis.
     - IOT Project: Air Quality IOT Product 
       - Building an IOT Product which measures the quality of data for offices. 
-      - I’ve checked the measurements with Power BI & Python
+      - Controlling the measurements with Power BI & Python
     - Prediction of System Direction for an Energy Company
       - The aim of this project is predicting the hourly energy imbalance direction for the upcoming day.
       - Data: Public dataset from “EPIAS Seffaflık Platform”
@@ -58,11 +58,10 @@ SQL, GAMS, Power BI
       - Simulation for delivery process: I’ve written Simulation environment with Simpy which shows the order’s 
         assignments and delivery times. Simulation is used to show the current state and the improvement of our new 
         approach before live test. 
-      - Shift optimization: Targeted hourly driver numbers are calculated based on order distributions. 
-        The working hours of full and part-time employees are determined by the Gurobi optimization tool based on the 
-        targeted numbers. The objective function of the mathematical model is minimizing the difference between 
-        the target driver and the assigned driver. These new shifts found as a result of the study are tested by 
-        simulation and the delivery times that occur with the new shifts are checked. 
+      - Shift optimization: Targeted hourly driver numbers are calculated based on order distributions. The working 
+        hours of full and part-time employees are determined by a mathematical model based on the targeted employees. 
+        The objective function is minimizing the difference between the target driver and the assigned driver. 
+        Simulation environment is used to analyze the proposed number of employees.
       - Tools: Python, SQL, Gurobi, Simpy, Power BI
 
     
@@ -134,6 +133,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
+- Sequence Models, Deep Learning AI, Coursera,2022, ongoing
+- Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
 - Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
 - Applications of TinyML, HarvardX, Edx, 2022 Free Version
