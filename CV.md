@@ -166,6 +166,7 @@ English (Advanced), Spanish (Beginner), German (Beginner)
 - Gazi University Technology Club, Charter Member and Member of the Board, 2007 – 2009
 - Self-learner, self-awareness, a good team member, creative and analytical thinking, good communication skills
 
+
 ## Badges & Projects
 
 <div class="fig figcenter fighighlight">
