@@ -46,12 +46,15 @@ permalink: /BooksIRead(Okuduklarım)/
 - Kan ve Gül – Alper Canıgüz
 - Alice Harikalar Diyarında – Lewis Carrol
 - Muhteşem Gatsby – Scott Fitzgerald
+- On Küçük Zenci - Agahta Christie
 - İvan İlyiç’in Ölümü – Tolstoy
 - Allah Senden Razı Olsun Bay Rosewater – Kurt Vonnegut
 - Utopia – Thomas More
 - Benim Üniversitelerim – Gorki
+- Oz Büyücüsü - L. Frank Baum
 - Germinal – Emile Zola
 - Robinson Crusoe – Daniel Defoe
+- On Küçük Zenci - Agahta Christie
 - Theo’ya Mektuplar – Vincent Van Gogh
 - Ecinniler – Dostoyevski
 - Zacharius Usta – Jules Verne
@@ -70,8 +73,17 @@ permalink: /BooksIRead(Okuduklarım)/
 - Yedek Sevgili – Kemal Tahir
 - Dr. Moreau’nun Adası – H.G.Wells
 - Minimalizm Anlamlı Bir Yaşam – The Minimalists
-- Sanatın Öyküsü -   
+- Sanatın Öyküsü - Gombrich
+- Masal Terapi - Judith Malika Liberman
 - Düşünce ve Tartışma Özgürlüğü Üzerine - John Stuart Mill
 - Beyin Hasarı Sonrası Yaşam: Kurtulanların Öyküleri - Barbara A. Wilson Jill Winegardner Fiona Ashworth
 - Alice Aynanın İçinde - Lewis Carrol
+- Ay'a Yolculuk - Jules Verne
 - Duygusal Zeka - Harvard Business Review 
+- Aritmetik İyi Kuşlar Pekiyi - Cemal Süreya
+- Yaşam 3.0 Yapay Zeka Çağında İnsan Olmak - Max Tegmark
+- Böyle Küçük Şeyler - Claire Keegan
+- Feynman'ın Gökkuşağı - Leonard Mlodinow
+- Bir Gün Bunu Konuşmayı Bırakacağız ama Bugün Değil - Arina Obuh
+- Şeker Portakalı - Jose Mauro De Vasconcelos
+- Denizler Altında Yirmi Bin Fersah - Jules Verne
