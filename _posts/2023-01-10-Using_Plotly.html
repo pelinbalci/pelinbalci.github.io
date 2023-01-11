@@ -13315,18 +13315,83 @@ if (outputEl) {{
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">front_matter_str</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;---</span>
 <span class="s2">layout: post</span>
 <span class="s2">title: Using plotly</span>
 <span class="s2">subtitle: jekyll blog using jupyter notebook</span>
-<span class="s2">tags: [,plotly,python,jupyter,jekyll]</span>
+<span class="s2">tags: [plotly,python]</span>
 <span class="s2">---&quot;&quot;&quot;</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+
+<span class="k">def</span> <span class="nf">conv_nb_jekyll</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span><span class="n">front_matter</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    this function will convert your jupyter notebook to html and </span>
+<span class="sd">    prepend the front matter string you provide to the top of the resulting html file</span>
+<span class="sd">    </span>
+<span class="sd">    Args:</span>
+<span class="sd">        filename: filename of input jupyter notebook (.ipynb file)</span>
+<span class="sd">        front_matter: python formatted string resembling YAML jekyll front matter</span>
+<span class="sd">    Returns:</span>
+<span class="sd">        jekyll_html_post: location of final html file to post on your jekyll blog</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#convert jupyter notebook to html</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">([</span><span class="s2">&quot;jupyter&quot;</span><span class="p">,</span> <span class="s2">&quot;nbconvert&quot;</span><span class="p">,</span><span class="s2">&quot;--to&quot;</span><span class="p">,</span><span class="s2">&quot;html&quot;</span><span class="p">,</span><span class="s2">&quot;--template&quot;</span><span class="p">,</span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="n">filename</span><span class="p">])</span>
+            
+    <span class="c1">#function that will prepend given string to given filename</span>
+    <span class="k">def</span> <span class="nf">prepend_string</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">string</span><span class="p">):</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+            <span class="n">content</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">seek</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">content</span><span class="p">)</span>
+            
+    <span class="c1">#call function to prepend front matter to the file </span>
+    <span class="n">html_file</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;.ipynb&#39;</span><span class="p">,</span><span class="s1">&#39;.html&#39;</span><span class="p">)</span>
+    <span class="n">prepend_string</span><span class="p">(</span><span class="n">html_file</span><span class="p">,</span><span class="n">front_matter</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;converted html file at: &#39;</span><span class="p">,</span><span class="n">html_file</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">html_file</span>
+        
+
+
+<span class="n">jekyll_html_post</span> <span class="o">=</span> <span class="n">conv_nb_jekyll</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;2023-01-10-Using_Plotly.ipynb&#39;</span><span class="p">,</span><span class="n">front_matter</span><span class="o">=</span><span class="n">front_matter_str</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>converted html file at:  2023-01-10-Using_Plotly.html
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
