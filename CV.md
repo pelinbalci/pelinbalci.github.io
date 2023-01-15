@@ -133,7 +133,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
-- Sequence Models, Deep Learning AI, Coursera,2022, ongoing
+- Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
 - Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
 - Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
