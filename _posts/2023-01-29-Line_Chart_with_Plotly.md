@@ -85,7 +85,6 @@ I used jupyter notebook. After plotting the chart, it is saved under _posts with
 I moved them to _includes folder. And then, I created an md file which you are reading now, and add a line 
 to show the plot:
 
-        {% include simple.html %}
 
 ```python
 import plotly.express as px
