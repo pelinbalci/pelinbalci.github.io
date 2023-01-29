@@ -82,9 +82,6 @@ fig.show()
 # How to embed plotly chart to md file?
 
 I used jupyter notebook. After plotting the chart, it is saved under _posts with the code below. 
-I moved them to _includes folder. And then, I created an md file which you are reading now, and add a line 
-to show the plot:
-
 
 ```python
 import plotly.express as px
@@ -94,7 +91,10 @@ fig.show()
 pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 ```
 
+I moved them to _includes folder. And then, I created an md file which you are reading now, and add a line 
+to show the plot: 
 
+```{% include plotly_simple.html %}```
 
 # References
 - https://raw.githubusercontent.com/plotly/plotly.py/master/doc/python/line-and-scatter.md
