@@ -62,6 +62,7 @@ We need to convert the "date" to datetime to show it in x axis properly.
 
 ```python
 # to datetime
+import pandas as pd
 df.Date = pd.to_datetime(df.Date)
 df_with_group.Date = pd.to_datetime(df_with_group.Date)
 ```
@@ -83,7 +84,6 @@ fig2 = px.line(df_with_group, x="Date", y="Sales", color='Sales_Group', title='D
 fig2.show()
 ```
 
-{% include_relative plotly_simple_2.html %}
 
 Let's put them together and see 2 group's sales performance: 
 
