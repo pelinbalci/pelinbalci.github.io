@@ -60,7 +60,7 @@ df_with_group = pd.DataFrame({
 
 We need to convert the "date" to datetime to show it in x axis properly. 
 
-```
+```python
 # to datetime
 df.Date = pd.to_datetime(df.Date)
 df_with_group.Date = pd.to_datetime(df_with_group.Date)
