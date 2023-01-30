@@ -127,34 +127,6 @@ fig.show()
 
 Let's put them together and see 2 group's sales performance: 
 
-```python
-# filter anomaly dates
-anomaly_date_2 = df_with_group[df_with_group.Analysis == "Anomaly"]
-
-# line plot
-fig2 = px.line(df_with_group, x="Date", y="Sales", color='Sales_Group', title='Daily Sales')
-
-# add marker
-fig2.add_traces(go.Scatter(x=anomaly_date_2["Date"], y=anomaly_date_2["Sales"], mode="markers", name="Anomaly", 
-                          hoverinfo="skip"))
-
-# add annotation
-for idx in range(len(anomaly_date_2)):
-     fig2.add_annotation(dict(font=dict(color='rgba(0,0,200,0.8)',size=12),
-                                        x=anomaly_date_2["Date"].iloc[idx],
-                                        y=anomaly_date_2["Sales"].iloc[idx],
-                                        showarrow=False,
-                                        text=anomaly_date_2["Analysis"].iloc[idx],
-                                        textangle=0,
-                                        xanchor='auto',  #['auto', 'left', 'center', 'right']
-                                        xref="x",
-                                        yref="y"))
-
-fig2.show()
-```
-
-{% include plotly_mark_annotation_2.html %}
-
 ### How to embed plotly chart to md file?
 
 It is a bit tricky when you want to pusblish your plotly express plots as md file. In this blog I'm using Jeykll and mostly, I prefer
