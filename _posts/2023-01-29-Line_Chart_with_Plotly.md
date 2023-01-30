@@ -118,10 +118,6 @@ pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 ```
 
 I moved those html files to _includes folder. In order to show the plot in the md file you can simply add a line:
-        
-```html
-{% include plotly_simple.html %}
-```
 
 
 ### References
