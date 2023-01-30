@@ -83,47 +83,7 @@ fig2 = px.line(df_with_group, x="Date", y="Sales", color='Sales_Group', title='D
 fig2.show()
 ```
 
-{% include plotly_simple_2.html %}
-
-Now it is time to markthe anomalies! We will use Graph objects for this. Start with mark the anomaly dates:
-
-```python
-anomaly_date = df[df.Analysis == "Anomaly"]
-```
-
-add_traces is used this 'go', first, we need to import it.
-
-```python
-import plotly.graph_objects as go
-fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
-fig.add_traces(go.Scatter(x=anomaly_date["Date"], y=anomaly_date["Sales"], mode="markers", name="Anomaly", 
-                          hoverinfo="skip"))
-fig.show(renderer='notebook')
-```
-
-{% include plotly_mark.html %}
-
-
-If you want to see the "Anomaly" at the chart, you should use "add_annotation":
-
-```python
-fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
-fig.add_traces(go.Scatter(x=anomaly_date["Date"], y=anomaly_date["Sales"], mode="markers", name="Anomaly", 
-                          hoverinfo="skip"))
-for idx in range(len(anomaly_date)):
-     fig.add_annotation(dict(font=dict(color='rgba(0,0,200,0.8)',size=12),
-                                        x=anomaly_date["Date"].iloc[idx],
-                                        y=anomaly_date["Sales"].iloc[idx],
-                                        showarrow=False,
-                                        text=anomaly_date["Analysis"].iloc[idx],
-                                        textangle=0,
-                                        xanchor='auto',  #['auto', 'left', 'center', 'right']
-                                        xref="x",
-                                        yref="y"))
-fig.show()
-```
-
-{% include plotly_mark_annotation.html %}
+{% include_relative plotly_simple_2.html %}
 
 Let's put them together and see 2 group's sales performance: 
 
