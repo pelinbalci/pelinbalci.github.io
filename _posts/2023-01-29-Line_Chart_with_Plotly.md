@@ -29,9 +29,9 @@ jupyter:
     name: Line Charts
     order: 1
     page_type: example_index
-    permalink: -
-    redirect_from: -
-    thumbnail: -
+    permalink: python/line/
+    redirect_from: python/line-plots/
+    thumbnail: thumbnail/line.jpg
 ---
 
 In this file I will explain how to use plotly with markers and annotation. It is very easy to plot chart in plotly express!:)
