@@ -45,16 +45,6 @@ df = pd.DataFrame({"Date": ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-0
      "Analysis": ["Normal", "Anomaly", "Normal", "Anomaly", "Anomaly", "Normal", "Normal", "Normal", "Normal", "Normal"],
      "Sales": [120, 30, 115, 10, 5, 100, 99, 123, 134, 96]})
 
-df_with_group = pd.DataFrame({
-    "Date": ["2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", "2023-01-05", "2023-01-06", "2023-01-07", 
-             "2023-01-08", "2023-01-09", "2023-01-10", "2023-01-01", "2023-01-02", "2023-01-03", "2023-01-04", 
-             "2023-01-05", "2023-01-06", "2023-01-07", "2023-01-08", "2023-01-09", "2023-01-10"],
-    "Analysis": ["Normal", "Anomaly", "Normal", "Anomaly", "Anomaly", "Normal", "Normal", "Normal", "Normal", "Normal",
-                 "Anomaly", "Normal", "Normal", "Anomaly", "Anomaly", "Normal", "Normal", "Normal", "Normal", "Anomaly"],
-    "Sales": [120, 30, 115, 10, 5, 100, 99, 123, 134, 96, 
-              15, 100, 103, 13, 8, 88, 111, 126, 120, 25],
-    "Sales_Group": ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", "B", "B", "B", "B", "B", "B", "B", "B", "B", "B"]
-})
 ```
 
 We need to convert the "date" to datetime to show it in x axis properly. 
@@ -75,15 +65,23 @@ fig.show()
 
 {% include plotly_simple.html %}
 
-
-If we want to see 2 sales group's performance together:
+Now it is time to mark the anomalies! We will use Graph objects for this. Start with mark the anomaly dates:
 
 ```python
-fig2 = px.line(df_with_group, x="Date", y="Sales", color='Sales_Group', title='Daily Sales')
-fig2.show()
+anomaly_date = df[df.Analysis == "Anomaly"]
 ```
 
-{% include plotly_simple_2.html %}
+add_traces is used this 'go', first, we need to import it.
+
+```python
+import plotly.graph_objects as go
+fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
+fig.add_traces(go.Scatter(x=anomaly_date["Date"], y=anomaly_date["Sales"], mode="markers", name="Anomaly", 
+                          hoverinfo="skip"))
+fig.show(renderer='notebook')
+```
+
+{% include plotly_mark.html %}
 
 
 ### How to embed plotly chart to md file?
