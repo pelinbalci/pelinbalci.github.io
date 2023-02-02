@@ -83,6 +83,27 @@ fig.show(renderer='notebook')
 
 {% include plotly_mark.html %}
 
+If you want to see the "Anomaly" at the chart, you should use "add_annotation":
+
+```python
+fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
+fig.add_traces(go.Scatter(x=anomaly_date["Date"], y=anomaly_date["Sales"], mode="markers", name="Anomaly", 
+                          hoverinfo="skip"))
+for idx in range(len(anomaly_date)):
+     fig.add_annotation(dict(font=dict(color='rgba(0,0,200,0.8)',size=12),
+                                        x=anomaly_date["Date"].iloc[idx],
+                                        y=anomaly_date["Sales"].iloc[idx],
+                                        showarrow=False,
+                                        text=anomaly_date["Analysis"].iloc[idx],
+                                        textangle=0,
+                                        xanchor='auto',  #['auto', 'left', 'center', 'right']
+                                        xref="x",
+                                        yref="y"))
+fig.show()
+```
+
+{% include plotly_mark_annotation.html %}
+
 
 ### How to embed plotly chart to md file?
 
