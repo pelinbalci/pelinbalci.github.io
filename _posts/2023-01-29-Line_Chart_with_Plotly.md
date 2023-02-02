@@ -112,10 +112,13 @@ fig.show()
 pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 ```
 
-I moved those html files to _includes folder. In order to show the plot in the md file you can simply add a line to include 
-xxx.html files. 
+I moved those html files to _includes folder. In order to show the plot in the md file you can simply add a line:
 
-```{% include plotly_simple.html %}```
+<div class="fig figcenter fighighlight">
+  <img src="/assets/images/include_file.png" width="20%">
+  <div class="figcaption">include html</div>
+</div>
+
 
 # References
 - https://raw.githubusercontent.com/plotly/plotly.py/master/doc/python/line-and-scatter.md
