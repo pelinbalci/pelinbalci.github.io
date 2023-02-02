@@ -84,10 +84,7 @@ in github deployment.
 
 One error example: 
 
-```
-Liquid syntax error (line 15038): Variable '{{ x.observe(notebook Container, {childList: true}' was not properly terminated with regexp: /\}\}/ in /github/workspace/_posts/2023-01-10-Line_Chart_with_Plotly.html
-
-```
+> Liquid syntax error (line 15038): Variable '{{ x.observe(notebook Container, {childList: true}' was not properly terminated with regexp: /\}\}/ in /github/workspace/_posts/2023-01-10-Line_Chart_with_Plotly.html
 
 ```python
 import plotly.express as px
