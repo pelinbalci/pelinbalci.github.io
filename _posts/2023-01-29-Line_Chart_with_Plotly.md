@@ -76,6 +76,16 @@ fig.show()
 {% include plotly_simple.html %}
 
 
+If we want to see 2 sales group's performance together:
+
+```python
+fig2 = px.line(df_with_group, x="Date", y="Sales", color='Sales_Group', title='Daily Sales')
+fig2.show()
+```
+
+{% include plotly_simple_2.html %}
+
+
 ### How to embed plotly chart to md file?
 
 It is a bit tricky when you want to pusblish your plotly express plots as md file. In this blog I'm using Jeykll and mostly, I prefer
