@@ -80,11 +80,8 @@ fig.show()
 
 It is a bit tricky when you want to pusblish your plotly express plots as md file. In this blog I'm using Jeykll and mostly, I prefer
 to convert my jupyter notebooks to html and publish them directly. However, when it comes to publish plotly there are many erros 
-in github deployment. 
+in github deployment. For example: Liquid syntax error
 
-One error example: 
-
-Liquid syntax error (line 15038): Variable '{{ x.observe(notebook Container, {childList: true}' was not properly terminated with regexp: /\}\}/ in /github/workspace/_posts/2023-01-10-Line_Chart_with_Plotly.html
 
 ```python
 import plotly.express as px
