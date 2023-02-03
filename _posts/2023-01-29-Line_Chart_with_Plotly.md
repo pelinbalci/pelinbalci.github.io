@@ -107,7 +107,7 @@ fig.show()
 
 ### How to embed plotly chart to md file?
 
-It is a bit tricky when you want to pusblish your plotly express plots as md file. In this blog I'm using Jeykll and mostly, I prefer
+It is a bit tricky when you want to publish your plotly express plots as md file. In this blog I'm using Jeykll and mostly, I prefer
 to convert my jupyter notebooks to html and publish them directly. However, when it comes to publish plotly there are many erros 
 in github deployment. For example: Liquid syntax error
 
@@ -144,7 +144,7 @@ pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 I moved those html files to _includes folder. In order to show the plot in the md file you can simply add a line:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/include_file.png" width="20%">
+  <img src="/assets/images/include_file.png" width="50%">
   <div class="figcaption">include html</div>
 </div>
 
