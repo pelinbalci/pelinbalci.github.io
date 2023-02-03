@@ -71,7 +71,7 @@ Now it is time to mark the anomalies! We will use Graph objects for this. Start 
 anomaly_date = df[df.Analysis == "Anomaly"]
 ```
 
-add_traces is used this 'go', first, we need to import it.
+It is required to import graph objects to mark "anomalies".
 
 ```python
 import plotly.graph_objects as go
@@ -83,7 +83,7 @@ fig.show(renderer='notebook')
 
 {% include plotly_mark.html %}
 
-If you want to see the "Anomaly" at the chart, you should use "add_annotation":
+If you want to see the "Anomaly" as a string on the chart, you should use "add_annotation":
 
 ```python
 fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
