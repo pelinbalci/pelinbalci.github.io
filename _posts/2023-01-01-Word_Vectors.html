@@ -14614,7 +14614,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <li><a href="#1">1 - Load the Word Vectors</a></li>
 <li><a href="#3">2 - Cosine Similarity</a></li>
 <li><a href="#4">3 - Word Analogy Task</a></li>
-<li><a href="#5">4 - Debiasing Word Vectors (OPTIONAL/UNGRADED)</a><ul>
+<li><a href="#5">4 - Debiasing Word Vectors</a><ul>
 <li><a href="#5-1">4.1 - Neutralize Bias for Non-Gender Specific Words</a></li>
 <li><a href="#5-2">4.2 - Equalization Algorithm for Gender-Specific Words</a></li>
 </ul>
@@ -14662,7 +14662,8 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <p><a name='1'></a></p>
-<h2 id="1---Load-the-Word-Vectors">1 - Load the Word Vectors<a class="anchor-link" href="#1---Load-the-Word-Vectors">&#182;</a></h2><p>We will use 50-dimensional GloVe vectors to represent words. Let's load the <code>word_to_vec_map</code>.</p>
+<h2 id="1---Load-the-Word-Vectors">1 - Load the Word Vectors<a class="anchor-link" href="#1---Load-the-Word-Vectors">&#182;</a></h2><p>For this assignment, you'll use 50-dimensional GloVe vectors to represent words. 
+Run the following cell to load the <code>word_to_vec_map</code>.</p>
 
 </div>
 </div>
@@ -14840,7 +14841,7 @@ $$\text{CosineSimilarity(u, v)} = \frac {u \cdot v} {||u||_2 ||v||_2} = cos(\the
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># dot product</span>
 <span class="n">u_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;town&quot;</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;u_v: np.dot(city, town)&quot;</span><span class="p">,</span> <span class="n">u_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u_v</span><span class="p">)</span>
 
 <span class="c1"># norm of 2 words:</span>
 <span class="n">norm_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">])))</span>
@@ -14849,12 +14850,12 @@ $$\text{CosineSimilarity(u, v)} = \frac {u \cdot v} {||u||_2 ||v||_2} = cos(\the
 <span class="c1"># simple version of norm:</span>
 <span class="n">norm_u</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;city&quot;</span><span class="p">]))</span>
 <span class="n">norm_v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;town&quot;</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;town&quot;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;norm_u: ||u||_2&quot;</span><span class="p">,</span> <span class="n">norm_u</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;norm_v: ||v||_2&quot;</span><span class="p">,</span> <span class="n">norm_v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">norm_u</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">norm_v</span><span class="p">)</span>
 
 
 <span class="c1"># cosine similarity:</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cos similarity&quot;</span><span class="p">,</span> <span class="n">u_v</span><span class="o">/</span><span class="p">(</span><span class="n">norm_u</span> <span class="o">*</span> <span class="n">norm_v</span><span class="p">))</span>
+<span class="n">u_v</span><span class="o">/</span><span class="p">(</span><span class="n">norm_u</span> <span class="o">*</span> <span class="n">norm_v</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -14874,12 +14875,23 @@ $$\text{CosineSimilarity(u, v)} = \frac {u \cdot v} {||u||_2 ||v||_2} = cos(\the
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>u_v: np.dot(city, town) 27.940339194829
-norm_u: ||u||_2 5.683819631019707
-norm_v: ||v||_2 5.658190970652017
-cos similarity 0.868787942931717
+<pre>27.940339194829
+5.683819631019707
+5.658190970652017
 </pre>
 </div>
+</div>
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[6]:</div>
+
+
+
+
+<div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain">
+<pre>0.868787942931717</pre>
+</div>
+
 </div>
 
 </div>
@@ -15009,9 +15021,9 @@ cosine_similarity(france - paris, rome - italy) =  -0.6751479308174201
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;man to actor &amp; woman to actress similarity&quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actor&quot;</span><span class="p">],</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actor&quot;</span><span class="p">],</span> 
                         <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actress&quot;</span><span class="p">]))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;man to actress &amp; woman to actor similarity&quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actress&quot;</span><span class="p">],</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actress&quot;</span><span class="p">],</span> 
                         <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;actor&quot;</span><span class="p">]))</span>
 </pre></div>
 
@@ -15032,8 +15044,8 @@ cosine_similarity(france - paris, rome - italy) =  -0.6751479308174201
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>man to actor &amp; woman to actress similarity 0.9146492195406316
-man to actress &amp; woman to actor similarity 0.5060072094699283
+<pre>0.9146492195406316
+0.5060072094699283
 </pre>
 </div>
 </div>
@@ -15062,10 +15074,10 @@ man to actress &amp; woman to actor similarity 0.5060072094699283
 <div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;man to engineer &amp; women to nurse&quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;engineer&quot;</span><span class="p">],</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;engineer&quot;</span><span class="p">],</span> 
                         <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;nurse&quot;</span><span class="p">]))</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;man to nurse &amp; women to engineer&quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;nurse&quot;</span><span class="p">],</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;nurse&quot;</span><span class="p">],</span> 
                         <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]</span><span class="o">-</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;engineer&quot;</span><span class="p">]))</span>
 </pre></div>
 
@@ -15086,8 +15098,8 @@ man to actress &amp; woman to actor similarity 0.5060072094699283
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>man to engineer &amp; women to nurse 0.5709592438104082
-man to nurse &amp; women to engineer 0.23166955887222856
+<pre>0.5709592438104082
+0.23166955887222856
 </pre>
 </div>
 </div>
@@ -15250,10 +15262,10 @@ man to nurse &amp; women to engineer 0.23166955887222856
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_similarity</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">word</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;np.dot:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">word</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L2 diff&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">diff</span><span class="p">))),</span><span class="mi">4</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L2 word: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">word</span><span class="p">))),</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L2 diff&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">diff</span><span class="p">))))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;L2 word: &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">word</span><span class="p">))))</span>
     <span class="n">cos_sim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diff</span><span class="p">,</span> <span class="n">word</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">diff</span><span class="p">)))</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">word</span><span class="p">))))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cos sim&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cos_sim</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cos sim&quot;</span><span class="p">,</span> <span class="n">cos_sim</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15302,9 +15314,9 @@ man to nurse &amp; women to engineer 0.23166955887222856
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>np.dot: -0.16
-L2 diff 2.0616
-L2 word:  0.1414
-cos sim -0.5488
+L2 diff 2.0615528128088303
+L2 word:  0.14142135623730953
+cos sim -0.5487954724560281
 </pre>
 </div>
 </div>
@@ -15354,9 +15366,9 @@ cos sim -0.5488
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
 <pre>np.dot: 0.16
-L2 diff 2.0616
-L2 word:  0.1414
-cos sim 0.5488
+L2 diff 2.0615528128088303
+L2 word:  0.14142135623730953
+cos sim 0.5487954724560281
 </pre>
 </div>
 </div>
@@ -15454,7 +15466,7 @@ cos sim 0.5488
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">example_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;italy&#39;</span><span class="p">,</span> <span class="s1">&#39;italian&#39;</span><span class="p">,</span> <span class="s1">&#39;spain&#39;</span><span class="p">),</span> 
@@ -15487,7 +15499,6 @@ cos sim 0.5488
 india -&gt; delhi :: japan -&gt; tokyo
 man -&gt; woman :: boy -&gt; girl
 small -&gt; smaller :: large -&gt; smaller
-small -&gt; smaller :: big -&gt; competitors
 </pre>
 </div>
 </div>
@@ -15535,12 +15546,12 @@ small -&gt; smaller :: big -&gt; competitors
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s1">&#39;woman&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s1">&#39;man&#39;</span><span class="p">]</span>
@@ -15552,41 +15563,12 @@ small -&gt; smaller :: big -&gt; competitors
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>[-0.087144    0.2182     -0.40986    -0.03922    -0.1032      0.94165
- -0.06042     0.32988     0.46144    -0.35962     0.31102    -0.86824
-  0.96006     0.01073     0.24337     0.08193    -1.02722    -0.21122
-  0.695044   -0.00222     0.29106     0.5053     -0.099454    0.40445
-  0.30181     0.1355     -0.0606     -0.07131    -0.19245    -0.06115
- -0.3204      0.07165    -0.13337    -0.25068714 -0.14293    -0.224957
- -0.149       0.048882    0.12191    -0.27362    -0.165476   -0.20426
-  0.54376    -0.271425   -0.10245    -0.32108     0.2516     -0.33455
- -0.04371     0.01258   ]
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;List of names and their similarities with constructed vector:&#39;</span><span class="p">)</span>
@@ -15596,43 +15578,12 @@ small -&gt; smaller :: big -&gt; competitors
              <span class="s1">&#39;katy&#39;</span><span class="p">,</span> <span class="s1">&#39;yasmin&#39;</span><span class="p">]</span>
 
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">name_list</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">g</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>List of names and their similarities with constructed vector:
-john -0.2316
-marie 0.3156
-sophie 0.3187
-ronaldo -0.3124
-priya 0.1763
-rahul -0.1692
-danielle 0.2439
-reza -0.0793
-katy 0.2831
-yasmin 0.2331
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15648,61 +15599,24 @@ yasmin 0.2331
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Other words and their similarities:&#39;</span><span class="p">)</span>
 <span class="n">word_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;lipstick&#39;</span><span class="p">,</span> <span class="s1">&#39;guns&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;arts&#39;</span><span class="p">,</span> <span class="s1">&#39;literature&#39;</span><span class="p">,</span> <span class="s1">&#39;warrior&#39;</span><span class="p">,</span><span class="s1">&#39;doctor&#39;</span><span class="p">,</span> <span class="s1">&#39;tree&#39;</span><span class="p">,</span> <span class="s1">&#39;receptionist&#39;</span><span class="p">,</span> 
              <span class="s1">&#39;technology&#39;</span><span class="p">,</span>  <span class="s1">&#39;fashion&#39;</span><span class="p">,</span> <span class="s1">&#39;teacher&#39;</span><span class="p">,</span> <span class="s1">&#39;engineer&#39;</span><span class="p">,</span> <span class="s1">&#39;pilot&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;singer&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_list</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">g</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Other words and their similarities:
-lipstick 0.2769
-guns -0.1888
-science -0.0608
-arts 0.0082
-literature 0.0647
-warrior -0.2092
-doctor 0.119
-tree -0.0709
-receptionist 0.3308
-technology -0.1319
-fashion 0.0356
-teacher 0.1792
-engineer -0.0804
-pilot 0.0011
-computer -0.1033
-singer 0.185
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15729,12 +15643,12 @@ singer 0.185
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Other words and their similarities:&#39;</span><span class="p">)</span>
@@ -15743,70 +15657,17 @@ singer 0.185
 <span class="n">word_list_2</span> <span class="o">=</span> <span class="p">[</span> <span class="s1">&#39;guns&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;warrior&#39;</span><span class="p">,</span>
              <span class="s1">&#39;technology&#39;</span><span class="p">,</span> <span class="s1">&#39;engineer&#39;</span><span class="p">,</span> <span class="s1">&#39;pilot&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">]</span>
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_list_1</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;woman&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]),</span><span class="mi">4</span><span class="p">))</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]),</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;woman&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]))</span>
 
 <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">word_list_2</span><span class="p">:</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;woman&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]),</span><span class="mi">4</span><span class="p">))</span>
-    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]),</span><span class="mi">4</span><span class="p">))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;woman&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">]))</span>
+    <span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="n">w</span><span class="p">],</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">]))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>Other words and their similarities:
-woman lipstick 0.3862
-man lipstick 0.2732
-woman arts 0.294
-man arts 0.3085
-woman literature 0.3631
-man literature 0.3539
-woman doctor 0.7253
-man doctor 0.712
-woman tree 0.3748
-man tree 0.4337
-woman receptionist 0.4464
-man receptionist 0.3104
-woman fashion 0.4625
-man fashion 0.4739
-woman teacher 0.685
-man teacher 0.6392
-woman singer 0.5693
-man singer 0.5134
-woman guns 0.3139
-man guns 0.4274
-woman science 0.3124
-man science 0.3623
-woman warrior 0.4714
-man warrior 0.6049
-woman technology 0.2014
-man technology 0.2796
-woman engineer 0.3769
-man engineer 0.4405
-woman pilot 0.5124
-man pilot 0.5442
-woman computer 0.3295
-man computer 0.4016
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
@@ -15820,7 +15681,7 @@ man computer 0.4016
 <h3 id="4.1---Neutralize-Bias-for-Non-Gender-Specific-Words">4.1 - Neutralize Bias for Non-Gender Specific Words<a class="anchor-link" href="#4.1---Neutralize-Bias-for-Non-Gender-Specific-Words">&#182;</a></h3><p><a href="https://arxiv.org/abs/1607.06520">Boliukbasi et al., 2016</a></p>
 <p>The figure below should help you visualize what neutralizing does. If you're using a 50-dimensional word embedding, the 50 dimensional space can be split into two parts: The bias-direction $g$, and the remaining 49 dimensions, which is called $g_{\perp}$ here. In linear algebra, we say that the 49-dimensional $g_{\perp}$ is perpendicular (or &quot;orthogonal&quot;) to $g$, meaning it is at 90 degrees to $g$. The neutralization step takes a vector such as $e_{receptionist}$ and zeros out the component in the direction of $g$, giving us $e_{receptionist}^{debiased}$.</p>
 <p>Even though $g_{\perp}$ is 49-dimensional, given the limitations of what you can draw on a 2D screen, it's illustrated using a 1-dimensional axis below.</p>
-<img src="images/neutral.png" style="width:800px;height:300px;">
+<img src="neutral.png" style="width:800px;height:300px;">
 <caption><center><font color='purple'><b>Figure 2</b>: The word vector for "receptionist" represented before and after applying the neutralize operation.</font> </center></caption>
 <p><a name='ex-3'></a></p>
 <h3 id="Exercise-3---neutralize">Exercise 3 - neutralize<a class="anchor-link" href="#Exercise-3---neutralize">&#182;</a></h3><p>Implement <code>neutralize()</code> to remove the bias of words such as &quot;receptionist&quot; or &quot;scientist.&quot;</p>
@@ -15840,7 +15701,7 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">neutralize</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">word_to_vec_map</span><span class="p">):</span>
@@ -15869,12 +15730,12 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="s2">&quot;receptionist&quot;</span>
@@ -15889,28 +15750,6 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 </div>
 </div>
 
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>cosine similarity between receptionist and g, before neutralizing:  0.33077941750593737
-cosine similarity between receptionist and g, after neutralizing:  -2.6832242276243644e-17
-</pre>
-</div>
-</div>
-
-</div>
-
-</div>
-
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15921,7 +15760,7 @@ cosine similarity between receptionist and g, after neutralizing:  -2.6832242276
 <p><a name='5-2'></a></p>
 <h3 id="4.2---Equalization-Algorithm-for-Gender-Specific-Words">4.2 - Equalization Algorithm for Gender-Specific Words<a class="anchor-link" href="#4.2---Equalization-Algorithm-for-Gender-Specific-Words">&#182;</a></h3><p>Equalization is applied to pairs of words that you might want to have differ only through the gender property. As a concrete example, suppose that &quot;actress&quot; is closer to &quot;babysit&quot; than &quot;actor.&quot; By applying neutralization to &quot;babysit,&quot; you can reduce the gender stereotype associated with babysitting. But this still does not guarantee that &quot;actor&quot; and &quot;actress&quot; are equidistant from &quot;babysit.&quot; The equalization algorithm takes care of this.</p>
 <p>The key idea behind equalization is to make sure that a particular pair of words are equidistant from the 49-dimensional $g_\perp$. The equalization step also ensures that the two equalized steps are now the same distance from $e_{receptionist}^{debiased}$, or from any other work that has been neutralized. Visually, this is how equalization works:</p>
-<img src="images/equalize10.png" style="width:800px;height:400px;">
+<img src="equalize10.png" style="width:800px;height:400px;">
 <p>The derivation of the linear algebra to do this is a bit more complex. (See Bolukbasi et al., 2016 in the References for details.) Here are the key equations:</p>
 $$ \mu = \frac{e_{w1} + e_{w2}}{2}\tag{4}$$$$ \mu_{B} = \frac {\mu \cdot \text{bias_axis}}{||\text{bias_axis}||_2^2} *\text{bias_axis}
 \tag{5}$$$$\mu_{\perp} = \mu - \mu_{B} \tag{6}$$$$ e_{w1B} = \frac {e_{w1} \cdot \text{bias_axis}}{||\text{bias_axis}||_2^2} *\text{bias_axis}
@@ -15936,7 +15775,7 @@ $$e_{w1B}^{corrected} = \sqrt{ |{1 - ||\mu_{\perp} ||^2_2} |} * \frac{e_{\text{w
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">equalize</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">bias_axis</span><span class="p">,</span> <span class="n">word_to_vec_map</span><span class="p">):</span>
@@ -15984,54 +15823,27 @@ $$e_{w1B}^{corrected} = \sqrt{ |{1 - ||\mu_{\perp} ||^2_2} |} * \frac{e_{\text{w
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine similarities before equalizing:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(word_to_vec_map[</span><span class="se">\&quot;</span><span class="s2">man</span><span class="se">\&quot;</span><span class="s2">], gender) = &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">],</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(word_to_vec_map[</span><span class="se">\&quot;</span><span class="s2">woman</span><span class="se">\&quot;</span><span class="s2">], gender) = &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">],</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(word_to_vec_map[</span><span class="se">\&quot;</span><span class="s2">man</span><span class="se">\&quot;</span><span class="s2">], gender) = &quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;man&quot;</span><span class="p">],</span> <span class="n">g</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(word_to_vec_map[</span><span class="se">\&quot;</span><span class="s2">woman</span><span class="se">\&quot;</span><span class="s2">], gender) = &quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">word_to_vec_map</span><span class="p">[</span><span class="s2">&quot;woman&quot;</span><span class="p">],</span> <span class="n">g</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">()</span>
 <span class="n">e1</span><span class="p">,</span> <span class="n">e2</span> <span class="o">=</span> <span class="n">equalize</span><span class="p">((</span><span class="s2">&quot;man&quot;</span><span class="p">,</span> <span class="s2">&quot;woman&quot;</span><span class="p">),</span> <span class="n">g</span><span class="p">,</span> <span class="n">word_to_vec_map</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine similarities after equalizing:&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(e1, gender) = &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(e2, gender) = &quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cosine_similarity</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">g</span><span class="p">),</span><span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(e1, gender) = &quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">e1</span><span class="p">,</span> <span class="n">g</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine_similarity(e2, gender) = &quot;</span><span class="p">,</span> <span class="n">cosine_similarity</span><span class="p">(</span><span class="n">e2</span><span class="p">,</span> <span class="n">g</span><span class="p">))</span>
 </pre></div>
 
      </div>
 </div>
 </div>
-</div>
-
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-
-
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>cosine similarities before equalizing:
-cosine_similarity(word_to_vec_map[&#34;man&#34;], gender) =  -0.1171
-cosine_similarity(word_to_vec_map[&#34;woman&#34;], gender) =  0.3567
-
-cosine similarities after equalizing:
-cosine_similarity(e1, gender) =  -0.7166
-cosine_similarity(e2, gender) =  0.7397
-</pre>
-</div>
-</div>
-
-</div>
-
 </div>
 
 </div>
