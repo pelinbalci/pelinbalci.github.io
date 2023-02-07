@@ -15466,7 +15466,7 @@ cos sim 0.5487954724560281
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">example_list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;italy&#39;</span><span class="p">,</span> <span class="s1">&#39;italian&#39;</span><span class="p">,</span> <span class="s1">&#39;spain&#39;</span><span class="p">),</span> 
@@ -15499,6 +15499,7 @@ cos sim 0.5487954724560281
 india -&gt; delhi :: japan -&gt; tokyo
 man -&gt; woman :: boy -&gt; girl
 small -&gt; smaller :: large -&gt; smaller
+small -&gt; smaller :: big -&gt; competitors
 </pre>
 </div>
 </div>
@@ -15546,12 +15547,12 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s1">&#39;woman&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">word_to_vec_map</span><span class="p">[</span><span class="s1">&#39;man&#39;</span><span class="p">]</span>
@@ -15563,12 +15564,41 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>[-0.087144    0.2182     -0.40986    -0.03922    -0.1032      0.94165
+ -0.06042     0.32988     0.46144    -0.35962     0.31102    -0.86824
+  0.96006     0.01073     0.24337     0.08193    -1.02722    -0.21122
+  0.695044   -0.00222     0.29106     0.5053     -0.099454    0.40445
+  0.30181     0.1355     -0.0606     -0.07131    -0.19245    -0.06115
+ -0.3204      0.07165    -0.13337    -0.25068714 -0.14293    -0.224957
+ -0.149       0.048882    0.12191    -0.27362    -0.165476   -0.20426
+  0.54376    -0.271425   -0.10245    -0.32108     0.2516     -0.33455
+ -0.04371     0.01258   ]
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;List of names and their similarities with constructed vector:&#39;</span><span class="p">)</span>
@@ -15586,6 +15616,37 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>List of names and their similarities with constructed vector:
+john -0.23163356145973724
+marie 0.315597935396073
+sophie 0.31868789859418784
+ronaldo -0.31244796850329437
+priya 0.17632041839009402
+rahul -0.16915471039231716
+danielle 0.24393299216283895
+reza -0.07930429672199553
+katy 0.2831068659572615
+yasmin 0.23313857767928758
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15599,12 +15660,12 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Other words and their similarities:&#39;</span><span class="p">)</span>
@@ -15617,6 +15678,43 @@ small -&gt; smaller :: large -&gt; smaller
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Other words and their similarities:
+lipstick 0.2769191625638267
+guns -0.1888485567898898
+science -0.06082906540929701
+arts 0.008189312385880337
+literature 0.06472504433459932
+warrior -0.20920164641125288
+doctor 0.11895289410935041
+tree -0.07089399175478091
+receptionist 0.33077941750593737
+technology -0.13193732447554302
+fashion 0.03563894625772699
+teacher 0.17920923431825664
+engineer -0.0803928049452407
+pilot 0.0010764498991916937
+computer -0.10330358873850498
+singer 0.1850051813649629
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
@@ -15643,12 +15741,12 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Other words and their similarities:&#39;</span><span class="p">)</span>
@@ -15670,6 +15768,59 @@ small -&gt; smaller :: large -&gt; smaller
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>Other words and their similarities:
+woman lipstick 0.3862429669706063
+man lipstick 0.273165272354283
+woman arts 0.2940187431766971
+man arts 0.3084874532181791
+woman literature 0.363119683771546
+man literature 0.35388764809819956
+woman doctor 0.7252735302545701
+man doctor 0.7119579038910591
+woman tree 0.37484879731523546
+man tree 0.43365820275424793
+woman receptionist 0.4464364858934247
+man receptionist 0.3104243175079627
+woman fashion 0.4624789392055569
+man fashion 0.4739439919224705
+woman teacher 0.68499316078363
+man teacher 0.6392358303810439
+woman singer 0.5692962568351047
+man singer 0.5133699757062065
+woman guns 0.3138791334333115
+man guns 0.4273814491100573
+woman science 0.31239626692008643
+man science 0.3622743278942722
+woman warrior 0.4713955678516831
+man warrior 0.6049269311478533
+woman technology 0.20144332004912435
+man technology 0.27961583473586277
+woman engineer 0.37687460619888824
+man engineer 0.4405255720305907
+woman pilot 0.5124479109262313
+man pilot 0.5442145707441612
+woman computer 0.32951857656034195
+man computer 0.40155425059559346
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15681,7 +15832,7 @@ small -&gt; smaller :: large -&gt; smaller
 <h3 id="4.1---Neutralize-Bias-for-Non-Gender-Specific-Words">4.1 - Neutralize Bias for Non-Gender Specific Words<a class="anchor-link" href="#4.1---Neutralize-Bias-for-Non-Gender-Specific-Words">&#182;</a></h3><p><a href="https://arxiv.org/abs/1607.06520">Boliukbasi et al., 2016</a></p>
 <p>The figure below should help you visualize what neutralizing does. If you're using a 50-dimensional word embedding, the 50 dimensional space can be split into two parts: The bias-direction $g$, and the remaining 49 dimensions, which is called $g_{\perp}$ here. In linear algebra, we say that the 49-dimensional $g_{\perp}$ is perpendicular (or &quot;orthogonal&quot;) to $g$, meaning it is at 90 degrees to $g$. The neutralization step takes a vector such as $e_{receptionist}$ and zeros out the component in the direction of $g$, giving us $e_{receptionist}^{debiased}$.</p>
 <p>Even though $g_{\perp}$ is 49-dimensional, given the limitations of what you can draw on a 2D screen, it's illustrated using a 1-dimensional axis below.</p>
-<img src="neutral.png" style="width:800px;height:300px;">
+<img src=".assets/images/neutral.png" style="width:800px;height:300px;">
 <caption><center><font color='purple'><b>Figure 2</b>: The word vector for "receptionist" represented before and after applying the neutralize operation.</font> </center></caption>
 <p><a name='ex-3'></a></p>
 <h3 id="Exercise-3---neutralize">Exercise 3 - neutralize<a class="anchor-link" href="#Exercise-3---neutralize">&#182;</a></h3><p>Implement <code>neutralize()</code> to remove the bias of words such as &quot;receptionist&quot; or &quot;scientist.&quot;</p>
@@ -15701,7 +15852,7 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">neutralize</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">word_to_vec_map</span><span class="p">):</span>
@@ -15730,12 +15881,12 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">e</span> <span class="o">=</span> <span class="s2">&quot;receptionist&quot;</span>
@@ -15750,6 +15901,28 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 </div>
 </div>
 
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cosine similarity between receptionist and g, before neutralizing:  0.33077941750593737
+cosine similarity between receptionist and g, after neutralizing:  -2.6832242276243644e-17
+</pre>
+</div>
+</div>
+
+</div>
+
+</div>
+
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper">
@@ -15760,7 +15933,7 @@ where : $u_B = $ and $ u_{\perp} = u - u_B $
 <p><a name='5-2'></a></p>
 <h3 id="4.2---Equalization-Algorithm-for-Gender-Specific-Words">4.2 - Equalization Algorithm for Gender-Specific Words<a class="anchor-link" href="#4.2---Equalization-Algorithm-for-Gender-Specific-Words">&#182;</a></h3><p>Equalization is applied to pairs of words that you might want to have differ only through the gender property. As a concrete example, suppose that &quot;actress&quot; is closer to &quot;babysit&quot; than &quot;actor.&quot; By applying neutralization to &quot;babysit,&quot; you can reduce the gender stereotype associated with babysitting. But this still does not guarantee that &quot;actor&quot; and &quot;actress&quot; are equidistant from &quot;babysit.&quot; The equalization algorithm takes care of this.</p>
 <p>The key idea behind equalization is to make sure that a particular pair of words are equidistant from the 49-dimensional $g_\perp$. The equalization step also ensures that the two equalized steps are now the same distance from $e_{receptionist}^{debiased}$, or from any other work that has been neutralized. Visually, this is how equalization works:</p>
-<img src="equalize10.png" style="width:800px;height:400px;">
+<img src="images/equalize10.png" style="width:800px;height:400px;">
 <p>The derivation of the linear algebra to do this is a bit more complex. (See Bolukbasi et al., 2016 in the References for details.) Here are the key equations:</p>
 $$ \mu = \frac{e_{w1} + e_{w2}}{2}\tag{4}$$$$ \mu_{B} = \frac {\mu \cdot \text{bias_axis}}{||\text{bias_axis}||_2^2} *\text{bias_axis}
 \tag{5}$$$$\mu_{\perp} = \mu - \mu_{B} \tag{6}$$$$ e_{w1B} = \frac {e_{w1} \cdot \text{bias_axis}}{||\text{bias_axis}||_2^2} *\text{bias_axis}
@@ -15775,7 +15948,7 @@ $$e_{w1B}^{corrected} = \sqrt{ |{1 - ||\mu_{\perp} ||^2_2} |} * \frac{e_{\text{w
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">equalize</span><span class="p">(</span><span class="n">pair</span><span class="p">,</span> <span class="n">bias_axis</span><span class="p">,</span> <span class="n">word_to_vec_map</span><span class="p">):</span>
@@ -15823,12 +15996,12 @@ $$e_{w1B}^{corrected} = \sqrt{ |{1 - ||\mu_{\perp} ||^2_2} |} * \frac{e_{\text{w
 </div>
 </div>
 
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;cosine similarities before equalizing:&quot;</span><span class="p">)</span>
@@ -15844,6 +16017,33 @@ $$e_{w1B}^{corrected} = \sqrt{ |{1 - ||\mu_{\perp} ||^2_2} |} * \frac{e_{\text{w
      </div>
 </div>
 </div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
+<pre>cosine similarities before equalizing:
+cosine_similarity(word_to_vec_map[&#34;man&#34;], gender) =  -0.11711095765336832
+cosine_similarity(word_to_vec_map[&#34;woman&#34;], gender) =  0.35666618846270376
+
+cosine similarities after equalizing:
+cosine_similarity(e1, gender) =  -0.7165727525843935
+cosine_similarity(e2, gender) =  0.7396596474928908
+</pre>
+</div>
+</div>
+
+</div>
+
 </div>
 
 </div>
