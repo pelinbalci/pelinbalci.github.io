@@ -133,6 +133,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
+- Natural Language Processing with Classification and Vector Spaces, Deep Learning AI, Coursera, 2022 Free Version
 - Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
 - Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
 - Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
