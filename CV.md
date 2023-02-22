@@ -29,6 +29,7 @@ SQL, GAMS, Power BI
 
 ## Work Experiences
 - 2022 -  SabancıDx, Sr. Data Scientist 
+    - Air Handling Unit Optimization
     - Demand prediction for retail company 
        - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
          according to the lead time and safety stocks
