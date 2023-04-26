@@ -6,15 +6,32 @@ permalink: /CV/
 
 # Pelin Balci, Msc Industrial Engineer
 
+## About
+I am an industrial engineer with a master's degree. I've completed my master's degree at Bilkent University, one of the 
+tops university in industrial engineering in Turkey. I took many online lectures regarding machine learning and deep 
+learning. Currently, I am working as a Sr. Data Scientist in SabancıDx. My biggest field of interest is Tiny ML & NLP. 
+
+I am using Python for my projects. Also, I am using LeetCode to improve my coding skills. I am trying to contribute to 
+Turkey's data science community. Recently, I joined AYA (Açık Yazılım Ağı) which aims to help people who were affected 
+by the big earthquake in Kahramanmaraş and I have worked as a lead on data labeling for NER and Intent Classification 
+Models. I am also part of the Geeks of Data community where I have a chance to share my knowledge and learn from others' 
+experiences. 
+
+I am a self-learner. I believe that open-source software is very important and only in this way, we will progress much 
+faster. I share my codes on my GitHub and write posts on my own website and Medium. Please let me know if you have any 
+questions regarding my projects or would like to collaborate with me on an open-source project :)
+
 ## Contact
 * Location: İstanbul, Turkey
-* LinkedIn: [https://www.linkedin.com/in/pelin-balci/](https://www.linkedin.com/in/pelin-balci/)
-* GitHub: [https://github.com/pelinbalci](https://github.com/pelinbalci)
-* Blog: [https://pelinbalci.com/](https://pelinbalci.com/)
+* [LinkedIn](https://www.linkedin.com/in/pelin-balci/)
+* [GitHub](https://github.com/pelinbalci)
+* [Website](https://pelinbalci.com/)
+* [Medium](https://medium.com/@balci.pelin)
+* [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
 
 ## Key Skills
 Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
-Tiny Machine Learning
+Tiny Machine Learning, Reinforcement Learning
 
 ## Software Knowledge
 Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite, Streamlit), 
@@ -26,11 +43,10 @@ SQL, GAMS, Power BI
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
 
-
 ## Work Experiences
 - 2022 -  SabancıDx, Sr. Data Scientist 
     - NLP - OCR Project
-    - Air Handling Unit Optimization
+    - Air Handling Unit Optimization with Reinforcement Learning
     - Demand prediction for retail company 
        - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
          according to the lead time and safety stocks
@@ -40,24 +56,20 @@ SQL, GAMS, Power BI
 - 2020 - 2022 SabancıDX, Data Scientist
     - Prediction of breakage in the production
         - The aim of this project is to recommend sensor values which minimizes the breakage in the final product for 
-          industry. XGBoost Regression is used to make break prediction.
-        - Data: Customer’s own dataset
+          industry. XGBoost Regression is used to make break prediction, a recommendation system is implemented which 
+          suggests the best sensor values in the factory.
         - Model: XGBoost and Linear Regression
-        - The project includes the maintenance of the codes and create an MLOPs platform to schedule retraining and 
-          making faster analysis.
     - IOT Project: Air Quality IOT Product 
       - Building an IOT Product which measures the quality of data for offices. 
       - Controlling the measurements with Power BI & Python
     - Prediction of System Direction for an Energy Company
       - The aim of this project is predicting the hourly energy imbalance direction for the upcoming day.
-      - Data: Public dataset from “EPIAS Seffaflık Platform”
       - Model: Neural Network Model is implemented with PyTorch 
       - Deployment: Databricks. Our model is being retrained every week and send a prediction mail to custome
       - Tools: Python, Databricks, SQL, Power BI
     - Delivery Optimization for a Fast-Food Company 
-      - The aim of this project is improving delivery process and optimize shifts 
-      - Data: Customer’s own data. 
-      - Simulation for delivery process: I’ve written Simulation environment with Simpy which shows the order’s 
+      - The aim of this project is improving delivery process and optimize shifts
+      - Simulation for delivery process: I’ve written Simulation environment with Simpy library which shows the order’s 
         assignments and delivery times. Simulation is used to show the current state and the improvement of our new 
         approach before live test. 
       - Shift optimization: Targeted hourly driver numbers are calculated based on order distributions. The working 
@@ -135,6 +147,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
+- The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
+- ChatGPT Teach-Out, Michigan University, Coursera, 2023 ongoing
 - Natural Language Processing with Classification and Vector Spaces, Deep Learning AI, Coursera, 2022 Free Version
 - Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
 - Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
