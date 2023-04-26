@@ -178,8 +178,8 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - Advanced Data Analytics, Data Scientist Track, Sabancı University, 2018
 
 #### Other
+- ChatGPT Teach-Out, Michigan University, Coursera, 2023 on-going
 - The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
-- ChatGPT Teach-Out, Michigan University, Coursera, 2023 ongoing
 - Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
 - Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
 - Bertelsmann Data Analyst Nano Degree with Scholarship, 2018 – 2019 [certificate](https://graduation.udacity.com/confirm/URVHJGL)
