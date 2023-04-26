@@ -153,27 +153,35 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - TÜBİTAK Graduate Scholarship, 2010 – 2012
 
 ## Trainings
-- The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
-- ChatGPT Teach-Out, Michigan University, Coursera, 2023 ongoing
+
+#### Deep Learning
 - Natural Language Processing with Classification and Vector Spaces, Deep Learning AI, Coursera, 2022 Free Version
 - Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
-- Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
-- Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
-- Applications of TinyML, HarvardX, Edx, 2022 Free Version
-- Fundamentals of TinyML, HarvardX, Edx, 2022 Free Version
-- Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
-- Introduction to Embedded Machine Learning, Edge Impulse, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
 - Convolutional Neural Networks in TensorFlow, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/DKW73Y8LDAQT)
 - Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning, Deep Learning AI, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/XNKW988DUE4H)
-- Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
 - CS231n Convolutional Neural Networks for Visual Recognition, Standford University, 2020[github_notes](https://github.com/pelinbalci/Standford_CS231n)
 - Intro to Deep Learning with PyTorch, Udacity, 2020 [github_notes](https://github.com/pelinbalci/Intro_Deep_Learning)
+
+#### Embedded Machine Learning
+- Applications of TinyML, HarvardX, Edx, 2022 Free Version
+- Fundamentals of TinyML, HarvardX, Edx, 2022 Free Version
+- Introduction to Embedded Machine Learning, Edge Impulse, Coursera, 2021 [certificate](https://www.coursera.org/account/accomplishments/certificate/X3URUA7UD6XL)
+
+#### Machine Learning
+- Machine Learning Specialization, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/9368ed0aecf293acaa5d03a15202ad75)
+- Unsupervised Learning, Recommenders, Reinforcement Learning, Deep Learning AI, Coursera,2022 [certificate](https://coursera.org/share/705cb543d8cea1969864519dba8424ba)
 - AWS Machine Learning Foundation Course, Udacity, 2020 [github_notes](https://github.com/pelinbalci/aws_ml_foundations)
 - Machine Learning Crash Course with TensorFlow API, Google, 2020 [github_notes](https://github.com/pelinbalci/machinelearning)
 - Intro to Machine Learning, Udacity, 2020 [github_notes](https://github.com/pelinbalci/intro_to_ml)
 - Bayesian Machine Learning via Python: A/B Testing, Udemy, 2020 [github_notes](https://github.com/pelinbalci/Bayesian-AB-Test), [certificate](https://www.udemy.com/certificate/UC-918b0d23-b95e-471f-b7fc-92f4438ce1e3/)
 - Advanced Data Analytics, Data Scientist Track, Sabancı University, 2018
+
+#### Other
+- The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
+- ChatGPT Teach-Out, Michigan University, Coursera, 2023 ongoing
+- Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
+- Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
 - Bertelsmann Data Analyst Nano Degree with Scholarship, 2018 – 2019 [certificate](https://graduation.udacity.com/confirm/URVHJGL)
 - Google Android Basics Nano Degree with Scholarship, 2017 – 2018 [certificate](https://graduation.udacity.com/confirm/APRDAZTN)
 - Intermediate Python for Data Science Course, DataCamp, 2017 [certificate](https://www.datacamp.com/statement-of-accomplishment/course/415c57b9164ac3a2066d0617d4ddbf094305bc99)
