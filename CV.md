@@ -7,19 +7,25 @@ permalink: /CV/
 # Pelin Balci, Msc Industrial Engineer
 
 ## About
-I am an industrial engineer with a master's degree. I've completed my master's degree at Bilkent University, one of the 
-tops university in industrial engineering in Turkey. I took many online lectures regarding machine learning and deep 
-learning. Currently, I am working as a Sr. Data Scientist in SabancıDx. My biggest field of interest is Tiny ML & NLP. 
+I hold a master's degree in industrial engineering and have a professional background in this field. My postgraduate 
+education was completed at Bilkent University, one of the tops institution in industrial engineering in Turkey. 
+In addition to my academic qualifications, I have supplemented my expertise by taking several online courses in machine 
+learning and deep learning.
 
-I am using Python for my projects. Also, I am using LeetCode to improve my coding skills. I am trying to contribute to 
-Turkey's data science community. Recently, I joined AYA (Açık Yazılım Ağı) which aims to help people who were affected 
-by the big earthquake in Kahramanmaraş and I have worked as a lead on data labeling for NER and Intent Classification 
-Models. I am also part of the Geeks of Data community where I have a chance to share my knowledge and learn from others' 
-experiences. 
+At present, I am working as a Senior Data Scientist at SabancıDx. My research interests are focused on Tiny ML and 
+Natural Language Processing (NLP). These are particularly dynamic areas of study, and I am passionate about advancing my 
+understanding of them.
 
-I am a self-learner. I believe that open-source software is very important and only in this way, we will progress much 
-faster. I share my codes on my GitHub and write posts on my own website and Medium. Please let me know if you have any 
-questions regarding my projects or would like to collaborate with me on an open-source project :)
+I am using Python as my primary programming language for my various projects. Additionally, I strive to enhance my coding 
+skills by utilizing LeetCode. My objective is to make meaningful contributions to the data science community in Turkey. 
+Recently, I joined AYA (Açık Yazılım Ağı), an organization committed to helping those impacted by the devastating 
+earthquake in Kahramanmaraş.  I have worked as a lead on data labeling for NER and Intent Classification Models. 
+I am also a member of the Geeks of Data community, which offers a valuable platform for sharing my knowledge and learning 
+from the experiences of others.
+
+As a self-learner, I firmly believe in the importance of open-source software. I embrace this philosophy by sharing my 
+codes on GitHub and publishing posts on my website and Medium. If you have any questions about my projects or wish to 
+engage in an open-source initiative, please do not hesitate to contact me :)
 
 ## Contact
 * Location: İstanbul, Turkey
