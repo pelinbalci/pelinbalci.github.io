@@ -33,7 +33,6 @@ engage in an open-source initiative, please do not hesitate to contact me :)
 * [GitHub](https://github.com/pelinbalci)
 * [Website](https://pelinbalci.com/)
 * [Medium](https://medium.com/@balci.pelin)
-* [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
 
 ## Key Skills
 Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
@@ -44,6 +43,7 @@ Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch
 SQL, GAMS, Power BI
 
 ## Personal Projects
+- [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
 - [Movie Recommendation System](https://github.com/pelinbalci/MovieRecommendation)
 - [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
