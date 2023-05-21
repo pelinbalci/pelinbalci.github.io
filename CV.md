@@ -12,8 +12,8 @@ education was completed at Bilkent University, one of the tops institution in in
 In addition to my academic qualifications, I have supplemented my expertise by taking several online courses in machine 
 learning and deep learning.
 
-At present, I am working as a Senior Data Scientist at SabancıDx. My research interests are focused on Tiny ML and 
-Natural Language Processing (NLP). These are particularly dynamic areas of study, and I am passionate about advancing my 
+At present, I am working as a Lead Data Scientist at SabancıDx. My research interests are focused on Tiny ML, 
+Natural Language Processing (NLP) and Reinforcement Learning. These are particularly dynamic areas of study, and I am passionate about advancing my 
 understanding of them.
 
 I am using Python as my primary programming language for my various projects. Additionally, I strive to enhance my coding 
