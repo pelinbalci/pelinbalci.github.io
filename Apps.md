@@ -4,7 +4,7 @@ title: My Apps
 permalink: /apps/
 ---
 
-[![HuggingFace EasyOCR App](assets/hf_easyocr1.png){width="10" height="5"}](https://huggingface.co/spaces/pelinbalci/easyocr){:target="_blank"}
+[![HuggingFace EasyOCR App](assets/hf_easyocr1.png){width=10px height=5px}](https://huggingface.co/spaces/pelinbalci/easyocr){:target="_blank"}
 
 [![HuggingFace LanguageDetection App](assets/hf_landet1.png)](https://huggingface.co/spaces/pelinbalci/easyocr){:target="_blank"}
 
