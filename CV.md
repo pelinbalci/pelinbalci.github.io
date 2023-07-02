@@ -36,23 +36,33 @@ engage in an open-source initiative, please do not hesitate to contact me :)
 
 ## Key Skills
 Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
-Tiny Machine Learning, Reinforcement Learning
+Tiny Machine Learning, Reinforcement Learning, NLP, LLM, Prompt Engineering, Transformers, NER Models
 
 ## Software Knowledge
 Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite, Streamlit), 
 SQL, GAMS, Power BI
 
 ## Personal Projects
+Live Apps: [Apps Page](https://pelinbalci.com/apps/)
+
+- [MovieRecommendation](https://pelinbalci-movierecommendation-app-vg04fm.streamlit.app/)
+- [HuggingFace Portfolio](https://huggingface.co/pelinbalci)
 - [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
-- [Movie Recommendation System](https://github.com/pelinbalci/MovieRecommendation)
+- [HuggingFace LanguageDetection App](https://huggingface.co/spaces/pelinbalci/LanguageDetection)
 - [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
 
 ## Work Experiences
-- 2022 -  SabancıDx, Sr. Data Scientist 
-    - NLP - OCR Project
-    - Air Handling Unit Optimization with Reinforcement Learning
+
+- 2023 SabancıDx, Lead Data Scientist
+    - Compilation of Güler Sabancı's speech at the Sabancı University Graduation Ceremony using Azure OpenAI service and GPT models
+      [Sabancı University News](https://gazetesu.sabanciuniv.edu/tr/universitemizin-2023-mezuniyet-toreni-gerceklesti)
+      [YouTube](https://www.youtube.com/watch?v=1_l5vtNocdg&t=1017s)
+    - Web/App Automation Product with NLP and GPT Models
+    - Air Handling Unit Energy Optimization Product with Reinforcement Learning
+
+- 2022  SabancıDx, Sr. Data Scientist
     - Demand prediction for retail company 
        - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
          according to the lead time and safety stocks
@@ -155,6 +165,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Trainings
 
 #### Deep Learning
+- Generative AI with Large Language Models, Deep Learning AI, Coursera, 2023, ongoing
 - Natural Language Processing with Classification and Vector Spaces, Deep Learning AI, Coursera, 2022 Free Version
 - Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
@@ -178,7 +189,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - Advanced Data Analytics, Data Scientist Track, Sabancı University, 2018
 
 #### Other
-- ChatGPT Teach-Out, Michigan University, Coursera, 2023 on-going
+- ChatGPT Teach-Out, Michigan University, Coursera, 2023 Free Version
 - The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
 - Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
 - Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
