@@ -55,21 +55,21 @@ Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 
 ## Work Experiences
 
-- 2023 SabancıDx, Lead Data Scientist
+- 2023 SabancıDx, Lead Data Scientist/Machine Learning Engineer
     - Compilation of Güler Sabancı's speech at the Sabancı University Graduation Ceremony using Azure OpenAI service and GPT models
       [Sabancı University News](https://gazetesu.sabanciuniv.edu/tr/universitemizin-2023-mezuniyet-toreni-gerceklesti)
       [YouTube](https://www.youtube.com/watch?v=1_l5vtNocdg&t=1017s)
     - Web/App Automation Product with NLP and GPT Models
     - Air Handling Unit Energy Optimization Product with Reinforcement Learning
 
-- 2022  SabancıDx, Sr. Data Scientist
+- 2022  SabancıDx, Sr. Data Scientist/Machine Learning Engineer
     - Demand prediction for retail company 
        - The aim of this project is to predict the demand from sub-parties and turn the prediction into order amount 
          according to the lead time and safety stocks
        - My responsibilities are re-framing the project scope, detailing the tasks, making code reviews, turning the 
          initial codes into production
 
-- 2020 - 2022 SabancıDX, Data Scientist
+- 2020 - 2022 SabancıDX, Data Scientist/Machine Learning Engineer
     - Prediction of breakage in the production
         - The aim of this project is to recommend sensor values which minimizes the breakage in the final product for 
           industry. XGBoost Regression is used to make break prediction, a recommendation system is implemented which 
