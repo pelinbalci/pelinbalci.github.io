@@ -13,15 +13,15 @@ In addition to my academic qualifications, I have supplemented my expertise by t
 learning and deep learning.
 
 At present, I am working as a Lead Data Scientist at SabancıDx. My research interests are focused on Tiny ML, 
-Natural Language Processing (NLP) and Reinforcement Learning. These are particularly dynamic areas of study, and I am passionate about advancing my 
-understanding of them.
+Natural Language Processing (NLP), Large Language Models and Reinforcement Learning. These are particularly dynamic areas 
+of study, and I am passionate about advancing my understanding of them.
 
 I am using Python as my primary programming language for my various projects. Additionally, I strive to enhance my coding 
 skills by utilizing LeetCode. My objective is to make meaningful contributions to the data science community in Turkey. 
 Recently, I joined AYA (Açık Yazılım Ağı), an organization committed to helping those impacted by the devastating 
-earthquake in Kahramanmaraş.  I have worked as a lead on data labeling for NER and Intent Classification Models. 
-I am also a member of the Geeks of Data community, which offers a valuable platform for sharing my knowledge and learning 
-from the experiences of others.
+earthquake in Kahramanmaraş.  I have worked as a lead on data labeling for NER and Intent Classification Models. I’m 
+also giving mentorship on the [Geleceğini Kuran Genç Kadınlar (Young Women Establishing Their Future)](https://geleceginikurangenckadinlar.org/) project to support 
+young womens who are neither in education nor in employment.
 
 As a self-learner, I firmly believe in the importance of open-source software. I embrace this philosophy by sharing my 
 codes on GitHub and publishing posts on my website and Medium. If you have any questions about my projects or wish to 
@@ -165,7 +165,11 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Trainings
 
 #### Deep Learning
-- Generative AI with Large Language Models, Deep Learning AI, Coursera, 2023, ongoing
+- Google Cloud Lectures, 2023 [certificates](https://www.cloudskillsboost.google/public_profiles/62904b0f-d77c-454f-bd25-41a71afcc7ad)
+- Finetuning Large Language Models, deeplearning.ai, 2023, Freely Available
+- Introduction to Large Language Models, Google Cloud, Coursera, 2023, [certificate](https://www.coursera.org/account/accomplishments/certificate/43JL5WCRJHUA)
+- Generative AI with Large Language Models, Deep Learning AI, Coursera, 2023, Free Version
+- ChatGPT Teach-Out, Michigan University, Coursera, 2023 Free Version
 - Natural Language Processing with Classification and Vector Spaces, Deep Learning AI, Coursera, 2022 Free Version
 - Sequence Models, Deep Learning AI, Coursera,2022, [certificate](https://coursera.org/share/a002bbde0c776b58191c7b5bb097de21)
 - Custom Models, Layers, and Loss Functions with TensorFlow, Deep Learning AI, Coursera, 2022 [certificate](https://coursera.org/share/c523f787a2533cb3597b798efd5da3a3)
@@ -189,7 +193,6 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 - Advanced Data Analytics, Data Scientist Track, Sabancı University, 2018
 
 #### Other
-- ChatGPT Teach-Out, Michigan University, Coursera, 2023 Free Version
 - The Science of Stem Cells, American Museum of National History, Coursera, 2023, [certificate](https://coursera.org/share/e9d7184f4187c06440bfca8a4e531d95)
 - Self Awareness and the Effective Leader, Rice University, Coursera, 2022 [certificate](https://www.coursera.org/account/accomplishments/certificate/LTMQE2RH5CFL)
 - Discrete Optimization, The University of Melbourne, Coursera, 2020 [certificate](https://www.coursera.org/account/accomplishments/certificate/EWZ43LNQU7DH)
