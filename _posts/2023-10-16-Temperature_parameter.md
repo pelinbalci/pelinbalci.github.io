@@ -36,26 +36,19 @@ jupyter:
 
 ## What is Temperature?
 
-The definition on OpenAI [1]
+**Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the 
+output probabilities. It helps us to control the **creativeness** of a Large Language Model.
 
-    The sampling temperature, between 0 and 1. 
-    Higher values like 0.8 will make the output more random, 
-    while lower values like 0.2 will make it more focused and deterministic. 
+The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, 
+temperature values fall within the range of 0 to 5. _See the references below._
 
-    If set to 0, the model will use log probability to automatically increase the 
-    temperature until certain thresholds are hit.
-
-In the context of Cohere, temperature values fall within the range of 0.5 to 5, 
-This informative [blog post](https://txt.cohere.com/llm-parameters-best-outputs-language-ai/) provides insightful examples.
-
-In essence, Temperature is a parameter which is injected into the softmax function, enabling the users to manipulate the 
-output probabilities. It helps us to control the creativeness of a Large Language Model.
+-----------------------------------------------------
 
 This is the original softmax function: 
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/images/softmax.PNG" width="50%">
-  <div class="figcaption">softmax</div>
+  <div class="figcaption"> </div>
 </div>
 
 
@@ -63,10 +56,13 @@ When we add Temperature parameter:
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/images/softmax_temp.PNG" width="50%">
-  <div class="figcaption">softmax with temperature</div>
+  <div class="figcaption"> </div>
 </div>
 
-zj is the output of the neural network. There may be a lot of forward pass, some activation functions, but as a result it is a floating number. 
+Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about 
+softmax function, read [here](https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax).
+
+-----------------------------------------------------
 
 - As Temperature approaches 0, the output probabilities become more "sharp". One of the probability will be close to 1.
 - As Temperature increases, the output probabilities become more "flat" or "uniform", reducing the difference between the probabilities of different elements.
@@ -83,17 +79,19 @@ These are the original results:
 
 <div class="fig figcenter fighighlight">
   <img src="/assets/images/softmax_df.PNG" width="50%">
-  <div class="figcaption">Output probabilities with softmax</div>
+  <div class="figcaption"> </div>
 </div>
 
-You can try different temperature values to see how the output changes:
+
+You can try different temperature values to see how the output changes.
 
 {% include temperature_slider.html %}
 
 
+Happy Learning! :)
+
 # References
 - [1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature
-- [2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/#:~:text=one%20long%20burst.-,Temperature,-Temperature%20is%20a
-
-
+- [2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/
+- [3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/
 
