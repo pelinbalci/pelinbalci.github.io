@@ -1,7 +1,7 @@
 # Pelin Balci's Blog
 
-My blog about Data Science and Machine Learning.
+My blog about Data Science & Machine Learning & Deep Learning & LLM
 
-- Source code for Jekyll theme: https://github.com/jekyll/jekyll
-- Direct Link: https://pelinbalci.github.io/ 
-- 
+- This webpage is prepared using the codes [Minima](https://github.com/jekyll/minima) and [Jekyll](https://github.com/jekyll/jekyll)
+
+- Direct Link: https://pelinbalci.github.io/ & https://pelinbalci.com/
