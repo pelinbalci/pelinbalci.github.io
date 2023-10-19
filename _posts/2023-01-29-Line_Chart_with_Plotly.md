@@ -35,6 +35,7 @@ jupyter:
 ---
 
 In this file I will explain how to use plotly with markers and annotation. It is very easy to plot chart in plotly express!:)
+
 Let's create two datasets: they include sales & anomalies for the first 10 days of Jan 2023. 
 
 ```python

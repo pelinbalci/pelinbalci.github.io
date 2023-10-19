@@ -3,9 +3,7 @@ layout: post
 title: "Motion Classifier with Edge Impulse"
 categories: tinyml
 ---
-Hello!
-
-Happy new year everyone:) On the very first day of the year, I completed a motion classifier project with Edge Impulse & Arduino. 
+Hello! Happy new year everyone:) On the very first day of the year, I completed a motion classifier project with Edge Impulse & Arduino. 
 I would like to tell you the steps of the project, some problems I've faced with and how to solve them.
 
 I would like to thank Coursera and Edge Impulse to give us a chance to learn embedded machine learning. 
