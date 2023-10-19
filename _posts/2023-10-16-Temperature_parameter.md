@@ -34,8 +34,6 @@ jupyter:
     thumbnail: thumbnail/line-and-scatter.jpg
 ---
 
-## What is Temperature?
-
 **Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the 
 output probabilities. It helps us to control the **creativeness** of a Large Language Model.
 
@@ -87,6 +85,7 @@ You can try different temperature values to see how the output changes.
 
 {% include temperature_slider.html %}
 
+Listen my YouTube Vide from [here](https://youtu.be/KbUPOJ8Fmzs)
 
 Happy Learning! :)
 
