@@ -11,5 +11,8 @@ My job is also my hobby, I continue to write code in my spare time. At the momen
 large language models. I care about sustainable environments and energy-efficient products. Here you can find my notes and projects 
 for machine learning and deep learning.
 
-- Medium Articles: https://medium.com/@balci.pelin
-- YouTube Videos: https://www.youtube.com/@pelinbalci
+* [LinkedIn](https://www.linkedin.com/in/pelin-balci/)
+* [GitHub](https://github.com/pelinbalci)
+* [Website](https://pelinbalci.com/)
+* [Medium](https://medium.com/@balci.pelin)
+* [YouTube](https://www.youtube.com/@pelinbalci)
