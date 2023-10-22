@@ -4,12 +4,11 @@ title: About
 permalink: /about/
 ---
 
-Hello! :)
+Hello and welcome to my website! :)
 
-I am an industrial engineer with a master’s degree. I'm working as AI/ML Engineer in SabancıDx. 
-My job is also my hobby, I continue to write code in my spare time. At the moment, my biggest field of interest is 
-large language models. I care about sustainable environments and energy-efficient products. Here you can find my notes and projects 
-for machine learning and deep learning.
+Quick introduction: AI/ML engineer who loves deep learning, tiny ml and LLM. Keywords: operations research, İstanbul, python, 
+dance, Arduino, LLM, Transformers, opensource, remote working. Cares about gender equality and sustainable environments. 
+Follow me:
 
 * [LinkedIn](https://www.linkedin.com/in/pelin-balci/)
 * [GitHub](https://github.com/pelinbalci)
