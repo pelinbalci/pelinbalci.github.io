@@ -1,9 +1,9 @@
-title: Pelin Balcı's Blog
-author:
+title: TinyWorld
+author: Pelin Balcı
   name: Pelin Balcı
   github: https://github.com/pelinbalci
 description: > # this means to ignore newlines until "show_excerpts:"
-  Machine Learning Notes
+   My notes on ML & DS & LLM
 #description will appear in your document head meta (for Google search results)
 
 show_excerpts: true # set to true to show excerpts on the homepage
