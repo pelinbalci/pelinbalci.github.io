@@ -15,3 +15,6 @@ Follow me:
 * [Website](https://pelinbalci.com/)
 * [Medium](https://medium.com/@balci.pelin)
 * [YouTube](https://www.youtube.com/@pelinbalci)
+
+Best,
+Pelin
