@@ -33,6 +33,7 @@ engage in an open-source initiative, please do not hesitate to contact me :)
 * [GitHub](https://github.com/pelinbalci)
 * [Website](https://pelinbalci.com/)
 * [Medium](https://medium.com/@balci.pelin)
+* [YouTube](https://www.youtube.com/@pelinbalci)
 
 ## Key Skills
 Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Learning, Deep Learning, 
