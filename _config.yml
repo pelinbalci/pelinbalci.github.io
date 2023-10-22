@@ -24,8 +24,8 @@ minima:
     # instagram: jekyll
     linkedin: pelin-balci
     # pinterest: jekyll
-    youtube: @pelinbalci
-    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube: @pelinbalci
+    youtube_channel: UC7GKSxCvmkKTqMmb4w3-sxA
     # youtube_channel_name: CloudCannon
     # telegram: jekyll
     # googleplus: +jekyll
@@ -34,8 +34,8 @@ minima:
 
     # Mastodon instances
     # mastodon:
-    - username: @pelinbalci
-      instance: masto.ai
+    # - username: @pelinbalci
+    #  instance: masto.ai
     # - username: jekyll2
     #   instance: example.com
 
