@@ -53,6 +53,7 @@ header_pages:
  - about.md
  - CV.md
  - Books.md
+ - Conferences.md
 
 # Build settings
 theme: jekyll-theme-minimal
