@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Books I Read (Okuduklarım)
-permalink: /BooksIRead(Okuduklarım)/
+title: Books
+permalink: /Books/
 
 ---
 - Zamanın Kısa Tarihi - Stephen Hawking
