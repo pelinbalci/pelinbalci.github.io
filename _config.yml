@@ -52,7 +52,7 @@ header_pages:
  - Apps.md
  - about.md
  - CV.md
- - BooksIRead(Okuduklarım).md
+ - Books.md
 
 # Build settings
 theme: jekyll-theme-minimal
