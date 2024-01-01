@@ -4,6 +4,11 @@ title: Books
 permalink: /Books/
 
 ---
+- Neden hiç büyük kadın sanatçı yok? - Linda Nochlin
+- Bir Ömür Nasıl Yaşanır? - İlber Ortaylı 
+- Cadı - Hüseyin Rahmi Gürpınar
+- Fizik Aşkına - Walter Lewin 
+- Gulyabani - Hüseyin Rahmi Gürpınar
 - Zamanın Kısa Tarihi - Stephen Hawking
 - Kuyruklu Yıldız Altında bir İzdivaç - Hüseyin Rahmi Gürpınar
 - Denizler Altında Yirmi Bin Fersah - Jules Verne
