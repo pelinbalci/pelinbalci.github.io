@@ -12,9 +12,9 @@ education was completed at Bilkent University, one of the tops institution in in
 In addition to my academic qualifications, I have supplemented my expertise by taking several online courses in machine 
 learning and deep learning.
 
-At present, I am working as a Lead Data Scientist/ML Engineer at SabancıDx. My research interests are focused on Tiny ML, 
-Natural Language Processing, Large Language Models and Reinforcement Learning. These are particularly dynamic areas 
-of study, and I am passionate about advancing my understanding of them.
+At present, I am working as a Sr Lead Machine Learning Engineer at Arçelik Global. My research interests are focused on 
+Retrieval Augmented Generation Systems, Knowledge Graphs, Tiny ML, Natural Language Processing, Large Language Models 
+and Reinforcement Learning. These are particularly dynamic areas of study, and I am passionate about advancing my understanding of them.
 
 I am using Python as my primary programming language for my various projects. Additionally, I strive to enhance my coding 
 skills by utilizing LeetCode. My objective is to make meaningful contributions to the data science community in Turkey. 
@@ -166,6 +166,7 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Trainings
 
 #### Deep Learning
+- Building Applications with Vector Databases, deeplearning.ai, 2024, Freely Available
 - Google Cloud Lectures, 2023 [certificates](https://www.cloudskillsboost.google/public_profiles/62904b0f-d77c-454f-bd25-41a71afcc7ad)
 - Finetuning Large Language Models, deeplearning.ai, 2023, Freely Available
 - Introduction to Large Language Models, Google Cloud, Coursera, 2023, [certificate](https://www.coursera.org/account/accomplishments/certificate/43JL5WCRJHUA)
