@@ -53,6 +53,7 @@ Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 - [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
+- Build NER models for Pathology Reports to extract relevant information (ongoing)
 
 ## Work Experiences
 - 2024 -  Arçelik Global, Senior Lead Machine Learning Engineer
