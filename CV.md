@@ -46,6 +46,7 @@ Streamlit, llama-index, langchain), SQL, GAMS, Power BI
 ## Personal Projects
 Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 
+- Build NER models for Pathology Reports to extract relevant information (ongoing)
 - [MovieRecommendation](https://pelinbalci-movierecommendation-app-vg04fm.streamlit.app/)
 - [HuggingFace Portfolio](https://huggingface.co/pelinbalci)
 - [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
@@ -53,7 +54,7 @@ Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 - [Occupancy Detection with TensorFlow Lite & Neuton AI](https://github.com/pelinbalci/Tinyml_Occupancy_Detection)
 - [Audio Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/17/Audio-Classifier.html)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
-- Build NER models for Pathology Reports to extract relevant information (ongoing)
+
 
 ## Work Experiences
 - 2024 -  Arçelik Global, Senior Lead Machine Learning Engineer
