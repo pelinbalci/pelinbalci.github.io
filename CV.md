@@ -40,8 +40,8 @@ Operations Research, Mathematical Modeling, Simulation, Data Science, Machine Le
 Tiny Machine Learning, Reinforcement Learning, NLP, LLM, Prompt Engineering, Transformers, NER Models
 
 ## Software Knowledge
-Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite, Streamlit), 
-SQL, GAMS, Power BI
+Python for Data Science (Pandas, Numpy, Simply Scikit-learn, Matplotlib, PyTorch, Simpy, TensorFlow, TensorFlow Lite, 
+Streamlit, llama-index, langchain), SQL, GAMS, Power BI
 
 ## Personal Projects
 Live Apps: [Apps Page](https://pelinbalci.com/apps/)
@@ -55,6 +55,9 @@ Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 - [Motion Classifier with Edge Impulse](https://pelinbalci.com/tinyml/2022/01/01/Motion-Classifier.html)
 
 ## Work Experiences
+- 2024 -  Arçelik Global, Senior Lead Machine Learning Engineer
+    - Text Classification & Training Pipeline & AWS deployment
+    - Retrieval Augmented Generation Project: Knowledge Graphs, Metadata Extraction
 
 - 2023 SabancıDx, Lead Data Scientist/Machine Learning Engineer
     - Compilation of Güler Sabancı's speech at the Sabancı University Graduation Ceremony using Azure OpenAI service and GPT models
