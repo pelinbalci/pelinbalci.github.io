@@ -68,5 +68,28 @@ Posts
         • Developing methodologies to identify, measure, and mitigate biases in AI models to ensure fair
         and ethical decision-making
 
+- [In-Context Learning Learns Label Relationships but Is Not Conventional Learning](https://arxiv.org/abs/2307.12375)
+
+In-context learning (ICL) is a specific method of prompt engineering where demonstrations of the task are provided to 
+the model as part of the prompt (in natural language). With ICL, you can use off-the-shelf large language models (LLMs) 
+to solve novel tasks without the need for fine-tuning. ICL can also be combined with fine-tuning for more powerful LLMs.
+LLMs that are large enough have shown a new type of machine learning - in-context learning -  the ability to learn to 
+solve new tasks by providing “training” examples in the prompt. In contrast to the aforementioned types of ML, the newly 
+learnt skill is forgotten directly after the LLM sends its response  - model weights are not updated. 
+
+ One way to implement this service would be with prompts prefixed with example recipes before your text with your 
+ available ingredients is finally added to the prompt. 
+ 
+For this, you may have thousands of recipes indexed in a VectorDB. When the query arrives, you use the ingredients to 
+look up the most relevant recipes in the VectorDB, then paste them in at the start of the prompt, and then write the 
+list of available ingredients, and finally, ask your LLM to generate a prompt. This is an example of retrieval-augmented generation for LLMs.
+Ref: https://www.hopsworks.ai/dictionary/in-context-learning-icl#:~:text=In%2Dcontext%20learning%20(ICL)%20learns%20a%20new%20task%20from,objective%20of%20next%20token%20prediction.
+
+[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)
+We find that performance can degrade significantly when changing the position of relevant information, indicating that 
+current language models do not robustly make use of information in long input contexts. In particular, we observe that 
+performance is often highest when relevant information occurs at the beginning or end of the input context, and 
+significantly degrades when models must access relevant information in the middle of long contexts, even for explicitly long-context models. 
 
 
+[An Explanation of In-context Learning as Implicit Bayesian Inference](https://arxiv.org/pdf/2111.02080.pdf)
