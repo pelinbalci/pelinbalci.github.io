@@ -4,9 +4,22 @@ title: Academic Studies
 permalink: /Academic Studies/
 ---
 
-Articles that I've Read: 
-- Attention Is All You Need, Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, 
-  A. N., Kaiser, L., Polosukhin, I. [link](arXivpreprintarXiv:1706.03762,2017)
+## Lectures
+- [Yarin Gal -. Bayesian Deep Learning](https://www.youtube.com/watch?v=G6tUZRHnJYc&t=941s)
+
+**Bayesian Probability Theory - the Language of Ucertainty:**
+- Would you pay a penny (0.01 pound) to buy a note where I commit to paying 1 pound instead?
+- Would you pay a penny (0.99pound) to buy a note where I commit to paying 1 pound instead? 
+- Would you sell a unit wager at p for heads? Yu get p and you have to pay 1 pound if head.
+
+I think he expected outcome will be 0.5 heads. Which means 0.5*1*note It need to be less than p*1*note for buyer and higher than p*1*note for seller. 
+
+
+
+
+## Articles that I've Read: 
+- [Attention Is All You Need](arXivpreprintarXiv:1706.03762,2017), Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, 
+  A. N., Kaiser, L., Polosukhin, I.
 
 
 - [AI Poses Doomsday Risks—But That Doesn’t Mean We Shouldn’t Talk About Present Harms Too](https://time.com/6303127/ai-future-danger-present-harms/)
