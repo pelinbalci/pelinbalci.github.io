@@ -54,6 +54,7 @@ header_pages:
  - CV.md
  - Books.md
  - Conferences.md
+ - AcademicStudies.md
 
 # Build settings
 theme: jekyll-theme-minimal
