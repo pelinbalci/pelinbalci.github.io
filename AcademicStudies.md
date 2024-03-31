@@ -89,9 +89,16 @@ Bayesian Linear Regression:
 What we want is to find dist over W given D. 
 
 ## Articles that I've Read: 
-- [Attention Is All You Need](arXivpreprintarXiv:1706.03762,2017), Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, 
-  A. N., Kaiser, L., Polosukhin, I.
 
+- [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566)
+
+- [Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/abs/2307.11768)
+
+- [Measuring Faithfulness in Chain-of-Thought Reasoning](https://arxiv.org/abs/2307.137029)
+
+- [Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation](https://arxiv.org/abs/2302.09664)
+
+- [CLAM: Selective Clarification for Ambiguous Questions with Generative Language Models](https://arxiv.org/abs/2212.07769)
 
 - [Managing AI Risks in an Era of Rapid Progress](https://arxiv.org/abs/2310.17688)
 
@@ -248,3 +255,6 @@ Ref3: [An Explanation of In-context Learning as Implicit Bayesian Inference](htt
     HMM (Figure 9)."
 
 
+
+- [Attention Is All You Need](arXivpreprintarXiv:1706.03762,2017), Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, 
+  A. N., Kaiser, L., Polosukhin, I.
