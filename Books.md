@@ -4,6 +4,12 @@ title: Books
 permalink: /Books/
 
 ---
+- Bunu Herkes Bilir - Emrah Safa Gürkan
+- Felatun Bey ile Rakım Efendi - Ahmet Mithat Efendi 
+- Duygusal Zeka - Daniel Goleman
+- Meyhanede Hanımar - Hüseyin Rahmi Gürpınar
+- Çavdar Tarlasında Çocuklar - J.D. Salinger
+- Suya Yazılan - Fazıl Say
 - Neden hiç büyük kadın sanatçı yok? - Linda Nochlin
 - Bir Ömür Nasıl Yaşanır? - İlber Ortaylı 
 - Cadı - Hüseyin Rahmi Gürpınar
