@@ -90,6 +90,8 @@ What we want is to find dist over W given D.
 
 ## Articles that I've Read: 
 
+- https://arxiv.org/html/2403.17887v1
+
 - [Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training](https://arxiv.org/abs/2401.05566)
 
 - [Question Decomposition Improves the Faithfulness of Model-Generated Reasoning](https://arxiv.org/abs/2307.11768)
