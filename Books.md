@@ -4,10 +4,12 @@ title: Books
 permalink: /Books/
 
 ---
+- En Büyük İyilik - Peter Singer
+- Efsuncu Baba - Hüseyin Rahmi Gürpınar
 - Bunu Herkes Bilir - Emrah Safa Gürkan
 - Felatun Bey ile Rakım Efendi - Ahmet Mithat Efendi 
 - Duygusal Zeka - Daniel Goleman
-- Meyhanede Hanımar - Hüseyin Rahmi Gürpınar
+- Meyhanede Hanımlar - Hüseyin Rahmi Gürpınar
 - Çavdar Tarlasında Çocuklar - J.D. Salinger
 - Suya Yazılan - Fazıl Say
 - Neden hiç büyük kadın sanatçı yok? - Linda Nochlin
