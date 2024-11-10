@@ -13,6 +13,10 @@ As Speaker:
 
 As Attendee:
 
+- GDG, Devfes'24, Nov 08 2024, Uniq İstnabul
+- Microsoft AI Tour, Oct 22 2024, Swiss Hotel
+- Amazon Cloud Day Türkiye, Sep 24 2024, Zorlu PSM
+- Microsoft Build AI Day, June 12 2024, Mess Teknoloji Merkezi
 - Women in Machine Learning Symposium 2023 [details](https://aidevelopers.withgoogle.com/events/wiml-symposium-2023)
 - GDG, Devfest'23, Nov 26 2023, Uniq İstanbul [details](https://devfest.istanbul/)
 - Amazon Cloud Day Türkiye, Oct 3 2023, Wyndham Grand Levent Hotel İstanbul [details](https://aws.amazon.com/tr/events/cloud-day-turkiye/)
