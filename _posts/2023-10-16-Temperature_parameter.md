@@ -45,7 +45,7 @@ temperature values fall within the range of 0 to 5. _See the references below._
 This is the original softmax function: 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/softmax.PNG" width="50%">
+  <img src="/assets/image_assets/temperature_images/softmax.PNG" width="50%">
   <div class="figcaption"> </div>
 </div>
 
@@ -53,7 +53,7 @@ This is the original softmax function:
 When we add Temperature parameter:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/softmax_temp.PNG" width="50%">
+  <img src="/assets/image_assets/temperature_images/softmax_temp.PNG" width="50%">
   <div class="figcaption"> </div>
 </div>
 
@@ -76,7 +76,7 @@ The prediction of next token of given sentence: "At the table, there is a delici
 These are the original results: 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/softmax_df.PNG" width="50%">
+  <img src="/assets/image_assets/temperature_images/softmax_df.PNG" width="50%">
   <div class="figcaption"> </div>
 </div>
 
