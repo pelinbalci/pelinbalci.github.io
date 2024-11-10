@@ -31,7 +31,7 @@ as you can see below.
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/hairdryer.jpeg" width="40%" height="60%">
+  <img src="/assets/image_assets/tinyml_motion_images/hairdryer.jpeg" width="40%" height="60%">
   <div class="figcaption">Setup </div>
 </div>
 
@@ -49,7 +49,7 @@ Here is a short video of the collecting data process:
 -- 
 
 <video width="320" height="240" controls>
-  <source src="/assets/tinyml_images/datacollect.mp4" type="video/mp4">
+  <source src="/assets/image_assets/tinyml_motion_images/datacollect.mp4" type="video/mp4">
 </video>
 
 --
@@ -65,7 +65,7 @@ features, and the learning block is the classification model.
 -- 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/impulse_design.PNG" width="80%">
+  <img src="/assets/image_assets/tinyml_motion_images/impulse_design.PNG" width="80%">
   <div class="figcaption">Impulse Design </div>
 </div>
 
@@ -105,7 +105,7 @@ After feature generation, I designed a neural network with 2 hidden layers and d
 Here is the validation score:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/valid_acc.PNG" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/valid_acc.PNG" width="70%">
   <div class="figcaption">Validation Accuracy :) </div>
 </div>
 
@@ -116,7 +116,7 @@ Then I choose model testing. The test score is 71.45%. I am happy with this resu
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_acc.PNG" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/test_acc.PNG" width="70%">
   <div class="figcaption">Test Accuracy :) </div>
 </div>
 
@@ -135,13 +135,13 @@ Then you can open Serial Monitor for live classification. Here is a short video 
 There are some errors between the targets light and heavy but that's ok :)
 
 <video width="320" height="240" controls>
-  <source src="/assets/tinyml_images/live_class.mp4" type="video/mp4">
+  <source src="/assets/image_assets/tinyml_motion_images/live_class.mp4" type="video/mp4">
 </video>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/live_classification.PNG" width="80%">
+  <img src="/assets/image_assets/tinyml_motion_images/live_classification.PNG" width="80%">
   <div class="figcaption">Live Classification </div>
 </div>
 
@@ -181,14 +181,14 @@ Then, I've changed the parameters in Spectral features.
 Default filter value is low. Let's try "heavy" filter. The features separates the classes well but the test accuracy is worse than the low filter:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/feature_heavy.png" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/feature_heavy.png" width="70%">
   <div class="figcaption">Heavy Filter </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_heavy.png" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/test_heavy.png" width="70%">
   <div class="figcaption">Heavy Filter Test Accuracy </div>
 </div>
 
@@ -197,12 +197,12 @@ Default filter value is low. Let's try "heavy" filter. The features separates th
 Filter None gives very good result for test data :) 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/feature_none.png" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/feature_none.png" width="70%">
   <div class="figcaption">None Filter </div>
 </div>
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/test_none.png" width="70%">
+  <img src="/assets/image_assets/tinyml_motion_images/test_none.png" width="70%">
   <div class="figcaption">None Filter Test Accuracy </div>
 </div>
 

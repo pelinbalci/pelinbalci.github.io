@@ -12,7 +12,7 @@ In the project description two audio datasets are given, faucet and noise. I add
 I've run the blender for 2 minutes. Then using Audacity interface, I divided the 2 minute-data to 50 1-second data. 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/audacity.png" width="80%">
+  <img src="/assets/image_assets/tinyml_audio_images/audacity.png" width="80%">
   <div class="figcaption">Audacity Interface </div>
 </div>
 
@@ -106,35 +106,35 @@ and less in the high frequencies, thus it performs well on sounds that can be di
 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_1.PNG">
+  <img src="/assets/image_assets/tinyml_audio_images/mfcc_mfe_1.PNG">
   <div class="figcaption">DSP </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_2.PNG">
+  <img src="/assets/image_assets/tinyml_audio_images/mfcc_mfe_2.PNG">
   <div class="figcaption">Parameters </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_3.PNG" width="80%">
+  <img src="/assets/image_assets/tinyml_audio_images/mfcc_mfe_3.PNG" width="80%">
   <div class="figcaption">MFE Separates better </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG">
+  <img src="/assets/image_assets/tinyml_audio_images/mfcc_mfe_4.PNG">
   <div class="figcaption">Training Accuracy </div>
 </div>
 
 --
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/mfcc_mfe_4.PNG">
+  <img src="/assets/image_assets/tinyml_audio_images/mfcc_mfe_4.PNG">
   <div class="figcaption">Test Accuracy </div>
 </div>
 

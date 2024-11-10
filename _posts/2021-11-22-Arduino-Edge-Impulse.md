@@ -19,7 +19,7 @@ Remember that those tips are valid for Windows OS.
 - **Install the additional tools when installing NodeJS.** 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/nodejs.PNG" width="60%">
+  <img src="/assets/image_assets/tinyml_arduino_images/nodejs.PNG" width="60%">
   <div class="figcaption">Figure 1: Node.js download</div>
 </div>
 
@@ -127,7 +127,7 @@ Then, with the latest step `$edge-impulse-daemon`, I've achieved to load my devi
     [WS ] Go to https://studio.edgeimpulse.com/studio/62428/acquisition/training to build your machine learning model!`
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/tinyml_images/device.PNG" width="90%">
+  <img src="/assets/image_assets/tinyml_arduino_images/device.PNG" width="90%">
   <div class="figcaption">Figure 2: Finally! :) </div>
 </div>
 
