@@ -58,7 +58,7 @@ Bayesian Rule:
 
 Give data what is the prob of mu=? given mu what is the prob of data (likelihood) * prob of mu (prior) / prob of data (evidence) 
 
-<img src="assets/images_academicstudies/bayes_1.jpg" width="128"/>
+<img src="assets/image_assets/images_academicstudies/bayes_1.jpg" width="128"/>
 
 Note: ss from [lecture - YouTube](https://www.youtube.com/watch?v=G6tUZRHnJYc&t=941s)
 
