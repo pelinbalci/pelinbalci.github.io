@@ -145,7 +145,7 @@ pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 I moved those html files to _includes folder. In order to show the plot in the md file you can simply add a line:
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/images/include_file.png" width="50%">
+  <img src="/assets/image_assets/plotly_image/include_file.png" width="50%">
   <div class="figcaption">include html</div>
 </div>
 
