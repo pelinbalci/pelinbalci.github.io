@@ -28,7 +28,7 @@ In this paper[1]  style transfer uses the features found in 19 layer VGG network
 - In btw 5 pooling layers --> 2 or 4 conv layers.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/image_op/vgg_fig.png" width="75%">
+  <img src="/assets/image_assets/image_op/vgg_fig.png" width="75%">
   <div class="figcaption">Figure 1: VGG Layers for Style and Content Images</div>
 </div>
 
