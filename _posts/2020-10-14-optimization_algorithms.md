@@ -34,7 +34,7 @@ videos of cs231n can be found in YouTube and all materials are freely available 
 - With Momentum update, the parameter vector will build up velocity in any direction that has consistent gradient.
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/sgd_vs_momentum.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/sgd_vs_momentum.png" width="75%">
   <div class="figcaption">Figure 1: SGD vs SGD with Momentum</div>
 </div>
 
@@ -142,14 +142,14 @@ often divergence.
 Different Models comparison: {'sgd': 5e-3, 'sgd_momentum':  5e-3, 'rmsprop': 1e-4, 'adam': 1e-3}
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/different_models.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/different_models.png" width="75%">
   <div class="figcaption">Figure 2: Different models</div>
 </div>
 
 Different Models comparison: {'sgd': 1e-3, 'sgd_momentum':  1e-3, 'rmsprop': 1e-3, 'adam': 1e-3}
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/different_models_same_lr.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/different_models_same_lr.png" width="75%">
   <div class="figcaption">Figure 3: Different models with the same learning rate</div>
 </div>
 
@@ -166,7 +166,7 @@ Start with no decay. Select the best learning rate. Check the loss plot and deci
 #### 'sgd' : 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/sgd_lr.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/sgd_lr.png" width="75%">
   <div class="figcaption">Figure 4: SGD, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
 </div>
 
@@ -174,14 +174,14 @@ Start with no decay. Select the best learning rate. Check the loss plot and deci
 #### 'sgd_momentum':
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/sgd_moment_lr.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/sgd_moment_lr.png" width="75%">
   <div class="figcaption">Figure 5: SGD with Momentum, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>
 </div>
 
 #### 'rmsprop': 
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/rms_lr.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/rms_lr.png" width="75%">
   <div class="figcaption">Figure 6: RMSProp, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
 </div>
 
@@ -191,14 +191,14 @@ RMS Prop needs smaller lr: [1e-5, 5e-5, 5e-4, 1e-4]
 - running with  0.0001: (Epoch 5 / 5) train acc: 0.557000; val_acc: 0.376000
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/rms_lr_smaller.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/rms_lr_smaller.png" width="75%">
   <div class="figcaption">RMSProp, smaller learning rates</div>
 </div>
 
 ####'adam':
 
 <div class="fig figcenter fighighlight">
-  <img src="/assets/optimization_images/adam_lr.png" width="75%">
+  <img src="/assets/image_assets/optimization_images/adam_lr.png" width="75%">
   <div class="figcaption">Figure 7: Adam, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>
 </div>
 
