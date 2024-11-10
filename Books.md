@@ -4,6 +4,7 @@ title: Books
 permalink: /Books/
 
 ---
+- Sınırsız Beyin - Jo Boaler
 - En Büyük İyilik - Peter Singer
 - Efsuncu Baba - Hüseyin Rahmi Gürpınar
 - Bunu Herkes Bilir - Emrah Safa Gürkan
