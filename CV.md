@@ -46,7 +46,7 @@ Streamlit, llama-index, langchain), SQL, GAMS, Power BI
 ## Personal Projects
 Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 
-- Build NER models for Pathology Reports to extract relevant information (ongoing)
+- [Extracting Information from Semi-Structured Pathology Reports](https://drive.google.com/file/d/1l9rPr03DtO9mIvyQzE9H3jETMRFoNfcw/view)
 - [MovieRecommendation](https://pelinbalci-movierecommendation-app-vg04fm.streamlit.app/)
 - [HuggingFace Portfolio](https://huggingface.co/pelinbalci)
 - [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
