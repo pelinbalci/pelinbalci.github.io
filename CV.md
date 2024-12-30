@@ -171,9 +171,10 @@ International IIE Conference, The Global Reach of Industrial Engineering, Istanb
 ## Trainings
 
 #### Deep Learning
+- DeepLearning.AI 2024 highlights, [link](https://learn.deeplearning.ai/my/learnings/learning-highlights/2024/01JBRKVYTPJVWGB9FFZ94MG1ZT?usp=sharing)
+- Retrieval Optimization: Tokenization to Vector Quantization, Quantization Fundamentals with Hugging Face, Knowledge Graphs for RAG, Building Applications with Vector Databases, Quality and Safety for LLM Applications, Finetuning Large Language Models, _DeepLearning.AI_, 2024  
 - Building Applications with Vector Databases, deeplearning.ai, 2024, Freely Available
 - Google Cloud Lectures, 2023 [certificates](https://www.cloudskillsboost.google/public_profiles/62904b0f-d77c-454f-bd25-41a71afcc7ad)
-- Finetuning Large Language Models, deeplearning.ai, 2023, Freely Available
 - Introduction to Large Language Models, Google Cloud, Coursera, 2023, [certificate](https://www.coursera.org/account/accomplishments/certificate/43JL5WCRJHUA)
 - Generative AI with Large Language Models, Deep Learning AI, Coursera, 2023, Free Version
 - ChatGPT Teach-Out, Michigan University, Coursera, 2023 Free Version
