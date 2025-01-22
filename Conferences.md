@@ -13,6 +13,7 @@ As Speaker:
 
 As Attendee:
 
+- AWS re:Invent, Dec 2-6 2024, Las Vegas Nevada
 - GDG, Devfes'24, Nov 08 2024, Uniq İstnabul
 - Microsoft AI Tour, Oct 22 2024, Swiss Hotel
 - Amazon Cloud Day Türkiye, Sep 24 2024, Zorlu PSM
