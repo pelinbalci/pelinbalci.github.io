@@ -47,7 +47,7 @@ Streamlit, llama-index, langchain), SQL, GAMS, Power BI
 Live Apps: [Apps Page](https://pelinbalci.com/apps/)
 
 - [Extracting Information from Semi-Structured Pathology Reports](https://drive.google.com/file/d/1l9rPr03DtO9mIvyQzE9H3jETMRFoNfcw/view)
-- [MovieRecommendation](https://pelinbalci-movierecommendation-app-vg04fm.streamlit.app/)
+- [MovieRecommendation](https://pelinbalci-movierecommendation.streamlit.app/)
 - [HuggingFace Portfolio](https://huggingface.co/pelinbalci)
 - [HuggingFace EasyOCR App](https://huggingface.co/spaces/pelinbalci/easyocr)
 - [HuggingFace LanguageDetection App](https://huggingface.co/spaces/pelinbalci/LanguageDetection)

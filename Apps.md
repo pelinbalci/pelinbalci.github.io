@@ -4,7 +4,7 @@ title: My Apps
 permalink: /apps/
 ---
 
-[![MovieRecommendation](assets/image_assets/myapps_images/movie.png)](https://pelinbalci-movierecommendation-app-vg04fm.streamlit.app/){:target="_blank"}
+[![MovieRecommendation](assets/image_assets/myapps_images/movie.png)](https://pelinbalci-movierecommendation.streamlit.app/){:target="_blank"}
 
 [![HuggingFace Portfolio](assets/image_assets/myapps_images/hf_portfolio.png)](https://huggingface.co/pelinbalci){:target="_blank"}
 
