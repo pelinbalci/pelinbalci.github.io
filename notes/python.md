@@ -1,0 +1,432 @@
+---
+title: "Python Programming Basics"
+id: "python"
+category: "programming"
+tags: ["python", "programming", "basics", "tutorial"]
+related: ["ml", "numpy"]
+date: "2025-11-08"
+description: "Essential Python programming concepts for beginners"
+---
+
+# Python Programming Basics
+
+## Overview
+
+Python is a high-level, interpreted programming language known for its simplicity and readability. It's one of the most popular languages for data science, machine learning, web development, and automation.
+
+## Why Python?
+
+- **Easy to Learn**: Clean, readable syntax
+- **Versatile**: Web dev, data science, automation, AI
+- **Large Community**: Extensive libraries and support
+- **Cross-platform**: Works on Windows, Mac, Linux
+- **Free and Open Source**: No licensing costs
+
+## Getting Started
+
+### Installation
+
+Visit [python.org](https://www.python.org/downloads/) to download Python.
+
+```bash
+# Check if Python is installed
+python --version
+
+# Or
+python3 --version
+```
+
+### Your First Program
+
+```python
+# hello.py
+print("Hello, World!")
+```
+
+Run it:
+```bash
+python hello.py
+```
+
+## Basic Syntax
+
+### Variables
+
+```python
+# Variables (no declaration needed)
+name = "Alice"
+age = 25
+height = 5.6
+is_student = True
+
+# Multiple assignment
+x, y, z = 1, 2, 3
+```
+
+### Data Types
+
+```python
+# Integers
+count = 10
+
+# Floats
+price = 19.99
+
+# Strings
+message = "Hello, Python!"
+
+# Booleans
+is_active = True
+
+# Lists
+fruits = ["apple", "banana", "cherry"]
+
+# Tuples (immutable)
+coordinates = (10, 20)
+
+# Dictionaries
+person = {
+    "name": "Alice",
+    "age": 25,
+    "city": "New York"
+}
+
+# Sets (unique elements)
+unique_numbers = {1, 2, 3, 4}
+```
+
+## Control Flow
+
+### Conditionals
+
+```python
+# if-elif-else
+age = 18
+
+if age < 18:
+    print("Minor")
+elif age == 18:
+    print("Just became an adult")
+else:
+    print("Adult")
+```
+
+### Loops
+
+```python
+# for loop
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+
+# range()
+for i in range(5):  # 0 to 4
+    print(i)
+
+# while loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1
+```
+
+## Functions
+
+```python
+# Basic function
+def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("Alice")
+print(message)  # Hello, Alice!
+
+# Default parameters
+def power(base, exponent=2):
+    return base ** exponent
+
+print(power(3))      # 9 (3^2)
+print(power(3, 3))   # 27 (3^3)
+
+# Multiple return values
+def get_stats(numbers):
+    return min(numbers), max(numbers), sum(numbers)
+
+minimum, maximum, total = get_stats([1, 2, 3, 4, 5])
+```
+
+## Lists and List Comprehensions
+
+```python
+# List operations
+numbers = [1, 2, 3, 4, 5]
+
+numbers.append(6)        # Add to end
+numbers.insert(0, 0)     # Insert at position
+numbers.remove(3)        # Remove value
+numbers.pop()            # Remove last item
+
+# Slicing
+first_three = numbers[:3]
+last_two = numbers[-2:]
+
+# List comprehension
+squares = [x**2 for x in range(10)]
+# [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+evens = [x for x in range(20) if x % 2 == 0]
+# [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]
+```
+
+## Dictionaries
+
+```python
+# Creating and accessing
+student = {
+    "name": "Alice",
+    "age": 20,
+    "grades": [85, 90, 92]
+}
+
+print(student["name"])           # Alice
+print(student.get("age"))        # 20
+print(student.get("email", "N/A"))  # N/A (default)
+
+# Adding/updating
+student["email"] = "alice@example.com"
+student["age"] = 21
+
+# Iterating
+for key, value in student.items():
+    print(f"{key}: {value}")
+```
+
+## Classes and Objects
+
+```python
+# Define a class
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        return f"{self.name} says Woof!"
+    
+    def get_age_in_dog_years(self):
+        return self.age * 7
+
+# Create objects
+my_dog = Dog("Buddy", 3)
+print(my_dog.bark())                    # Buddy says Woof!
+print(my_dog.get_age_in_dog_years())   # 21
+```
+
+## File Handling
+
+```python
+# Writing to a file
+with open("output.txt", "w") as file:
+    file.write("Hello, World!\n")
+    file.write("Python is awesome!")
+
+# Reading from a file
+with open("output.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Reading line by line
+with open("output.txt", "r") as file:
+    for line in file:
+        print(line.strip())
+```
+
+## Error Handling
+
+```python
+# try-except
+try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+except Exception as e:
+    print(f"An error occurred: {e}")
+finally:
+    print("This always executes")
+
+# Raising exceptions
+def divide(a, b):
+    if b == 0:
+        raise ValueError("Divisor cannot be zero")
+    return a / b
+```
+
+## Modules and Imports
+
+```python
+# Importing standard library
+import math
+print(math.pi)           # 3.141592653589793
+print(math.sqrt(16))     # 4.0
+
+# Import specific functions
+from math import pi, sqrt
+print(pi)
+
+# Import with alias
+import numpy as np
+import pandas as pd
+
+# Your own modules
+# In mymodule.py:
+def my_function():
+    return "Hello from module"
+
+# In main.py:
+import mymodule
+print(mymodule.my_function())
+```
+
+## Useful Built-in Functions
+
+```python
+# len() - length
+print(len([1, 2, 3]))        # 3
+print(len("Hello"))          # 5
+
+# type() - check type
+print(type(42))              # <class 'int'>
+
+# range() - sequence of numbers
+list(range(5))               # [0, 1, 2, 3, 4]
+
+# enumerate() - index and value
+for i, fruit in enumerate(["apple", "banana"]):
+    print(f"{i}: {fruit}")
+
+# zip() - combine iterables
+names = ["Alice", "Bob"]
+ages = [25, 30]
+for name, age in zip(names, ages):
+    print(f"{name} is {age}")
+
+# map() - apply function
+numbers = [1, 2, 3, 4]
+squared = list(map(lambda x: x**2, numbers))
+# [1, 4, 9, 16]
+
+# filter() - filter elements
+evens = list(filter(lambda x: x % 2 == 0, numbers))
+# [2, 4]
+```
+
+## Common Mistakes to Avoid
+
+1. **Indentation Errors**: Python uses indentation (not brackets)
+2. **Mutable Default Arguments**: Don't use mutable defaults in functions
+3. **Not Closing Files**: Use `with` statement
+4. **Index Out of Range**: Check list length before accessing
+5. **Integer Division**: Use `//` for floor division, `/` for float
+
+## Practice Projects
+
+### Beginner
+- Calculator
+- To-do list
+- Number guessing game
+- Password generator
+
+### Intermediate
+- Web scraper
+- Data analyzer
+- Simple game (snake, tic-tac-toe)
+- API consumer
+
+## Essential Libraries
+
+```python
+# Data Science
+import numpy as np         # Numerical computing
+import pandas as pd        # Data manipulation
+import matplotlib.pyplot as plt  # Visualization
+
+# Web Development
+from flask import Flask    # Web framework
+import requests           # HTTP requests
+
+# Automation
+import os                 # Operating system
+import sys                # System-specific
+from pathlib import Path  # File paths
+```
+
+## Resources for Learning
+
+### Online Platforms
+- [Python.org Tutorial](https://docs.python.org/3/tutorial/)
+- [Real Python](https://realpython.com/)
+- [Python for Everybody](https://www.py4e.com/)
+
+### Practice
+- [LeetCode](https://leetcode.com/) - Coding challenges
+- [HackerRank](https://www.hackerrank.com/) - Python track
+- [Project Euler](https://projecteuler.net/) - Math problems
+
+### Books
+- "Python Crash Course" by Eric Matthes
+- "Automate the Boring Stuff with Python" by Al Sweigart
+- "Fluent Python" by Luciano Ramalho (Advanced)
+
+## Google Colab Example
+
+Try this code in [Google Colab](https://colab.research.google.com):
+
+```python
+# Data analysis example
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create sample data
+data = {
+    'Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Age': [25, 30, 35, 28],
+    'Score': [85, 90, 78, 92]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+# Plot
+plt.bar(df['Name'], df['Score'])
+plt.title('Student Scores')
+plt.xlabel('Name')
+plt.ylabel('Score')
+plt.show()
+```
+
+## Key Takeaways
+
+- Python is beginner-friendly with clean syntax
+- Strong typing but dynamically typed
+- Indentation matters (use 4 spaces)
+- Rich standard library and ecosystem
+- Great for automation, data science, and web development
+- Practice is essential - code daily!
+
+## Related Topics
+
+- [Machine Learning](ml.html) - Use Python for ML
+- [NumPy](numpy.html) - Numerical computing library
+- [Data Structures](data-structures.html) - Core CS concepts
+
+## Next Steps
+
+1. Install Python on your machine
+2. Complete a beginner tutorial
+3. Build small projects
+4. Learn a library (NumPy, Pandas, or Flask)
+5. Contribute to open source
+
+---
+
+**Last Updated:** November 8, 2025  
+**Difficulty Level:** Beginner

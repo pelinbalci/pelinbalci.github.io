@@ -1,0 +1,289 @@
+// Graph Visualization using D3.js
+// This creates an interactive force-directed graph
+
+class KnowledgeGraph {
+    constructor(containerId) {
+        this.container = d3.select(`#${containerId}`);
+        this.width = document.getElementById(containerId).clientWidth;
+        this.height = document.getElementById(containerId).clientHeight;
+        this.nodes = [];
+        this.links = [];
+        this.simulation = null;
+        this.svg = null;
+        this.activeFilters = new Set();
+        
+        this.init();
+    }
+    
+    init() {
+        // Create SVG
+        this.svg = this.container
+            .attr('width', this.width)
+            .attr('height', this.height);
+        
+        // Add zoom behavior
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 4])
+            .on('zoom', (event) => {
+                this.g.attr('transform', event.transform);
+            });
+        
+        this.svg.call(zoom);
+        
+        // Create container group for zoom/pan
+        this.g = this.svg.append('g');
+        
+        // Create force simulation
+        this.simulation = d3.forceSimulation()
+            .force('link', d3.forceLink().id(d => d.id).distance(150))
+            .force('charge', d3.forceManyBody().strength(-300))
+            .force('center', d3.forceCenter(this.width / 2, this.height / 2))
+            .force('collision', d3.forceCollide().radius(50));
+        
+        // Load data
+        this.loadData();
+    }
+    
+    async loadData() {
+        try {
+            // For now, use sample data. Later this will load from notes
+            const data = await this.fetchGraphData();
+            this.nodes = data.nodes;
+            this.links = data.links;
+            
+            // Update stats
+            this.updateStats();
+            
+            // Render graph
+            this.render();
+            
+            // Hide loading spinner
+            document.getElementById('loadingSpinner').style.display = 'none';
+        } catch (error) {
+            console.error('Error loading graph data:', error);
+            this.showError();
+        }
+    }
+    
+    async fetchGraphData() {
+        // This will eventually read from your markdown files
+        // For now, return sample data
+        return {
+            nodes: [
+                { id: 'ml', name: 'Machine Learning', category: 'ml', description: 'Introduction to ML concepts and algorithms' },
+                { id: 'dl', name: 'Deep Learning', category: 'ml', description: 'Neural networks and deep architectures' },
+                { id: 'python', name: 'Python Basics', category: 'programming', description: 'Python programming fundamentals' },
+                { id: 'numpy', name: 'NumPy', category: 'programming', description: 'Numerical computing with Python' },
+                { id: 'cv', name: 'Computer Vision', category: 'ai', description: 'Image processing and analysis' },
+                { id: 'nlp', name: 'NLP', category: 'ai', description: 'Natural language processing' },
+                { id: 'data-viz', name: 'Data Visualization', category: 'data', description: 'Visualizing data effectively' },
+                { id: 'statistics', name: 'Statistics', category: 'math', description: 'Statistical methods and analysis' },
+            ],
+            links: [
+                { source: 'python', target: 'ml' },
+                { source: 'python', target: 'numpy' },
+                { source: 'ml', target: 'dl' },
+                { source: 'dl', target: 'cv' },
+                { source: 'dl', target: 'nlp' },
+                { source: 'numpy', target: 'ml' },
+                { source: 'statistics', target: 'ml' },
+                { source: 'data-viz', target: 'statistics' },
+            ]
+        };
+    }
+    
+    render() {
+        // Create links
+        const link = this.g.append('g')
+            .selectAll('line')
+            .data(this.links)
+            .enter()
+            .append('line')
+            .attr('class', 'link')
+            .attr('stroke-width', 2);
+        
+        // Create nodes
+        const node = this.g.append('g')
+            .selectAll('g')
+            .data(this.nodes)
+            .enter()
+            .append('g')
+            .attr('class', d => `node category-${d.category}`)
+            .call(this.drag());
+        
+        // Add circles to nodes
+        node.append('circle')
+            .attr('r', 30)
+            .attr('fill', d => this.getCategoryColor(d.category))
+            .attr('stroke', d => this.getCategoryStroke(d.category));
+        
+        // Add labels to nodes
+        node.append('text')
+            .text(d => d.name)
+            .attr('dy', 45)
+            .attr('text-anchor', 'middle');
+        
+        // Add interactions
+        node.on('click', (event, d) => this.onNodeClick(event, d))
+            .on('mouseenter', (event, d) => this.onNodeHover(event, d))
+            .on('mouseleave', () => this.onNodeLeave());
+        
+        // Update simulation
+        this.simulation
+            .nodes(this.nodes)
+            .on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                
+                node.attr('transform', d => `translate(${d.x},${d.y})`);
+            });
+        
+        this.simulation.force('link').links(this.links);
+        
+        // Store references
+        this.linkElements = link;
+        this.nodeElements = node;
+    }
+    
+    drag() {
+        return d3.drag()
+            .on('start', (event, d) => {
+                if (!event.active) this.simulation.alphaTarget(0.3).restart();
+                d.fx = d.x;
+                d.fy = d.y;
+            })
+            .on('drag', (event, d) => {
+                d.fx = event.x;
+                d.fy = event.y;
+            })
+            .on('end', (event, d) => {
+                if (!event.active) this.simulation.alphaTarget(0);
+                d.fx = null;
+                d.fy = null;
+            });
+    }
+    
+    onNodeClick(event, node) {
+        // Navigate to note page
+        window.location.href = `notes/${node.id}.html`;
+    }
+    
+    onNodeHover(event, node) {
+        // Highlight connected nodes
+        this.highlightConnections(node);
+        
+        // Show tooltip
+        this.showTooltip(event, node);
+    }
+    
+    onNodeLeave() {
+        // Remove highlights
+        this.nodeElements.classed('dimmed', false);
+        this.linkElements.classed('dimmed', false).classed('highlighted', false);
+        
+        // Hide tooltip
+        this.hideTooltip();
+    }
+    
+    highlightConnections(node) {
+        const connectedNodes = new Set();
+        connectedNodes.add(node.id);
+        
+        // Find connected nodes
+        this.links.forEach(link => {
+            if (link.source.id === node.id) connectedNodes.add(link.target.id);
+            if (link.target.id === node.id) connectedNodes.add(link.source.id);
+        });
+        
+        // Dim non-connected nodes
+        this.nodeElements.classed('dimmed', d => !connectedNodes.has(d.id));
+        
+        // Highlight connected links
+        this.linkElements
+            .classed('dimmed', d => d.source.id !== node.id && d.target.id !== node.id)
+            .classed('highlighted', d => d.source.id === node.id || d.target.id === node.id);
+    }
+    
+    showTooltip(event, node) {
+        const tooltip = document.getElementById('nodeTooltip');
+        tooltip.classList.remove('hidden');
+        
+        tooltip.querySelector('.tooltip-title').textContent = node.name;
+        tooltip.querySelector('.tooltip-category').textContent = node.category.toUpperCase();
+        tooltip.querySelector('.tooltip-description').textContent = node.description;
+        
+        // Position tooltip
+        tooltip.style.left = `${event.pageX + 10}px`;
+        tooltip.style.top = `${event.pageY + 10}px`;
+    }
+    
+    hideTooltip() {
+        document.getElementById('nodeTooltip').classList.add('hidden');
+    }
+    
+    getCategoryColor(category) {
+        const colors = {
+            'ai': '#6366f1',
+            'ml': '#8b5cf6',
+            'programming': '#ec4899',
+            'data': '#14b8a6',
+            'web': '#f59e0b',
+            'math': '#06b6d4',
+            'default': '#6b7280'
+        };
+        return colors[category] || colors.default;
+    }
+    
+    getCategoryStroke(category) {
+        const strokes = {
+            'ai': '#4f46e5',
+            'ml': '#7c3aed',
+            'programming': '#db2777',
+            'data': '#0d9488',
+            'web': '#d97706',
+            'math': '#0891b2',
+            'default': '#4b5563'
+        };
+        return strokes[category] || strokes.default;
+    }
+    
+    updateStats() {
+        document.getElementById('nodeCount').textContent = this.nodes.length;
+        document.getElementById('connectionCount').textContent = this.links.length;
+    }
+    
+    filterByCategory(categories) {
+        if (categories.size === 0) {
+            // Show all nodes
+            this.nodeElements.style('display', 'block');
+            this.linkElements.style('display', 'block');
+        } else {
+            // Filter nodes
+            this.nodeElements.style('display', d => 
+                categories.has(d.category) ? 'block' : 'none'
+            );
+            
+            // Filter links
+            this.linkElements.style('display', d => 
+                categories.has(d.source.category) && categories.has(d.target.category) ? 'block' : 'none'
+            );
+        }
+        
+        // Restart simulation
+        this.simulation.alpha(0.3).restart();
+    }
+    
+    showError() {
+        const spinner = document.getElementById('loadingSpinner');
+        spinner.innerHTML = '<p style="color: red;">Error loading graph data. Please refresh the page.</p>';
+    }
+}
+
+// Initialize graph when page loads
+let graph;
+document.addEventListener('DOMContentLoaded', () => {
+    graph = new KnowledgeGraph('graph');
+});

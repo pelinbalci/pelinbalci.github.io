@@ -1,0 +1,178 @@
+---
+title: "Machine Learning Fundamentals"
+id: "ml"
+category: "ml"
+tags: ["machine learning", "AI", "algorithms", "supervised learning"]
+related: ["dl", "python", "statistics"]
+date: "2025-11-08"
+description: "Introduction to machine learning concepts, algorithms, and applications"
+---
+
+# Machine Learning Fundamentals
+
+## Overview
+
+Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead of being explicitly programmed, these systems improve their performance through experience.
+
+## What is Machine Learning?
+
+Machine Learning enables computers to learn patterns from data without being explicitly programmed for every scenario. It's the foundation of many modern AI applications, from recommendation systems to autonomous vehicles.
+
+### Key Concepts
+
+- **Training Data**: Historical data used to teach the model
+- **Features**: Input variables used to make predictions
+- **Labels**: The output we want to predict (in supervised learning)
+- **Model**: The mathematical representation of patterns in data
+
+## Types of Machine Learning
+
+### 1. Supervised Learning
+
+The algorithm learns from labeled training data, making predictions based on that data.
+
+**Examples:**
+- Classification (spam detection, image recognition)
+- Regression (price prediction, weather forecasting)
+
+```python
+# Simple supervised learning example with sklearn
+from sklearn.linear_model import LinearRegression
+import numpy as np
+
+# Training data
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([2, 4, 6, 8, 10])
+
+# Create and train model
+model = LinearRegression()
+model.fit(X, y)
+
+# Make prediction
+prediction = model.predict([[6]])
+print(f"Prediction for 6: {prediction[0]}")  # Output: ~12
+```
+
+### 2. Unsupervised Learning
+
+The algorithm finds patterns in unlabeled data.
+
+**Examples:**
+- Clustering (customer segmentation)
+- Dimensionality reduction (data compression)
+- Anomaly detection
+
+### 3. Reinforcement Learning
+
+The algorithm learns through trial and error, receiving rewards or penalties.
+
+**Examples:**
+- Game playing (AlphaGo, Chess engines)
+- Robotics
+- Resource optimization
+
+## Common Algorithms
+
+### Linear Regression
+Predicts continuous values based on linear relationships.
+
+### Logistic Regression
+Classification algorithm for binary outcomes.
+
+### Decision Trees
+Tree-like model for classification and regression.
+
+### Neural Networks
+Inspired by biological neurons, forms the basis of deep learning.
+
+### Support Vector Machines (SVM)
+Finds optimal boundaries between classes.
+
+### K-Means Clustering
+Groups similar data points together.
+
+## The ML Workflow
+
+1. **Problem Definition**: What are we trying to predict or understand?
+2. **Data Collection**: Gather relevant data
+3. **Data Preprocessing**: Clean and prepare data
+4. **Feature Engineering**: Create meaningful features
+5. **Model Selection**: Choose appropriate algorithm
+6. **Training**: Teach the model with training data
+7. **Evaluation**: Test model performance
+8. **Deployment**: Use the model in production
+9. **Monitoring**: Track performance over time
+
+## Practical Example: Predicting House Prices
+
+```python
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error
+
+# Load data
+data = pd.DataFrame({
+    'size': [1500, 1600, 1700, 1800, 1900],
+    'bedrooms': [3, 3, 4, 4, 5],
+    'age': [10, 15, 20, 5, 8],
+    'price': [300000, 320000, 340000, 380000, 400000]
+})
+
+# Prepare features and target
+X = data[['size', 'bedrooms', 'age']]
+y = data['price']
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+
+# Train model
+model = RandomForestRegressor(n_estimators=100)
+model.fit(X_train, y_train)
+
+# Evaluate
+predictions = model.predict(X_test)
+mse = mean_squared_error(y_test, predictions)
+print(f"Mean Squared Error: {mse}")
+```
+
+## Resources for Learning
+
+### Online Courses
+- [Coursera: Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)
+- [Fast.ai: Practical Deep Learning](https://www.fast.ai/)
+
+### Books
+- "Hands-On Machine Learning" by Aurélien Géron
+- "Pattern Recognition and Machine Learning" by Christopher Bishop
+
+### Practice Platforms
+- [Kaggle](https://www.kaggle.com) - Competitions and datasets
+- [Google Colab](https://colab.research.google.com) - Free GPU for experiments
+
+## Key Takeaways
+
+- Machine Learning enables computers to learn from data
+- Three main types: Supervised, Unsupervised, and Reinforcement Learning
+- The ML workflow is iterative and requires continuous improvement
+- Start with simple algorithms before moving to complex ones
+- Practice is essential - work on real projects and datasets
+
+## Related Topics
+
+- [Deep Learning](dl.html) - Neural networks and advanced architectures
+- [Python Basics](python.html) - Programming fundamentals for ML
+- [Statistics](statistics.html) - Mathematical foundations
+
+## Tools and Libraries
+
+- **Scikit-learn**: General-purpose ML library
+- **TensorFlow**: Deep learning framework
+- **PyTorch**: Deep learning framework
+- **Pandas**: Data manipulation
+- **NumPy**: Numerical computing
+
+---
+
+**Last Updated:** November 8, 2025  
+**Difficulty Level:** Beginner to Intermediate
