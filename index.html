@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive Knowledge Graph - Explore connected learning topics">
+    <title>Tiny AI World - Interactive Learning Platform</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/graph.css">
+    
+    <!-- D3.js for graph visualization -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 Tiny AI World</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active">Graph</a>
+                <a href="notes.html" class="nav-link">All Notes</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="controls">
+                <button id="searchBtn" class="icon-btn" title="Search">🔍</button>
+                <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay hidden">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search topics..." autocomplete="off">
+            <button id="closeSearch" class="close-btn">✕</button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Graph Info Panel -->
+        <div class="info-panel">
+            <h2>Explore the Tiny AI World</h2>
+            <p>Click on nodes to explore topics. Drag to rearrange. Zoom and pan to navigate.</p>
+            <div class="stats">
+                <span class="stat-item">
+                    <strong id="nodeCount">0</strong> Topics
+                </span>
+                <span class="stat-item">
+                    <strong id="connectionCount">0</strong> Connections
+                </span>
+            </div>
+        </div>
+
+        <!-- Filter Panel -->
+        <div class="filter-panel">
+            <h3>Filter by Category</h3>
+            <div id="categoryFilters" class="category-filters">
+                <!-- Categories will be dynamically added here -->
+            </div>
+            <button id="clearFilters" class="btn-secondary">Clear Filters</button>
+        </div>
+
+        <!-- Graph Canvas -->
+        <div id="graphContainer" class="graph-container">
+            <div id="loadingSpinner" class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Loading knowledge graph...</p>
+            </div>
+            <svg id="graph"></svg>
+        </div>
+
+        <!-- Node Details Tooltip -->
+        <div id="nodeTooltip" class="node-tooltip hidden">
+            <h4 class="tooltip-title"></h4>
+            <p class="tooltip-category"></p>
+            <p class="tooltip-description"></p>
+            <div class="tooltip-tags"></div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tiny AI World. Free and Open Source.</p>
+            <p>
+                <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">GitHub</a> •
+                <a href="LICENSE">License</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/graph.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
