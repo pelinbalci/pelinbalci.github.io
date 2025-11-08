@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="All Notes - Tiny AI World">
+    <title>All Notes - Tiny AI World</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 Tiny AI World</h1>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Graph</a>
+                <a href="notes.html" class="nav-link active">All Notes</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="about.html" class="nav-link">About</a>
+            </nav>
+            <div class="controls">
+                <button id="searchBtn" class="icon-btn" title="Search">🔍</button>
+                <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Header Section -->
+            <section style="text-align: center; margin-bottom: 3rem;">
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">All Notes</h1>
+                <p style="font-size: 1.25rem; color: var(--text-secondary);">
+                    Browse all learning materials and resources
+                </p>
+            </section>
+
+            <!-- Filter/Sort Controls -->
+            <section style="max-width: 800px; margin: 0 auto 2rem;">
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                    <select id="sortSelect" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background-color: var(--bg-primary); color: var(--text-primary);">
+                        <option value="recent">Most Recent</option>
+                        <option value="title">Title (A-Z)</option>
+                        <option value="category">Category</option>
+                    </select>
+                    
+                    <select id="categoryFilter" style="padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: var(--radius-md); background-color: var(--bg-primary); color: var(--text-primary);">
+                        <option value="all">All Categories</option>
+                        <option value="ai">AI</option>
+                        <option value="ml">Machine Learning</option>
+                        <option value="programming">Programming</option>
+                        <option value="data">Data Science</option>
+                        <option value="web">Web Development</option>
+                        <option value="math">Math</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Notes Grid -->
+            <section style="max-width: 1200px; margin: 0 auto;">
+                <div id="notesGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                    
+                    <!-- Sample Note Card 1 -->
+                    <div class="note-card" style="background-color: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: transform 0.2s, box-shadow 0.2s;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <span style="padding: 0.25rem 0.75rem; background-color: var(--accent-secondary); color: white; border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">ML</span>
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">Nov 8, 2025</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">
+                            <a href="notes/ml.html" style="color: var(--text-primary); text-decoration: none;">Machine Learning Fundamentals</a>
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.875rem;">
+                            Introduction to machine learning concepts, algorithms, and applications
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">machine learning</span>
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">AI</span>
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">algorithms</span>
+                        </div>
+                        <a href="notes/ml.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+                            Read more →
+                        </a>
+                    </div>
+
+                    <!-- Sample Note Card 2 -->
+                    <div class="note-card" style="background-color: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); transition: transform 0.2s, box-shadow 0.2s;">
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <span style="padding: 0.25rem 0.75rem; background-color: var(--accent-tertiary); color: white; border-radius: var(--radius-sm); font-size: 0.75rem; font-weight: 600;">PROGRAMMING</span>
+                            <span style="font-size: 0.875rem; color: var(--text-secondary);">Nov 8, 2025</span>
+                        </div>
+                        <h3 style="font-size: 1.25rem; margin-bottom: 0.75rem;">
+                            <a href="notes/python.html" style="color: var(--text-primary); text-decoration: none;">Python Programming Basics</a>
+                        </h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem; font-size: 0.875rem;">
+                            Essential Python programming concepts for beginners
+                        </p>
+                        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">python</span>
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">programming</span>
+                            <span style="padding: 0.125rem 0.5rem; background-color: var(--bg-tertiary); border-radius: var(--radius-sm); font-size: 0.75rem; color: var(--text-secondary);">tutorial</span>
+                        </div>
+                        <a href="notes/python.html" style="color: var(--accent-primary); font-weight: 600; font-size: 0.875rem; text-decoration: none;">
+                            Read more →
+                        </a>
+                    </div>
+
+                    <!-- Placeholder for More Notes -->
+                    <div style="background-color: var(--bg-secondary); padding: 1.5rem; border-radius: var(--radius-lg); border: 2px dashed var(--border-color); display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 250px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+                        <h3 style="margin-bottom: 0.5rem; color: var(--text-primary);">Add More Notes</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">
+                            Create new notes to see them appear here
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section style="max-width: 600px; margin: 3rem auto; text-align: center; padding: 2rem; background-color: var(--bg-secondary); border-radius: var(--radius-lg);">
+                <h2 style="margin-bottom: 1rem;">Explore the Knowledge Graph</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    See how all these topics connect in an interactive visualization
+                </p>
+                <a href="index.html" style="display: inline-block; padding: 0.75rem 2rem; background-color: var(--accent-primary); color: white; border-radius: var(--radius-md); text-decoration: none; font-weight: 600;">
+                    View Graph
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tiny AI World. Free and Open Source.</p>
+            <p>
+                <a href="https://github.com/pelinbalci/pelinbalci.github.io" target="_blank">GitHub</a> •
+                <a href="LICENSE">License</a> •
+                <a href="about.html">About</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/theme.js"></script>
+    
+    <style>
+        .note-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px var(--shadow);
+        }
+    </style>
+</body>
+</html>
