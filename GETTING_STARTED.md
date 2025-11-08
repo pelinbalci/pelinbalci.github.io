@@ -1,6 +1,6 @@
 # 🚀 Getting Started Guide
 
-Welcome to your Knowledge Graph platform! This guide will help you deploy and start adding content.
+Welcome to your Tiny AI World platform! This guide will help you deploy and start adding content.
 
 ## 📦 What You Have
 
@@ -288,7 +288,7 @@ A: Yes! Enable pull requests in your repo settings, and others can suggest notes
 
 ## 🎉 You're Ready!
 
-You now have everything you need to build an amazing knowledge graph platform. 
+You now have everything you need to build an amazing ai platform. 
 
 **Remember:**
 - The best knowledge base is one that's actually used

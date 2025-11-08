@@ -1,6 +1,6 @@
-# 🧠 Knowledge Graph - Interactive Learning Platform
+# 🧠 Tiny AI World - Interactive Learning Platform
 
-A beautiful, interactive knowledge graph platform for organizing and sharing learning notes. Built with D3.js and deployed on GitHub Pages.
+A beautiful, interactive AI platform for organizing and sharing learning notes. Built with D3.js and deployed on GitHub Pages.
 
 ## ✨ Features
 
