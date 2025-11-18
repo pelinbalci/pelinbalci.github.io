@@ -1,0 +1,75 @@
+{
+  "nodes": [
+    {
+      "id": "ml",
+      "name": "Machine Learning Fundamentals",
+      "category": "ml",
+      "tags": [
+        "machine learning",
+        "AI",
+        "algorithms",
+        "supervised learning"
+      ],
+      "description": "Introduction to machine learning concepts, algorithms, and applications",
+      "date": "2025-11-08",
+      "file": "ml.md"
+    },
+    {
+      "id": "python",
+      "name": "Python Programming Basics",
+      "category": "programming",
+      "tags": [
+        "python",
+        "programming",
+        "basics",
+        "tutorial"
+      ],
+      "description": "Essential Python programming concepts for beginners",
+      "date": "2025-11-08",
+      "file": "python.md"
+    },
+    {
+      "id": "unique-note-id",
+      "name": "Your Note Title",
+      "category": "ml",
+      "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+      ],
+      "description": "A brief description of what this note covers",
+      "date": "2025-11-08",
+      "file": "transformers.md"
+    }
+  ],
+  "links": [
+    {
+      "source": "ml",
+      "target": "dl"
+    },
+    {
+      "source": "ml",
+      "target": "python"
+    },
+    {
+      "source": "ml",
+      "target": "statistics"
+    },
+    {
+      "source": "python",
+      "target": "ml"
+    },
+    {
+      "source": "python",
+      "target": "numpy"
+    },
+    {
+      "source": "unique-note-id",
+      "target": "other-note-id"
+    },
+    {
+      "source": "unique-note-id",
+      "target": "another-note-id"
+    }
+  ]
+}
