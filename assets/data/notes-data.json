@@ -27,19 +27,6 @@
       "description": "Essential Python programming concepts for beginners",
       "date": "2025-11-08",
       "file": "python.md"
-    },
-    {
-      "id": "unique-note-id",
-      "name": "Your Note Title",
-      "category": "ml",
-      "tags": [
-        "tag1",
-        "tag2",
-        "tag3"
-      ],
-      "description": "A brief description of what this note covers",
-      "date": "2025-11-08",
-      "file": "transformers.md"
     }
   ],
   "links": [
@@ -62,14 +49,6 @@
     {
       "source": "python",
       "target": "numpy"
-    },
-    {
-      "source": "unique-note-id",
-      "target": "other-note-id"
-    },
-    {
-      "source": "unique-note-id",
-      "target": "another-note-id"
     }
   ]
 }
