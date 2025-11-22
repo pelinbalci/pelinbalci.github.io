@@ -41,14 +41,19 @@ cp notes/_template.md notes/your-topic.md
    - Write your content in Markdown
    - Save the file
 
-4. **Push to GitHub**
+4. **Generate site data**
+   - Install optional helpers for richer HTML: `pip install markdown`
+   - Build the JSON dataset: `python generate-data.py`
+   - This writes `assets/data/notes.json` with metadata, relationships, and rendered HTML used by the graph and search
+
+5. **Push to GitHub**
 ```bash
 git add .
 git commit -m "Add note on [your topic]"
 git push origin main
 ```
 
-The graph will automatically update when you push!
+Run `python generate-data.py` whenever you add or edit notes so the graph, search, and notes pages stay in sync.
 
 ## 📝 Creating Notes
 

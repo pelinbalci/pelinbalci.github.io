@@ -224,7 +224,7 @@
 
         async function loadNotes() {
             try {
-                const response = await fetch('assets/data/notes-data.json');
+                const response = await fetch('/assets/data/notes.json');
                 const data = await response.json();
                 allNotes = data.nodes || [];
                 filteredNotes = [...allNotes];
@@ -235,7 +235,7 @@
                     <div style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
                         <p style="color: red; margin-bottom: 1rem;">Error loading notes</p>
                         <p style="color: var(--text-secondary); font-size: 0.875rem;">
-                            Make sure you've run: <code>python scripts/generate-data.py</code>
+                            Make sure you've run: <code>python generate-data.py</code>
                         </p>
                     </div>
                 `;
