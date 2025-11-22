@@ -4,3 +4,5 @@ scripts
 archive
 projectplanfiles
 misc.xml
+generate-data.py
+
