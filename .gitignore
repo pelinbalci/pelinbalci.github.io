@@ -1,3 +1,6 @@
 .idea
+.venv
+scripts
 archive
 projectplanfiles
+misc.xml
