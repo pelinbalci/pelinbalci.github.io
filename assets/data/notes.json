@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-22T20:00:34.379741Z",
+  "generated_at": "2025-11-22T20:17:21.818135Z",
   "nodes": [
     {
       "id": "ml",
@@ -97,6 +97,25 @@
       "file": "trial2.md",
       "html": "<h1>TRANSFORMERS PEL\u0130N 2</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li>**Bold text**</li>\n<li>*Italic text*</li>\n<li>[Links](https://example.com)</li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<p>```python</p>\n<h1>Python code example</h1>\n<p>def hello_world():</p>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>return True</p>\n<p>```</p>\n<p>```javascript</p>\n<p>// JavaScript code example</p>\n<p>function helloWorld() {</p>\n<p>console.log(&quot;Hello, World!&quot;);</p>\n<p>return true;</p>\n<p>}</p>\n<p>```</p>\n<h2>External Resources</h2>\n<ul>\n<li>[Link to Colab Notebook](https://colab.research.google.com/...)</li>\n<li>[GitHub Repository](https://github.com/...)</li>\n<li>[Documentation](https://docs.example.com)</li>\n</ul>\n<h2>Images</h2>\n<p>![Description of image](../assets/images/example.png)</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Related Note 1](other-note.html)</li>\n<li>[Related Note 2](another-note.html)</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** 2025-11-22</p>",
       "excerpt": "# TRANSFORMERS PEL\u0130N 2 ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links](htt..."
+    },
+    {
+      "id": "PEL\u0130N_3445",
+      "name": "TRANSFORMERS PEL\u0130N_3",
+      "category": "Data",
+      "tags": [
+        "tag_AI",
+        "TAG_ml"
+      ],
+      "date": "2025-11-22",
+      "description": "A brief description of what this note covers",
+      "related": [
+        "dl",
+        "ml",
+        "Statistics"
+      ],
+      "file": "trial_3.md",
+      "html": "<h1>TRANSFORMERS PEL\u0130N 2</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li>**Bold text**</li>\n<li>*Italic text*</li>\n<li>[Links](https://example.com)</li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<p>```python</p>\n<h1>Python code example</h1>\n<p>def hello_world():</p>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>return True</p>\n<p>```</p>\n<p>```javascript</p>\n<p>// JavaScript code example</p>\n<p>function helloWorld() {</p>\n<p>console.log(&quot;Hello, World!&quot;);</p>\n<p>return true;</p>\n<p>}</p>\n<p>```</p>\n<h2>External Resources</h2>\n<ul>\n<li>[Link to Colab Notebook](https://colab.research.google.com/...)</li>\n<li>[GitHub Repository](https://github.com/...)</li>\n<li>[Documentation](https://docs.example.com)</li>\n</ul>\n<h2>Images</h2>\n<p>![Description of image](../assets/images/example.png)</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Related Note 1](other-note.html)</li>\n<li>[Related Note 2](another-note.html)</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** 2025-11-22</p>",
+      "excerpt": "# TRANSFORMERS PEL\u0130N 2 ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links](htt..."
     }
   ],
   "links": [
@@ -146,6 +165,18 @@
     },
     {
       "source": "PEL\u0130N_123",
+      "target": "Statistics"
+    },
+    {
+      "source": "PEL\u0130N_3445",
+      "target": "dl"
+    },
+    {
+      "source": "PEL\u0130N_3445",
+      "target": "ml"
+    },
+    {
+      "source": "PEL\u0130N_3445",
       "target": "Statistics"
     }
   ]
