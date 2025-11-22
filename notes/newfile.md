@@ -1,14 +1,14 @@
 ---
-title: "TRANSFORMERS PELİN"
+title: "TRANSFORMERS PELİN TRIAL"
 id: "PELİN_123"
-category: "ml"
-tags: ["tag_AI", "TAG_ml"]
-related: ["dl", "ml"]
+category: "Math"
+tags: ["NLP", "TAG_ml"]
+related: ["Deep Learning", "Computer Vision"]
 date: "2025-11-08"
 description: "A brief description of what this note covers"
 ---
 
-# TRANSFORMERS PELİN
+# TRANSFORMERS PELİN TRIAL
 
 ## Overview
 

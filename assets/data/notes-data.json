@@ -15,6 +15,18 @@
       "file": "ml.md"
     },
     {
+      "id": "PEL\u0130N_123",
+      "name": "TRANSFORMERS PEL\u0130N TRIAL",
+      "category": "Math",
+      "tags": [
+        "NLP",
+        "TAG_ml"
+      ],
+      "description": "A brief description of what this note covers",
+      "date": "2025-11-08",
+      "file": "newfile.md"
+    },
+    {
       "id": "python",
       "name": "Python Programming Basics",
       "category": "programming",
@@ -43,18 +55,6 @@
     },
     {
       "id": "PEL\u0130N_123",
-      "name": "TRANSFORMERS PEL\u0130N",
-      "category": "ml",
-      "tags": [
-        "tag_AI",
-        "TAG_ml"
-      ],
-      "description": "A brief description of what this note covers",
-      "date": "2025-11-08",
-      "file": "trial.md"
-    },
-    {
-      "id": "PEL\u0130N_123",
       "name": "TRANSFORMERS PEL\u0130N_2",
       "category": "Data",
       "tags": [
@@ -80,6 +80,14 @@
       "target": "statistics"
     },
     {
+      "source": "PEL\u0130N_123",
+      "target": "Deep Learning"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "Computer Vision"
+    },
+    {
       "source": "python",
       "target": "ml"
     },
@@ -94,14 +102,6 @@
     {
       "source": "unique-note-id",
       "target": "another-note-id"
-    },
-    {
-      "source": "PEL\u0130N_123",
-      "target": "dl"
-    },
-    {
-      "source": "PEL\u0130N_123",
-      "target": "ml"
     },
     {
       "source": "PEL\u0130N_123",
