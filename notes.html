@@ -403,7 +403,7 @@
                 : '';
 
             return `
-                <div class="note-card" onclick="window.location.href='notes/note.html?id=${note.id}'">
+                <div class="note-card" onclick="window.location.href='/notes/note.html?id=${note.id}'">
                     <div class="note-card-header">
                         <span class="note-category-badge" style="background-color: ${categoryColor};">
                             ${note.categoryLabel}
@@ -411,11 +411,11 @@
                         <span class="note-date">📅 ${note.date}</span>
                     </div>
                     <h3 class="note-title">
-                        <a href="notes/note.html?id=${note.id}">${note.name}</a>
+                        <a href="/notes/note.html?id=${note.id}">${note.name}</a>
                     </h3>
                     <p class="note-description">${note.description}</p>
                     ${tagsHTML ? `<div class="note-tags">${tagsHTML}</div>` : ''}
-                    <a href="notes/note.html?id=${note.id}" class="note-link">
+                    <a href="/notes/note.html?id=${note.id}" class="note-link">
                         Read more →
                     </a>
                 </div>
