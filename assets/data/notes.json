@@ -1,0 +1,152 @@
+{
+  "generated_at": "2025-11-22T19:29:39.829451Z",
+  "nodes": [
+    {
+      "id": "ml",
+      "name": "Machine Learning Fundamentals",
+      "category": "ml",
+      "tags": [
+        "machine learning",
+        "AI",
+        "algorithms",
+        "supervised learning"
+      ],
+      "date": "2025-11-08",
+      "description": "Introduction to machine learning concepts, algorithms, and applications",
+      "related": [
+        "dl",
+        "python",
+        "statistics"
+      ],
+      "file": "ml.md",
+      "html": "<h1>Machine Learning Fundamentals</h1>\n<h2>Overview</h2>\n<p>Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead of being explicitly programmed, these systems improve their performance through experience.</p>\n<h2>What is Machine Learning?</h2>\n<p>Machine Learning enables computers to learn patterns from data without being explicitly programmed for every scenario. It&#x27;s the foundation of many modern AI applications, from recommendation systems to autonomous vehicles.</p>\n<h3>Key Concepts</h3>\n<ul>\n<li>**Training Data**: Historical data used to teach the model</li>\n<li>**Features**: Input variables used to make predictions</li>\n<li>**Labels**: The output we want to predict (in supervised learning)</li>\n<li>**Model**: The mathematical representation of patterns in data</li>\n</ul>\n<h2>Types of Machine Learning</h2>\n<h3>1. Supervised Learning</h3>\n<p>The algorithm learns from labeled training data, making predictions based on that data.</p>\n<p>**Examples:**</p>\n<ul>\n<li>Classification (spam detection, image recognition)</li>\n<li>Regression (price prediction, weather forecasting)</li>\n</ul>\n<p>```python</p>\n<h1>Simple supervised learning example with sklearn</h1>\n<p>from sklearn.linear_model import LinearRegression</p>\n<p>import numpy as np</p>\n<h1>Training data</h1>\n<p>X = np.array([[1], [2], [3], [4], [5]])</p>\n<p>y = np.array([2, 4, 6, 8, 10])</p>\n<h1>Create and train model</h1>\n<p>model = LinearRegression()</p>\n<p>model.fit(X, y)</p>\n<h1>Make prediction</h1>\n<p>prediction = model.predict([[6]])</p>\n<p>print(f&quot;Prediction for 6: {prediction[0]}&quot;)  # Output: ~12</p>\n<p>```</p>\n<h3>2. Unsupervised Learning</h3>\n<p>The algorithm finds patterns in unlabeled data.</p>\n<p>**Examples:**</p>\n<ul>\n<li>Clustering (customer segmentation)</li>\n<li>Dimensionality reduction (data compression)</li>\n<li>Anomaly detection</li>\n</ul>\n<h3>3. Reinforcement Learning</h3>\n<p>The algorithm learns through trial and error, receiving rewards or penalties.</p>\n<p>**Examples:**</p>\n<ul>\n<li>Game playing (AlphaGo, Chess engines)</li>\n<li>Robotics</li>\n<li>Resource optimization</li>\n</ul>\n<h2>Common Algorithms</h2>\n<h3>Linear Regression</h3>\n<p>Predicts continuous values based on linear relationships.</p>\n<h3>Logistic Regression</h3>\n<p>Classification algorithm for binary outcomes.</p>\n<h3>Decision Trees</h3>\n<p>Tree-like model for classification and regression.</p>\n<h3>Neural Networks</h3>\n<p>Inspired by biological neurons, forms the basis of deep learning.</p>\n<h3>Support Vector Machines (SVM)</h3>\n<p>Finds optimal boundaries between classes.</p>\n<h3>K-Means Clustering</h3>\n<p>Groups similar data points together.</p>\n<h2>The ML Workflow</h2>\n<p>1. **Problem Definition**: What are we trying to predict or understand?</p>\n<p>2. **Data Collection**: Gather relevant data</p>\n<p>3. **Data Preprocessing**: Clean and prepare data</p>\n<p>4. **Feature Engineering**: Create meaningful features</p>\n<p>5. **Model Selection**: Choose appropriate algorithm</p>\n<p>6. **Training**: Teach the model with training data</p>\n<p>7. **Evaluation**: Test model performance</p>\n<p>8. **Deployment**: Use the model in production</p>\n<p>9. **Monitoring**: Track performance over time</p>\n<h2>Practical Example: Predicting House Prices</h2>\n<p>```python</p>\n<p>import pandas as pd</p>\n<p>from sklearn.model_selection import train_test_split</p>\n<p>from sklearn.ensemble import RandomForestRegressor</p>\n<p>from sklearn.metrics import mean_squared_error</p>\n<h1>Load data</h1>\n<p>data = pd.DataFrame({</p>\n<p>&#x27;size&#x27;: [1500, 1600, 1700, 1800, 1900],</p>\n<p>&#x27;bedrooms&#x27;: [3, 3, 4, 4, 5],</p>\n<p>&#x27;age&#x27;: [10, 15, 20, 5, 8],</p>\n<p>&#x27;price&#x27;: [300000, 320000, 340000, 380000, 400000]</p>\n<p>})</p>\n<h1>Prepare features and target</h1>\n<p>X = data[[&#x27;size&#x27;, &#x27;bedrooms&#x27;, &#x27;age&#x27;]]</p>\n<p>y = data[&#x27;price&#x27;]</p>\n<h1>Split data</h1>\n<p>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</p>\n<h1>Train model</h1>\n<p>model = RandomForestRegressor(n_estimators=100)</p>\n<p>model.fit(X_train, y_train)</p>\n<h1>Evaluate</h1>\n<p>predictions = model.predict(X_test)</p>\n<p>mse = mean_squared_error(y_test, predictions)</p>\n<p>print(f&quot;Mean Squared Error: {mse}&quot;)</p>\n<p>```</p>\n<h2>Resources for Learning</h2>\n<h3>Online Courses</h3>\n<ul>\n<li>[Coursera: Machine Learning by Andrew Ng](https://www.coursera.org/learn/machine-learning)</li>\n<li>[Fast.ai: Practical Deep Learning](https://www.fast.ai/)</li>\n</ul>\n<h3>Books</h3>\n<ul>\n<li>&quot;Hands-On Machine Learning&quot; by Aur\u00e9lien G\u00e9ron</li>\n<li>&quot;Pattern Recognition and Machine Learning&quot; by Christopher Bishop</li>\n</ul>\n<h3>Practice Platforms</h3>\n<ul>\n<li>[Kaggle](https://www.kaggle.com) - Competitions and datasets</li>\n<li>[Google Colab](https://colab.research.google.com) - Free GPU for experiments</li>\n</ul>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Machine Learning enables computers to learn from data</li>\n<li>Three main types: Supervised, Unsupervised, and Reinforcement Learning</li>\n<li>The ML workflow is iterative and requires continuous improvement</li>\n<li>Start with simple algorithms before moving to complex ones</li>\n<li>Practice is essential - work on real projects and datasets</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Deep Learning](dl.html) - Neural networks and advanced architectures</li>\n<li>[Python Basics](python.html) - Programming fundamentals for ML</li>\n<li>[Statistics](statistics.html) - Mathematical foundations</li>\n</ul>\n<h2>Tools and Libraries</h2>\n<ul>\n<li>**Scikit-learn**: General-purpose ML library</li>\n<li>**TensorFlow**: Deep learning framework</li>\n<li>**PyTorch**: Deep learning framework</li>\n<li>**Pandas**: Data manipulation</li>\n<li>**NumPy**: Numerical computing</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** November 8, 2025</p>\n<p>**Difficulty Level:** Beginner to Intermediate</p>",
+      "excerpt": "# Machine Learning Fundamentals ## Overview Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead ..."
+    },
+    {
+      "id": "PEL\u0130N_123",
+      "name": "TRANSFORMERS PEL\u0130N TRIAL",
+      "category": "Math",
+      "tags": [
+        "NLP",
+        "TAG_ml"
+      ],
+      "date": "2025-11-08",
+      "description": "A brief description of what this note covers",
+      "related": [
+        "Deep Learning",
+        "Computer Vision"
+      ],
+      "file": "newfile.md",
+      "html": "<h1>TRANSFORMERS PEL\u0130N TRIAL</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li>**Bold text**</li>\n<li>*Italic text*</li>\n<li>[Links](https://example.com)</li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<p>```python</p>\n<h1>Python code example</h1>\n<p>def hello_world():</p>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>return True</p>\n<p>```</p>\n<p>```javascript</p>\n<p>// JavaScript code example</p>\n<p>function helloWorld() {</p>\n<p>console.log(&quot;Hello, World!&quot;);</p>\n<p>return true;</p>\n<p>}</p>\n<p>```</p>\n<h2>External Resources</h2>\n<ul>\n<li>[Link to Colab Notebook](https://colab.research.google.com/...)</li>\n<li>[GitHub Repository](https://github.com/...)</li>\n<li>[Documentation](https://docs.example.com)</li>\n</ul>\n<h2>Images</h2>\n<p>![Description of image](../assets/images/example.png)</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Related Note 1](other-note.html)</li>\n<li>[Related Note 2](another-note.html)</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** 2025-11-08</p>",
+      "excerpt": "# TRANSFORMERS PEL\u0130N TRIAL ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links]..."
+    },
+    {
+      "id": "python",
+      "name": "Python Programming Basics",
+      "category": "programming",
+      "tags": [
+        "python",
+        "programming",
+        "basics",
+        "tutorial"
+      ],
+      "date": "2025-11-08",
+      "description": "Essential Python programming concepts for beginners",
+      "related": [
+        "ml",
+        "numpy"
+      ],
+      "file": "python.md",
+      "html": "<h1>Python Programming Basics</h1>\n<h2>Overview</h2>\n<p>Python is a high-level, interpreted programming language known for its simplicity and readability. It&#x27;s one of the most popular languages for data science, machine learning, web development, and automation.</p>\n<h2>Why Python?</h2>\n<ul>\n<li>**Easy to Learn**: Clean, readable syntax</li>\n<li>**Versatile**: Web dev, data science, automation, AI</li>\n<li>**Large Community**: Extensive libraries and support</li>\n<li>**Cross-platform**: Works on Windows, Mac, Linux</li>\n<li>**Free and Open Source**: No licensing costs</li>\n</ul>\n<h2>Getting Started</h2>\n<h3>Installation</h3>\n<p>Visit [python.org](https://www.python.org/downloads/) to download Python.</p>\n<p>```bash</p>\n<h1>Check if Python is installed</h1>\n<p>python --version</p>\n<h1>Or</h1>\n<p>python3 --version</p>\n<p>```</p>\n<h3>Your First Program</h3>\n<p>```python</p>\n<h1>hello.py</h1>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>```</p>\n<p>Run it:</p>\n<p>```bash</p>\n<p>python hello.py</p>\n<p>```</p>\n<h2>Basic Syntax</h2>\n<h3>Variables</h3>\n<p>```python</p>\n<h1>Variables (no declaration needed)</h1>\n<p>name = &quot;Alice&quot;</p>\n<p>age = 25</p>\n<p>height = 5.6</p>\n<p>is_student = True</p>\n<h1>Multiple assignment</h1>\n<p>x, y, z = 1, 2, 3</p>\n<p>```</p>\n<h3>Data Types</h3>\n<p>```python</p>\n<h1>Integers</h1>\n<p>count = 10</p>\n<h1>Floats</h1>\n<p>price = 19.99</p>\n<h1>Strings</h1>\n<p>message = &quot;Hello, Python!&quot;</p>\n<h1>Booleans</h1>\n<p>is_active = True</p>\n<h1>Lists</h1>\n<p>fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</p>\n<h1>Tuples (immutable)</h1>\n<p>coordinates = (10, 20)</p>\n<h1>Dictionaries</h1>\n<p>person = {</p>\n<p>&quot;name&quot;: &quot;Alice&quot;,</p>\n<p>&quot;age&quot;: 25,</p>\n<p>&quot;city&quot;: &quot;New York&quot;</p>\n<p>}</p>\n<h1>Sets (unique elements)</h1>\n<p>unique_numbers = {1, 2, 3, 4}</p>\n<p>```</p>\n<h2>Control Flow</h2>\n<h3>Conditionals</h3>\n<p>```python</p>\n<h1>if-elif-else</h1>\n<p>age = 18</p>\n<p>if age &lt; 18:</p>\n<p>print(&quot;Minor&quot;)</p>\n<p>elif age == 18:</p>\n<p>print(&quot;Just became an adult&quot;)</p>\n<p>else:</p>\n<p>print(&quot;Adult&quot;)</p>\n<p>```</p>\n<h3>Loops</h3>\n<p>```python</p>\n<h1>for loop</h1>\n<p>fruits = [&quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot;]</p>\n<p>for fruit in fruits:</p>\n<p>print(fruit)</p>\n<h1>range()</h1>\n<p>for i in range(5):  # 0 to 4</p>\n<p>print(i)</p>\n<h1>while loop</h1>\n<p>count = 0</p>\n<p>while count &lt; 5:</p>\n<p>print(count)</p>\n<p>count += 1</p>\n<p>```</p>\n<h2>Functions</h2>\n<p>```python</p>\n<h1>Basic function</h1>\n<p>def greet(name):</p>\n<p>return f&quot;Hello, {name}!&quot;</p>\n<p>message = greet(&quot;Alice&quot;)</p>\n<p>print(message)  # Hello, Alice!</p>\n<h1>Default parameters</h1>\n<p>def power(base, exponent=2):</p>\n<p>return base ** exponent</p>\n<p>print(power(3))      # 9 (3^2)</p>\n<p>print(power(3, 3))   # 27 (3^3)</p>\n<h1>Multiple return values</h1>\n<p>def get_stats(numbers):</p>\n<p>return min(numbers), max(numbers), sum(numbers)</p>\n<p>minimum, maximum, total = get_stats([1, 2, 3, 4, 5])</p>\n<p>```</p>\n<h2>Lists and List Comprehensions</h2>\n<p>```python</p>\n<h1>List operations</h1>\n<p>numbers = [1, 2, 3, 4, 5]</p>\n<p>numbers.append(6)        # Add to end</p>\n<p>numbers.insert(0, 0)     # Insert at position</p>\n<p>numbers.remove(3)        # Remove value</p>\n<p>numbers.pop()            # Remove last item</p>\n<h1>Slicing</h1>\n<p>first_three = numbers[:3]</p>\n<p>last_two = numbers[-2:]</p>\n<h1>List comprehension</h1>\n<p>squares = [x**2 for x in range(10)]</p>\n<h1>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</h1>\n<p>evens = [x for x in range(20) if x % 2 == 0]</p>\n<h1>[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]</h1>\n<p>```</p>\n<h2>Dictionaries</h2>\n<p>```python</p>\n<h1>Creating and accessing</h1>\n<p>student = {</p>\n<p>&quot;name&quot;: &quot;Alice&quot;,</p>\n<p>&quot;age&quot;: 20,</p>\n<p>&quot;grades&quot;: [85, 90, 92]</p>\n<p>}</p>\n<p>print(student[&quot;name&quot;])           # Alice</p>\n<p>print(student.get(&quot;age&quot;))        # 20</p>\n<p>print(student.get(&quot;email&quot;, &quot;N/A&quot;))  # N/A (default)</p>\n<h1>Adding/updating</h1>\n<p>student[&quot;email&quot;] = &quot;alice@example.com&quot;</p>\n<p>student[&quot;age&quot;] = 21</p>\n<h1>Iterating</h1>\n<p>for key, value in student.items():</p>\n<p>print(f&quot;{key}: {value}&quot;)</p>\n<p>```</p>\n<h2>Classes and Objects</h2>\n<p>```python</p>\n<h1>Define a class</h1>\n<p>class Dog:</p>\n<p>def __init__(self, name, age):</p>\n<p>self.name = name</p>\n<p>self.age = age</p>\n<p>def bark(self):</p>\n<p>return f&quot;{self.name} says Woof!&quot;</p>\n<p>def get_age_in_dog_years(self):</p>\n<p>return self.age * 7</p>\n<h1>Create objects</h1>\n<p>my_dog = Dog(&quot;Buddy&quot;, 3)</p>\n<p>print(my_dog.bark())                    # Buddy says Woof!</p>\n<p>print(my_dog.get_age_in_dog_years())   # 21</p>\n<p>```</p>\n<h2>File Handling</h2>\n<p>```python</p>\n<h1>Writing to a file</h1>\n<p>with open(&quot;output.txt&quot;, &quot;w&quot;) as file:</p>\n<p>file.write(&quot;Hello, World!\\n&quot;)</p>\n<p>file.write(&quot;Python is awesome!&quot;)</p>\n<h1>Reading from a file</h1>\n<p>with open(&quot;output.txt&quot;, &quot;r&quot;) as file:</p>\n<p>content = file.read()</p>\n<p>print(content)</p>\n<h1>Reading line by line</h1>\n<p>with open(&quot;output.txt&quot;, &quot;r&quot;) as file:</p>\n<p>for line in file:</p>\n<p>print(line.strip())</p>\n<p>```</p>\n<h2>Error Handling</h2>\n<p>```python</p>\n<h1>try-except</h1>\n<p>try:</p>\n<p>result = 10 / 0</p>\n<p>except ZeroDivisionError:</p>\n<p>print(&quot;Cannot divide by zero!&quot;)</p>\n<p>except Exception as e:</p>\n<p>print(f&quot;An error occurred: {e}&quot;)</p>\n<p>finally:</p>\n<p>print(&quot;This always executes&quot;)</p>\n<h1>Raising exceptions</h1>\n<p>def divide(a, b):</p>\n<p>if b == 0:</p>\n<p>raise ValueError(&quot;Divisor cannot be zero&quot;)</p>\n<p>return a / b</p>\n<p>```</p>\n<h2>Modules and Imports</h2>\n<p>```python</p>\n<h1>Importing standard library</h1>\n<p>import math</p>\n<p>print(math.pi)           # 3.141592653589793</p>\n<p>print(math.sqrt(16))     # 4.0</p>\n<h1>Import specific functions</h1>\n<p>from math import pi, sqrt</p>\n<p>print(pi)</p>\n<h1>Import with alias</h1>\n<p>import numpy as np</p>\n<p>import pandas as pd</p>\n<h1>Your own modules</h1>\n<h1>In mymodule.py:</h1>\n<p>def my_function():</p>\n<p>return &quot;Hello from module&quot;</p>\n<h1>In main.py:</h1>\n<p>import mymodule</p>\n<p>print(mymodule.my_function())</p>\n<p>```</p>\n<h2>Useful Built-in Functions</h2>\n<p>```python</p>\n<h1>len() - length</h1>\n<p>print(len([1, 2, 3]))        # 3</p>\n<p>print(len(&quot;Hello&quot;))          # 5</p>\n<h1>type() - check type</h1>\n<p>print(type(42))              # &lt;class &#x27;int&#x27;&gt;</p>\n<h1>range() - sequence of numbers</h1>\n<p>list(range(5))               # [0, 1, 2, 3, 4]</p>\n<h1>enumerate() - index and value</h1>\n<p>for i, fruit in enumerate([&quot;apple&quot;, &quot;banana&quot;]):</p>\n<p>print(f&quot;{i}: {fruit}&quot;)</p>\n<h1>zip() - combine iterables</h1>\n<p>names = [&quot;Alice&quot;, &quot;Bob&quot;]</p>\n<p>ages = [25, 30]</p>\n<p>for name, age in zip(names, ages):</p>\n<p>print(f&quot;{name} is {age}&quot;)</p>\n<h1>map() - apply function</h1>\n<p>numbers = [1, 2, 3, 4]</p>\n<p>squared = list(map(lambda x: x**2, numbers))</p>\n<h1>[1, 4, 9, 16]</h1>\n<h1>filter() - filter elements</h1>\n<p>evens = list(filter(lambda x: x % 2 == 0, numbers))</p>\n<h1>[2, 4]</h1>\n<p>```</p>\n<h2>Common Mistakes to Avoid</h2>\n<p>1. **Indentation Errors**: Python uses indentation (not brackets)</p>\n<p>2. **Mutable Default Arguments**: Don&#x27;t use mutable defaults in functions</p>\n<p>3. **Not Closing Files**: Use `with` statement</p>\n<p>4. **Index Out of Range**: Check list length before accessing</p>\n<p>5. **Integer Division**: Use `//` for floor division, `/` for float</p>\n<h2>Practice Projects</h2>\n<h3>Beginner</h3>\n<ul>\n<li>Calculator</li>\n<li>To-do list</li>\n<li>Number guessing game</li>\n<li>Password generator</li>\n</ul>\n<h3>Intermediate</h3>\n<ul>\n<li>Web scraper</li>\n<li>Data analyzer</li>\n<li>Simple game (snake, tic-tac-toe)</li>\n<li>API consumer</li>\n</ul>\n<h2>Essential Libraries</h2>\n<p>```python</p>\n<h1>Data Science</h1>\n<p>import numpy as np         # Numerical computing</p>\n<p>import pandas as pd        # Data manipulation</p>\n<p>import matplotlib.pyplot as plt  # Visualization</p>\n<h1>Web Development</h1>\n<p>from flask import Flask    # Web framework</p>\n<p>import requests           # HTTP requests</p>\n<h1>Automation</h1>\n<p>import os                 # Operating system</p>\n<p>import sys                # System-specific</p>\n<p>from pathlib import Path  # File paths</p>\n<p>```</p>\n<h2>Resources for Learning</h2>\n<h3>Online Platforms</h3>\n<ul>\n<li>[Python.org Tutorial](https://docs.python.org/3/tutorial/)</li>\n<li>[Real Python](https://realpython.com/)</li>\n<li>[Python for Everybody](https://www.py4e.com/)</li>\n</ul>\n<h3>Practice</h3>\n<ul>\n<li>[LeetCode](https://leetcode.com/) - Coding challenges</li>\n<li>[HackerRank](https://www.hackerrank.com/) - Python track</li>\n<li>[Project Euler](https://projecteuler.net/) - Math problems</li>\n</ul>\n<h3>Books</h3>\n<ul>\n<li>&quot;Python Crash Course&quot; by Eric Matthes</li>\n<li>&quot;Automate the Boring Stuff with Python&quot; by Al Sweigart</li>\n<li>&quot;Fluent Python&quot; by Luciano Ramalho (Advanced)</li>\n</ul>\n<h2>Google Colab Example</h2>\n<p>Try this code in [Google Colab](https://colab.research.google.com):</p>\n<p>```python</p>\n<h1>Data analysis example</h1>\n<p>import pandas as pd</p>\n<p>import matplotlib.pyplot as plt</p>\n<h1>Create sample data</h1>\n<p>data = {</p>\n<p>&#x27;Name&#x27;: [&#x27;Alice&#x27;, &#x27;Bob&#x27;, &#x27;Charlie&#x27;, &#x27;David&#x27;],</p>\n<p>&#x27;Age&#x27;: [25, 30, 35, 28],</p>\n<p>&#x27;Score&#x27;: [85, 90, 78, 92]</p>\n<p>}</p>\n<p>df = pd.DataFrame(data)</p>\n<p>print(df)</p>\n<h1>Plot</h1>\n<p>plt.bar(df[&#x27;Name&#x27;], df[&#x27;Score&#x27;])</p>\n<p>plt.title(&#x27;Student Scores&#x27;)</p>\n<p>plt.xlabel(&#x27;Name&#x27;)</p>\n<p>plt.ylabel(&#x27;Score&#x27;)</p>\n<p>plt.show()</p>\n<p>```</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Python is beginner-friendly with clean syntax</li>\n<li>Strong typing but dynamically typed</li>\n<li>Indentation matters (use 4 spaces)</li>\n<li>Rich standard library and ecosystem</li>\n<li>Great for automation, data science, and web development</li>\n<li>Practice is essential - code daily!</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Machine Learning](ml.html) - Use Python for ML</li>\n<li>[NumPy](numpy.html) - Numerical computing library</li>\n<li>[Data Structures](data-structures.html) - Core CS concepts</li>\n</ul>\n<h2>Next Steps</h2>\n<p>1. Install Python on your machine</p>\n<p>2. Complete a beginner tutorial</p>\n<p>3. Build small projects</p>\n<p>4. Learn a library (NumPy, Pandas, or Flask)</p>\n<p>5. Contribute to open source</p>\n<p>---</p>\n<p>**Last Updated:** November 8, 2025</p>\n<p>**Difficulty Level:** Beginner</p>",
+      "excerpt": "# Python Programming Basics ## Overview Python is a high-level, interpreted programming language known for its simplicity and readability. It's one of the most popular languages for data science, mach..."
+    },
+    {
+      "id": "unique-note-id",
+      "name": "Your Note Title",
+      "category": "ml",
+      "tags": [
+        "tag1",
+        "tag2",
+        "tag3"
+      ],
+      "date": "2025-11-08",
+      "description": "A brief description of what this note covers",
+      "related": [
+        "other-note-id",
+        "another-note-id"
+      ],
+      "file": "transformers.md",
+      "html": "<h1>Your Note Title</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li>**Bold text**</li>\n<li>*Italic text*</li>\n<li>[Links](https://example.com)</li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<p>```python</p>\n<h1>Python code example</h1>\n<p>def hello_world():</p>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>return True</p>\n<p>```</p>\n<p>```javascript</p>\n<p>// JavaScript code example</p>\n<p>function helloWorld() {</p>\n<p>console.log(&quot;Hello, World!&quot;);</p>\n<p>return true;</p>\n<p>}</p>\n<p>```</p>\n<h2>External Resources</h2>\n<ul>\n<li>[Link to Colab Notebook](https://colab.research.google.com/...)</li>\n<li>[GitHub Repository](https://github.com/...)</li>\n<li>[Documentation](https://docs.example.com)</li>\n</ul>\n<h2>Images</h2>\n<p>![Description of image](../assets/images/example.png)</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Related Note 1](other-note.html)</li>\n<li>[Related Note 2](another-note.html)</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** 2025-11-08</p>",
+      "excerpt": "# Your Note Title ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links](https://..."
+    },
+    {
+      "id": "PEL\u0130N_123",
+      "name": "TRANSFORMERS PEL\u0130N_2",
+      "category": "Data",
+      "tags": [
+        "tag_AI",
+        "TAG_ml"
+      ],
+      "date": "2025-11-22",
+      "description": "A brief description of what this note covers",
+      "related": [
+        "dl",
+        "ml",
+        "Statistics"
+      ],
+      "file": "trial2.md",
+      "html": "<h1>TRANSFORMERS PEL\u0130N 2</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li>**Bold text**</li>\n<li>*Italic text*</li>\n<li>[Links](https://example.com)</li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<p>```python</p>\n<h1>Python code example</h1>\n<p>def hello_world():</p>\n<p>print(&quot;Hello, World!&quot;)</p>\n<p>return True</p>\n<p>```</p>\n<p>```javascript</p>\n<p>// JavaScript code example</p>\n<p>function helloWorld() {</p>\n<p>console.log(&quot;Hello, World!&quot;);</p>\n<p>return true;</p>\n<p>}</p>\n<p>```</p>\n<h2>External Resources</h2>\n<ul>\n<li>[Link to Colab Notebook](https://colab.research.google.com/...)</li>\n<li>[GitHub Repository](https://github.com/...)</li>\n<li>[Documentation](https://docs.example.com)</li>\n</ul>\n<h2>Images</h2>\n<p>![Description of image](../assets/images/example.png)</p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li>[Related Note 1](other-note.html)</li>\n<li>[Related Note 2](another-note.html)</li>\n</ul>\n<p>---</p>\n<p>**Last Updated:** 2025-11-22</p>",
+      "excerpt": "# TRANSFORMERS PEL\u0130N 2 ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links](htt..."
+    }
+  ],
+  "links": [
+    {
+      "source": "ml",
+      "target": "dl"
+    },
+    {
+      "source": "ml",
+      "target": "python"
+    },
+    {
+      "source": "ml",
+      "target": "statistics"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "Deep Learning"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "Computer Vision"
+    },
+    {
+      "source": "python",
+      "target": "ml"
+    },
+    {
+      "source": "python",
+      "target": "numpy"
+    },
+    {
+      "source": "unique-note-id",
+      "target": "other-note-id"
+    },
+    {
+      "source": "unique-note-id",
+      "target": "another-note-id"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "dl"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "ml"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "Statistics"
+    }
+  ]
+}
