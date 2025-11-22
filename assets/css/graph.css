@@ -266,16 +266,16 @@
     .graph-container {
         height: 500px;
     }
-    
+
     .node text {
         font-size: 10px;
     }
-    
+
     .graph-legend {
         font-size: var(--font-size-sm);
         padding: var(--spacing-sm);
     }
-    
+
     .graph-control-btn {
         width: 36px;
         height: 36px;
@@ -288,11 +288,11 @@
         height: 400px;
         border-radius: var(--radius-md);
     }
-    
+
     .node text {
         display: none; /* Hide labels on very small screens */
     }
-    
+
     .node:hover text {
         display: block; /* Show on hover */
     }

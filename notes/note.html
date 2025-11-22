@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Note Viewer - Tiny AI World">
+    <title>Note Viewer - Tiny AI World</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .note-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: 0 12px 24px var(--shadow);
+        }
+
+        .note-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .note-title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .note-category {
+            padding: 0.35rem 0.9rem;
+            color: white;
+            border-radius: var(--radius-sm);
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+        }
+
+        .note-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .note-tag {
+            padding: 0.25rem 0.65rem;
+            background-color: var(--bg-tertiary);
+            color: var(--text-secondary);
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+        }
+
+        .note-content {
+            line-height: 1.8;
+        }
+
+        .note-content pre {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+        }
+
+        .note-content code {
+            background: var(--bg-tertiary);
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--radius-sm);
+        }
+
+        .related-notes {
+            margin-top: 2.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .related-notes h3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .related-notes a {
+            color: var(--accent-primary);
+            text-decoration: none;
+        }
+
+        .related-notes a:hover {
+            text-decoration: underline;
+        }
+
+        .muted {
+            color: var(--text-secondary);
+        }
+
+        .error {
+            color: #ef4444;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 Tiny AI World</h1>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Graph</a>
+                <a href="../notes.html" class="nav-link">All Notes</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../about.html" class="nav-link">About</a>
+            </nav>
+            <div class="controls">
+                <button id="searchBtn" class="icon-btn" title="Search">🔍</button>
+                <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div id="noteContainer" class="note-container">
+                <p class="muted">Loading note...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tiny AI World. Free and Open Source.</p>
+            <p>
+                <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">GitHub</a> •
+                <a href="../LICENSE">License</a> •
+                <a href="../about.html">About</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const FALLBACK_COLORS = {
+            'ai': '#6366f1',
+            'ml': '#8b5cf6',
+            'programming': '#ec4899',
+            'data': '#14b8a6',
+            'web': '#f59e0b',
+            'math': '#06b6d4'
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadNote();
+        });
+
+        async function loadNote() {
+            const noteContainer = document.getElementById('noteContainer');
+            const noteId = utils.getQueryParam('id');
+
+            if (!noteId) {
+                noteContainer.innerHTML = '<p class="error">Missing note id in the URL.</p>';
+                return;
+            }
+
+            try {
+                const response = await fetch('../assets/data/notes.json', { cache: 'no-cache' });
+                if (!response.ok) {
+                    throw new Error(`Could not load notes data (status ${response.status})`);
+                }
+
+                const data = await response.json();
+                const notes = Array.isArray(data.nodes) ? data.nodes : [];
+                const note = notes.find(n => n.id === noteId);
+
+                if (!note) {
+                    noteContainer.innerHTML = '<p class="error">Note not found.</p>';
+                    return;
+                }
+
+                renderNote(note, notes);
+            } catch (error) {
+                console.error('Error loading note:', error);
+                noteContainer.innerHTML = '<p class="error">Unable to load note content. Please try again later.</p>';
+            }
+        }
+
+        function renderNote(note, allNotes) {
+            const noteContainer = document.getElementById('noteContainer');
+            const categoryId = normalizeCategory(note.category);
+            const tagsHTML = (note.tags || []).map(tag => `<span class="note-tag">${tag}</span>`).join('');
+            const related = getRelatedNotes(note, allNotes);
+            const relatedHTML = related.length
+                ? related.map(item => `<li><a href="/notes/note.html?id=${item.id}">${item.name}</a></li>`).join('')
+                : '<li class="muted">No related notes listed.</li>';
+
+            document.title = `${note.name} - Tiny AI World`;
+
+            noteContainer.innerHTML = `
+                <div class="note-meta">
+                    <span class="note-category" style="background-color: ${getCategoryColor(categoryId)};">${formatCategoryLabel(categoryId)}</span>
+                    <span>📅 ${note.date || 'Date not specified'}</span>
+                </div>
+                <h1 class="note-title">${note.name}</h1>
+                ${tagsHTML ? `<div class="note-tags">${tagsHTML}</div>` : ''}
+                <p class="muted" style="margin-bottom: 1.5rem;">${note.description || ''}</p>
+                <div class="note-content">${note.html || '<p class="muted">No content available.</p>'}</div>
+                <div class="related-notes">
+                    <h3>Related Notes</h3>
+                    <ul>${relatedHTML}</ul>
+                </div>
+            `;
+        }
+
+        function getRelatedNotes(note, allNotes) {
+            const relatedIds = Array.isArray(note.related) ? note.related : [];
+            return relatedIds
+                .map(id => allNotes.find(n => n.id === id))
+                .filter(Boolean);
+        }
+
+        function normalizeCategory(category) {
+            return (category || '').toString().trim().toLowerCase();
+        }
+
+        function formatCategoryLabel(categoryId) {
+            if (!categoryId) return 'Uncategorized';
+            return categoryId
+                .split(/[-_\s]/)
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(' ');
+        }
+
+        function getCategoryColor(categoryId) {
+            const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
+            return palette[categoryId] || FALLBACK_COLORS[categoryId] || '#6b7280';
+        }
+    </script>
+</body>
+</html>

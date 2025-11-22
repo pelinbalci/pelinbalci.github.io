@@ -199,9 +199,9 @@
 
     <!-- Scripts -->
     <script src="assets/js/theme.js"></script>
-    <script src="assets/js/main.js"></script>
     <script>
-        const FALLBACK_COLORS = {
+        // Category colors
+        const categoryColors = {
             'ai': '#6366f1',
             'ml': '#8b5cf6',
             'programming': '#ec4899',
@@ -212,40 +212,22 @@
 
         let allNotes = [];
         let filteredNotes = [];
-        let activeCategoryFilters = new Set();
-        let categoryPalette = {};
 
-        document.addEventListener('categoriesLoaded', (event) => {
-            categoryPalette = buildPalette(event.detail.categories || []);
-            hydrateCategoryFilter();
-            renderNotes();
-        });
-
+        // Load notes on page load
         document.addEventListener('DOMContentLoaded', () => {
             loadNotes();
 
+            // Add event listeners
             document.getElementById('sortSelect').addEventListener('change', filterAndSort);
-            document.getElementById('categoryFilter').addEventListener('change', onCategorySelectChange);
-
-            document.addEventListener('categoryFilterChange', (event) => {
-                const incomingFilters = new Set(event.detail.activeFilters || []);
-                syncFromExternalFilters(incomingFilters);
-            });
+            document.getElementById('categoryFilter').addEventListener('change', filterAndSort);
         });
 
         async function loadNotes() {
             try {
                 const response = await fetch('/assets/data/notes.json');
                 const data = await response.json();
-                categoryPalette = window.categoryPalette || categoryPalette;
-
-                allNotes = (data.nodes || []).map(note => ({
-                    ...note,
-                    categoryId: normalizeCategoryId(note.category),
-                    categoryLabel: formatCategoryLabel(note.category)
-                }));
+                allNotes = data.nodes || [];
                 filteredNotes = [...allNotes];
-                hydrateCategoryFilter();
                 renderNotes();
             } catch (error) {
                 console.error('Error loading notes:', error);
@@ -260,103 +242,24 @@
             }
         }
 
-        function normalizeCategoryId(category) {
-            return (category || '').toString().trim().toLowerCase();
-        }
-
-        function formatCategoryLabel(categoryId) {
-            if (!categoryId) return 'Uncategorized';
-            return normalizeCategoryId(categoryId)
-                .split(/[-_\s]/)
-                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ');
-        }
-
-        function buildPalette(categories) {
-            return Object.fromEntries((categories || []).map(cat => [cat.id, cat.color]));
-        }
-
-        function hydrateCategoryFilter() {
-            const selector = document.getElementById('categoryFilter');
-            if (!selector || allNotes.length === 0) return;
-
-            const categories = Array.from(new Set(allNotes.map(note => note.categoryId).filter(Boolean))).sort();
-
-            selector.innerHTML = '<option value="all">All Categories</option>' +
-                categories.map(cat => `<option value="${cat}">${formatCategoryLabel(cat)}</option>`).join('');
-
-            if (activeCategoryFilters.size === 1) {
-                const [onlyCategory] = activeCategoryFilters;
-                selector.value = onlyCategory;
-            } else if (activeCategoryFilters.size === 0) {
-                selector.value = 'all';
-            }
-        }
-
-        function onCategorySelectChange(event) {
-            const value = event.target.value;
-
-            if (value === 'multiple') {
-                // Selection reflects external multi-select, no action
-                return;
-            }
-
-            if (value === 'all') {
-                activeCategoryFilters = new Set();
-            } else {
-                activeCategoryFilters = new Set([value]);
-            }
-
-            if (window.categoryFilter && typeof window.categoryFilter.setFilters === 'function') {
-                window.categoryFilter.setFilters(activeCategoryFilters);
-            } else {
-                filterAndSort();
-            }
-        }
-
-        function syncFromExternalFilters(filters) {
-            const selector = document.getElementById('categoryFilter');
-            activeCategoryFilters = new Set(filters);
-
-            if (!selector) {
-                filterAndSort();
-                return;
-            }
-
-            if (activeCategoryFilters.size === 0) {
-                selector.value = 'all';
-            } else if (activeCategoryFilters.size === 1) {
-                const [first] = activeCategoryFilters;
-                if (![...selector.options].some(option => option.value === first)) {
-                    selector.insertAdjacentHTML('beforeend', `<option value="${first}">${formatCategoryLabel(first)}</option>`);
-                }
-                selector.value = first;
-            } else {
-                if (![...selector.options].some(option => option.value === 'multiple')) {
-                    selector.insertAdjacentHTML('beforeend', '<option value="multiple">Multiple categories selected</option>');
-                }
-                selector.value = 'multiple';
-            }
-
-            filterAndSort();
-        }
-
         function filterAndSort() {
             const sortBy = document.getElementById('sortSelect').value;
-            const hasFilters = activeCategoryFilters.size > 0;
+            const filterCategory = document.getElementById('categoryFilter').value;
 
-            if (hasFilters) {
-                filteredNotes = allNotes.filter(note => activeCategoryFilters.has(note.categoryId));
-            } else {
+            // Filter
+            if (filterCategory === 'all') {
                 filteredNotes = [...allNotes];
+            } else {
+                filteredNotes = allNotes.filter(note => note.category === filterCategory);
             }
 
+            // Sort
             switch(sortBy) {
                 case 'title':
                     filteredNotes.sort((a, b) => a.name.localeCompare(b.name));
                     break;
                 case 'category':
-                    filteredNotes.sort((a, b) => a.categoryId.localeCompare(b.categoryId));
+                    filteredNotes.sort((a, b) => a.category.localeCompare(b.category));
                     break;
                 case 'recent':
                 default:
@@ -392,30 +295,26 @@
             grid.innerHTML = notesHTML + placeholderHTML;
         }
 
-        function getCategoryColor(categoryId) {
-            return categoryPalette[categoryId] || FALLBACK_COLORS[categoryId] || '#6b7280';
-        }
-
         function createNoteCard(note) {
-            const categoryColor = getCategoryColor(note.categoryId);
+            const categoryColor = categoryColors[note.category] || '#6b7280';
             const tagsHTML = (note.tags && note.tags.length > 0)
                 ? note.tags.map(tag => `<span class="note-tag">${tag}</span>`).join('')
                 : '';
 
             return `
-                <div class="note-card" onclick="window.location.href='/notes/note.html?id=${note.id}'">
+                <div class="note-card" onclick="window.location.href='notes/note.html?id=${note.id}'">
                     <div class="note-card-header">
                         <span class="note-category-badge" style="background-color: ${categoryColor};">
-                            ${note.categoryLabel}
+                            ${note.category}
                         </span>
                         <span class="note-date">📅 ${note.date}</span>
                     </div>
                     <h3 class="note-title">
-                        <a href="/notes/note.html?id=${note.id}">${note.name}</a>
+                        <a href="notes/note.html?id=${note.id}">${note.name}</a>
                     </h3>
                     <p class="note-description">${note.description}</p>
                     ${tagsHTML ? `<div class="note-tags">${tagsHTML}</div>` : ''}
-                    <a href="/notes/note.html?id=${note.id}" class="note-link">
+                    <a href="notes/note.html?id=${note.id}" class="note-link">
                         Read more →
                     </a>
                 </div>
