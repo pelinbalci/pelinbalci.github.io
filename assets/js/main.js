@@ -7,38 +7,75 @@ class CategoryFilter {
         this.clearBtn = document.getElementById('clearFilters');
         this.activeFilters = new Set();
         this.categories = [];
-        
+
         this.init();
     }
-    
-    init() {
-        this.loadCategories();
+
+    async init() {
+        await this.loadCategories();
         this.renderFilters();
-        
+
         if (this.clearBtn) {
             this.clearBtn.addEventListener('click', () => this.clearFilters());
         }
     }
-    
-    loadCategories() {
-        // Extract unique categories from graph data
-        // For now, hardcode categories
-        this.categories = [
-            { id: 'ai', name: 'AI', color: '#6366f1' },
-            { id: 'ml', name: 'Machine Learning', color: '#8b5cf6' },
-            { id: 'programming', name: 'Programming', color: '#ec4899' },
-            { id: 'data', name: 'Data', color: '#14b8a6' },
-            { id: 'web', name: 'Web', color: '#f59e0b' },
-            { id: 'math', name: 'Math', color: '#06b6d4' },
-        ];
+
+    async loadCategories() {
+        const palette = ['#6366f1', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b', '#06b6d4', '#10b981', '#a855f7'];
+
+        try {
+            const response = await fetch('/assets/data/notes.json');
+            if (!response.ok) throw new Error('Could not load notes data');
+
+            const data = await response.json();
+            const uniqueCategories = Array.from(new Set((data.nodes || [])
+                .map(note => this.normalizeCategory(note.category))
+                .filter(Boolean)));
+
+            this.categories = uniqueCategories.map((id, index) => ({
+                id,
+                name: this.formatCategoryName(id),
+                color: palette[index % palette.length]
+            }));
+        } catch (error) {
+            console.warn('Could not derive categories:', error);
+            this.categories = [];
+        }
+
+        // Share palette globally for other components (graph, lists)
+        window.categoryPalette = Object.fromEntries(
+            this.categories.map(category => [category.id, category.color])
+        );
+
+        document.dispatchEvent(new CustomEvent('categoriesLoaded', {
+            detail: { categories: this.categories }
+        }));
+    }
+
+    normalizeCategory(category) {
+        return (category || '').toString().trim().toLowerCase();
+    }
+
+    formatCategoryName(categoryId) {
+        if (!categoryId) return 'Uncategorized';
+        return categoryId
+            .split(/[-_\s]/)
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
     }
     
     renderFilters() {
         if (!this.filterContainer) return;
-        
+
+        if (this.categories.length === 0) {
+            this.filterContainer.innerHTML = '<p class="muted">No categories available</p>';
+            if (this.clearBtn) this.clearBtn.style.display = 'none';
+            return;
+        }
+
         const filtersHTML = this.categories.map(category => `
-            <button 
-                class="category-tag" 
+            <button
+                class="category-tag"
                 data-category="${category.id}"
                 style="border-color: ${category.color};"
                 onclick="categoryFilter.toggleFilter('${category.id}')"
@@ -46,17 +83,19 @@ class CategoryFilter {
                 ${category.name}
             </button>
         `).join('');
-        
+
         this.filterContainer.innerHTML = filtersHTML;
     }
     
     toggleFilter(categoryId) {
-        if (this.activeFilters.has(categoryId)) {
-            this.activeFilters.delete(categoryId);
+        const normalizedId = this.normalizeCategory(categoryId);
+
+        if (this.activeFilters.has(normalizedId)) {
+            this.activeFilters.delete(normalizedId);
         } else {
-            this.activeFilters.add(categoryId);
+            this.activeFilters.add(normalizedId);
         }
-        
+
         this.updateUI();
         this.applyFilters();
     }
@@ -68,6 +107,8 @@ class CategoryFilter {
     }
     
     updateUI() {
+        if (!this.filterContainer) return;
+
         const tags = this.filterContainer.querySelectorAll('.category-tag');
         tags.forEach(tag => {
             const category = tag.dataset.category;
@@ -78,12 +119,25 @@ class CategoryFilter {
             }
         });
     }
-    
+
     applyFilters() {
+        const activeArray = Array.from(this.activeFilters);
+
         // Apply filters to the graph
         if (typeof graph !== 'undefined' && graph) {
             graph.filterByCategory(this.activeFilters);
         }
+
+        // Notify other components (e.g., list views)
+        document.dispatchEvent(new CustomEvent('categoryFilterChange', {
+            detail: { activeFilters: activeArray }
+        }));
+    }
+
+    setFilters(newFilters) {
+        this.activeFilters = new Set(Array.from(newFilters || []).map(id => this.normalizeCategory(id)));
+        this.updateUI();
+        this.applyFilters();
     }
 }
 

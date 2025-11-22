@@ -215,6 +215,7 @@ class KnowledgeGraph {
     }
 
     getCategoryColor(category) {
+        const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const colors = {
             'ai': '#6366f1',
             'ml': '#8b5cf6',
@@ -224,10 +225,11 @@ class KnowledgeGraph {
             'math': '#06b6d4',
             'default': '#6b7280'
         };
-        return colors[category] || colors.default;
+        return palette[category] || colors[category] || colors.default;
     }
 
     getCategoryStroke(category) {
+        const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const strokes = {
             'ai': '#4f46e5',
             'ml': '#7c3aed',
@@ -237,6 +239,8 @@ class KnowledgeGraph {
             'math': '#0891b2',
             'default': '#4b5563'
         };
+
+        if (palette[category]) return palette[category];
         return strokes[category] || strokes.default;
     }
 
@@ -246,24 +250,28 @@ class KnowledgeGraph {
     }
 
     filterByCategory(categories) {
-        if (categories.size === 0) {
-            // Show all nodes
-            this.nodeElements.style('display', 'block');
-            this.linkElements.style('display', 'block');
-        } else {
-            // Filter nodes
-            this.nodeElements.style('display', d =>
-                categories.has(d.category) ? 'block' : 'none'
-            );
+        const normalize = (category) => (category || '').toString().trim().toLowerCase();
+        const normalizedFilters = new Set(Array.from(categories || []).map(normalize));
+        const hasFilters = normalizedFilters.size > 0;
+        this.activeFilters = new Set(normalizedFilters);
 
-            // Filter links
-            this.linkElements.style('display', d =>
-                categories.has(d.source.category) && categories.has(d.target.category) ? 'block' : 'none'
-            );
-        }
+        const isVisible = (category) => !hasFilters || normalizedFilters.has(normalize(category));
 
-        // Restart simulation
-        this.simulation.alpha(0.3).restart();
+        if (!this.nodeElements || !this.linkElements) return;
+
+        this.nodeElements
+            .classed('dimmed', d => hasFilters && !isVisible(d.category))
+            .style('opacity', d => hasFilters && !isVisible(d.category) ? 0.2 : 1)
+            .style('pointer-events', d => hasFilters && !isVisible(d.category) ? 'none' : 'all')
+            .attr('display', d => hasFilters && !isVisible(d.category) ? 'none' : 'block');
+
+        this.linkElements
+            .classed('dimmed', d => hasFilters && (!isVisible(d.source.category) || !isVisible(d.target.category)))
+            .style('opacity', d => hasFilters && (!isVisible(d.source.category) || !isVisible(d.target.category)) ? 0.1 : 0.6)
+            .attr('display', d => hasFilters && (!isVisible(d.source.category) || !isVisible(d.target.category)) ? 'none' : 'block');
+
+        // Restart or reheat simulation so layout stabilizes after hiding elements
+        this.simulation.alpha(0.35).restart();
     }
 
     showError() {
