@@ -124,7 +124,7 @@ class SearchManager {
         }
 
         const resultsHTML = results.map(item => `
-            <div class="search-result-item" onclick="window.location.href='notes/note.html?id=${item.id}'" style="
+            <div class="search-result-item" onclick="window.location.href='/notes/note.html?id=${item.id}'" style="
                 padding: 1rem;
                 margin-bottom: 0.5rem;
                 background-color: var(--bg-primary);

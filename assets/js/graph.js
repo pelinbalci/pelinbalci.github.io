@@ -225,7 +225,7 @@ class KnowledgeGraph {
 
     onNodeClick(event, node) {
         // Navigate to note viewer page with note ID
-        window.location.href = `notes/note.html?id=${node.id}`;
+        window.location.href = `/notes/note.html?id=${node.id}`;
     }
 
     onNodeHover(event, node) {
