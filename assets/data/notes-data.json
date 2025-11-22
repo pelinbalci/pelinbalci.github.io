@@ -52,6 +52,18 @@
       "description": "A brief description of what this note covers",
       "date": "2025-11-08",
       "file": "trial.md"
+    },
+    {
+      "id": "PEL\u0130N_123",
+      "name": "TRANSFORMERS PEL\u0130N_2",
+      "category": "Data",
+      "tags": [
+        "tag_AI",
+        "TAG_ml"
+      ],
+      "description": "A brief description of what this note covers",
+      "date": "2025-11-22",
+      "file": "trial2.md"
     }
   ],
   "links": [
@@ -90,6 +102,18 @@
     {
       "source": "PEL\u0130N_123",
       "target": "ml"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "dl"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "ml"
+    },
+    {
+      "source": "PEL\u0130N_123",
+      "target": "Statistics"
     }
   ]
 }
