@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Note - Tiny AI World">
+    <title>Note - Tiny AI World</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <!-- Highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
+    <style>
+        .note-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .note-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .note-content h2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        
+        .note-content h3 {
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        .note-content p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        .note-content ul, .note-content ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+            line-height: 1.8;
+        }
+        
+        .note-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .note-content code {
+            background-color: var(--bg-secondary);
+            padding: 0.2rem 0.4rem;
+            border-radius: var(--radius-sm);
+            font-family: var(--font-mono);
+            font-size: 0.9em;
+        }
+        
+        .note-content pre {
+            background-color: var(--bg-secondary);
+            padding: 1rem;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            margin-bottom: 1rem;
+        }
+        
+        .note-content pre code {
+            background: none;
+            padding: 0;
+        }
+        
+        .note-content blockquote {
+            border-left: 4px solid var(--accent-primary);
+            padding-left: 1rem;
+            margin: 1rem 0;
+            color: var(--text-secondary);
+            font-style: italic;
+        }
+        
+        .note-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            margin: 1rem 0;
+        }
+        
+        .note-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .note-content th, .note-content td {
+            border: 1px solid var(--border-color);
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        .note-content th {
+            background-color: var(--bg-secondary);
+            font-weight: 600;
+        }
+        
+        .note-content a {
+            color: var(--accent-primary);
+            text-decoration: underline;
+        }
+        
+        .note-meta {
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .note-category {
+            padding: 0.5rem 1rem;
+            background-color: var(--accent-primary);
+            color: white;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .note-date {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+        }
+        
+        .note-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .note-tag {
+            padding: 0.25rem 0.75rem;
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .back-to-graph {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        
+        .related-notes {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+        }
+        
+        .related-notes h2 {
+            margin-bottom: 1rem;
+        }
+        
+        .related-notes ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .related-notes li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .related-notes a {
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🧠 Tiny AI World</h1>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Graph</a>
+                <a href="../notes.html" class="nav-link">All Notes</a>
+                <a href="../projects.html" class="nav-link">Projects</a>
+                <a href="../about.html" class="nav-link">About</a>
+            </nav>
+            <div class="controls">
+                <button id="themeToggle" class="icon-btn" title="Toggle Theme">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="back-to-graph">
+            <a href="../index.html" style="color: var(--accent-primary); font-weight: 600;">← Back to Graph</a>
+        </div>
+        
+        <!-- Note Metadata -->
+        <div class="note-meta" id="noteMeta">
+            <!-- Will be populated by JavaScript -->
+        </div>
+        
+        <!-- Note Content -->
+        <article class="note-content" id="noteContent">
+            <div style="text-align: center; padding: 3rem;">
+                <div class="spinner"></div>
+                <p>Loading note...</p>
+            </div>
+        </article>
+        
+        <!-- Related Notes -->
+        <section class="related-notes" id="relatedNotes" style="display: none;">
+            <h2>Related Topics</h2>
+            <ul id="relatedList"></ul>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Tiny AI World. Free and Open Source.</p>
+            <p>
+                <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">GitHub</a> •
+                <a href="../LICENSE">License</a> •
+                <a href="../about.html">About</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/theme.js"></script>
+    <script>
+        // Get note ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const noteId = urlParams.get('id');
+        
+        if (!noteId) {
+            document.getElementById('noteContent').innerHTML = '<p style="color: red;">Error: No note ID specified</p>';
+        } else {
+            loadNote(noteId);
+        }
+        
+        async function loadNote(noteId) {
+            try {
+                // Load note metadata
+                const metaResponse = await fetch('../assets/data/notes-data.json');
+                const data = await metaResponse.json();
+                const noteData = data.nodes.find(n => n.id === noteId);
+                
+                if (!noteData) {
+                    throw new Error('Note not found in metadata');
+                }
+                
+                // Update page title
+                document.title = `${noteData.name} - Tiny AI World`;
+                
+                // Display metadata
+                displayMetadata(noteData);
+                
+                // Load markdown content
+                const mdResponse = await fetch(`${noteData.file}`);
+                const markdown = await mdResponse.text();
+                
+                // Remove frontmatter
+                const contentWithoutFrontmatter = markdown.replace(/^---\s*\n.*?\n---\s*\n/s, '');
+                
+                // Configure marked
+                marked.setOptions({
+                    highlight: function(code, lang) {
+                        if (lang && hljs.getLanguage(lang)) {
+                            return hljs.highlight(code, { language: lang }).value;
+                        }
+                        return hljs.highlightAuto(code).value;
+                    },
+                    breaks: true,
+                    gfm: true
+                });
+                
+                // Render markdown
+                const html = marked.parse(contentWithoutFrontmatter);
+                document.getElementById('noteContent').innerHTML = html;
+                
+                // Display related notes
+                displayRelatedNotes(noteData, data);
+                
+            } catch (error) {
+                console.error('Error loading note:', error);
+                document.getElementById('noteContent').innerHTML = `
+                    <div style="text-align: center; padding: 3rem;">
+                        <p style="color: red; margin-bottom: 1rem;">Error loading note: ${error.message}</p>
+                        <a href="../index.html" style="color: var(--accent-primary);">Return to Graph</a>
+                    </div>
+                `;
+            }
+        }
+        
+        function displayMetadata(noteData) {
+            const metaContainer = document.getElementById('noteMeta');
+            
+            const categoryColors = {
+                'ai': '#6366f1',
+                'ml': '#8b5cf6',
+                'programming': '#ec4899',
+                'data': '#14b8a6',
+                'web': '#f59e0b',
+                'math': '#06b6d4'
+            };
+            
+            const categoryColor = categoryColors[noteData.category] || '#6b7280';
+            
+            let tagsHtml = '';
+            if (noteData.tags && noteData.tags.length > 0) {
+                tagsHtml = `
+                    <div class="note-tags">
+                        ${noteData.tags.map(tag => `<span class="note-tag">${tag}</span>`).join('')}
+                    </div>
+                `;
+            }
+            
+            metaContainer.innerHTML = `
+                <span class="note-category" style="background-color: ${categoryColor};">${noteData.category.toUpperCase()}</span>
+                <span class="note-date">📅 ${noteData.date}</span>
+                ${tagsHtml}
+            `;
+        }
+        
+        function displayRelatedNotes(noteData, allData) {
+            // Find related notes
+            const relatedIds = allData.links
+                .filter(link => link.source === noteData.id || link.target === noteData.id)
+                .map(link => link.source === noteData.id ? link.target : link.source);
+            
+            if (relatedIds.length === 0) return;
+            
+            const relatedNotes = allData.nodes.filter(n => relatedIds.includes(n.id));
+            
+            const relatedList = document.getElementById('relatedList');
+            relatedList.innerHTML = relatedNotes.map(note => 
+                `<li><a href="note.html?id=${note.id}">${note.name}</a> - ${note.description}</li>`
+            ).join('');
+            
+            document.getElementById('relatedNotes').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
