@@ -47,7 +47,7 @@ If we want repetitive answers, and no creativity at all, we can decrease the Tem
 
 # Example 
 
-Let's imagine our corpus has only 5 words: ["donut", "cake", "apple", "juice", "book"]
+Let's imagine that our corpus has only 5 words: ["donut", "cake", "apple", "juice", "book"]
 
 The prediction of next token of given sentence: "At the table, there is a delicious" will be one of the words in the corpus. 
 
