@@ -58,10 +58,16 @@ These are the original results:
   <div class="figcaption"> </div>
 </div>
 
-
 You can try different temperature values to see how the output changes.
 
-{{component:temperature_slider}}
+<div>
+<iframe 
+    src="https://www.pelinbalci.com/assets/components/temperature_slider.html" 
+    width="100%" 
+    height="600" 
+    style="border:none;"
+></iframe>
+</div>
 
 Listen my YouTube Vide from [here](https://youtu.be/KbUPOJ8Fmzs)
 
