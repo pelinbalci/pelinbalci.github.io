@@ -1,78 +1,74 @@
-<div class="interactive-viz" style="background: var(--bg-secondary); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid var(--border-color);">
-    <h3 style="margin-top: 0;">🌡️ Temperature Control</h3>
+<div id="plotly-chart-{ID}" style="width: 100%; max-width: 800px; margin: 2rem auto;"></div>
 
-    <div style="margin: 1.5rem 0;">
-        <input type="range" id="temp-slider-{ID}" min="-20" max="50" value="20"
-               style="width: 100%; height: 8px; background: linear-gradient(to right, #3b82f6, #ef4444); border-radius: 4px;">
-    </div>
-
-    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
-        <span style="font-size: 2rem;" id="temp-value-{ID}">20°C</span>
-        <span style="font-size: 1.5rem;" id="temp-status-{ID}">🌤️ Pleasant</span>
-    </div>
-
-    <canvas id="temp-chart-{ID}" width="600" height="250" style="width: 100%; max-width: 600px; border: 1px solid var(--border-color); border-radius: 8px; background: white;"></canvas>
-</div>
-
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script>
 (function() {
-    const id = '{ID}';
-    const slider = document.getElementById('temp-slider-' + id);
-    const valueDisplay = document.getElementById('temp-value-' + id);
-    const statusDisplay = document.getElementById('temp-status-' + id);
-    const canvas = document.getElementById('temp-chart-' + id);
-    const ctx = canvas.getContext('2d');
-
-    function getTemperatureColor(temp) {
-        if (temp < 0) return '#3b82f6';
-        if (temp < 15) return '#06b6d4';
-        if (temp < 25) return '#10b981';
-        if (temp < 35) return '#f59e0b';
-        return '#ef4444';
-    }
-
-    function getTemperatureStatus(temp) {
-        if (temp < 0) return '❄️ Freezing';
-        if (temp < 10) return '🥶 Cold';
-        if (temp < 20) return '😊 Cool';
-        if (temp < 25) return '🌤️ Pleasant';
-        if (temp < 30) return '☀️ Warm';
-        return '🔥 Hot';
-    }
-
-    function drawChart() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-        // Simple bar chart
-        const temp = parseFloat(slider.value);
-        const barHeight = ((temp + 20) / 70) * canvas.height;
-
-        ctx.fillStyle = getTemperatureColor(temp);
-        ctx.fillRect(50, canvas.height - barHeight, canvas.width - 100, barHeight);
-
-        // Draw temperature scale
-        ctx.strokeStyle = '#e5e7eb';
-        ctx.lineWidth = 1;
-        for (let i = 0; i <= 5; i++) {
-            const y = (canvas.height / 5) * i;
-            ctx.beginPath();
-            ctx.moveTo(0, y);
-            ctx.lineTo(canvas.width, y);
-            ctx.stroke();
+    // Temperature data
+    var trace1 = {
+        x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+        y: [10, 12, 15, 18, 22, 25, 28, 27, 24, 19, 14, 11],
+        type: 'scatter',
+        mode: 'lines+markers',
+        name: 'Temperature (°C)',
+        line: {
+            color: 'rgb(255, 127, 14)',
+            width: 3
+        },
+        marker: {
+            size: 8
         }
-    }
+    };
 
-    function updateTemperature(temp) {
-        valueDisplay.textContent = temp + '°C';
-        statusDisplay.textContent = getTemperatureStatus(parseFloat(temp));
-        valueDisplay.style.color = getTemperatureColor(parseFloat(temp));
-        drawChart();
-    }
+    var data = [trace1];
 
-    slider.addEventListener('input', (e) => {
-        updateTemperature(e.target.value);
+    var layout = {
+        title: 'Average Monthly Temperature',
+        xaxis: {
+            title: 'Month',
+            tickmode: 'array',
+            tickvals: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+            ticktext: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        },
+        yaxis: {
+            title: 'Temperature (°C)'
+        },
+        margin: {
+            l: 60,
+            r: 30,
+            t: 60,
+            b: 60
+        },
+        paper_bgcolor: 'var(--bg-secondary)',
+        plot_bgcolor: 'var(--bg-primary)',
+        font: {
+            color: 'var(--text-primary)',
+            family: 'var(--font-family)'
+        }
+    };
+
+    var config = {
+        responsive: true,
+        displayModeBar: true,
+        displaylogo: false
+    };
+
+    Plotly.newPlot('plotly-chart-{ID}', data, layout, config);
+
+    // Optional: Update on theme change
+    const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            if (mutation.attributeName === 'data-theme') {
+                Plotly.relayout('plotly-chart-{ID}', {
+                    paper_bgcolor: 'var(--bg-secondary)',
+                    plot_bgcolor: 'var(--bg-primary)',
+                    font: { color: 'var(--text-primary)' }
+                });
+            }
+        });
     });
-
-    updateTemperature(slider.value);
+    
+    observer.observe(document.documentElement, {
+        attributes: true
+    });
 })();
 </script>
