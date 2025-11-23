@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-23T16:11:22.524197Z",
+  "generated_at": "2025-11-23T17:36:58.704047Z",
   "nodes": [
     {
       "id": "ml",
@@ -23,22 +23,22 @@
       "excerpt": "# Machine Learning Fundamentals ## Overview Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead ..."
     },
     {
-      "id": "PEL\u0130N_123",
-      "name": "TRANSFORMERS PEL\u0130N TRIAL",
-      "category": "Math",
+      "id": "temperature",
+      "name": "LLM Configuration - Temperature",
+      "category": "AI",
       "tags": [
-        "NLP",
-        "TAG_ml"
+        "temperature",
+        "llm"
       ],
       "date": "2025-11-08",
-      "description": "A brief description of what this note covers",
+      "description": "A brief description of temperature parameter",
       "related": [
-        "Deep Learning",
-        "Computer Vision"
+        "LLM",
+        "Configuration"
       ],
       "file": "newfile.md",
-      "html": "<h1>TRANSFORMERS PEL\u0130N TRIAL</h1>\n<h2>Overview</h2>\n<p>Write a brief introduction to the topic here.</p>\n<h2>Main Content</h2>\n<h3>Section 1</h3>\n<p>Your content here. You can include:</p>\n<ul>\n<li>Lists</li>\n<li><strong>Bold text</strong></li>\n<li><em>Italic text</em></li>\n<li><a href=\"https://example.com\">Links</a></li>\n</ul>\n<h3>Section 2</h3>\n<p>More content...</p>\n<h2>Code Examples</h2>\n<pre><code class=\"language-python\"># Python code example\ndef hello_world():\n    print(&quot;Hello, World!&quot;)\n    return True\n</code></pre>\n<pre><code class=\"language-javascript\">// JavaScript code example\nfunction helloWorld() {\n    console.log(&quot;Hello, World!&quot;);\n    return true;\n}\n</code></pre>\n<h2>External Resources</h2>\n<ul>\n<li><a href=\"https://colab.research.google.com/...\">Link to Colab Notebook</a></li>\n<li><a href=\"https://github.com/...\">GitHub Repository</a></li>\n<li><a href=\"https://docs.example.com\">Documentation</a></li>\n</ul>\n<h2>Images</h2>\n<p><img alt=\"Description of image\" src=\"../assets/images/example.png\" /></p>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Important point 1</li>\n<li>Important point 2</li>\n<li>Important point 3</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li><a href=\"other-note.html\">Related Note 1</a></li>\n<li><a href=\"another-note.html\">Related Note 2</a></li>\n</ul>\n<hr />\n<p><strong>Last Updated:</strong> 2025-11-08</p>",
-      "excerpt": "# TRANSFORMERS PEL\u0130N TRIAL ## Overview Write a brief introduction to the topic here. ## Main Content ### Section 1 Your content here. You can include: - Lists - **Bold text** - *Italic text* - [Links]..."
+      "html": "<h1>Temperature</h1>\n<p><strong>Temperature</strong> is a parameter which is injected into the <strong>softmax function</strong>, enabling the users to manipulate the \noutput probabilities. It helps us to control the <strong>creativeness</strong> of a Large Language Model.</p>\n<p>The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, \ntemperature values fall within the range of 0 to 5. <em>See the references below.</em></p>\n<hr />\n<p>This is the original softmax function: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>When we add Temperature parameter:</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_temp.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about \nsoftmax function, read <a href=\"https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax\">here</a>.</p>\n<hr />\n<ul>\n<li>As Temperature approaches 0, the output probabilities become more \"sharp\". One of the probability will be close to 1.</li>\n<li>As Temperature increases, the output probabilities become more \"flat\" or \"uniform\", reducing the difference between the probabilities of different elements.</li>\n</ul>\n<p>If we want repetitive answers, and no creativity at all, we can decrease the Temperature. If we want more creative answers, we can increase it.</p>\n<hr />\n<h1>Example</h1>\n<p>Let's imagine our corpus has only 5 words: [\"donut\", \"cake\", \"apple\", \"juice\", \"book\"]</p>\n<p>The prediction of next token of given sentence: \"At the table, there is a delicious\" will be one of the words in the corpus. </p>\n<p>These are the original results: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_df.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>You can try different temperature values to see how the output changes.</p>\n<p>{% include temperature_slider.html %}</p>\n<p>Listen my YouTube Vide from <a href=\"https://youtu.be/KbUPOJ8Fmzs\">here</a></p>\n<p>Happy Learning! :)</p>\n<h1>References</h1>\n<ul>\n<li>[1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature</li>\n<li>[2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/</li>\n<li>[3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/</li>\n</ul>",
+      "excerpt": "# Temperature **Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the output probabilities. It helps us to control the **creativeness** of ..."
     },
     {
       "id": "python",
@@ -131,12 +131,12 @@
       "target": "PEL\u0130N_3445"
     },
     {
-      "source": "PEL\u0130N_123",
-      "target": "Deep Learning"
+      "source": "temperature",
+      "target": "LLM"
     },
     {
-      "source": "PEL\u0130N_123",
-      "target": "Computer Vision"
+      "source": "temperature",
+      "target": "Configuration"
     },
     {
       "source": "python",

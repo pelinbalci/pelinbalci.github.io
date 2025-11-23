@@ -1,72 +1,73 @@
 ---
-title: "TRANSFORMERS PELİN TRIAL"
-id: "PELİN_123"
-category: "Math"
-tags: ["NLP", "TAG_ml"]
-related: ["Deep Learning", "Computer Vision"]
+title: "LLM Configuration - Temperature"
+id: "temperature"
+category: "AI"
+tags: ["temperature", "llm"]
+related: ["LLM", "Configuration"]
 date: "2025-11-08"
-description: "A brief description of what this note covers"
+description: "A brief description of temperature parameter"
 ---
 
-# TRANSFORMERS PELİN TRIAL
+# Temperature 
 
-## Overview
+**Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the 
+output probabilities. It helps us to control the **creativeness** of a Large Language Model.
 
-Write a brief introduction to the topic here.
+The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, 
+temperature values fall within the range of 0 to 5. _See the references below._
 
-## Main Content
+-----------------------------------------------------
 
-### Section 1
+This is the original softmax function: 
 
-Your content here. You can include:
+<div class="fig figcenter fighighlight">
+  <img src="/assets/image_assets/temperature_images/softmax.PNG" width="50%">
+  <div class="figcaption"> </div>
+</div>
 
-- Lists
-- **Bold text**
-- *Italic text*
-- [Links](https://example.com)
 
-### Section 2
+When we add Temperature parameter:
 
-More content...
+<div class="fig figcenter fighighlight">
+  <img src="/assets/image_assets/temperature_images/softmax_temp.PNG" width="50%">
+  <div class="figcaption"> </div>
+</div>
 
-## Code Examples
+Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about 
+softmax function, read [here](https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax).
 
-```python
-# Python code example
-def hello_world():
-    print("Hello, World!")
-    return True
-```
+-----------------------------------------------------
 
-```javascript
-// JavaScript code example
-function helloWorld() {
-    console.log("Hello, World!");
-    return true;
-}
-```
+- As Temperature approaches 0, the output probabilities become more "sharp". One of the probability will be close to 1.
+- As Temperature increases, the output probabilities become more "flat" or "uniform", reducing the difference between the probabilities of different elements.
 
-## External Resources
+If we want repetitive answers, and no creativity at all, we can decrease the Temperature. If we want more creative answers, we can increase it.
 
-- [Link to Colab Notebook](https://colab.research.google.com/...)
-- [GitHub Repository](https://github.com/...)
-- [Documentation](https://docs.example.com)
+-----------------------------------------------------
 
-## Images
+# Example 
 
-![Description of image](../assets/images/example.png)
+Let's imagine our corpus has only 5 words: ["donut", "cake", "apple", "juice", "book"]
 
-## Key Takeaways
+The prediction of next token of given sentence: "At the table, there is a delicious" will be one of the words in the corpus. 
 
-- Important point 1
-- Important point 2
-- Important point 3
+These are the original results: 
 
-## Related Topics
+<div class="fig figcenter fighighlight">
+  <img src="/assets/image_assets/temperature_images/softmax_df.PNG" width="50%">
+  <div class="figcaption"> </div>
+</div>
 
-- [Related Note 1](other-note.html)
-- [Related Note 2](another-note.html)
 
----
+You can try different temperature values to see how the output changes.
 
-**Last Updated:** 2025-11-08
+{% include temperature_slider.html %}
+
+Listen my YouTube Vide from [here](https://youtu.be/KbUPOJ8Fmzs)
+
+Happy Learning! :)
+
+# References
+- [1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature
+- [2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/
+- [3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/
