@@ -61,7 +61,7 @@ These are the original results:
 
 You can try different temperature values to see how the output changes.
 
-{% include temperature_slider.html %}
+{{component:temperature-slider}}
 
 Listen my YouTube Vide from [here](https://youtu.be/KbUPOJ8Fmzs)
 
