@@ -1,6 +1,24 @@
 {
-  "generated_at": "2025-11-23T17:36:58.704047Z",
+  "generated_at": "2025-11-23T18:41:49.607025Z",
   "nodes": [
+    {
+      "id": "temperature",
+      "name": "LLM Configuration - Temperature",
+      "category": "AI",
+      "tags": [
+        "temperature",
+        "llm"
+      ],
+      "date": "2025-11-08",
+      "description": "A brief description of temperature parameter",
+      "related": [
+        "LLM",
+        "Configuration"
+      ],
+      "file": "2023-10-16-Temperature_parameter.md",
+      "html": "<h1>Temperature</h1>\n<p><strong>Temperature</strong> is a parameter which is injected into the <strong>softmax function</strong>, enabling the users to manipulate the \noutput probabilities. It helps us to control the <strong>creativeness</strong> of a Large Language Model.</p>\n<p>The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, \ntemperature values fall within the range of 0 to 5. <em>See the references below.</em></p>\n<hr />\n<p>This is the original softmax function: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>When we add Temperature parameter:</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_temp.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about \nsoftmax function, read <a href=\"https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax\">here</a>.</p>\n<hr />\n<ul>\n<li>As Temperature approaches 0, the output probabilities become more \"sharp\". One of the probability will be close to 1.</li>\n<li>As Temperature increases, the output probabilities become more \"flat\" or \"uniform\", reducing the difference between the probabilities of different elements.</li>\n</ul>\n<p>If we want repetitive answers, and no creativity at all, we can decrease the Temperature. If we want more creative answers, we can increase it.</p>\n<hr />\n<h1>Example</h1>\n<p>Let's imagine that our corpus has only 5 words: [\"donut\", \"cake\", \"apple\", \"juice\", \"book\"]</p>\n<p>The prediction of next token of given sentence: \"At the table, there is a delicious\" will be one of the words in the corpus. </p>\n<p>These are the original results: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_df.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>You can try different temperature values to see how the output changes.</p>\n<p style='color: red;'>Component 'temperature-slider' not found</p>\n\n<p>Listen my YouTube Vide from <a href=\"https://youtu.be/KbUPOJ8Fmzs\">here</a></p>\n<p>Happy Learning! :)</p>\n<h1>References</h1>\n<ul>\n<li>[1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature</li>\n<li>[2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/</li>\n<li>[3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/</li>\n</ul>",
+      "excerpt": "# Temperature **Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the output probabilities. It helps us to control the **creativeness** of ..."
+    },
     {
       "id": "ml",
       "name": "Machine Learning Fundamentals",
@@ -21,24 +39,6 @@
       "file": "ml.md",
       "html": "<h1>Machine Learning Fundamentals</h1>\n<h2>Overview</h2>\n<p>Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead of being explicitly programmed, these systems improve their performance through experience.</p>\n<h2>What is Machine Learning?</h2>\n<p>Machine Learning enables computers to learn patterns from data without being explicitly programmed for every scenario. It's the foundation of many modern AI applications, from recommendation systems to autonomous vehicles.</p>\n<h3>Key Concepts</h3>\n<ul>\n<li><strong>Training Data</strong>: Historical data used to teach the model</li>\n<li><strong>Features</strong>: Input variables used to make predictions</li>\n<li><strong>Labels</strong>: The output we want to predict (in supervised learning)</li>\n<li><strong>Model</strong>: The mathematical representation of patterns in data</li>\n</ul>\n<h2>Types of Machine Learning</h2>\n<h3>1. Supervised Learning</h3>\n<p>The algorithm learns from labeled training data, making predictions based on that data.</p>\n<p><strong>Examples:</strong>\n- Classification (spam detection, image recognition)\n- Regression (price prediction, weather forecasting)</p>\n<pre><code class=\"language-python\"># Simple supervised learning example with sklearn\nfrom sklearn.linear_model import LinearRegression\nimport numpy as np\n\n# Training data\nX = np.array([[1], [2], [3], [4], [5]])\ny = np.array([2, 4, 6, 8, 10])\n\n# Create and train model\nmodel = LinearRegression()\nmodel.fit(X, y)\n\n# Make prediction\nprediction = model.predict([[6]])\nprint(f&quot;Prediction for 6: {prediction[0]}&quot;)  # Output: ~12\n</code></pre>\n<h3>2. Unsupervised Learning</h3>\n<p>The algorithm finds patterns in unlabeled data.</p>\n<p><strong>Examples:</strong>\n- Clustering (customer segmentation)\n- Dimensionality reduction (data compression)\n- Anomaly detection</p>\n<h3>3. Reinforcement Learning</h3>\n<p>The algorithm learns through trial and error, receiving rewards or penalties.</p>\n<p><strong>Examples:</strong>\n- Game playing (AlphaGo, Chess engines)\n- Robotics\n- Resource optimization</p>\n<h2>Common Algorithms</h2>\n<h3>Linear Regression</h3>\n<p>Predicts continuous values based on linear relationships.</p>\n<h3>Logistic Regression</h3>\n<p>Classification algorithm for binary outcomes.</p>\n<h3>Decision Trees</h3>\n<p>Tree-like model for classification and regression.</p>\n<h3>Neural Networks</h3>\n<p>Inspired by biological neurons, forms the basis of deep learning.</p>\n<h3>Support Vector Machines (SVM)</h3>\n<p>Finds optimal boundaries between classes.</p>\n<h3>K-Means Clustering</h3>\n<p>Groups similar data points together.</p>\n<h2>The ML Workflow</h2>\n<ol>\n<li><strong>Problem Definition</strong>: What are we trying to predict or understand?</li>\n<li><strong>Data Collection</strong>: Gather relevant data</li>\n<li><strong>Data Preprocessing</strong>: Clean and prepare data</li>\n<li><strong>Feature Engineering</strong>: Create meaningful features</li>\n<li><strong>Model Selection</strong>: Choose appropriate algorithm</li>\n<li><strong>Training</strong>: Teach the model with training data</li>\n<li><strong>Evaluation</strong>: Test model performance</li>\n<li><strong>Deployment</strong>: Use the model in production</li>\n<li><strong>Monitoring</strong>: Track performance over time</li>\n</ol>\n<h2>Practical Example: Predicting House Prices</h2>\n<pre><code class=\"language-python\">import pandas as pd\nfrom sklearn.model_selection import train_test_split\nfrom sklearn.ensemble import RandomForestRegressor\nfrom sklearn.metrics import mean_squared_error\n\n# Load data\ndata = pd.DataFrame({\n    'size': [1500, 1600, 1700, 1800, 1900],\n    'bedrooms': [3, 3, 4, 4, 5],\n    'age': [10, 15, 20, 5, 8],\n    'price': [300000, 320000, 340000, 380000, 400000]\n})\n\n# Prepare features and target\nX = data[['size', 'bedrooms', 'age']]\ny = data['price']\n\n# Split data\nX_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)\n\n# Train model\nmodel = RandomForestRegressor(n_estimators=100)\nmodel.fit(X_train, y_train)\n\n# Evaluate\npredictions = model.predict(X_test)\nmse = mean_squared_error(y_test, predictions)\nprint(f&quot;Mean Squared Error: {mse}&quot;)\n</code></pre>\n<h2>Resources for Learning</h2>\n<h3>Online Courses</h3>\n<ul>\n<li><a href=\"https://www.coursera.org/learn/machine-learning\">Coursera: Machine Learning by Andrew Ng</a></li>\n<li><a href=\"https://www.fast.ai/\">Fast.ai: Practical Deep Learning</a></li>\n</ul>\n<h3>Books</h3>\n<ul>\n<li>\"Hands-On Machine Learning\" by Aur\u00e9lien G\u00e9ron</li>\n<li>\"Pattern Recognition and Machine Learning\" by Christopher Bishop</li>\n</ul>\n<h3>Practice Platforms</h3>\n<ul>\n<li><a href=\"https://www.kaggle.com\">Kaggle</a> - Competitions and datasets</li>\n<li><a href=\"https://colab.research.google.com\">Google Colab</a> - Free GPU for experiments</li>\n</ul>\n<h2>Key Takeaways</h2>\n<ul>\n<li>Machine Learning enables computers to learn from data</li>\n<li>Three main types: Supervised, Unsupervised, and Reinforcement Learning</li>\n<li>The ML workflow is iterative and requires continuous improvement</li>\n<li>Start with simple algorithms before moving to complex ones</li>\n<li>Practice is essential - work on real projects and datasets</li>\n</ul>\n<h2>Related Topics</h2>\n<ul>\n<li><a href=\"dl.html\">Deep Learning</a> - Neural networks and advanced architectures</li>\n<li><a href=\"python.html\">Python Basics</a> - Programming fundamentals for ML</li>\n<li><a href=\"statistics.html\">Statistics</a> - Mathematical foundations</li>\n</ul>\n<h2>Tools and Libraries</h2>\n<ul>\n<li><strong>Scikit-learn</strong>: General-purpose ML library</li>\n<li><strong>TensorFlow</strong>: Deep learning framework</li>\n<li><strong>PyTorch</strong>: Deep learning framework</li>\n<li><strong>Pandas</strong>: Data manipulation</li>\n<li><strong>NumPy</strong>: Numerical computing</li>\n</ul>\n<hr />\n<p><strong>Last Updated:</strong> November 8, 2025<br />\n<strong>Difficulty Level:</strong> Beginner to Intermediate</p>",
       "excerpt": "# Machine Learning Fundamentals ## Overview Machine Learning (ML) is a subset of artificial intelligence that focuses on building systems that can learn from and make decisions based on data. Instead ..."
-    },
-    {
-      "id": "temperature",
-      "name": "LLM Configuration - Temperature",
-      "category": "AI",
-      "tags": [
-        "temperature",
-        "llm"
-      ],
-      "date": "2025-11-08",
-      "description": "A brief description of temperature parameter",
-      "related": [
-        "LLM",
-        "Configuration"
-      ],
-      "file": "newfile.md",
-      "html": "<h1>Temperature</h1>\n<p><strong>Temperature</strong> is a parameter which is injected into the <strong>softmax function</strong>, enabling the users to manipulate the \noutput probabilities. It helps us to control the <strong>creativeness</strong> of a Large Language Model.</p>\n<p>The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, \ntemperature values fall within the range of 0 to 5. <em>See the references below.</em></p>\n<hr />\n<p>This is the original softmax function: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>When we add Temperature parameter:</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_temp.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about \nsoftmax function, read <a href=\"https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax\">here</a>.</p>\n<hr />\n<ul>\n<li>As Temperature approaches 0, the output probabilities become more \"sharp\". One of the probability will be close to 1.</li>\n<li>As Temperature increases, the output probabilities become more \"flat\" or \"uniform\", reducing the difference between the probabilities of different elements.</li>\n</ul>\n<p>If we want repetitive answers, and no creativity at all, we can decrease the Temperature. If we want more creative answers, we can increase it.</p>\n<hr />\n<h1>Example</h1>\n<p>Let's imagine our corpus has only 5 words: [\"donut\", \"cake\", \"apple\", \"juice\", \"book\"]</p>\n<p>The prediction of next token of given sentence: \"At the table, there is a delicious\" will be one of the words in the corpus. </p>\n<p>These are the original results: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_df.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>You can try different temperature values to see how the output changes.</p>\n<p>{% include temperature_slider.html %}</p>\n<p>Listen my YouTube Vide from <a href=\"https://youtu.be/KbUPOJ8Fmzs\">here</a></p>\n<p>Happy Learning! :)</p>\n<h1>References</h1>\n<ul>\n<li>[1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature</li>\n<li>[2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/</li>\n<li>[3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/</li>\n</ul>",
-      "excerpt": "# Temperature **Temperature** is a parameter which is injected into the **softmax function**, enabling the users to manipulate the output probabilities. It helps us to control the **creativeness** of ..."
     },
     {
       "id": "python",
@@ -119,6 +119,14 @@
   ],
   "links": [
     {
+      "source": "temperature",
+      "target": "LLM"
+    },
+    {
+      "source": "temperature",
+      "target": "Configuration"
+    },
+    {
       "source": "ml",
       "target": "python"
     },
@@ -129,14 +137,6 @@
     {
       "source": "ml",
       "target": "PEL\u0130N_3445"
-    },
-    {
-      "source": "temperature",
-      "target": "LLM"
-    },
-    {
-      "source": "temperature",
-      "target": "Configuration"
     },
     {
       "source": "python",
