@@ -1,14 +1,13 @@
 ---
-title: "TRANSFORMERS PELİN_2"
-id: "PELİN_123"
-category: "Data"
-tags: ["tag_AI", "TAG_ml"]
-related: ["dl", "ml", "Statistics"]
-date: "2025-11-22"
-description: "A brief description of what this note covers"
+title: "Statistics for ML"
+id: "statistics"
+category: "math"
+tags: ["statistics", "math", "probability"]
+related: ["ml"]
+date: "2025-11-23"
 ---
 
-# TRANSFORMERS PELİN 2
+# Statistics for ML
 
 ## Overview
 

@@ -3,7 +3,7 @@ title: "Python Programming Basics"
 id: "python"
 category: "programming"
 tags: ["python", "programming", "basics", "tutorial"]
-related: ["ml", "numpy"]
+related: ["ml", "PELİN_3445"]  # Added your trial note
 date: "2025-11-08"
 description: "Essential Python programming concepts for beginners"
 ---
