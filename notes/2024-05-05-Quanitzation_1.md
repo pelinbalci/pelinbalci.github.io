@@ -3,7 +3,7 @@ title: "Quantization 1"
 id: "quantization"
 category: "deep learning"
 tags: ["deep learning", "dl", "quantization", "medium"]
-related: ["finetuning"]
+related: ["finetuning", "dl"]
 date: "2024-05-05"
 description: "Unlocking the Power of Quantization: From Float32 to Int8"
 ---

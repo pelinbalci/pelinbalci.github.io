@@ -3,7 +3,7 @@ title: "Quantization 2"
 id: "quantization_2"
 category: "deep learning"
 tags: ["deep learning", "dl", "quantization", "medium"]
-related: ["finetuning", "quantization"]
+related: ["finetuning", "quantization", "dl"]
 date: "2024-05-06"
 description: "Mastering Post-training Quantization: A Guide with PyTorch and TensorFlow"
 ---
