@@ -180,25 +180,25 @@ class KnowledgeGraph {
             .attr('dy', 45)
             .attr('text-anchor', 'middle');
 
-        // Add video badge to nodes with 'video' tag
+        // Add video badge to nodes with 'video' tag (top-right corner)
         const videoBadge = node.filter(d => d.tags && d.tags.includes('video'))
             .append('g')
             .attr('class', 'video-badge')
-            .attr('transform', 'translate(0, -38)');
+            .attr('transform', 'translate(18, -22)');
 
         // Red rounded rectangle
         videoBadge.append('rect')
-            .attr('x', -12)
-            .attr('y', -8)
-            .attr('width', 24)
-            .attr('height', 16)
-            .attr('rx', 4)
-            .attr('ry', 4)
+            .attr('x', -10)
+            .attr('y', -7)
+            .attr('width', 20)
+            .attr('height', 14)
+            .attr('rx', 3)
+            .attr('ry', 3)
             .attr('fill', '#FF0000');
 
         // White play triangle
         videoBadge.append('polygon')
-            .attr('points', '-4,-5 -4,5 6,0')
+            .attr('points', '-3,-4 -3,4 5,0')
             .attr('fill', '#FFFFFF');
 
         // Add interactions
