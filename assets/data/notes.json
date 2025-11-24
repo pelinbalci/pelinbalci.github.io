@@ -1,6 +1,24 @@
 {
-  "generated_at": "2025-11-24T20:03:52.618367Z",
+  "generated_at": "2025-11-24T20:19:29.577747Z",
   "nodes": [
+    {
+      "id": "optimization",
+      "name": "Optimization Algorithms in Neural Networks",
+      "category": "deep-learning",
+      "tags": [
+        "deep learning",
+        "backpropagation",
+        "cs231n"
+      ],
+      "date": "2020-10-14",
+      "description": "Optimization Algorithms in Neural Network will be explained",
+      "related": [
+        "dl"
+      ],
+      "file": "2020-10-14-optimization_algorithms.md",
+      "html": "<p>In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Stanford University, the lecture \nvideos of cs231n can be found in YouTube and all materials are freely available (see the references). </p>\n<h1>First Order Optimization Algorithms</h1>\n<ul>\n<li>SGD</li>\n<li>SGD with Momentum</li>\n<li>SGD with Nesterov Momentum</li>\n<li>AdaGrad</li>\n<li>RMSProp</li>\n<li>Adam</li>\n</ul>\n<h2>SGD</h2>\n<pre><code>w = w - learningrate * gradient\n</code></pre>\n<ul>\n<li>Vanilla update. </li>\n<li>The simplest form of update is to change the parameters along the negative gradient direction </li>\n<li>Since the gradient indicates the direction of increase, but we usually wish to minimize a loss function</li>\n</ul>\n<h2>SGD with Momentum</h2>\n<pre><code>velocity = 0\nvelocity = momentum * velocity - learningrate * gradient\nw = w + velocity\n</code></pre>\n<ul>\n<li>With Momentum update, the parameter vector will build up velocity in any direction that has consistent gradient.</li>\n</ul>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/sgd_vs_momentum.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 1: SGD vs SGD with Momentum</div>\n</div>\n\n<h2>SGD with Nesterov Momentum</h2>\n<pre><code>old_velocity = velocity\nvelocity = momentum * velocity - learningrate * gradient\nw = w + (-momentum) * old_velocity + (1- (-momentum)) * velocity\n</code></pre>\n<ul>\n<li>https://arxiv.org/pdf/1212.0901v2.pdf : ADVANCES IN OPTIMIZING RECURRENT NETWORKS</li>\n<li>http://www.cs.utoronto.ca/~ilya/pubs/ilya_sutskever_phd_thesis.pdf : RNN </li>\n</ul>\n<h2>AdaGrad</h2>\n<p>Ref: https://jmlr.org/papers/volume12/duchi11a/duchi11a.pdf (-)\nRef: https://arxiv.org/pdf/1212.5701.pdf *</p>\n<pre><code>gradient_squared = 0 \ngradient_squared += gradient**2\nw += - learning_rate * gradient / (np.sqrt(gradient_squared) + eps)\n</code></pre>\n<p><strong>Pros:</strong> *</p>\n<p>While there is the hand tuned global learning rate, each dimension has its own dynamic rate. </p>\n<p>Since this dynamic rate grows with the inverse of the gradient magnitudes:\n    - large gradients have smaller learning rates\n    - small gradients have large learning rates. </p>\n<p>This is very beneficial for training deep neural networks since the scale of the gradients in each layer is often \ndifferent by several orders of magnitude, so the optimal learning rate should take that into account. </p>\n<p>Accumulation of gradient in the denominator has the same effects as annealing, reducing the learning rate over time. </p>\n<p><strong>Cons:</strong> * </p>\n<ul>\n<li>This method can be sensitive to initial conditions of the parameters and the corresponding gradients. </li>\n<li>If the initial gradients are large, the learning rates will be low for the remainder of training. </li>\n<li>This can be combatted by increasing the global learning rate, making the ADAGRAD method sensitive to the choice of \nlearning rate. </li>\n<li>Due to the continual accumulation of squared gradients in the denominator, the learning rate will continue to decrease \nthroughout training, eventually decreasing to zero and stopping training completely.</li>\n<li>Another exp:  A downside of Adagrad is that in case of Deep Learning, the monotonic learning rate usually proves too \naggressive and stops learning too early. **</li>\n</ul>\n<h2>RMS Prop</h2>\n<pre><code>gradient_squared = 0 \ngradient_squared = decay_rate * gradient_squared + (1 - decay_rate) * gradient**2\nw += - learning_rate * gradient / (np.sqrt(gradient_squared) + eps)\n</code></pre>\n<ul>\n<li>The RMSProp update adjusts the Adagrad method in a very simple way in an attempt to reduce its aggressive, monotonically \ndecreasing learning rate. </li>\n<li>In particular, it uses a moving average of squared gradients.</li>\n<li>\n<p>decay_rate is a hyperparameter and typical values are [0.9, 0.99, 0.999]. </p>\n</li>\n<li>\n<p>Notice that the w+= update is identical to Adagrad.</p>\n</li>\n<li>But the gradient_squared variable is a \u201cleaky\u201d. (has decay rate)</li>\n<li>Hence, RMSProp still modulates the learning rate of each weight based on the magnitudes of its gradients. \nIt has a beneficial equalizing effect.</li>\n<li>But unlike Adagrad, the updates do not get monotonically smaller.</li>\n</ul>\n<h1>Adam</h1>\n<p>Ref: https://arxiv.org/pdf/1412.6980.pdf</p>\n<pre><code># t is your iteration counter going from 1 to infinity\nfirst_moment, second_moment = 0, 0\nfor t in range(iterations):\n    first_moment = beta1 * first_moment + (1-beta1) * gradient\n    first_unbias = first_moment / (1-beta1**t)\n\n    second_moment = beta2 * second_moment + (1-beta2)*(gradient**2)\n    second_unbias = second_moment / (1-beta2**t)\n\n    w += - learning_rate * first_unbias / (np.sqrt(second_unbias) + eps)\n</code></pre>\n<p>The method computes individual adaptive learning rates for different parameters from estimates of first and second \nmoments of the gradients; the name Adam is derived from adaptive moment estimation.</p>\n<p>Without bias: </p>\n<p>At very first time step, second moment is zero. After one update teh second moment will still close to zero. When we\ndivide by second moment, we make a very large step at the beginning.  But this big step is not related with the geometry of the \nloss function, it is the nature of the formula. </p>\n<p>Bias correction term help to aviod the very large step at the beginning. </p>\n<p>You can start with these parameters:</p>\n<pre><code>beta1 = 0.9\nbeta2 = 0.999\nlr = 1e-3 or 1e-5\n</code></pre>\n<p>RMSProp with momentum generates its parameter updates using a momentum on the rescaled gradient, whereas Adam updates are\ndirectly estimated using a running average of first and second moment of the gradient. </p>\n<p>RMSProp also lacks a bias-correction term; this matters most in case of a value of beta2 close to 1 (required in\ncase of sparse gradients), since in that case not correcting the bias leads to very large stepsizes and\noften divergence. </p>\n<p>Different Models comparison: {'sgd': 5e-3, 'sgd_momentum':  5e-3, 'rmsprop': 1e-4, 'adam': 1e-3}</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/different_models.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 2: Different models</div>\n</div>\n\n<p>Different Models comparison: {'sgd': 1e-3, 'sgd_momentum':  1e-3, 'rmsprop': 1e-3, 'adam': 1e-3}</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/different_models_same_lr.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 3: Different models with the same learning rate</div>\n</div>\n\n<h2>Change LR</h2>\n<p>you can change learning rate during the training:</p>\n<ul>\n<li>Step Decay</li>\n<li>Exponential Decay</li>\n<li>1/t decay</li>\n</ul>\n<p>Start with no decay. Select the best learning rate. Check the loss plot and decide where you need decay. </p>\n<h4>'sgd' :</h4>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/sgd_lr.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 4: SGD, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>\n</div>\n\n<h4>'sgd_momentum':</h4>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/sgd_moment_lr.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 5: SGD with Momentum, learning rates: [1e-4, 5e-3, 3e-3, 1e-3, 1e-2]</div>\n</div>\n\n<h4>'rmsprop':</h4>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/rms_lr.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 6: RMSProp, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>\n</div>\n\n<p>RMS Prop needs smaller lr: [1e-5, 5e-5, 5e-4, 1e-4]\n- running with  5e-05: (Epoch 5 / 5) train acc: 0.591000; val_acc: 0.359000\n- running with  0.0001: (Epoch 5 / 5) train acc: 0.557000; val_acc: 0.376000</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/rms_lr_smaller.png\" width=\"75%\">\n  <div class=\"figcaption\">RMSProp, smaller learning rates</div>\n</div>\n\n<h4>'adam':</h4>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/optimization_images/adam_lr.png\" width=\"75%\">\n  <div class=\"figcaption\">Figure 7: Adam, learning rates: [1e-4, 5e-4, 5e-3, 1e-3, 1e-2]</div>\n</div>\n\n<h2>Model Ensembles</h2>\n<p>Ref: https://www.youtube.com/watch?v=EK61htlw8hY&amp;ab_channel=TTIC</p>\n<p>One disadvantage of model ensembles is that they take longer to evaluate on test example. \nAn interested reader may find the recent work from Geoff Hinton on \u201cDark Knowledge\u201d inspiring, where the idea is to \n\u201cdistill\u201d a good ensemble back to a single model by incorporating the ensemble log likelihoods into a modified objective.</p>\n<p>Ref: https://www.youtube.com/watch?v=_JB0AO7QxSA&amp;list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&amp;index=7&amp;ab_channel=StanfordUniversitySchoolofEngineering</p>\n<ol>\n<li>Train multiple independent models </li>\n<li>At test time average their results </li>\n</ol>\n<h1>Second Order Optimization Algorithms</h1>\n<ul>\n<li>https://arxiv.org/pdf/1311.2115.pdf (Quasi Newton)</li>\n<li>https://research.google/pubs/pub40565/ (Large Scale Distributed Deep Networks)</li>\n<li>https://en.wikipedia.org/wiki/Limited-memory_BFGS (LBFGS)</li>\n</ul>\n<h1>References</h1>\n<ul>\n<li>https://www.youtube.com/watch?v=_JB0AO7QxSA&amp;list=PL3FW7Lu3i5JvHM8ljYj-zLfQRF3EO8sYv&amp;index=7&amp;ab_channel=StanfordUniversitySchoolofEngineering</li>\n<li>https://cs231n.github.io/</li>\n</ul>\n<h1>Key Words</h1>\n<p>SGD, Momentum, Learning Rates, RMSProp, ADam, Optimization, Neural Networks</p>",
+      "excerpt": "In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Stanford University, the lecture videos of cs231n can be found in YouTube and all materials are freely available (s..."
+    },
     {
       "id": "kmeans",
       "name": "K-means with Numpy",
@@ -19,6 +37,26 @@
       "file": "2023-03-07-K_means_with_numpy.md",
       "html": "<p>In this post, I will explain the K-means algorithm via Numpy. Continue reading by clicking <a href=\"https://medium.com/@balci.pelin/k-means-with-numpy-3c207398c4d4\">here</a></p>",
       "excerpt": "In this post, I will explain the K-means algorithm via Numpy. Continue reading by clicking [here](https://medium.com/@balci.pelin/k-means-with-numpy-3c207398c4d4)"
+    },
+    {
+      "id": "crossentropy",
+      "name": "Cross-Entropy Loss",
+      "category": "deep-learning",
+      "tags": [
+        "deep learning",
+        "dl",
+        "loss",
+        "cross entropy",
+        "medium"
+      ],
+      "date": "2023-03-11",
+      "description": "Simple example for cross entropy loss",
+      "related": [
+        "dl"
+      ],
+      "file": "2023-03-11-Cross_Entropy_Loss.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/cross-entropy-loss-5568329c9d3\">Read the full version on Medium</a> I will explain the cross-entropy loss with a very simple example.</p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/cross-entropy-loss-5568329c9d3) I will explain the cross-entropy loss with a very simple example."
     },
     {
       "id": "llm",
@@ -96,6 +134,26 @@
       "excerpt": "[TL;DR? Read the full version on Medium](https://medium.com/@balci.pelin/llm-evaluation-6b63b3cfd48b) This article is a practical guide to measure the model performance and to make sure that the model..."
     },
     {
+      "id": "ner",
+      "name": "NER",
+      "category": "deep-learning",
+      "tags": [
+        "deep learning",
+        "dl",
+        "ner",
+        "from scratch",
+        "medium"
+      ],
+      "date": "2023-08-16",
+      "description": "Build your NER data from scratch and learn the details of the NER model",
+      "related": [
+        "dl"
+      ],
+      "file": "2023-08-16-NER.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/ner-8eb9694ccad3\">Read the full version on Medium</a> Build your NER data from scratch and learn the details of the NER model.</p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/ner-8eb9694ccad3) Build your NER data from scratch and learn the details of the NER model."
+    },
+    {
       "id": "finetuning",
       "name": "LLM Finetuning",
       "category": "genai",
@@ -157,7 +215,7 @@
     {
       "id": "quantization",
       "name": "Quantization 1",
-      "category": "deep learning",
+      "category": "deep-learning",
       "tags": [
         "deep learning",
         "dl",
@@ -177,7 +235,7 @@
     {
       "id": "quantization_2",
       "name": "Quantization 2",
-      "category": "deep learning",
+      "category": "deep-learning",
       "tags": [
         "deep learning",
         "dl",
@@ -330,8 +388,16 @@
   ],
   "links": [
     {
+      "source": "optimization",
+      "target": "dl"
+    },
+    {
       "source": "kmeans",
       "target": "ml"
+    },
+    {
+      "source": "crossentropy",
+      "target": "dl"
     },
     {
       "source": "configuration",
@@ -348,6 +414,10 @@
     {
       "source": "evaluation",
       "target": "llm"
+    },
+    {
+      "source": "ner",
+      "target": "dl"
     },
     {
       "source": "finetuning",

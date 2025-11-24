@@ -1,7 +1,7 @@
 ---
 title: "Quantization 2"
 id: "quantization_2"
-category: "deep learning"
+category: "deep-learning"
 tags: ["deep learning", "dl", "quantization", "medium"]
 related: ["finetuning", "quantization", "dl"]
 date: "2024-05-06"
