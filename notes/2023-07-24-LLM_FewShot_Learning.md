@@ -1,7 +1,7 @@
 ---
 title: "LLM FewShot Learning"
 id: "fewshot"
-category: "GenAI"
+category: "genai"
 tags: ["llm", "fewshot", "zeroshot", "prompt", "medium"]
 related: ["llm"]
 date: "2023-07-24"

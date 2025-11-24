@@ -1,7 +1,7 @@
 ---
 title: "Temperature"
 id: "temperature"
-category: "AI"
+category: "genai"
 tags: ["temperature", "llm"]
 related: ["llm", "configuration"]
 date: "2025-11-08"

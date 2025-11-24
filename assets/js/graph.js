@@ -287,7 +287,7 @@ class KnowledgeGraph {
             'genai': '#6366f1',
             'edge-ml': '#8b5cf6',
             'deep-learning': '#ec4899',
-            'data': '#14b8a6',
+            'ml': '#14b8a6',
             'conference': '#f59e0b',
             'visualization': '#06b6d4',
             'default': '#6b7280'

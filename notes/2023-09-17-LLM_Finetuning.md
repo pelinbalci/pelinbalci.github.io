@@ -1,7 +1,7 @@
 ---
 title: "LLM Finetuning"
 id: "finetuning"
-category: "GenAI"
+category: "genai"
 tags: ["evaluation", "llm", "medium", "finetuning"]
 related: ["llm", "evaluation"]
 date: "2023-09-17"

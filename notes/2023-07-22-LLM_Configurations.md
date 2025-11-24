@@ -1,7 +1,7 @@
 ---
 title: "LLM Configurations"
 id: "configuration"
-category: "GenAI"
+category: "genai"
 tags: ["llm", "configuration", "top_k", "medium"]
 related: ["llm", "temperature"]
 date: "2023-07-22"

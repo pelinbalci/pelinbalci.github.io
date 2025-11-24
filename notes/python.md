@@ -1,7 +1,7 @@
 ---
 title: "Python Programming Basics"
 id: "python"
-category: "programming"
+category: "ml"
 tags: ["python", "programming", "basics", "tutorial"]
 related: ["ml", "PELİN_3445"]  # Added your trial note
 date: "2025-11-08"

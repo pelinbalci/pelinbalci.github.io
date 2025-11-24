@@ -1,7 +1,7 @@
 ---
 title: "Statistics for ML"
 id: "statistics"
-category: "math"
+category: "visualization"
 tags: ["statistics", "math", "probability"]
 related: ["ml"]
 date: "2025-11-23"

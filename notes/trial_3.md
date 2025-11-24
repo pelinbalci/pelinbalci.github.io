@@ -1,7 +1,7 @@
 ---
 title: "TRANSFORMERS PELİN_3"
 id: "PELİN_3445"
-category: "data"  # Use lowercase for consistency
+category: "conference"  # Use lowercase for consistency
 tags: ["transformers", "NLP", "deep-learning"]
 related: ["ml", "python"]  # Only reference existing notes!
 date: "2025-11-22"

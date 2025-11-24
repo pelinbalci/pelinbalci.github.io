@@ -1,7 +1,7 @@
 ---
 title: "LLM Evaluation"
 id: "evaluation"
-category: "GenAI"
+category: "genai"
 tags: ["evaluation", "llm", "medium"]
 related: ["llm"]
 date: "2023-08-01"

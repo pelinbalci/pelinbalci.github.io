@@ -1,10 +1,10 @@
 {
-  "generated_at": "2025-11-24T18:28:13.700175Z",
+  "generated_at": "2025-11-24T18:33:48.750678Z",
   "nodes": [
     {
       "id": "llm",
       "name": "LLM Introduction",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "llm",
         "medium"
@@ -19,7 +19,7 @@
     {
       "id": "configuration",
       "name": "LLM Configurations",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "llm",
         "configuration",
@@ -39,7 +39,7 @@
     {
       "id": "fewshot",
       "name": "LLM FewShot Learning",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "llm",
         "fewshot",
@@ -59,7 +59,7 @@
     {
       "id": "evaluation",
       "name": "LLM Evaluation",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "evaluation",
         "llm",
@@ -77,7 +77,7 @@
     {
       "id": "finetuning",
       "name": "LLM Finetuning",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "evaluation",
         "llm",
@@ -97,7 +97,7 @@
     {
       "id": "faq",
       "name": "LLM FAQ",
-      "category": "GenAI",
+      "category": "genai",
       "tags": [
         "evaluation",
         "llm",
@@ -120,7 +120,7 @@
     {
       "id": "temperature",
       "name": "Temperature",
-      "category": "AI",
+      "category": "genai",
       "tags": [
         "temperature",
         "llm"
@@ -159,7 +159,7 @@
     {
       "id": "python",
       "name": "Python Programming Basics",
-      "category": "programming",
+      "category": "ml",
       "tags": [
         "python",
         "programming",
@@ -198,7 +198,7 @@
     {
       "id": "statistics",
       "name": "Statistics for ML",
-      "category": "math",
+      "category": "visualization",
       "tags": [
         "statistics",
         "math",
@@ -216,7 +216,7 @@
     {
       "id": "PEL\u0130N_3445",
       "name": "TRANSFORMERS PEL\u0130N_3",
-      "category": "data",
+      "category": "conference",
       "tags": [
         "transformers",
         "NLP",
