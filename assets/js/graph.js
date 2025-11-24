@@ -165,7 +165,7 @@ class KnowledgeGraph {
             .data(this.nodes)
             .enter()
             .append('g')
-            .attr('class', d => `node category-${d.category}`)
+            .attr('class', d => `node category-${d.category.toLowerCase()}`)
             .call(this.drag());
 
         // Add circles to nodes
