@@ -174,20 +174,32 @@ class KnowledgeGraph {
             .attr('fill', d => this.getCategoryColor(d.category))
             .attr('stroke', d => this.getCategoryStroke(d.category));
 
-        // Add video badge to nodes with 'video' tag
-        node.filter(d => d.tags && d.tags.includes('video'))
-            .append('text')
-            .attr('class', 'video-badge')
-            .attr('dy', -25)
-            .attr('text-anchor', 'middle')
-            .style('font-size', '16px')
-            .text('▶');
-
         // Add labels to nodes
         node.append('text')
             .text(d => d.name)
             .attr('dy', 45)
             .attr('text-anchor', 'middle');
+
+        // Add video badge to nodes with 'video' tag
+        const videoBadge = node.filter(d => d.tags && d.tags.includes('video'))
+            .append('g')
+            .attr('class', 'video-badge')
+            .attr('transform', 'translate(0, -38)');
+
+        // Red rounded rectangle
+        videoBadge.append('rect')
+            .attr('x', -12)
+            .attr('y', -8)
+            .attr('width', 24)
+            .attr('height', 16)
+            .attr('rx', 4)
+            .attr('ry', 4)
+            .attr('fill', '#FF0000');
+
+        // White play triangle
+        videoBadge.append('polygon')
+            .attr('points', '-4,-5 -4,5 6,0')
+            .attr('fill', '#FFFFFF');
 
         // Add interactions
         node.on('click', (event, d) => this.onNodeClick(event, d))
