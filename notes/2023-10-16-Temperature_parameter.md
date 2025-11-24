@@ -1,5 +1,5 @@
 ---
-title: "LLM Configuration - Temperature"
+title: "Temperature"
 id: "temperature"
 category: "AI"
 tags: ["temperature", "llm"]

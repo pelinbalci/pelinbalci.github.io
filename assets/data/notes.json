@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-24T18:10:26.640229Z",
+  "generated_at": "2025-11-24T18:21:43.141086Z",
   "nodes": [
     {
       "id": "llm",
@@ -119,7 +119,7 @@
     },
     {
       "id": "temperature",
-      "name": "LLM Configuration - Temperature",
+      "name": "Temperature",
       "category": "AI",
       "tags": [
         "temperature",

@@ -284,12 +284,12 @@ class KnowledgeGraph {
     getCategoryColor(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const colors = {
-            'ai': '#6366f1',
-            'ml': '#8b5cf6',
-            'programming': '#ec4899',
+            'genai': '#6366f1',
+            'edge-ml': '#8b5cf6',
+            'deep-learning': '#ec4899',
             'data': '#14b8a6',
-            'web': '#f59e0b',
-            'math': '#06b6d4',
+            'conference': '#f59e0b',
+            'visualization': '#06b6d4',
             'default': '#6b7280'
         };
         return palette[category] || colors[category] || colors.default;
