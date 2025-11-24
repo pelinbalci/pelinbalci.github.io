@@ -2,7 +2,7 @@
 title: "Temperature"
 id: "temperature"
 category: "genai"
-tags: ["temperature", "llm"]
+tags: ["temperature", "llm", "video"]
 related: ["llm", "configuration"]
 date: "2025-11-08"
 description: "A brief description of temperature parameter"

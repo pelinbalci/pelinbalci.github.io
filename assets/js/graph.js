@@ -174,6 +174,15 @@ class KnowledgeGraph {
             .attr('fill', d => this.getCategoryColor(d.category))
             .attr('stroke', d => this.getCategoryStroke(d.category));
 
+        // Add video badge to nodes with 'video' tag
+        node.filter(d => d.tags && d.tags.includes('video'))
+            .append('text')
+            .attr('class', 'video-badge')
+            .attr('dy', -25)
+            .attr('text-anchor', 'middle')
+            .style('font-size', '16px')
+            .text('▶');
+
         // Add labels to nodes
         node.append('text')
             .text(d => d.name)

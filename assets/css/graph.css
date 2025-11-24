@@ -59,6 +59,12 @@
     fill: var(--text-primary);
 }
 
+.node .video-badge {
+    fill: #ff0000;
+    font-size: 14px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
 /* Node Categories - Color Coding */
 .node.category-genai circle {
     fill: #6366f1;

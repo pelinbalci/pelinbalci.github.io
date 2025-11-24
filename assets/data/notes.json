@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-11-24T18:33:48.750678Z",
+  "generated_at": "2025-11-24T18:56:58.578552Z",
   "nodes": [
     {
       "id": "llm",
@@ -24,7 +24,8 @@
         "llm",
         "configuration",
         "top_k",
-        "medium"
+        "medium",
+        "video"
       ],
       "date": "2023-07-22",
       "description": "A brief introduction to LLM configurations",
@@ -45,7 +46,8 @@
         "fewshot",
         "zeroshot",
         "prompt",
-        "medium"
+        "medium",
+        "video"
       ],
       "date": "2023-07-24",
       "description": "Explanation of Zero-Shot One-Shot and Few Shot on code",
@@ -108,10 +110,7 @@
       "date": "2023-09-18",
       "description": "Q&A for LLM",
       "related": [
-        "llm",
-        "evaluation",
-        "fewshot",
-        "finetuning"
+        "llm"
       ],
       "file": "2023-09-18-LLM_Q_A.md",
       "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-q-a-4c98031d9ea3\">Read the full version on Medium</a> If you\u2019ve been curious about LLMs and still have questions, this article \nis just for you. Get ready to dive deep into the world of language models!</p>",
@@ -123,7 +122,8 @@
       "category": "genai",
       "tags": [
         "temperature",
-        "llm"
+        "llm",
+        "video"
       ],
       "date": "2025-11-08",
       "description": "A brief description of temperature parameter",
@@ -261,18 +261,6 @@
     {
       "source": "faq",
       "target": "llm"
-    },
-    {
-      "source": "faq",
-      "target": "evaluation"
-    },
-    {
-      "source": "faq",
-      "target": "fewshot"
-    },
-    {
-      "source": "faq",
-      "target": "finetuning"
     },
     {
       "source": "temperature",

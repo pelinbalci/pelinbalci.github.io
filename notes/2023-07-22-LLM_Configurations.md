@@ -2,7 +2,7 @@
 title: "LLM Configurations"
 id: "configuration"
 category: "genai"
-tags: ["llm", "configuration", "top_k", "medium"]
+tags: ["llm", "configuration", "top_k", "medium", "video"]
 related: ["llm", "temperature"]
 date: "2023-07-22"
 description: "A brief introduction to LLM configurations"

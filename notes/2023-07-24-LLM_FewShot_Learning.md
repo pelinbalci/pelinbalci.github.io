@@ -2,7 +2,7 @@
 title: "LLM FewShot Learning"
 id: "fewshot"
 category: "genai"
-tags: ["llm", "fewshot", "zeroshot", "prompt", "medium"]
+tags: ["llm", "fewshot", "zeroshot", "prompt", "medium", "video"]
 related: ["llm"]
 date: "2023-07-24"
 description: "Explanation of Zero-Shot One-Shot and Few Shot on code"
