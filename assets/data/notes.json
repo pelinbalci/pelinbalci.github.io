@@ -1,6 +1,122 @@
 {
-  "generated_at": "2025-11-23T20:02:01.731938Z",
+  "generated_at": "2025-11-24T18:10:26.640229Z",
   "nodes": [
+    {
+      "id": "llm",
+      "name": "LLM Introduction",
+      "category": "GenAI",
+      "tags": [
+        "llm",
+        "medium"
+      ],
+      "date": "2023-07-17",
+      "description": "LLM Introduction",
+      "related": [],
+      "file": "2023-07-17-LLM_Intro.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-introduction-7ededa51b78b\">Read the full version on Medium</a>If you think that, \nnow that ChatGPT handles everything and you are late to learn it, this article is for you:)</p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/llm-introduction-7ededa51b78b)If you think that, now that ChatGPT handles everything and you are late to learn it, this article is for..."
+    },
+    {
+      "id": "configuration",
+      "name": "LLM Configurations",
+      "category": "GenAI",
+      "tags": [
+        "llm",
+        "configuration",
+        "top_k",
+        "medium"
+      ],
+      "date": "2023-07-22",
+      "description": "A brief introduction to LLM configurations",
+      "related": [
+        "llm",
+        "temperature"
+      ],
+      "file": "2023-07-22-LLM_Configurations.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-inference-222c8e8a6ba7\">Read the full version on Medium</a> What are the configuration parameters that can influence the model\u2019s output during \ninference? Click here to watch the video on <a href=\"https://youtu.be/KbUPOJ8Fmzs\">YouTube</a></p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/llm-inference-222c8e8a6ba7) What are the configuration parameters that can influence the model\u2019s output during inference? Click here t..."
+    },
+    {
+      "id": "fewshot",
+      "name": "LLM FewShot Learning",
+      "category": "GenAI",
+      "tags": [
+        "llm",
+        "fewshot",
+        "zeroshot",
+        "prompt",
+        "medium"
+      ],
+      "date": "2023-07-24",
+      "description": "Explanation of Zero-Shot One-Shot and Few Shot on code",
+      "related": [
+        "llm"
+      ],
+      "file": "2023-07-24-LLM_FewShot_Learning.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-few-shot-learning-d7df1d2c4446\">Read the full version on Medium</a> Explanation of Zero-Shot One-Shot and Few Shot on code.<br />\nClick here to watch the video on <a href=\"https://youtu.be/byRgzRCRSvw\">YouTube</a></p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/llm-few-shot-learning-d7df1d2c4446) Explanation of Zero-Shot One-Shot and Few Shot on code. Click here to watch the video on [YouTube]..."
+    },
+    {
+      "id": "evaluation",
+      "name": "LLM Evaluation",
+      "category": "GenAI",
+      "tags": [
+        "evaluation",
+        "llm",
+        "medium"
+      ],
+      "date": "2023-08-01",
+      "description": "A practical guide to measure the model performance",
+      "related": [
+        "llm"
+      ],
+      "file": "2023-08-01-LLM_Evaluation.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-evaluation-6b63b3cfd48b\">TL;DR? Read the full version on Medium</a> This article is a practical guide to measure the model performance and to make sure that the model gives good results \nafter fine-tuning.</p>",
+      "excerpt": "[TL;DR? Read the full version on Medium](https://medium.com/@balci.pelin/llm-evaluation-6b63b3cfd48b) This article is a practical guide to measure the model performance and to make sure that the model..."
+    },
+    {
+      "id": "finetuning",
+      "name": "LLM Finetuning",
+      "category": "GenAI",
+      "tags": [
+        "evaluation",
+        "llm",
+        "medium",
+        "finetuning"
+      ],
+      "date": "2023-09-17",
+      "description": "A practical guide to measure the model performance",
+      "related": [
+        "llm",
+        "evaluation"
+      ],
+      "file": "2023-09-17-LLM_Finetuning.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-finetuning-410e8a2738ef\">Read the full version on Medium</a> Finetuning doesn\u2019t have \nto be a mystery anymore! In this article, I\u2019ve created a simple notebook that breaks down the \nprocess in an easy-to-understand way.</p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/llm-finetuning-410e8a2738ef) Finetuning doesn\u2019t have to be a mystery anymore! In this article, I\u2019ve created a simple notebook that bre..."
+    },
+    {
+      "id": "faq",
+      "name": "LLM FAQ",
+      "category": "GenAI",
+      "tags": [
+        "evaluation",
+        "llm",
+        "prompt",
+        "finetuning",
+        "medium"
+      ],
+      "date": "2023-09-18",
+      "description": "Q&A for LLM",
+      "related": [
+        "llm",
+        "evaluation",
+        "fewshot",
+        "finetuning"
+      ],
+      "file": "2023-09-18-LLM_Q_A.md",
+      "html": "<p><a href=\"https://medium.com/@balci.pelin/llm-q-a-4c98031d9ea3\">Read the full version on Medium</a> If you\u2019ve been curious about LLMs and still have questions, this article \nis just for you. Get ready to dive deep into the world of language models!</p>",
+      "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/llm-q-a-4c98031d9ea3) If you\u2019ve been curious about LLMs and still have questions, this article is just for you. Get ready to dive deep..."
+    },
     {
       "id": "temperature",
       "name": "LLM Configuration - Temperature",
@@ -12,8 +128,8 @@
       "date": "2025-11-08",
       "description": "A brief description of temperature parameter",
       "related": [
-        "LLM",
-        "Configuration"
+        "llm",
+        "configuration"
       ],
       "file": "2023-10-16-Temperature_parameter.md",
       "html": "<h1>Temperature</h1>\n<p><strong>Temperature</strong> is a parameter which is injected into the <strong>softmax function</strong>, enabling the users to manipulate the \noutput probabilities. It helps us to control the <strong>creativeness</strong> of a Large Language Model.</p>\n<p>The range of the temperature parameter is defined as 0 and 1 in OpenAI documentation. In the context of Cohere, \ntemperature values fall within the range of 0 to 5. <em>See the references below.</em></p>\n<hr />\n<p>This is the original softmax function: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>When we add Temperature parameter:</p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_temp.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>Remember that zj is the output of the neural network: it is a floating number. If you want to learn more about \nsoftmax function, read <a href=\"https://github.com/pelinbalci/Intro_Deep_Learning/blob/master/Intro_NN/notes/1_Perceptron_math.md#multiclass-classification--softmax:~:text=Multiclass%20Classification%20%26%20Softmax\">here</a>.</p>\n<hr />\n<ul>\n<li>As Temperature approaches 0, the output probabilities become more \"sharp\". One of the probability will be close to 1.</li>\n<li>As Temperature increases, the output probabilities become more \"flat\" or \"uniform\", reducing the difference between the probabilities of different elements.</li>\n</ul>\n<p>If we want repetitive answers, and no creativity at all, we can decrease the Temperature. If we want more creative answers, we can increase it.</p>\n<hr />\n<h1>Example</h1>\n<p>Let's imagine that our corpus has only 5 words: [\"donut\", \"cake\", \"apple\", \"juice\", \"book\"]</p>\n<p>The prediction of next token of given sentence: \"At the table, there is a delicious\" will be one of the words in the corpus. </p>\n<p>These are the original results: </p>\n<div class=\"fig figcenter fighighlight\">\n  <img src=\"/assets/image_assets/temperature_images/softmax_df.PNG\" width=\"50%\">\n  <div class=\"figcaption\"> </div>\n</div>\n\n<p>You can try different temperature values to see how the output changes.</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/temperature_slider.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>\n\n<p>Listen my YouTube Vide from <a href=\"https://youtu.be/KbUPOJ8Fmzs\">here</a></p>\n<p>Happy Learning! :)</p>\n<h1>References</h1>\n<ul>\n<li>[1] https://platform.openai.com/docs/api-reference/audio/createTranscription#audio/createTranscription-temperature</li>\n<li>[2] https://txt.cohere.com/llm-parameters-best-outputs-language-ai/</li>\n<li>[3] https://peterchng.com/blog/2023/05/02/token-selection-strategies-top-k-top-p-and-temperature/</li>\n</ul>",
@@ -119,12 +235,52 @@
   ],
   "links": [
     {
-      "source": "temperature",
-      "target": "LLM"
+      "source": "configuration",
+      "target": "llm"
+    },
+    {
+      "source": "configuration",
+      "target": "temperature"
+    },
+    {
+      "source": "fewshot",
+      "target": "llm"
+    },
+    {
+      "source": "evaluation",
+      "target": "llm"
+    },
+    {
+      "source": "finetuning",
+      "target": "llm"
+    },
+    {
+      "source": "finetuning",
+      "target": "evaluation"
+    },
+    {
+      "source": "faq",
+      "target": "llm"
+    },
+    {
+      "source": "faq",
+      "target": "evaluation"
+    },
+    {
+      "source": "faq",
+      "target": "fewshot"
+    },
+    {
+      "source": "faq",
+      "target": "finetuning"
     },
     {
       "source": "temperature",
-      "target": "Configuration"
+      "target": "llm"
+    },
+    {
+      "source": "temperature",
+      "target": "configuration"
     },
     {
       "source": "ml",

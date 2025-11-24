@@ -3,7 +3,7 @@ title: "LLM Configuration - Temperature"
 id: "temperature"
 category: "AI"
 tags: ["temperature", "llm"]
-related: ["LLM", "Configuration"]
+related: ["llm", "configuration"]
 date: "2025-11-08"
 description: "A brief description of temperature parameter"
 ---
