@@ -308,7 +308,7 @@ class KnowledgeGraph {
             'genai': '#6366f1',
             'edge-ml': '#8b5cf6',
             'deep-learning': '#ec4899',
-            'ml': '#14b8a6',
+            'machine-learning': '#14b8a6',
             'conference': '#f59e0b',
             'visualization': '#06b6d4',
             'default': '#6b7280'
@@ -319,12 +319,12 @@ class KnowledgeGraph {
     getCategoryStroke(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const strokes = {
-            'ai': '#4f46e5',
-            'ml': '#7c3aed',
-            'programming': '#db2777',
-            'data': '#0d9488',
-            'web': '#d97706',
-            'math': '#0891b2',
+            'genai': '#4f46e5',
+            'edge-ml': '#7c3aed',
+            'deep-learning': '#db2777',
+            'machine-learning': '#0d9488',
+            'conference': '#d97706',
+            'visualization': '#0891b2',
             'default': '#4b5563'
         };
 
