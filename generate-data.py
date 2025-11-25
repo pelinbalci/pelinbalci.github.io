@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate graph/search data from markdown notes.
+"""Generate graph/search data from markdown notes with component support.
 
 Reads frontmatter metadata from all Markdown files in ``notes/`` and writes a
 combined JSON payload to ``assets/data/notes.json``. The payload includes node
@@ -12,6 +12,7 @@ from __future__ import annotations
 import ast
 import json
 import sys
+import re
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -19,6 +20,7 @@ from typing import Any, Dict, List, Tuple
 
 NOTES_DIR = Path("notes")
 OUTPUT_PATH = Path("assets/data/notes.json")
+COMPONENTS_DIR = Path("assets/components")
 
 
 def parse_frontmatter(content: str) -> Tuple[Dict[str, Any], str]:
@@ -64,6 +66,31 @@ def parse_value(raw: str) -> Any:
     return raw.strip('"').strip("'")
 
 
+def process_components(markdown_text: str, note_id: str) -> str:
+    """Replace {{component:name}} with actual component HTML."""
+    if not COMPONENTS_DIR.exists():
+        return markdown_text
+
+    def replace_component(match):
+        component_name = match.group(1)
+        component_file = COMPONENTS_DIR / f"{component_name}.html"
+
+        if not component_file.exists():
+            return f"<p style='color: red;'>Component '{component_name}' not found</p>"
+
+        try:
+            component_html = component_file.read_text(encoding="utf-8")
+            # Replace {ID} placeholder with unique ID based on note_id and component
+            unique_id = f"{note_id}-{component_name}"
+            component_html = component_html.replace("{ID}", unique_id)
+            return component_html
+        except Exception as e:
+            return f"<p style='color: red;'>Error loading component '{component_name}': {e}</p>"
+
+    # Replace {{component:name}} patterns
+    return re.sub(r'\{\{component:([a-zA-Z0-9_-]+)\}\}', replace_component, markdown_text)
+
+
 def render_markdown(markdown_text: str) -> str:
     """Render markdown to HTML.
 
@@ -82,9 +109,30 @@ def simple_markdown(markdown_text: str) -> str:
     """A small markdown-to-HTML fallback for headings, lists, and paragraphs."""
     html_parts: List[str] = []
     in_list = False
+    in_code_block = False
+    code_lines = []
+    code_language = ""
 
     for line in markdown_text.splitlines():
         stripped = line.strip()
+
+        # Handle code blocks
+        if stripped.startswith("```"):
+            if not in_code_block:
+                in_code_block = True
+                code_language = stripped[3:].strip() or "python"
+                code_lines = []
+            else:
+                in_code_block = False
+                code_content = "\n".join(code_lines)
+                html_parts.append(f'<pre><code class="language-{code_language}">{escape(code_content)}</code></pre>')
+                code_lines = []
+            continue
+
+        if in_code_block:
+            code_lines.append(line)
+            continue
+
         if not stripped:
             if in_list:
                 html_parts.append("</ul>")
@@ -127,6 +175,9 @@ def build_note_payload(note_path: Path) -> Tuple[Dict[str, Any], List[Dict[str, 
     date = metadata.get("date", "")
     description = metadata.get("description", "")
 
+    # Process components BEFORE rendering markdown
+    body = process_components(body, note_id)
+
     html_content = render_markdown(body)
     plain_text = " ".join(body.split())
     excerpt = plain_text[:200] + ("..." if len(plain_text) > 200 else "")
@@ -157,7 +208,6 @@ def collect_notes() -> Dict[str, Any]:
     seen_links = set()
 
     for note_path in sorted(NOTES_DIR.glob("*.md")):
-        # Skip templates or helper files prefixed with an underscore
         if note_path.name.startswith("_"):
             continue
 

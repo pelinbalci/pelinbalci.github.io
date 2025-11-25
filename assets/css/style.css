@@ -250,6 +250,7 @@ a:hover {
     border: 2px solid var(--border-color);
     border-radius: var(--radius-full);
     font-size: var(--font-size-sm);
+    color: var(--text-primary);
     cursor: pointer;
     transition: all var(--transition-fast);
 }
@@ -270,6 +271,7 @@ a:hover {
     background-color: var(--bg-primary);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-md);
+    color: var(--text-primary);
     cursor: pointer;
     font-size: var(--font-size-sm);
     font-weight: 500;

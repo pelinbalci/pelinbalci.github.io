@@ -165,7 +165,7 @@ class KnowledgeGraph {
             .data(this.nodes)
             .enter()
             .append('g')
-            .attr('class', d => `node category-${d.category}`)
+            .attr('class', d => `node category-${d.category.toLowerCase()}`)
             .call(this.drag());
 
         // Add circles to nodes
@@ -179,6 +179,27 @@ class KnowledgeGraph {
             .text(d => d.name)
             .attr('dy', 45)
             .attr('text-anchor', 'middle');
+
+        // Add video badge to nodes with 'video' tag (top-right corner)
+        const videoBadge = node.filter(d => d.tags && d.tags.includes('video'))
+            .append('g')
+            .attr('class', 'video-badge')
+            .attr('transform', 'translate(18, -22)');
+
+        // Red rounded rectangle
+        videoBadge.append('rect')
+            .attr('x', -10)
+            .attr('y', -7)
+            .attr('width', 20)
+            .attr('height', 14)
+            .attr('rx', 3)
+            .attr('ry', 3)
+            .attr('fill', '#FF0000');
+
+        // White play triangle
+        videoBadge.append('polygon')
+            .attr('points', '-3,-4 -3,4 5,0')
+            .attr('fill', '#FFFFFF');
 
         // Add interactions
         node.on('click', (event, d) => this.onNodeClick(event, d))
@@ -284,12 +305,12 @@ class KnowledgeGraph {
     getCategoryColor(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const colors = {
-            'ai': '#6366f1',
-            'ml': '#8b5cf6',
-            'programming': '#ec4899',
-            'data': '#14b8a6',
-            'web': '#f59e0b',
-            'math': '#06b6d4',
+            'genai': '#6366f1',
+            'edge-ml': '#8b5cf6',
+            'deep-learning': '#ec4899',
+            'machine-learning': '#14b8a6',
+            'conference': '#f59e0b',
+            'visualization': '#06b6d4',
             'default': '#6b7280'
         };
         return palette[category] || colors[category] || colors.default;
@@ -298,12 +319,12 @@ class KnowledgeGraph {
     getCategoryStroke(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const strokes = {
-            'ai': '#4f46e5',
-            'ml': '#7c3aed',
-            'programming': '#db2777',
-            'data': '#0d9488',
-            'web': '#d97706',
-            'math': '#0891b2',
+            'genai': '#4f46e5',
+            'edge-ml': '#7c3aed',
+            'deep-learning': '#db2777',
+            'machine-learning': '#0d9488',
+            'conference': '#d97706',
+            'visualization': '#0891b2',
             'default': '#4b5563'
         };
 
