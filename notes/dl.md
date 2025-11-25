@@ -3,7 +3,7 @@ title: "Introduction to Deep Learning"
 id: "dl"
 category: "deep-learning"
 tags: ["deep learning", "neural networks", "PyTorch", "CNN", "RNN", "attention", "ai-generated"]
-related: ["ml", "python", "transformers"]
+related: ["transformers"]
 date: "2025-11-24"
 description: "Comprehensive introduction to deep learning concepts including neural networks, CNNs, RNNs, attention mechanisms, and backpropagation with PyTorch examples"
 ---
