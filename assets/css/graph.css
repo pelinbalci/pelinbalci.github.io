@@ -299,11 +299,8 @@
     }
 
     .node text {
-        display: none; /* Hide labels on very small screens */
-    }
-
-    .node:hover text {
-        display: block; /* Show on hover */
+        font-size: 9px;
+        font-weight: 700;
     }
 }
 

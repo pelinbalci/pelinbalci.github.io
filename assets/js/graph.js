@@ -33,12 +33,18 @@ class KnowledgeGraph {
         // Create container group for zoom/pan
         this.g = this.svg.append('g');
 
+        // Responsive simulation settings
+        const isMobile = window.innerWidth <= 480;
+        const linkDistance = isMobile ? 80 : 150;
+        const chargeStrength = isMobile ? -150 : -300;
+        const collisionRadius = isMobile ? 30 : 50;
+
         // Create force simulation
         this.simulation = d3.forceSimulation()
-            .force('link', d3.forceLink().id(d => d.id).distance(150))
-            .force('charge', d3.forceManyBody().strength(-300))
+            .force('link', d3.forceLink().id(d => d.id).distance(linkDistance))
+            .force('charge', d3.forceManyBody().strength(chargeStrength))
             .force('center', d3.forceCenter(this.width / 2, this.height / 2))
-            .force('collision', d3.forceCollide().radius(50));
+            .force('collision', d3.forceCollide().radius(collisionRadius));
 
         // Load data
         this.loadData();
@@ -150,6 +156,12 @@ class KnowledgeGraph {
     }
 
     render() {
+        // Detect mobile for responsive sizing
+        const isMobile = window.innerWidth <= 480;
+        const nodeRadius = isMobile ? 18 : 30;
+        const textOffset = isMobile ? 28 : 45;
+        const fontSize = isMobile ? '9px' : '12px';
+
         // Create links
         const link = this.g.append('g')
             .selectAll('line')
@@ -157,7 +169,7 @@ class KnowledgeGraph {
             .enter()
             .append('line')
             .attr('class', 'link')
-            .attr('stroke-width', 2);
+            .attr('stroke-width', isMobile ? 1.5 : 2);
 
         // Create nodes
         const node = this.g.append('g')
@@ -170,15 +182,16 @@ class KnowledgeGraph {
 
         // Add circles to nodes
         node.append('circle')
-            .attr('r', 30)
+            .attr('r', nodeRadius)
             .attr('fill', d => this.getCategoryColor(d.category))
             .attr('stroke', d => this.getCategoryStroke(d.category));
 
         // Add labels to nodes
         node.append('text')
-            .text(d => d.name)
-            .attr('dy', 45)
-            .attr('text-anchor', 'middle');
+            .text(d => isMobile && d.name.length > 15 ? d.name.slice(0, 12) + '...' : d.name)
+            .attr('dy', textOffset)
+            .attr('text-anchor', 'middle')
+            .style('font-size', fontSize);
 
         // Add video badge to nodes with 'video' tag (top-right corner)
         const videoBadge = node.filter(d => d.tags && d.tags.includes('video'))
