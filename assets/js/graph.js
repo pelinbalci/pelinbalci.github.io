@@ -4,8 +4,11 @@
 class KnowledgeGraph {
     constructor(containerId) {
         this.container = d3.select(`#${containerId}`);
-        this.width = document.getElementById(containerId).clientWidth;
-        this.height = document.getElementById(containerId).clientHeight;
+        this.svgElement = document.getElementById(containerId);
+        // Get dimensions from parent container (works better with flex layouts)
+        const parentContainer = this.svgElement.parentElement;
+        this.width = parentContainer.clientWidth || this.svgElement.clientWidth || 800;
+        this.height = parentContainer.clientHeight || this.svgElement.clientHeight || 600;
         this.nodes = [];
         this.links = [];
         this.simulation = null;
@@ -13,6 +16,36 @@ class KnowledgeGraph {
         this.activeFilters = new Set();
 
         this.init();
+        this.setupResizeHandler();
+    }
+
+    setupResizeHandler() {
+        // Debounced resize handler
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => this.handleResize(), 250);
+        });
+    }
+
+    handleResize() {
+        const parentContainer = this.svgElement.parentElement;
+        const newWidth = parentContainer.clientWidth || 800;
+        const newHeight = parentContainer.clientHeight || 600;
+
+        if (Math.abs(newWidth - this.width) > 10 || Math.abs(newHeight - this.height) > 10) {
+            this.width = newWidth;
+            this.height = newHeight;
+
+            this.svg
+                .attr('width', this.width)
+                .attr('height', this.height);
+
+            if (this.simulation) {
+                this.simulation.force('center', d3.forceCenter(this.width / 2, this.height / 2));
+                this.simulation.alpha(0.3).restart();
+            }
+        }
     }
 
     init() {

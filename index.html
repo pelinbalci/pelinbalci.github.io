@@ -3,18 +3,335 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Interactive Knowledge Graph - Explore connected learning topics">
+    <meta name="description" content="Tiny AI World!! - Interactive Learning Platform for AI, ML, and Data Science">
     <title>Tiny AI World - Interactive Learning Platform</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/graph.css">
-    
+
     <!-- D3.js for graph visualization -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <style>
+        /* ==========================================
+           DASHBOARD LAYOUT
+           ========================================== */
+        .dashboard {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        /* ==========================================
+           SECTION HEADERS
+           ========================================== */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+        }
+
+        .section-icon {
+            font-size: 1rem;
+        }
+
+        /* ==========================================
+           CATEGORIES BAR
+           ========================================== */
+        .categories-section {
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .categories-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.625rem;
+            align-items: center;
+        }
+
+        .category-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            border: 2px solid var(--border-color);
+            background-color: var(--bg-primary);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .category-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        .category-pill.active {
+            color: white;
+            border-color: transparent;
+        }
+
+        .category-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .category-count {
+            background-color: var(--bg-tertiary);
+            padding: 0.125rem 0.5rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+        }
+
+        .category-pill.active .category-count {
+            background-color: rgba(255,255,255,0.25);
+            color: white;
+        }
+
+        .clear-filters-btn {
+            padding: 0.5rem 1rem;
+            border-radius: var(--radius-full);
+            border: 1px dashed var(--border-color);
+            background-color: transparent;
+            cursor: pointer;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .clear-filters-btn:hover {
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+        }
+
+        /* ==========================================
+           MAIN CONTENT AREA (Graph + Recent)
+           ========================================== */
+        .main-area {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 1.25rem;
+            flex: 1;
+            min-height: 0;
+        }
+
+        /* ==========================================
+           GRAPH SECTION
+           ========================================== */
+        .graph-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 450px;
+        }
+
+        .graph-card {
+            flex: 1;
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            position: relative;
+            min-height: 400px;
+        }
+
+        .graph-card #graph {
+            width: 100%;
+            height: 100%;
+            cursor: grab;
+        }
+
+        .graph-card #graph:active {
+            cursor: grabbing;
+        }
+
+        .graph-hint {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            background-color: var(--bg-primary);
+            padding: 0.375rem 0.75rem;
+            border-radius: var(--radius-md);
+            opacity: 0.9;
+        }
+
+        /* ==========================================
+           RECENT ADDITIONS SECTION
+           ========================================== */
+        .recent-section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recent-card {
+            flex: 1;
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recent-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            overflow-y: auto;
+        }
+
+        .recent-item {
+            display: block;
+            padding: 0.875rem;
+            background-color: var(--bg-primary);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .recent-item:hover {
+            border-color: var(--accent-primary);
+            transform: translateX(4px);
+        }
+
+        .recent-item-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.375rem;
+            line-height: 1.3;
+        }
+
+        .recent-item-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .recent-item-category {
+            padding: 0.125rem 0.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            color: white;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+        }
+
+        .view-all-link {
+            display: block;
+            text-align: center;
+            padding: 0.75rem;
+            font-size: 0.85rem;
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 0.75rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .view-all-link:hover {
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           LOADING STATE
+           ========================================== */
+        .loading-spinner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .spinner {
+            width: 36px;
+            height: 36px;
+            margin: 0 auto 0.5rem;
+            border: 3px solid var(--border-color);
+            border-top-color: var(--accent-primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* ==========================================
+           RESPONSIVE DESIGN
+           ========================================== */
+        @media (max-width: 900px) {
+            .main-area {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr auto;
+            }
+
+            .graph-section {
+                min-height: 400px;
+            }
+
+            .recent-card {
+                max-height: 300px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .dashboard {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .categories-container {
+                gap: 0.5rem;
+            }
+
+            .category-pill {
+                padding: 0.375rem 0.75rem;
+                font-size: 0.8rem;
+            }
+
+            .graph-section {
+                min-height: 350px;
+            }
+        }
+
+        /* Hide default main-content padding */
+        .main-content {
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -46,36 +363,54 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Graph Info Panel -->
-        <div class="info-panel">
-            <h2>Explore the Tiny AI World</h2>
-            <p>Click on nodes to explore topics. Drag to rearrange. Zoom and pan to navigate.</p>
-            <div class="stats">
-                <span class="stat-item">
-                    <strong id="nodeCount">0</strong> Topics
-                </span>
-                <span class="stat-item">
-                    <strong id="connectionCount">0</strong> Connections
-                </span>
-            </div>
-        </div>
+        <div class="dashboard">
 
-        <!-- Filter Panel -->
-        <div class="filter-panel">
-            <h3>Filter by Category</h3>
-            <div id="categoryFilters" class="category-filters">
-                <!-- Categories will be dynamically added here -->
-            </div>
-            <button id="clearFilters" class="btn-secondary">Clear Filters</button>
-        </div>
+            <!-- Categories Bar -->
+            <section class="categories-section">
+                <div class="section-header">
+                    <span class="section-icon">🏷️</span>
+                    <span class="section-title">Categories</span>
+                </div>
+                <div id="categoryFilters" class="categories-container">
+                    <!-- Populated by JavaScript -->
+                    <span style="color: var(--text-secondary); font-size: 0.85rem;">Loading categories...</span>
+                </div>
+            </section>
 
-        <!-- Graph Canvas -->
-        <div id="graphContainer" class="graph-container">
-            <div id="loadingSpinner" class="loading-spinner">
-                <div class="spinner"></div>
-                <p>Loading knowledge graph...</p>
+            <!-- Main Area: Graph + Recent -->
+            <div class="main-area">
+
+                <!-- Graph Section -->
+                <section class="graph-section">
+                    <div class="section-header">
+                        <span class="section-icon">🗺️</span>
+                        <span class="section-title">Knowledge Graph</span>
+                    </div>
+                    <div id="graphContainer" class="graph-card">
+                        <div id="loadingSpinner" class="loading-spinner">
+                            <div class="spinner"></div>
+                            <p style="color: var(--text-secondary); font-size: 0.85rem;">Loading graph...</p>
+                        </div>
+                        <svg id="graph"></svg>
+                        <span class="graph-hint">Click • Drag • Scroll to zoom</span>
+                    </div>
+                </section>
+
+                <!-- Recent Additions Section -->
+                <section class="recent-section">
+                    <div class="section-header">
+                        <span class="section-icon">✨</span>
+                        <span class="section-title">Recent Additions</span>
+                    </div>
+                    <div class="recent-card">
+                        <div id="recentList" class="recent-list">
+                            <!-- Populated by JavaScript -->
+                            <span style="color: var(--text-secondary); font-size: 0.85rem;">Loading...</span>
+                        </div>
+                        <a href="notes.html" class="view-all-link">View all notes →</a>
+                    </div>
+                </section>
             </div>
-            <svg id="graph"></svg>
         </div>
 
         <!-- Node Details Tooltip -->
@@ -87,13 +422,17 @@
         </div>
     </main>
 
+    <!-- Hidden elements for graph.js compatibility -->
+    <span id="nodeCount" style="display:none;">0</span>
+    <span id="connectionCount" style="display:none;">0</span>
+
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Tiny AI World. Free and Open Source.</p>
-            <p>
-                <a href="https://github.com/yourusername/yourusername.github.io" target="_blank">GitHub</a> •
-                <a href="LICENSE">License</a>
+    <footer class="footer" style="padding: 0.75rem 0; font-size: 0.8rem;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <p style="margin: 0;">© 2025 Tiny AI World</p>
+            <p style="margin: 0;">
+                <a href="https://github.com/pelinbalci/pelinbalci.github.io" target="_blank">GitHub</a> •
+                <a href="about.html">About</a>
             </p>
         </div>
     </footer>
@@ -102,6 +441,212 @@
     <script src="assets/js/theme.js"></script>
     <script src="assets/js/search.js"></script>
     <script src="assets/js/graph.js"></script>
+    <script>
+        // ==========================================
+        // CATEGORY COLORS & UTILITIES
+        // ==========================================
+        const CATEGORY_COLORS = {
+            'deep learning': '#a855f7',
+            'machine learning': '#8b5cf6',
+            'genai': '#f43f5e',
+            'conference': '#f97316',
+            'ai': '#6366f1',
+            'ml': '#8b5cf6',
+            'programming': '#ec4899',
+            'data': '#14b8a6',
+            'web': '#f59e0b',
+            'math': '#06b6d4'
+        };
+
+        function getCategoryColor(category) {
+            const normalized = (category || '').toLowerCase().trim();
+            return CATEGORY_COLORS[normalized] || '#6b7280';
+        }
+
+        function formatCategoryLabel(category) {
+            if (!category) return 'Uncategorized';
+            return category
+                .toString()
+                .split(/[-_\s]/)
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+                .join(' ');
+        }
+
+        function formatRelativeDate(dateString) {
+            if (!dateString) return '';
+            const date = new Date(dateString);
+            const now = new Date();
+            const diffTime = now - date;
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+            if (diffDays === 0) return 'Today';
+            if (diffDays === 1) return 'Yesterday';
+            if (diffDays < 7) return `${diffDays} days ago`;
+            if (diffDays < 14) return '1 week ago';
+            if (diffDays < 30) return `${Math.floor(diffDays / 7)} weeks ago`;
+            if (diffDays < 60) return '1 month ago';
+            if (diffDays < 365) return `${Math.floor(diffDays / 30)} months ago`;
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        // ==========================================
+        // LOAD DATA & RENDER
+        // ==========================================
+        let notesData = [];
+        let activeFilters = new Set();
+
+        async function loadData() {
+            try {
+                const response = await fetch('/assets/data/notes.json');
+                if (!response.ok) throw new Error('Failed to load notes');
+                const data = await response.json();
+                notesData = data.nodes || [];
+
+                renderCategories();
+                renderRecentAdditions();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('categoryFilters').innerHTML =
+                    '<span style="color: var(--text-secondary);">Could not load categories</span>';
+                document.getElementById('recentList').innerHTML =
+                    '<span style="color: var(--text-secondary);">Could not load notes</span>';
+            }
+        }
+
+        // ==========================================
+        // CATEGORIES
+        // ==========================================
+        function renderCategories() {
+            const container = document.getElementById('categoryFilters');
+
+            // Count notes per category
+            const categoryCounts = {};
+            notesData.forEach(note => {
+                const cat = (note.category || 'uncategorized').toLowerCase().trim();
+                categoryCounts[cat] = (categoryCounts[cat] || 0) + 1;
+            });
+
+            // Sort by count (descending)
+            const sortedCategories = Object.entries(categoryCounts)
+                .sort((a, b) => b[1] - a[1]);
+
+            if (sortedCategories.length === 0) {
+                container.innerHTML = '<span style="color: var(--text-secondary);">No categories yet</span>';
+                return;
+            }
+
+            const categoriesHTML = sortedCategories.map(([category, count]) => {
+                const color = getCategoryColor(category);
+                const label = formatCategoryLabel(category);
+                return `
+                    <button class="category-pill" data-category="${category}" style="--cat-color: ${color};">
+                        <span class="category-dot" style="background-color: ${color};"></span>
+                        <span>${label}</span>
+                        <span class="category-count">${count}</span>
+                    </button>
+                `;
+            }).join('');
+
+            container.innerHTML = categoriesHTML + `
+                <button class="clear-filters-btn" id="clearFilters" style="display: none;">
+                    Clear filters
+                </button>
+            `;
+
+            // Add click handlers
+            container.querySelectorAll('.category-pill').forEach(pill => {
+                pill.addEventListener('click', () => toggleCategory(pill.dataset.category));
+            });
+
+            document.getElementById('clearFilters').addEventListener('click', clearFilters);
+        }
+
+        function toggleCategory(category) {
+            if (activeFilters.has(category)) {
+                activeFilters.delete(category);
+            } else {
+                activeFilters.add(category);
+            }
+            updateCategoryUI();
+            applyFiltersToGraph();
+        }
+
+        function clearFilters() {
+            activeFilters.clear();
+            updateCategoryUI();
+            applyFiltersToGraph();
+        }
+
+        function updateCategoryUI() {
+            const pills = document.querySelectorAll('.category-pill');
+            const clearBtn = document.getElementById('clearFilters');
+
+            pills.forEach(pill => {
+                const category = pill.dataset.category;
+                const color = getCategoryColor(category);
+
+                if (activeFilters.has(category)) {
+                    pill.classList.add('active');
+                    pill.style.backgroundColor = color;
+                    pill.style.borderColor = color;
+                } else {
+                    pill.classList.remove('active');
+                    pill.style.backgroundColor = '';
+                    pill.style.borderColor = '';
+                }
+            });
+
+            clearBtn.style.display = activeFilters.size > 0 ? 'inline-block' : 'none';
+        }
+
+        function applyFiltersToGraph() {
+            if (typeof graph !== 'undefined' && graph && graph.filterByCategory) {
+                graph.filterByCategory(activeFilters);
+            }
+        }
+
+        // ==========================================
+        // RECENT ADDITIONS
+        // ==========================================
+        function renderRecentAdditions() {
+            const container = document.getElementById('recentList');
+
+            const recentNotes = notesData
+                .filter(note => note.date)
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 6);
+
+            if (recentNotes.length === 0) {
+                container.innerHTML = '<span style="color: var(--text-secondary);">No notes yet</span>';
+                return;
+            }
+
+            container.innerHTML = recentNotes.map(note => {
+                const color = getCategoryColor(note.category);
+                const label = formatCategoryLabel(note.category);
+                const relativeDate = formatRelativeDate(note.date);
+
+                return `
+                    <a href="/notes/note.html?id=${note.id}" class="recent-item">
+                        <div class="recent-item-title">${note.name}</div>
+                        <div class="recent-item-meta">
+                            <span class="recent-item-category" style="background-color: ${color};">${label}</span>
+                            <span>${relativeDate}</span>
+                        </div>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        // ==========================================
+        // INITIALIZE
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            loadData();
+        });
+    </script>
+
+    <!-- Load main.js for any shared functionality -->
     <script src="assets/js/main.js"></script>
 </body>
 </html>
