@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate graph/search data from markdown notes with component support.
+"""Generate graph/search data from markdown notes.
 
 Reads frontmatter metadata from all Markdown files in ``notes/`` and writes a
 combined JSON payload to ``assets/data/notes.json``. The payload includes node
@@ -11,8 +11,8 @@ from __future__ import annotations
 
 import ast
 import json
-import sys
 import re
+import sys
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -20,7 +20,6 @@ from typing import Any, Dict, List, Tuple
 
 NOTES_DIR = Path("notes")
 OUTPUT_PATH = Path("assets/data/notes.json")
-COMPONENTS_DIR = Path("assets/components")
 
 
 def parse_frontmatter(content: str) -> Tuple[Dict[str, Any], str]:
@@ -35,7 +34,7 @@ def parse_frontmatter(content: str) -> Tuple[Dict[str, Any], str]:
         raise ValueError("Closing frontmatter delimiter '---' not found") from exc
 
     frontmatter_lines = lines[1:end_index]
-    body_lines = lines[end_index + 1 :]
+    body_lines = lines[end_index + 1:]
 
     metadata: Dict[str, Any] = {}
     for line in frontmatter_lines:
@@ -66,31 +65,6 @@ def parse_value(raw: str) -> Any:
     return raw.strip('"').strip("'")
 
 
-def process_components(markdown_text: str, note_id: str) -> str:
-    """Replace {{component:name}} with actual component HTML."""
-    if not COMPONENTS_DIR.exists():
-        return markdown_text
-
-    def replace_component(match):
-        component_name = match.group(1)
-        component_file = COMPONENTS_DIR / f"{component_name}.html"
-
-        if not component_file.exists():
-            return f"<p style='color: red;'>Component '{component_name}' not found</p>"
-
-        try:
-            component_html = component_file.read_text(encoding="utf-8")
-            # Replace {ID} placeholder with unique ID based on note_id and component
-            unique_id = f"{note_id}-{component_name}"
-            component_html = component_html.replace("{ID}", unique_id)
-            return component_html
-        except Exception as e:
-            return f"<p style='color: red;'>Error loading component '{component_name}': {e}</p>"
-
-    # Replace {{component:name}} patterns
-    return re.sub(r'\{\{component:([a-zA-Z0-9_-]+)\}\}', replace_component, markdown_text)
-
-
 def render_markdown(markdown_text: str) -> str:
     """Render markdown to HTML.
 
@@ -100,45 +74,84 @@ def render_markdown(markdown_text: str) -> str:
     try:
         import markdown  # type: ignore
 
-        return markdown.markdown(markdown_text, extensions=["fenced_code", "tables"])
-    except Exception:
+        # Enable raw HTML passthrough with extensions
+        return markdown.markdown(
+            markdown_text,
+            extensions=["fenced_code", "tables", "md_in_html"]
+        )
+    except ImportError:
         return simple_markdown(markdown_text)
 
 
+def is_html_line(line: str) -> bool:
+    """Check if a line appears to be raw HTML."""
+    stripped = line.strip()
+    # Check for common HTML patterns
+    if stripped.startswith("<") and not stripped.startswith("<http"):
+        return True
+    return False
+
+
 def simple_markdown(markdown_text: str) -> str:
-    """A small markdown-to-HTML fallback for headings, lists, and paragraphs."""
+    """A small markdown-to-HTML fallback for headings, lists, paragraphs, and raw HTML."""
     html_parts: List[str] = []
     in_list = False
     in_code_block = False
-    code_lines = []
-    code_language = ""
+    code_lines: List[str] = []
+    code_lang = ""
+    in_html_block = False
+    html_block_lines: List[str] = []
 
     for line in markdown_text.splitlines():
         stripped = line.strip()
 
-        # Handle code blocks
+        # Handle fenced code blocks
         if stripped.startswith("```"):
             if not in_code_block:
                 in_code_block = True
-                code_language = stripped[3:].strip() or "python"
+                code_lang = stripped[3:].strip()
                 code_lines = []
             else:
                 in_code_block = False
-                code_content = "\n".join(code_lines)
-                html_parts.append(f'<pre><code class="language-{code_language}">{escape(code_content)}</code></pre>')
-                code_lines = []
+                lang_class = f' class="language-{code_lang}"' if code_lang else ''
+                code_content = escape("\n".join(code_lines))
+                html_parts.append(f"<pre><code{lang_class}>{code_content}</code></pre>")
             continue
 
         if in_code_block:
             code_lines.append(line)
             continue
 
+        # Handle HTML blocks (multi-line HTML)
+        if stripped.startswith("<div") or stripped.startswith("<figure"):
+            in_html_block = True
+            html_block_lines = [line]
+            continue
+
+        if in_html_block:
+            html_block_lines.append(line)
+            if stripped.startswith("</div>") or stripped.startswith("</figure>"):
+                in_html_block = False
+                html_parts.append("\n".join(html_block_lines))
+                html_block_lines = []
+            continue
+
+        # Pass through single-line HTML tags
+        if is_html_line(stripped):
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            html_parts.append(line)
+            continue
+
+        # Empty line
         if not stripped:
             if in_list:
                 html_parts.append("</ul>")
                 in_list = False
             continue
 
+        # Headings
         if stripped.startswith("#"):
             if in_list:
                 html_parts.append("</ul>")
@@ -146,22 +159,74 @@ def simple_markdown(markdown_text: str) -> str:
             level = len(stripped) - len(stripped.lstrip("#"))
             text = stripped[level:].strip()
             level = min(level, 6)
-            html_parts.append(f"<h{level}>{escape(text)}</h{level}>")
+            # Process inline markdown in heading text
+            text = process_inline_markdown(text)
+            html_parts.append(f"<h{level}>{text}</h{level}>")
+
+        # Unordered list items
         elif stripped.startswith("- "):
             if not in_list:
                 html_parts.append("<ul>")
                 in_list = True
-            html_parts.append(f"<li>{escape(stripped[2:].strip())}</li>")
+            item_text = process_inline_markdown(stripped[2:].strip())
+            html_parts.append(f"<li>{item_text}</li>")
+
+        # Ordered list items
+        elif re.match(r'^\d+\.\s', stripped):
+            if not in_list:
+                html_parts.append("<ol>")
+                in_list = True
+            item_text = process_inline_markdown(re.sub(r'^\d+\.\s', '', stripped))
+            html_parts.append(f"<li>{item_text}</li>")
+
+        # Horizontal rule
+        elif stripped in ["---", "***", "___"]:
+            if in_list:
+                html_parts.append("</ul>")
+                in_list = False
+            html_parts.append("<hr>")
+
+        # Regular paragraph
         else:
             if in_list:
                 html_parts.append("</ul>")
                 in_list = False
-            html_parts.append(f"<p>{escape(stripped)}</p>")
+            para_text = process_inline_markdown(stripped)
+            html_parts.append(f"<p>{para_text}</p>")
 
     if in_list:
         html_parts.append("</ul>")
 
     return "\n".join(html_parts)
+
+
+def process_inline_markdown(text: str) -> str:
+    """Process inline markdown elements like bold, italic, links, code."""
+    # Escape HTML entities in the text (but not in URLs)
+    # We'll handle this more carefully
+
+    # Don't escape if it looks like it already contains HTML
+    if "<" in text and ">" in text:
+        return text
+
+    # Bold: **text** or __text__
+    text = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', text)
+    text = re.sub(r'__(.+?)__', r'<strong>\1</strong>', text)
+
+    # Italic: *text* or _text_ (but not inside words)
+    text = re.sub(r'(?<!\w)\*(?!\*)(.+?)(?<!\*)\*(?!\w)', r'<em>\1</em>', text)
+    text = re.sub(r'(?<!\w)_(?!_)(.+?)(?<!_)_(?!\w)', r'<em>\1</em>', text)
+
+    # Inline code: `code`
+    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
+
+    # Links: [text](url)
+    text = re.sub(r'\[([^\]]+)\]\(([^)]+)\)', r'<a href="\2">\1</a>', text)
+
+    # Images: ![alt](src)
+    text = re.sub(r'!\[([^\]]*)\]\(([^)]+)\)', r'<img src="\2" alt="\1">', text)
+
+    return text
 
 
 def build_note_payload(note_path: Path) -> Tuple[Dict[str, Any], List[Dict[str, str]]]:
@@ -174,9 +239,6 @@ def build_note_payload(note_path: Path) -> Tuple[Dict[str, Any], List[Dict[str, 
     related = metadata.get("related") or []
     date = metadata.get("date", "")
     description = metadata.get("description", "")
-
-    # Process components BEFORE rendering markdown
-    body = process_components(body, note_id)
 
     html_content = render_markdown(body)
     plain_text = " ".join(body.split())
@@ -208,6 +270,7 @@ def collect_notes() -> Dict[str, Any]:
     seen_links = set()
 
     for note_path in sorted(NOTES_DIR.glob("*.md")):
+        # Skip templates or helper files prefixed with an underscore
         if note_path.name.startswith("_"):
             continue
 
