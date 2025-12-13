@@ -70,13 +70,13 @@
 
 /* Node Categories - Color Coding */
 .node.category-genai circle {
-    fill: #6366f1;
-    stroke: #4f46e5;
+    fill: #a855f7;
+    stroke: #9333ea;
 }
 
 .node.category-edge-ml circle {
-    fill: #8b5cf6;
-    stroke: #7c3aed;
+    fill: #3b82f6;
+    stroke: #2563eb;
 }
 
 .node.category-deep-learning circle {
