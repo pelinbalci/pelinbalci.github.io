@@ -3,7 +3,7 @@ title: "GDG Devfest'24 Notes"
 id: "devfest"
 category: "conference"
 tags: ["llmops", "google", "devfest"]
-related: []
+related: ["reinvent"]
 date: "2024-11-09"
 description: "I've joined GDG devfest'24 event."
 ---

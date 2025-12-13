@@ -3,7 +3,7 @@ title: "Machine Learning Fundamentals"
 id: "ml"
 category: "machine-learning"
 tags: ["machine learning", "AI", "algorithms", "supervised learning", "ai-generated"]
-related: ["python"]  # Added your trial note
+related: ["python", "dl"]  # Added your trial note
 date: "2025-11-08"
 description: "Introduction to machine learning concepts, algorithms, and applications"
 ---
