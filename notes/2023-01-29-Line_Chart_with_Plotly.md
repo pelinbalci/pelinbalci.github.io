@@ -1,7 +1,7 @@
 ---
 title: "Line Chart with Plotly"
 id: "chart"
-category: "machine-learning"
+category: "visualization"
 tags: ["python", "visualization"]
 related: ["python"]
 date: "2025-11-08"
