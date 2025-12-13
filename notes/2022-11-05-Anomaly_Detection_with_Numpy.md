@@ -8,8 +8,6 @@ date: "2022-11-05"
 description: "Notebook for anomaly detection with NumPy"
 ---
 
-# Anomaly Detection with NumPy
-
 <div>
 <iframe 
     src="https://www.pelinbalci.com/assets/components/2022-11-05-Anomaly_Detection_with_Numpy.html" 

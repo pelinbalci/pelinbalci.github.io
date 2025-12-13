@@ -8,8 +8,6 @@ date: "2020-10-19"
 description: "Loading an image with PIL and processing it with PyTorch and Numpy"
 ---
 
-# Image Processing 
-
 In this notebook, I will explain how to load an image with PIL and explain some operations with PyTorch and Numpy. 
 These processes are part of Style Transfer in Convolutional Neural Networks, there are two images: content and style. 
 The next post defines how to transfer the style of one image to the content of the other image.

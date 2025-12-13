@@ -8,9 +8,6 @@ date: "2020-10-20"
 description: "How to transfer the style of an image to another image using CNN"
 ---
 
-
-# Style Transfer
-
 In this post, I would like to share my notes from the 'Style Transfer' lecture given by Udacity, Intro to Deep Learning 
 with PyTorch. You may find the references below. 
 
