@@ -1,6 +1,6 @@
 ---
 title: "Image Processing"
-id: "image process"
+id: "imageprocess"
 category: "deep-learning"
 tags: ["deep learning", "dl", "image"]
 related: ["dl"]
