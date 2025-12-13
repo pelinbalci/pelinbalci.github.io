@@ -8,6 +8,9 @@ date: "2020-10-14"
 description: "Optimization Algorithms in Neural Network will be explained"
 ---
 
+
+# Optimization Algorithms 
+
 In this post, Optimization Algorithms in Neural Network will be explained. Thanks to Stanford University, the lecture 
 videos of cs231n can be found in YouTube and all materials are freely available (see the references). 
 
