@@ -3,7 +3,7 @@ title: "Line Chart with Plotly"
 id: "chart"
 category: "machine-learning"
 tags: ["python", "visualization"]
-related: ["python"]  # Added your trial note
+related: ["python"]
 date: "2025-11-08"
 description: "How to make scatter plots in Python with Plotly."
 ---
@@ -38,7 +38,16 @@ fig = px.line(df, x="Date", y="Sales", title='Daily Sales')
 fig.show()
 ```
 
-{% include plotly_simple.html %}
+<div>
+<iframe 
+    src="https://www.pelinbalci.com/assets/components/plotly_simple.html" 
+    width="100%" 
+    height="600" 
+    style="border:none;"
+></iframe>
+</div>
+
+
 
 Now it is time to mark the anomalies! We will use Graph objects for this. Start with mark the anomaly dates:
 
@@ -56,7 +65,14 @@ fig.add_traces(go.Scatter(x=anomaly_date["Date"], y=anomaly_date["Sales"], mode=
 fig.show(renderer='notebook')
 ```
 
-{% include plotly_mark.html %}
+<div>
+<iframe 
+    src="https://www.pelinbalci.com/assets/components/plotly_mark.html" 
+    width="100%" 
+    height="600" 
+    style="border:none;"
+></iframe>
+</div>
 
 If you want to see the "Anomaly" as a string on the chart, you should use "add_annotation":
 
@@ -77,7 +93,14 @@ for idx in range(len(anomaly_date)):
 fig.show()
 ```
 
-{% include plotly_mark_annotation.html %}
+<div>
+<iframe 
+    src="https://www.pelinbalci.com/assets/components/plotly_mark_annotation.html" 
+    width="100%" 
+    height="600" 
+    style="border:none;"
+></iframe>
+</div>
 
 
 ### How to embed plotly chart to md file?
@@ -98,10 +121,14 @@ pio.write_html(fig, file='plotly_simple.html', auto_open=False)
 
 Then you can add the html in .md file: 
 
-<div class="fig figcenter fighighlight">
-  <img src="/assets/image_assets/plotly_image/include_file.png" width="50%">
-  <div class="figcaption">include html</div>
-</div>
+    <div>
+    <iframe 
+        src="https://www.pelinbalci.com/assets/components/plotly_mark_annotation.html" 
+        width="100%" 
+        height="600" 
+        style="border:none;"
+    ></iframe>
+    </div>
 
 Happy learning! :)
 
