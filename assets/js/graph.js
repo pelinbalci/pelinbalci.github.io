@@ -351,12 +351,12 @@ class KnowledgeGraph {
     getCategoryColor(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const colors = {
-            'genai': '#6366f1',
-            'edge-ml': '#8b5cf6',
-            'deep-learning': '#ec4899',
-            'machine-learning': '#14b8a6',
-            'conference': '#f59e0b',
-            'visualization': '#06b6d4',
+            'deep-learning': '#ec4899',      // Pink - stands out
+            'edge-ml': '#3b82f6',            // Blue - classic tech
+            'machine-learning': '#10b981',   // Emerald - fresh green
+            'genai': '#a855f7',              // Purple - AI/futuristic
+            'visualization': '#06b6d4',      // Cyan - data/charts
+            'conference': '#f97316',         // Orange - events/energy
             'default': '#6b7280'
         };
         return palette[category] || colors[category] || colors.default;
@@ -365,13 +365,13 @@ class KnowledgeGraph {
     getCategoryStroke(category) {
         const palette = (typeof window !== 'undefined' && window.categoryPalette) || {};
         const strokes = {
-            'genai': '#4f46e5',
-            'edge-ml': '#7c3aed',
-            'deep-learning': '#db2777',
-            'machine-learning': '#0d9488',
-            'conference': '#d97706',
-            'visualization': '#0891b2',
-            'default': '#4b5563'
+            'deep-learning': '#ec4899',      // Pink - stands out
+            'edge-ml': '#3b82f6',            // Blue - classic tech
+            'machine-learning': '#10b981',   // Emerald - fresh green
+            'genai': '#a855f7',              // Purple - AI/futuristic
+            'visualization': '#06b6d4',      // Cyan - data/charts
+            'conference': '#f97316',         // Orange - events/energy
+            'default': '#6b7280'
         };
 
         if (palette[category]) return palette[category];

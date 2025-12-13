@@ -1,6 +1,31 @@
 // Main JavaScript
 // General functionality and category filters
 
+// ==========================================
+// SHARED CATEGORY COLOR DEFINITIONS
+// ==========================================
+// This is the SINGLE SOURCE OF TRUTH for category colors.
+// All components (graph, filters, notes list) use these colors.
+const CATEGORY_COLORS = {
+            'deep-learning': '#ec4899',      // Pink - stands out
+            'edge-ml': '#3b82f6',            // Blue - classic tech
+            'machine-learning': '#10b981',   // Emerald - fresh green
+            'genai': '#a855f7',              // Purple - AI/futuristic
+            'visualization': '#06b6d4',      // Cyan - data/charts
+            'conference': '#f97316',         // Orange - events/energy
+            'default': '#6b7280'
+};
+
+const DEFAULT_CATEGORY_COLOR = '#6b7280'; // Gray
+
+function getCategoryColor(category) {
+    const normalized = (category || '').toString().trim().toLowerCase();
+    return CATEGORY_COLORS[normalized] || DEFAULT_CATEGORY_COLOR;
+}
+
+// ==========================================
+// CATEGORY FILTER CLASS
+// ==========================================
 class CategoryFilter {
     constructor() {
         this.filterContainer = document.getElementById('categoryFilters');
@@ -21,8 +46,6 @@ class CategoryFilter {
     }
 
     async loadCategories() {
-        const palette = ['#6366f1', '#8b5cf6', '#ec4899', '#14b8a6', '#f59e0b', '#06b6d4', '#10b981', '#a855f7'];
-
         try {
             const response = await fetch('/assets/data/notes.json');
             if (!response.ok) throw new Error('Could not load notes data');
@@ -32,10 +55,11 @@ class CategoryFilter {
                 .map(note => this.normalizeCategory(note.category))
                 .filter(Boolean)));
 
-            this.categories = uniqueCategories.map((id, index) => ({
+            // Use the SHARED color map instead of index-based colors
+            this.categories = uniqueCategories.map(id => ({
                 id,
                 name: this.formatCategoryName(id),
-                color: palette[index % palette.length]
+                color: getCategoryColor(id)
             }));
         } catch (error) {
             console.warn('Could not derive categories:', error);
@@ -46,6 +70,9 @@ class CategoryFilter {
         window.categoryPalette = Object.fromEntries(
             this.categories.map(category => [category.id, category.color])
         );
+
+        // Also expose the full color map
+        window.CATEGORY_COLORS = CATEGORY_COLORS;
 
         document.dispatchEvent(new CustomEvent('categoriesLoaded', {
             detail: { categories: this.categories }
@@ -63,7 +90,7 @@ class CategoryFilter {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(' ');
     }
-    
+
     renderFilters() {
         if (!this.filterContainer) return;
 
@@ -86,7 +113,7 @@ class CategoryFilter {
 
         this.filterContainer.innerHTML = filtersHTML;
     }
-    
+
     toggleFilter(categoryId) {
         const normalizedId = this.normalizeCategory(categoryId);
 
@@ -99,13 +126,13 @@ class CategoryFilter {
         this.updateUI();
         this.applyFilters();
     }
-    
+
     clearFilters() {
         this.activeFilters.clear();
         this.updateUI();
         this.applyFilters();
     }
-    
+
     updateUI() {
         if (!this.filterContainer) return;
 
@@ -141,18 +168,20 @@ class CategoryFilter {
     }
 }
 
-// Utility Functions
+// ==========================================
+// UTILITY FUNCTIONS
+// ==========================================
 const utils = {
     // Format date
     formatDate(dateString) {
         const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long', 
-            day: 'numeric' 
+        return date.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
         });
     },
-    
+
     // Debounce function
     debounce(func, wait) {
         let timeout;
@@ -165,13 +194,13 @@ const utils = {
             timeout = setTimeout(later, wait);
         };
     },
-    
+
     // Get query parameter
     getQueryParam(param) {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get(param);
     },
-    
+
     // Smooth scroll to element
     scrollToElement(elementId) {
         const element = document.getElementById(elementId);
@@ -181,7 +210,9 @@ const utils = {
     }
 };
 
-// Initialize category filter
+// ==========================================
+// INITIALIZATION
+// ==========================================
 let categoryFilter;
 document.addEventListener('DOMContentLoaded', () => {
     categoryFilter = new CategoryFilter();
