@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T15:36:50.017428Z",
+  "generated_at": "2026-01-09T15:49:09.099175Z",
   "nodes": [
     {
       "id": "optimization",
@@ -523,24 +523,6 @@
       "excerpt": "[TL;DR? Read the full version on Medium](https://medium.com/@balci.pelin/aws-re-invent-2024-notes-part2-5318a2295bf9) Welcome to the second part of my AWS re: Invent series! In this post, I\u2019ll be divi..."
     },
     {
-      "id": "fft",
-      "name": "Fast Fourier Transform",
-      "category": "edge-ml",
-      "tags": [
-        "edge machine learning",
-        "fft",
-        "audio"
-      ],
-      "date": "2021-01-01",
-      "description": "A motion classifier project with Edge Impulse & Arduino",
-      "related": [
-        "edge-audio"
-      ],
-      "file": "2025-01-09-Deep_Dream_Generator.md",
-      "html": "<p>I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, he explains the Deep Dream Generator.</p>\n<p>It was very popular in 2015, and I used it a lot to make my pictures look dreamy. Thanks to Clade, I can now understand</p>\n<p>the logic behind it. Here is a notebook that explains it better.</p>\n<p>The Colab link: https://colab.research.google.com/drive/1EvQjVea0M3qkUVMkil3ZtujnGcRGjBB_?usp=sharing</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/deep_dream_tutorial.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
-      "excerpt": "I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, he explains the Deep Dream Generator. It was very popular in 2015, and I used it a lot to make my pictures look dreamy. ..."
-    },
-    {
       "id": "langchain_tools",
       "name": "Langchain Tools",
       "category": "genai",
@@ -575,6 +557,26 @@
       "file": "2025-09-03-ArduinoTinyMLKitSensors.md",
       "html": "<p><a href=\"https://medium.com/@balci.pelin/review-of-arduino-tinyml-kit-sensors-b982f00518c7\">Read the full version on Medium</a></p>\n<p>Before jumping into machine learning, it\u2019s fun to simply play with the kit \u2014 blink an LED, read motion data, or snap a picture. In this post, we\u2019ll walk through some quick tests (Blink \u2192 IMU \u2192 Camera) that help you explore the hardware and get comfortable before machine learning applications.</p>",
       "excerpt": "[Read the full version on Medium](https://medium.com/@balci.pelin/review-of-arduino-tinyml-kit-sensors-b982f00518c7) Before jumping into machine learning, it\u2019s fun to simply play with the kit \u2014 blink ..."
+    },
+    {
+      "id": "deepdream",
+      "name": "Deep Dream Generator",
+      "category": "deep-learning",
+      "tags": [
+        "deep dream",
+        "image generation",
+        "image",
+        "inception",
+        "CNN"
+      ],
+      "date": "2026-01-09",
+      "description": "What happens when you ask a neural network to enhance what it sees, over and over again? You get Deep Dream\u2014one of the first techniques that let us peek inside the black box of AI",
+      "related": [
+        "dl"
+      ],
+      "file": "2026-01-09-Deep_Dream_Generator.md",
+      "html": "<p>I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, he explains the Deep Dream Generator.</p>\n<p>It was very popular in 2015, and I used it a lot to make my pictures look dreamy. Thanks to Clade, I can now understand</p>\n<p>the logic behind it. Here is a notebook that explains it better.</p>\n<p>The Colab link: https://colab.research.google.com/drive/1EvQjVea0M3qkUVMkil3ZtujnGcRGjBB_?usp=sharing</p>\n<p>The actual deep dream generator: https://deepdreamgenerator.com/</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/deep_dream_tutorial.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
+      "excerpt": "I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, he explains the Deep Dream Generator. It was very popular in 2015, and I used it a lot to make my pictures look dreamy. ..."
     },
     {
       "id": "agentic-architecture",
@@ -794,6 +796,10 @@
     },
     {
       "source": "arduinosensor",
+      "target": "dl"
+    },
+    {
+      "source": "deepdream",
       "target": "dl"
     },
     {
