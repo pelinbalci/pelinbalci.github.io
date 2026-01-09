@@ -3,7 +3,7 @@ title: "Deep Dream Generator"
 id: "deepdream"
 category: "deep-learning" # "genai", "deep-learning", "conference", "machine-learning", "edge-ml", "visualization"
 tags: ["deep dream", "image generation", "image", "inception", "CNN"]
-related: ["dl"]
+related: ["imageprocess"]
 date: "2026-01-09"
 description: "What happens when you ask a neural network to enhance what it sees, over and over again? You get Deep Dream—one of the first techniques that let us peek inside the black box of AI"
 ---
