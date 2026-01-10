@@ -1,0 +1,6 @@
+# Generated chunks file (upload to HuggingFace Space, not GitHub)
+chunks.json
+
+# Python
+__pycache__/
+*.pyc
