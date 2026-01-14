@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-09T15:57:59.050530Z",
+  "generated_at": "2026-01-14T20:04:43.780135Z",
   "nodes": [
     {
       "id": "optimization",
@@ -579,6 +579,78 @@
       "excerpt": "I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, he explains the Deep Dream Generator. It was very popular in 2015, and I used it a lot to make my pictures look dreamy. ..."
     },
     {
+      "id": "gnn_deep",
+      "name": "GNN Architecture Deep Dive",
+      "category": "deep-learning",
+      "tags": [
+        "gnn",
+        "graph",
+        "pytorch"
+      ],
+      "date": "2026-01-11",
+      "description": "This notebook explains GNN architectures with input/output shapes at every layer.",
+      "related": [
+        "dl"
+      ],
+      "file": "2026-01-11-GNN_Deep_Dive.md",
+      "html": "<p>\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working</p>\n<p>up to a functional implementation. Along the way, we'll see how GNNs differ from traditional matrix factorization and</p>\n<p>where they might shine.\"</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/1-GNN_Architecture_Deep_Dive.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
+      "excerpt": "\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working up to a functional implementation. Along the way, we'll see how GNNs differ from..."
+    },
+    {
+      "id": "gnn_steps",
+      "name": "GNN Step by Step",
+      "category": "deep-learning",
+      "tags": [
+        "gnn",
+        "graph",
+        "pytorch"
+      ],
+      "date": "2026-01-12",
+      "description": "This notebook shows exactly what happens inside a GCN layer using the actual MovieLens data",
+      "related": [
+        "gnn_deep"
+      ],
+      "file": "2026-01-12-GNN_Step_by_Step.md",
+      "html": "<p>\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working</p>\n<p>up to a functional implementation. Along the way, we'll see how GNNs differ from traditional matrix factorization and</p>\n<p>where they might shine.\"</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/2-GCN_Step_by_Step.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
+      "excerpt": "\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working up to a functional implementation. Along the way, we'll see how GNNs differ from..."
+    },
+    {
+      "id": "gnn_simple",
+      "name": "GNN Simple",
+      "category": "deep-learning",
+      "tags": [
+        "gnn",
+        "graph",
+        "pytorch"
+      ],
+      "date": "2026-01-13",
+      "description": "This notebook is a learning journey from traditional collaborative filtering to Graph Neural Networks (GNNs) for recommendation systems.",
+      "related": [
+        "gnn_steps"
+      ],
+      "file": "2026-01-13-GNN_Simple.md",
+      "html": "<p>\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working</p>\n<p>up to a functional implementation. Along the way, we'll see how GNNs differ from traditional matrix factorization and</p>\n<p>where they might shine.\"</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/3-GNN_Recommender_Simple.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
+      "excerpt": "\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working up to a functional implementation. Along the way, we'll see how GNNs differ from..."
+    },
+    {
+      "id": "gnn_improved",
+      "name": "GNN Improved",
+      "category": "deep-learning",
+      "tags": [
+        "gnn",
+        "graph",
+        "pytorch"
+      ],
+      "date": "2026-01-14",
+      "description": "This notebook shows the improvements on training.",
+      "related": [
+        "gnn_simple"
+      ],
+      "file": "2026-01-14-GNN_Improved.md",
+      "html": "<p>\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working</p>\n<p>up to a functional implementation. Along the way, we'll see how GNNs differ from traditional matrix factorization and</p>\n<p>where they might shine.\"</p>\n<div>\n<iframe \n    src=\"https://www.pelinbalci.com/assets/components/4-GNN_Recommender_Improved_v3.html\" \n    width=\"100%\" \n    height=\"600\" \n    style=\"border:none;\"\n></iframe>\n</div>",
+      "excerpt": "\"In this series, I'll build a graph neural network for movie recommendation, starting from the fundamentals and working up to a functional implementation. Along the way, we'll see how GNNs differ from..."
+    },
+    {
       "id": "agentic-architecture",
       "name": "Introduction to Agentic Architecture",
       "category": "genai",
@@ -801,6 +873,22 @@
     {
       "source": "deepdream",
       "target": "imageprocess"
+    },
+    {
+      "source": "gnn_deep",
+      "target": "dl"
+    },
+    {
+      "source": "gnn_steps",
+      "target": "gnn_deep"
+    },
+    {
+      "source": "gnn_simple",
+      "target": "gnn_steps"
+    },
+    {
+      "source": "gnn_improved",
+      "target": "gnn_simple"
     },
     {
       "source": "agentic-architecture",
