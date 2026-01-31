@@ -645,5 +645,160 @@
 
     <!-- Load main.js for any shared functionality -->
     <script src="assets/js/main.js"></script>
+
+
+        <!--
+      CHATBOT POPUP WIDGET FOR PELINBALCI.COM
+
+      Add this code to your index.html (paste before </body>)
+    -->
+
+    <!-- Chatbot Button and Popup -->
+    <div id="chatbot-widget">
+      <!-- Toggle Button -->
+      <button id="chatbot-toggle" onclick="toggleChatbot()" aria-label="Open chat">
+        💬
+      </button>
+
+      <!-- Chat Popup -->
+      <div id="chatbot-popup" class="chatbot-hidden">
+        <div id="chatbot-header">
+          <span>🧠 Ask My Notes</span>
+          <button onclick="toggleChatbot()" aria-label="Close chat">✕</button>
+        </div>
+        <iframe
+          id="chatbot-iframe"
+          src="https://pelinbalci-pelin-notes-chat.hf.space"
+          title="Chat with Pelin's Notes"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Chatbot Styles -->
+    <style>
+      #chatbot-widget {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 9999;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      #chatbot-toggle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        cursor: pointer;
+        font-size: 28px;
+        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #chatbot-toggle:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+      }
+
+      #chatbot-popup {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 380px;
+        height: 550px;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      #chatbot-popup.chatbot-hidden {
+        opacity: 0;
+        transform: translateY(20px);
+        pointer-events: none;
+      }
+
+      #chatbot-header {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        font-size: 16px;
+      }
+
+      #chatbot-header button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 0;
+        line-height: 1;
+        opacity: 0.8;
+        transition: opacity 0.2s;
+      }
+
+      #chatbot-header button:hover {
+        opacity: 1;
+      }
+
+      #chatbot-iframe {
+        width: 100%;
+        height: calc(100% - 52px);
+        border: none;
+      }
+
+      /* Mobile responsive */
+      @media (max-width: 480px) {
+        #chatbot-popup {
+          width: calc(100vw - 40px);
+          height: 70vh;
+          right: -10px;
+        }
+
+        #chatbot-toggle {
+          width: 50px;
+          height: 50px;
+          font-size: 24px;
+        }
+      }
+    </style>
+
+    <!-- Chatbot Script -->
+    <script>
+      function toggleChatbot() {
+        const popup = document.getElementById('chatbot-popup');
+        const button = document.getElementById('chatbot-toggle');
+
+        popup.classList.toggle('chatbot-hidden');
+
+        // Change button icon when open
+        if (popup.classList.contains('chatbot-hidden')) {
+          button.textContent = '💬';
+          button.setAttribute('aria-label', 'Open chat');
+        } else {
+          button.textContent = '✕';
+          button.setAttribute('aria-label', 'Close chat');
+        }
+      }
+
+      // Close on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const popup = document.getElementById('chatbot-popup');
+          if (!popup.classList.contains('chatbot-hidden')) {
+            toggleChatbot();
+          }
+        }
+      });
+</script>
 </body>
 </html>

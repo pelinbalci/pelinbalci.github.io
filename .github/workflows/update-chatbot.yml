@@ -1,0 +1,83 @@
+# .github/workflows/update-chatbot.yml
+#
+# This workflow automatically:
+# 1. Generates chunks.json from your notes
+# 2. Uploads it to your HuggingFace Space
+#
+# Runs: Every Sunday at midnight, OR when you push to main
+
+name: Update Chatbot Chunks
+
+on:
+  # Run every Sunday at 00:00 UTC
+  schedule:
+    - cron: '0 0 * * 0'
+
+  # Also run when pushing to main (optional - remove if you only want weekly)
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - 'notes/**'
+      - 'assets/components/**'
+      - 'cv.html'
+      - 'projects.html'
+      - 'about.html'
+
+  # Allow manual trigger from GitHub UI
+  workflow_dispatch:
+
+jobs:
+  update-chunks:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: |
+          pip install sentence-transformers langchain huggingface_hub
+
+      # 4. Run create_chunks.py
+      - name: Generate chunks.json
+        run: |
+          cd chatbot
+          python create_chunks.py
+
+      # 5. Upload to HuggingFace Space
+      - name: Upload to HuggingFace
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python << 'EOF'
+          from huggingface_hub import HfApi
+          import os
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          
+          # Upload chunks.json to your Space
+          api.upload_file(
+              path_or_fileobj="chatbot/chunks.json",
+              path_in_repo="chunks.json",
+              repo_id="pelinbalci/pelin-notes-chat",
+              repo_type="space"
+          )
+          
+          print("✅ Successfully uploaded chunks.json to HuggingFace Space!")
+          EOF
+
+      # 6. Summary
+      - name: Done
+        run: |
+          echo "🎉 Chatbot chunks updated successfully!"
+          echo "Your HuggingFace Space will automatically rebuild."
