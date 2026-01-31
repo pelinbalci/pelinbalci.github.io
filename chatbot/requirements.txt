@@ -2,3 +2,5 @@
 sentence-transformers==5.2.0
 langchain==1.2.3
 langchain-text-splitters==1.1.0
+beautifulsoup4
+pyyaml
