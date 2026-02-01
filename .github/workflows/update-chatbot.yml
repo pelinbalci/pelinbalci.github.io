@@ -24,6 +24,7 @@ on:
       - 'cv.html'
       - 'projects.html'
       - 'about.html'
+      - 'chatbot/create_chunks.py'
 
   # Allow manual trigger from GitHub UI
   workflow_dispatch:
@@ -46,7 +47,8 @@ jobs:
       # 3. Install dependencies
       - name: Install dependencies
         run: |
-          pip install sentence-transformers langchain langchain-text-splitters huggingface_hub
+          pip install -r chatbot/requirements.txt
+          pip install huggingface_hub
 
       # 4. Run create_chunks.py
       - name: Generate chunks.json
