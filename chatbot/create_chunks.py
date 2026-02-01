@@ -38,8 +38,8 @@ COMPONENTS_PATH = os.path.join(REPO_ROOT, "assets", "components")
 
 
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"  # was "all-MiniLM-L6-v2" "sentence-transformers/all-MiniLM-L6-v2"
-CHUNK_SIZE = 600
-CHUNK_OVERLAP = 100
+CHUNK_SIZE = 800
+CHUNK_OVERLAP = 150
 OUTPUT_FILE = "chunks.json"
 
 # Your predefined categories (for reference/validation)
