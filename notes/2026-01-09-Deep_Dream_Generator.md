@@ -12,7 +12,7 @@ I am reading the book How Smart Machines Think by Sean Gerrish. In one chapter, 
 It was very popular in 2015, and I used it a lot to make my pictures look dreamy. Thanks to Clade, I can now understand 
 the logic behind it. Here is a notebook that explains it better. 
 
-The Colab link: https://colab.research.google.com/drive/1EvQjVea0M3qkUVMkil3ZtujnGcRGjBB_?usp=sharing
+The Colab link: https://github.com/pelinbalci/deep-dream/blob/main/deep_dream_tutorial.ipynb
 
 The actual deep dream generator: https://deepdreamgenerator.com/
 
