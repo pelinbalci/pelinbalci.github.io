@@ -181,8 +181,9 @@
         });
         $('workFilters').hidden = shown.length <= 2;
         $('workFilters').innerHTML = shown.map(function (f) {
-            return '<button type="button" class="chip" data-filter="' + f.id + '" aria-pressed="' +
-                (state.filter === f.id) + '">' + esc(f.label) + '</button>';
+            var on = state.filter === f.id;
+            return '<button type="button" class="category-tag' + (on ? ' active' : '') + '" data-filter="' + f.id +
+                '" aria-pressed="' + on + '">' + esc(f.label) + '</button>';
         }).join('');
     }
 
@@ -255,21 +256,23 @@
         });
         if (focus) $('tab-' + id).focus();
 
-        var bar = document.querySelector('.tabbar');
-        if (bar && window.scrollY > bar.offsetTop) window.scrollTo(0, bar.offsetTop);
+        var bar = document.querySelector('.cv-tabbar');
+        var header = document.querySelector('.header');
+        var offset = header ? header.offsetHeight : 0;
+        if (bar && window.scrollY > bar.offsetTop - offset) window.scrollTo(0, bar.offsetTop - offset);
     }
 
     function currentHash() { return (location.hash || '').replace('#', ''); }
 
     function bindEvents() {
-        document.querySelector('.tabbar__inner').addEventListener('click', function (e) {
+        document.querySelector('.cv-tabs').addEventListener('click', function (e) {
             var tab = e.target.closest('[data-tab]');
             if (!tab) return;
             if (currentHash() === tab.dataset.tab) showTab(tab.dataset.tab);
             else location.hash = tab.dataset.tab;
         });
 
-        document.querySelector('.tabbar__inner').addEventListener('keydown', function (e) {
+        document.querySelector('.cv-tabs').addEventListener('keydown', function (e) {
             if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
             var i = TABS.indexOf(currentHash() || 'overview');
             var next = TABS[(i + (e.key === 'ArrowRight' ? 1 : TABS.length - 1)) % TABS.length];
@@ -298,14 +301,8 @@
             btn.textContent = open ? 'Show less ↑' : 'Show ' + btn.getAttribute('data-count') + ' more ↓';
         });
 
+        // Dark mode is handled by theme.js, like on the other pages.
         $('cvPrint').addEventListener('click', function () { window.print(); });
-
-        $('cvThemeToggle').addEventListener('click', function () {
-            var root = document.documentElement;
-            var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            root.setAttribute('data-theme', next);
-            try { localStorage.setItem('theme', next); } catch (err) {}
-        });
     }
 
     // ---- boot ---------------------------------------------------------------
