@@ -35,6 +35,7 @@ REPO_ROOT = os.path.join(SCRIPT_DIR, "..")
 # Folders and files to process
 NOTES_PATH = os.path.join(REPO_ROOT, "notes")
 COMPONENTS_PATH = os.path.join(REPO_ROOT, "assets", "components")
+CV_PATH = os.path.join(REPO_ROOT, "cv")  # CV content lives here (Markdown), not in cv.html
 
 
 EMBEDDING_MODEL = "sentence-transformers/all-mpnet-base-v2"  # was "all-MiniLM-L6-v2" "sentence-transformers/all-MiniLM-L6-v2"
@@ -194,7 +195,8 @@ def load_root_html_files(repo_root: str) -> list:
     documents = []
 
     pages = [
-        ("cv.html", "CV / Resume", "cv"),
+        # cv.html is now an empty shell filled by JavaScript, so the CV is
+        # read from the cv/ Markdown files instead (see load_cv_files).
         ("projects.html", "Projects Page", "projects"),
         ("about.html", "About Page", "about")
     ]
@@ -236,6 +238,149 @@ def load_root_html_files(repo_root: str) -> list:
         except Exception as e:
             print(f"   ❌ Error loading {filepath}: {e}")
 
+    return documents
+
+
+def clean_cv_text(text: str) -> str:
+    """Remove things that should not reach the chatbot:
+    [placeholders], '# ' comment lines and <!-- --> comments."""
+    text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+    text = re.sub(r'\[[^\]\n]{1,120}\](?!\()', '', text)          # [outcome], [result] ...
+    text = re.sub(r'\[([^\]]+)\]\(([^)\s]+)\)', r'\1 (\2)', text)  # [label](url) -> label (url)
+    lines = [l for l in text.splitlines() if not re.match(r'^#\s', l)]
+    text = "\n".join(lines)
+    text = re.sub(r'[ \t]+\n', '\n', text)
+    text = re.sub(r'\n{3,}', '\n\n', text)
+    return text.strip()
+
+
+def split_cv_sections(body: str) -> list:
+    """Split a CV file on '## ' headings -> [(heading, text), ...]."""
+    sections, heading, buf = [], None, []
+    for line in body.splitlines():
+        if line.startswith("## "):
+            if heading is not None:
+                sections.append((heading, "\n".join(buf)))
+            heading, buf = line[3:].strip(), []
+        elif heading is not None:
+            buf.append(line)
+    if heading is not None:
+        sections.append((heading, "\n".join(buf)))
+    return sections
+
+
+def cv_document(title: str, content: str, source: str, doc_id: str, date: str = "") -> dict:
+    return {
+        "content": content,
+        "source": source,
+        "source_path": f"cv/{source}",
+        "title": title,
+        "category": "cv",
+        "tags": ["cv", "resume", "pelin balci"],
+        "date": str(date),
+        "description": "",
+        "doc_id": doc_id,
+        "related": [],
+        "type": "page"
+    }
+
+
+def load_cv_files(cv_path: str) -> list:
+    """Load the CV from the cv/ folder (the same files that build cv.html).
+
+    One document per role, per project and per public-work item, so the
+    chatbot can retrieve them separately. Drafts, files starting with '_'
+    and [placeholders] are skipped.
+    """
+    documents = []
+
+    if not os.path.exists(cv_path):
+        print(f"⚠️  CV path not found: {cv_path}")
+        return documents
+
+    def read(relpath):
+        path = os.path.join(cv_path, relpath)
+        if not os.path.exists(path):
+            return None, None
+        with open(path, 'r', encoding='utf-8') as f:
+            return parse_frontmatter(f.read())
+
+    who = "Pelin Balcı"
+
+    # Profile: name, title, summary, links
+    meta, body = read("profile.md")
+    if body is not None:
+        header = f"{meta.get('name', who)} — {meta.get('title', '')}\n{meta.get('meta', '')}"
+        documents.append(cv_document(
+            "CV — Profile and summary",
+            clean_cv_text(f"{header}\n\n{body}"),
+            "profile.md", "cv-profile"))
+
+    # Selected work and focus areas (one document each)
+    for filename, label, doc_id in [("featured.md", "Selected work", "cv-featured"),
+                                    ("focus.md", "Focus areas / skills", "cv-focus")]:
+        _, body = read(filename)
+        if body:
+            documents.append(cv_document(
+                f"CV — {label}",
+                clean_cv_text(f"{who}'s CV — {label}\n\n{body}"),
+                filename, doc_id))
+
+    # Experience: one document per role
+    exp_dir = os.path.join(cv_path, "experience")
+    for path in sorted(glob.glob(os.path.join(exp_dir, "*.md")), reverse=True):
+        name = os.path.basename(path)
+        if name.startswith("_"):
+            continue
+        meta, body = read(os.path.join("experience", name))
+        period = f"{meta.get('start', '')} – {meta.get('end', '')}".strip(" –")
+        header = (f"{who}'s work experience: {meta.get('title', '')} at {meta.get('org', '')} "
+                  f"({period}{', ' + meta['location'] if meta.get('location') else ''})")
+        stack = f"\nTools: {meta['stack']}" if meta.get("stack") else ""
+        documents.append(cv_document(
+            f"CV — Experience: {meta.get('title', '')} · {meta.get('org', '')}",
+            clean_cv_text(f"{header}\n\n{body}{stack}"),
+            f"experience/{name}", f"cv-exp-{name[:-3]}", meta.get("start", "")))
+
+    # Projects: one document per '## ' section
+    _, body = read("projects.md")
+    for i, (heading, text) in enumerate(split_cv_sections(body or "")):
+        text = re.sub(r'(?m)^link:.*\n?', '', text)                 # button label, not useful
+        text = re.sub(r'(?m)^url:\s*$\n?', '', text)               # empty url (client work)
+        text = re.sub(r'(?m)^(kind|stack|url):', lambda m: m.group(1).capitalize() + ':', text)
+        documents.append(cv_document(
+            f"CV — Project: {heading}",
+            clean_cv_text(f"{who}'s project: {heading}\n{text}"),
+            "projects.md", f"cv-project-{i}"))
+
+    # Public work: one document per item, drafts skipped
+    work_dir = os.path.join(cv_path, "public-work")
+    for path in sorted(glob.glob(os.path.join(work_dir, "*.md")), reverse=True):
+        name = os.path.basename(path)
+        if name.startswith("_"):
+            continue
+        meta, body = read(os.path.join("public-work", name))
+        if meta.get("draft") is True:
+            continue
+        url = meta.get("url", "")
+        url_line = f"\nLink: {url}" if url and not str(url).startswith("[") else ""
+        header = (f"{who}'s public work ({meta.get('type', '')}, {meta.get('date', '')}): "
+                  f"{meta.get('title', '')} — {meta.get('role', '')}, {meta.get('org', '')}")
+        documents.append(cv_document(
+            f"CV — Public work: {meta.get('title', '')}",
+            clean_cv_text(f"{header}\n\n{body}{url_line}"),
+            f"public-work/{name}", f"cv-work-{name[:-3]}", meta.get("date", "")))
+
+    # Education, training, awards, languages
+    _, body = read("education.md")
+    if body:
+        documents.append(cv_document(
+            "CV — Education, training, awards and languages",
+            clean_cv_text(f"{who}'s education, certifications, awards and languages\n\n{body}"),
+            "education.md", "cv-education"))
+
+    for doc in documents:
+        print(f"   ✅ {doc['source']} → {doc['title']}")
     return documents
 
 
@@ -413,6 +558,11 @@ def main():
     print("\nStep 3/6: Loading root HTML files...")
     page_docs = load_root_html_files(REPO_ROOT)
     all_documents.extend(page_docs)
+
+    # Step 3b: Load the CV from the cv/ Markdown folder
+    print("\nStep 3b/6: Loading CV (cv/ folder)...")
+    cv_docs = load_cv_files(CV_PATH)
+    all_documents.extend(cv_docs)
 
     if not all_documents:
         print("❌ No documents found!")
