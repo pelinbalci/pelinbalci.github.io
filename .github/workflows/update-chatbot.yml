@@ -22,6 +22,8 @@ on:
       - 'notes/**'
       - 'assets/components/**'
       - 'cv.html'
+      - 'cv/**'
+      - 'assets/data/cv.json'
       - 'projects.html'
       - 'about.html'
       - 'chatbot/create_chunks.py'
